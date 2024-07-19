@@ -5,6 +5,12 @@ interface Coord {
   y: number,
 }
 
+const maxAngle: number = 360;
+
+const getRandomNumberInRange = (max: number, min: number) => {
+  return Math.random() * (max + 1 - min) + min;
+}
+
 const degreesToRadians = (degrees: number) => {
   return degrees * (Math.PI / 180);
 }
@@ -53,16 +59,21 @@ export class PokemonObject {
   }
 
   updateAngle(): void {
-    this.angle = Math.floor(Math.random() * 360) + 1;
+    this.angle = Math.floor(Math.random() * maxAngle) + 1;
   }
 
   detectCollision(): void {
+    const minAngleDiscrepancy: number = -30;
+    const maxAngleDiscrepancy: number = 30;
+
     const setOppositeVerticalAngle = (): void => {
-      this.angle = this.angle * -1;
+      this.angle = this.angle * -1 + getRandomNumberInRange(maxAngleDiscrepancy, minAngleDiscrepancy);
     }
 
     const setOppositeHorizontalAngle = (): void => {
-      this.angle = ((180 - this.angle) + 360) % 360;
+      this.angle =
+        ((maxAngle / 2 - this.angle) + maxAngle) % maxAngle +
+        getRandomNumberInRange(maxAngleDiscrepancy, minAngleDiscrepancy);
     };
 
     // Detect collision with top of screen
@@ -122,7 +133,6 @@ export class Canvas {
     };
 
     clearCanvas();
-
 
     this.objects.forEach((object: PokemonObject) => {
       object.drawFrame();
