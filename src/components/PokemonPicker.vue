@@ -15,9 +15,9 @@
         class="tw-inline-block tw-h-24 tw-w-24 tw-cursor-pointer"
         v-for="(pokemon, key) in pokemonResults"
         :key="key"
-        @click="addPokemonToCanvas(pokemon.imgUrl)"
+        @click="addPokemonToCanvas(getImageUrl(pokemon.imgUrl))"
       >
-        <img :src="pokemon.imgUrl" :alt="pokemon.name" />
+        <img :src="getImageUrl(pokemon.imgUrl)" :alt="pokemon.name" />
       </div>
     </div>
   </div>
@@ -25,7 +25,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import  { getCanvas, PokemonObject, Canvas } from '../util/canvas';
+import  { getCanvas, Canvas } from '../util/canvas';
 import { type Ref, type CanvasObject, type Pokemon } from '../util//interfaces';
 import pokemonJSON from '../assets/json/pokemon.json';
 
@@ -42,7 +42,6 @@ export default defineComponent({
       pokemon: pokemonJSON as Array<Pokemon>,
       pokemonResults: new Array<Pokemon>,
       searchText: '',
-      // canvasObj: {} as CanvasObject,
     };
   },
   watch: {
@@ -94,6 +93,9 @@ export default defineComponent({
     });
   },
   methods: {
+    getImageUrl(imageName: string) {
+      return new URL(`../assets/images/pokemon/${imageName}.png`, import.meta.url).href
+    },
     addPokemonToCanvas(imgSrc: string): void {
       const x = Math.floor(Math.random() * window.innerWidth) + 1;
       const y = Math.floor(Math.random() * window.innerHeight) + 1;

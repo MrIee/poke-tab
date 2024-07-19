@@ -48,8 +48,8 @@ export class PokemonObject {
 
     this.img.onload = (): void => {
       if (this.ctx) {
-       this.drawFrame();
-       this.updateAngle();
+        this.drawFrame();
+        this.setRandomAngle();
       }
     };
   }
@@ -58,7 +58,7 @@ export class PokemonObject {
     this.ctx?.drawImage(this.img, this.position.x, this.position.y);
   }
 
-  updateAngle(): void {
+  setRandomAngle(): void {
     this.angle = Math.floor(Math.random() * maxAngle) + 1;
   }
 
