@@ -18,7 +18,7 @@ export const getCanvas = (): CanvasObject => {
 export class PokemonObject {
   position: Coord;
   src: string;
-  velocity: Coord;
+  speed: number;
   ctx: CanvasRenderingContext2D | null;
   img: HTMLImageElement;
   angle: number;
@@ -26,12 +26,12 @@ export class PokemonObject {
   constructor({
     position = { x: 0, y: 0 },
     src = '',
-    velocity = { x: 0, y: 0 }
+    speed = 2,
 
   }, ctx: CanvasRenderingContext2D | null) {
     this.position = position;
     this.src = src;
-    this.velocity = velocity;
+    this.speed = speed;
     this.ctx = ctx;
     this.img = new Image();
     this.angle = 180;
@@ -57,16 +57,36 @@ export class PokemonObject {
   }
 
   detectCollision(): void {
-    // Detect collision with top of screen
-    // Detect collision with bottom of screen
-    if (this.position.y < 0 || this.position.y + this.img.height > window.innerHeight) {
+    const setOppositeVerticalAngle = (): void => {
       this.angle = this.angle * -1;
     }
 
-    // Detect collision with left of screen
-    // Detect collision with right of screen
-    if (this.position.x < 0 || this.position.x + this.img.width > window.innerWidth) {
+    const setOppositeHorizontalAngle = (): void => {
       this.angle = ((180 - this.angle) + 360) % 360;
+    };
+
+    // Detect collision with top of screen
+    if (this.position.y < 0) {
+      this.position.y = 0;
+      setOppositeVerticalAngle();
+    }
+
+    // Detect collision with bottom of screen
+    if (this.position.y + this.img.height > window.innerHeight) {
+      this.position.y = window.innerHeight - this.img.height;
+      setOppositeVerticalAngle();
+    }
+
+    // Detect collision with left of screen
+    if (this.position.x < 0) {
+      this.position.x = 0;
+      setOppositeHorizontalAngle();
+    }
+
+    // Detect collision with right of screen
+    if (this.position.x + this.img.width > window.innerWidth) {
+      this.position.x = window.innerWidth - this.img.width;
+      setOppositeHorizontalAngle();
     }
   }
 };
@@ -107,8 +127,8 @@ export class Canvas {
     this.objects.forEach((object: PokemonObject) => {
       object.drawFrame();
       object.detectCollision();
-      object.position.x += Math.cos(degreesToRadians(object.angle));
-      object.position.y += Math.sin(degreesToRadians(object.angle));
+      object.position.x += object.speed * Math.cos(degreesToRadians(object.angle));
+      object.position.y += object.speed * Math.sin(degreesToRadians(object.angle));
     });
   };
 };
