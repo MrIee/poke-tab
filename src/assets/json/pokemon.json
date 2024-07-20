@@ -2,19 +2,19 @@
   {
     "name": "Bulbasaur",
     "imgUrl": "bulbasaur",
-    "type": ["grass", "posion"],
+    "type": ["grass", "poison"],
     "generation": 1
   },
   {
     "name": "Ivysaur",
     "imgUrl": "ivysaur",
-    "type": ["grass", "posion"],
+    "type": ["grass", "poison"],
     "generation": 1
   },
   {
     "name": "Venusaur",
     "imgUrl": "venusaur",
-    "type": ["grass", "posion"],
+    "type": ["grass", "poison"],
     "generation": 1
   },
   {
@@ -134,13 +134,13 @@
   {
     "name": "Ekans",
     "imgUrl": "ekans",
-    "type": ["posion"],
+    "type": ["poison"],
     "generation": 1
   },
   {
     "name": "Arbok",
     "imgUrl": "arbok",
-    "type": ["posion"],
+    "type": ["poison"],
     "generation": 1
   },
   {
@@ -170,37 +170,37 @@
   {
     "name": "Nidoran♀",
     "imgUrl": "nidoran-f",
-    "type": ["posion"],
+    "type": ["poison"],
     "generation": 1
   },
   {
     "name": "Nidorina",
     "imgUrl": "nidorina",
-    "type": ["posion"],
+    "type": ["poison"],
     "generation": 1
   },
   {
     "name": "Nidoqueen",
     "imgUrl": "nidoqueen",
-    "type": ["posion", "ground"],
+    "type": ["poison", "ground"],
     "generation": 1
   },
   {
     "name": "Nidoran♀",
     "imgUrl": "nidoran-m",
-    "type": ["posion"],
+    "type": ["poison"],
     "generation": 1
   },
   {
     "name": "Nidorino",
     "imgUrl": "nidorino",
-    "type": ["posion"],
+    "type": ["poison"],
     "generation": 1
   },
   {
     "name": "Nidoking",
     "imgUrl": "nidoking",
-    "type": ["posion", "ground"],
+    "type": ["poison", "ground"],
     "generation": 1
   },
   {
@@ -242,31 +242,31 @@
   {
     "name": "Zubat",
     "imgUrl": "zubat",
-    "type": ["posion", "flying"],
+    "type": ["poison", "flying"],
     "generation": 1
   },
   {
     "name": "Golbat",
     "imgUrl": "golbat",
-    "type": ["posion", "flying"],
+    "type": ["poison", "flying"],
     "generation": 1
   },
   {
     "name": "Oddish",
     "imgUrl": "oddish",
-    "type": ["grass", "posion"],
+    "type": ["grass", "poison"],
     "generation": 1
   },
   {
     "name": "Gloom",
     "imgUrl": "gloom",
-    "type": ["grass", "posion"],
+    "type": ["grass", "poison"],
     "generation": 1
   },
   {
     "name": "Vileplume",
     "imgUrl": "vileplume",
-    "type": ["grass", "posion"],
+    "type": ["grass", "poison"],
     "generation": 1
   },
   {
@@ -284,13 +284,13 @@
   {
     "name": "Venonat",
     "imgUrl": "venonat",
-    "type": ["bug", "posion"],
+    "type": ["bug", "poison"],
     "generation": 1
   },
   {
     "name": "Venomoth",
     "imgUrl": "venomoth",
-    "type": ["bug", "posion"],
+    "type": ["bug", "poison"],
     "generation": 1
   },
   {
@@ -410,31 +410,31 @@
   {
     "name": "Bellsprout",
     "imgUrl": "bellsprout",
-    "type": ["grass", "posion"],
+    "type": ["grass", "poison"],
     "generation": 1
   },
   {
     "name": "Weepinbell",
     "imgUrl": "weepinbell",
-    "type": ["grass", "posion"],
+    "type": ["grass", "poison"],
     "generation": 1
   },
   {
     "name": "Victreebel",
     "imgUrl": "victreebel",
-    "type": ["grass", "posion"],
+    "type": ["grass", "poison"],
     "generation": 1
   },
   {
     "name": "Tentacool",
     "imgUrl": "tentacool",
-    "type": ["water", "posion"],
+    "type": ["water", "poison"],
     "generation": 1
   },
   {
     "name": "Tentacruel",
     "imgUrl": "tentacruel",
-    "type": ["water", "posion"],
+    "type": ["water", "poison"],
     "generation": 1
   },
   {
@@ -524,13 +524,13 @@
   {
     "name": "Grimer",
     "imgUrl": "grimer",
-    "type": ["Posion"],
+    "type": ["Poison"],
     "generation": 1
   },
   {
     "name": "Muk",
     "imgUrl": "muk",
-    "type": ["Posion"],
+    "type": ["Poison"],
     "generation": 1
   },
   {
@@ -650,13 +650,13 @@
   {
     "name": "Koffing",
     "imgUrl": "koffing",
-    "type": ["posion"],
+    "type": ["poison"],
     "generation": 1
   },
   {
     "name": "Weezing",
     "imgUrl": "weezing",
-    "type": ["posion"],
+    "type": ["poison"],
     "generation": 1
   },
   {
@@ -902,7 +902,7 @@
   {
     "name": "Mew",
     "imgUrl": "mew",
-    "type": ["dragon"],
+    "type": ["psychic"],
     "generation": 1
   }
 ]

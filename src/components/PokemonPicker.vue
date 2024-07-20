@@ -4,15 +4,17 @@
     :ref="pickerRef"
     class="tw-fixed tw-w-[403px] tw-h-[676px] tw-flex tw-flex-col tw-border tw-border-gray-800 tw-bg-white tw-z-10"
   >
-    <input
-      :ref="searchBarRef"
-      class="tw-w-full tw-py-1 tw-px-2 tw-border tw-border-gray-800"
-      type="text"
-      v-model="searchText"
-    >
+    <div :ref="filterBarRef">
+      <input
+        class="tw-w-full tw-py-1 tw-px-2 tw-border tw-border-gray-800"
+        type="text"
+        v-model="searchText"
+      >
+      <Filter @filter="filterPokemonByType" />
+    </div>
     <div :ref="pokemonListRef" class="tw-inline-block tw-overflow-auto">
       <div
-        class="tw-inline-block tw-h-24 tw-w-24 tw-cursor-pointer"
+        class="pokemon-picker__sprite"
         v-for="(pokemon, key) in pokemonResults"
         :key="key"
         @click="addPokemonToCanvas(getImageUrl(pokemon.imgUrl))"
@@ -25,6 +27,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import Filter from './Filter.vue';
 import { type Ref, type Pokemon } from '../util/interfaces';
 import { DrawApp } from '../util/drawApp';
 import pokemonJSON from '../assets/json/pokemon.json';
@@ -32,6 +35,9 @@ import pokemonJSON from '../assets/json/pokemon.json';
 let drawApp: DrawApp = new DrawApp();
 
 export default defineComponent({
+  components: {
+    Filter,
+  },
   props: {
     canvasId: {
       type: String,
@@ -41,32 +47,35 @@ export default defineComponent({
   data() {
     return {
       pickerRef: 'pickerRef',
-      searchBarRef: 'searchBarRef',
+      filterBarRef: 'filterBarRef',
       pokemonListRef: 'pokemonListRef',
       isVisible: false,
-      pokemon: pokemonJSON as Array<Pokemon>,
+      allPokemon: pokemonJSON as Array<Pokemon>,
       pokemonResults: new Array<Pokemon>,
       searchText: '',
+      filteredPokemon: new Array<Pokemon>,
     };
   },
   watch: {
     searchText(text: string): void {
       if (!text) {
-        this.pokemonResults = this.pokemon;
+        this.pokemonResults = this.filteredPokemon;
       } else {
-        this.pokemonResults = this.pokemon.filter((pokemon: Pokemon) => {
+        this.pokemonResults = this.filteredPokemon.filter((pokemon: Pokemon) => {
           return pokemon.name.toLowerCase().indexOf(text) !== -1;
         });
       }
     },
   },
   mounted() {
-    this.pokemonResults = this.pokemon;
+    this.pokemonResults = this.allPokemon;
     const canvasEl = document.querySelector(`#${this.canvasId}`);
     drawApp.setCanvasElement(canvasEl);
     drawApp.animate();
-
-    canvasEl?.addEventListener('click', (event): void => {
+    canvasEl?.addEventListener('click', this.setupPokemonPicker);
+  },
+  methods: {
+    setupPokemonPicker(event: Event) {
       const e = event as PointerEvent;
       this.isVisible = !this.isVisible;
 
@@ -77,10 +86,10 @@ export default defineComponent({
 
         const refs = this.$refs;
         const pickerRef: Ref = this.pickerRef;
-        const searchBarRef: Ref = this.searchBarRef;
+        const filterBarRef: Ref = this.filterBarRef;
         const pokemonListRef: Ref = this.pokemonListRef;
         const pickerEl: HTMLElement = refs[pickerRef] as HTMLElement;
-        const searchBarEl: HTMLElement = refs[searchBarRef] as HTMLElement;
+        const searchBarEl: HTMLElement = refs[filterBarRef] as HTMLElement;
         const pokemonListEl: HTMLElement = refs[pokemonListRef] as HTMLElement;
         const pickerRect: DOMRect = pickerEl.getBoundingClientRect();
         const searchBarRect: DOMRect = searchBarEl.getBoundingClientRect();
@@ -97,16 +106,25 @@ export default defineComponent({
           pickerEl.style.left = `${window.innerWidth - pickerRect.width}px`;
         }
       });
-    });
-  },
-  methods: {
-    getImageUrl(imageName: string) {
+    },
+    getImageUrl(imageName: string): string {
       return new URL(`../assets/images/pokemon/${imageName}.png`, import.meta.url).href
     },
     addPokemonToCanvas(imgSrc: string): void {
       const x = Math.floor(Math.random() * window.innerWidth) + 1;
       const y = Math.floor(Math.random() * window.innerHeight) + 1;
       drawApp.addPokemon(imgSrc, {x, y});
+    },
+    filterPokemonByType(type: string): void {
+      if (type) {
+        this.pokemonResults = this.allPokemon.filter((pokemon: Pokemon): boolean => {
+          return pokemon.type.some((t: string) => t === type);
+        });
+        this.filteredPokemon = this.pokemonResults;
+      } else {
+        this.pokemonResults = this.allPokemon;
+        this.filteredPokemon = this.allPokemon;
+      }
     },
   },
 });
@@ -116,4 +134,44 @@ export default defineComponent({
 .pokemon-sprite {
   @apply tw-fixed;
 }
+
+.pokemon-picker__sprite {
+  @apply
+  tw-inline-block
+  tw-h-24
+  tw-w-24
+  tw-relative
+  tw-cursor-pointer
+  tw-rounded-lg
+  tw-z-10;
+}
+
+/* Pokeball hover effect */
+/* .pokemon-picker__sprite::before {
+  content: '';
+  background-image: url(../assets//images/pokeball.png);
+
+  @apply tw-h-full tw-w-full tw-absolute tw-top-0 tw-left-0 tw-opacity-0 hover:tw-opacity-20 -tw-z-10;
+} */
+
+
+/* Fancy border hover effect */
+/* .pokemon-picker__sprite:hover {
+  box-shadow: inset 0 0 0 4px rgb(75, 85, 99);
+}
+
+.pokemon-picker__sprite::before,
+.pokemon-picker__sprite::after {
+  content: '';
+
+  @apply tw-absolute -tw-z-10;
+}
+
+.pokemon-picker__sprite::before:hover {
+  @apply tw-w-1/2 tw-h-full tw-bg-white tw-left-1/4;
+}
+
+.pokemon-picker__sprite::after:hover {
+  @apply tw-h-1/2 tw-w-full tw-bg-white tw-top-1/4;
+} */
 </style>
