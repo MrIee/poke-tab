@@ -23,6 +23,7 @@ export const getCanvas = (): CanvasObject => {
 
 export class PokemonObject {
   position: Coord;
+  prevPosition: Coord;
   src: string;
   speed: number;
   img: HTMLImageElement;
@@ -37,6 +38,7 @@ export class PokemonObject {
   }, className = 'pokemon-sprite') {
     this.className = className;
     this.position = position;
+    this.prevPosition = position;
     this.src = src;
     this.speed = speed;
     this.img = new Image();
@@ -60,10 +62,12 @@ export class PokemonObject {
   }
 
   incrementImgX(x: number) {
+    this.prevPosition.x = this.getX();
     this.img.style.left = `${this.getX() + x}px`;
   }
 
   incrementImgY(y: number) {
+    this.prevPosition.y = this.getY();
     this.img.style.top = `${this.getY() + y}px`;
   }
 
@@ -71,12 +75,20 @@ export class PokemonObject {
     this.angle = Math.floor(Math.random() * maxAngle) + 1;
   }
 
+  setFacingAngle(): void {
+    if (this.getX() > this.prevPosition.x) {
+      this.img.style.transform = 'scaleX(-1)';
+    } else {
+      this.img.style.transform = 'scaleX(1)';
+    }
+  }
+
   detectCollision(): void {
     const minAngleDiscrepancy: number = -20;
     const maxAngleDiscrepancy: number = 20;
 
     const setOppositeVerticalAngle = (): void => {
-      this.angle = this.angle * -1 + getRandomNumberInRange(maxAngleDiscrepancy, minAngleDiscrepancy);
+      this.angle = 180 * (Math.PI / 180) - this.angle + getRandomNumberInRange(maxAngleDiscrepancy, minAngleDiscrepancy);
     }
 
     const setOppositeHorizontalAngle = (): void => {
@@ -142,6 +154,7 @@ export class DrawApp {
 
     this.objects.forEach((object: PokemonObject) => {
       object.detectCollision();
+      object.setFacingAngle();
       const x: number = object.speed * Math.cos(degreesToRadians(object.angle));
       const y: number = object.speed * Math.sin(degreesToRadians(object.angle));
 
