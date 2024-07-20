@@ -25,19 +25,14 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { type Ref, type Pokemon } from '../util/interfaces';
-import { DrawApp } from '../util/drawApp';
+import  { getCanvas, Canvas } from '../util/canvas';
+import { type Ref, type CanvasObject, type Pokemon } from '../util/interfaces';
 import pokemonJSON from '../assets/json/pokemon.json';
 
-let drawApp: DrawApp = new DrawApp();
+let canvasObj: CanvasObject = {} as CanvasObject;
+let canvasApp: Canvas = {} as Canvas;
 
 export default defineComponent({
-  props: {
-    canvasId: {
-      type: String,
-      default: undefined,
-    },
-  },
   data() {
     return {
       pickerRef: 'pickerRef',
@@ -62,12 +57,10 @@ export default defineComponent({
   },
   mounted() {
     this.pokemonResults = this.pokemon;
-    const canvasEl = document.querySelector(`#${this.canvasId}`);
-    drawApp.setCanvasElement(canvasEl);
-    drawApp.animate();
-
-    canvasEl?.addEventListener('click', (event): void => {
-      const e = event as PointerEvent;
+    canvasObj = getCanvas();
+    canvasApp = new Canvas(canvasObj.canvas, canvasObj.ctx);
+    canvasApp.animate();
+    canvasApp.canvas.addEventListener('click', (e): void => {
       this.isVisible = !this.isVisible;
 
       this.$nextTick(() => {
@@ -106,14 +99,8 @@ export default defineComponent({
     addPokemonToCanvas(imgSrc: string): void {
       const x = Math.floor(Math.random() * window.innerWidth) + 1;
       const y = Math.floor(Math.random() * window.innerHeight) + 1;
-      drawApp.addPokemon(imgSrc, {x, y});
+      canvasApp.addPokemon(imgSrc, {x, y});
     },
   },
 });
 </script>
-
-<style>
-.pokemon-sprite {
-  @apply tw-fixed;
-}
-</style>
