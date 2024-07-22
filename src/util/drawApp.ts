@@ -15,12 +15,6 @@ const degreesToRadians = (degrees: number) => {
   return degrees * (Math.PI / 180);
 }
 
-export const getCanvas = (): CanvasObject => {
-  const canvas: HTMLCanvasElement = document.querySelector('#canvas') as HTMLCanvasElement;
-  const ctx: CanvasRenderingContext2D | null = canvas.getContext('2d');
-  return { canvas, ctx };
-};
-
 export class PokemonObject {
   position: Coord;
   prevPosition: Coord;
