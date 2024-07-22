@@ -17,6 +17,7 @@ import { DrawApp } from './util/drawApp';
 import pokemonJSON from './assets/json/pokemon.json';
 
 let drawApp: DrawApp = new DrawApp();
+const pokemonDefaultAmount = 30;
 
 export default defineComponent({
   components: {
@@ -28,13 +29,15 @@ export default defineComponent({
       canvasRef: 'canvasRef',
       isPickerVisible: false,
       allPokemon: pokemonJSON as Array<Pokemon>,
+      savedPokemon: new Array<Pokemon>,
     }
   },
   mounted() {
     const canvasEl: HTMLElement = this.$refs[this.canvasRef] as HTMLElement;
-    drawApp.setCanvasElement(canvasEl);
-    drawApp.animate();
+    drawApp.intialize(canvasEl);
     canvasEl.addEventListener('click', this.setupPokemonPicker);
+    this.saveInitialPokemon();
+    this.addSavedPokemonToCavvas();
   },
   methods: {
     setupPokemonPicker(event: Event) {
@@ -61,10 +64,21 @@ export default defineComponent({
         }
       });
     },
+    saveInitialPokemon() {
+      for (let i = 0; i < pokemonDefaultAmount; i++) {
+        const randomIndex: number = Math.floor(Math.random() * this.allPokemon.length);
+        this.savedPokemon.push(this.allPokemon[randomIndex]);
+      };
+    },
+    addSavedPokemonToCavvas() {
+      this.savedPokemon.forEach((pokemon: Pokemon) => {
+        this.addPokemonToCanvas(pokemon.imgUrl);
+      });
+    },
     addPokemonToCanvas(imgUrl: string) {
       const x = Math.floor(Math.random() * window.innerWidth) + 1;
       const y = Math.floor(Math.random() * window.innerHeight) + 1;
-      drawApp.addPokemon(imgUrl, {x, y});
+      drawApp.addPokemonToCanvas(imgUrl, {x, y});
     },
   },
 });

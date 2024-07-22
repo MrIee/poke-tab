@@ -1,4 +1,4 @@
-import { type CanvasObject } from "./interfaces";
+import { type Pokemon } from "./interfaces";
 
 interface Coord {
   x: number,
@@ -131,11 +131,12 @@ export class DrawApp {
     this.canvas = null;
   };
 
-  setCanvasElement(el: Element | null): void {
+  intialize(el: Element | null): void {
     this.canvas = el;
+    this.animate();
   }
 
-  addPokemon(imgSrc: string, position: Coord): PokemonObject {
+  addPokemonToCanvas(imgSrc: string, position: Coord): PokemonObject {
     const pokemonObj = new PokemonObject({position, src: imgSrc});
     this.canvas?.appendChild(pokemonObj.img);
     this.objects.push(pokemonObj);
