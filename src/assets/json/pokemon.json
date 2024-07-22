@@ -1,907 +1,907 @@
 [
   {
     "name": "Bulbasaur",
-    "imgUrl": "bulbasaur",
+    "imgUrl": "/images/pokemon/bulbasaur.png",
     "type": ["grass", "poison"],
     "generation": 1
   },
   {
     "name": "Ivysaur",
-    "imgUrl": "ivysaur",
+    "imgUrl": "/images/pokemon/ivysaur.png",
     "type": ["grass", "poison"],
     "generation": 1
   },
   {
     "name": "Venusaur",
-    "imgUrl": "venusaur",
+    "imgUrl": "/images/pokemon/venusaur.png",
     "type": ["grass", "poison"],
     "generation": 1
   },
   {
     "name": "Charmander",
-    "imgUrl": "charmander",
+    "imgUrl": "/images/pokemon/charmander.png",
     "type": ["fire"],
     "generation": 1
   },
   {
     "name": "Charmeleon",
-    "imgUrl": "charmeleon",
+    "imgUrl": "/images/pokemon/charmeleon.png",
     "type": ["fire"],
     "generation": 1
   },
   {
     "name": "Charizard",
-    "imgUrl": "charizard",
+    "imgUrl": "/images/pokemon/charizard.png",
     "type": ["fire", "flying"],
     "generation": 1
   },
   {
     "name": "Squirtle",
-    "imgUrl": "squirtle",
+    "imgUrl": "/images/pokemon/squirtle.png",
     "type": ["water"],
     "generation": 1
   },
   {
     "name": "Wartortle",
-    "imgUrl": "wartortle",
+    "imgUrl": "/images/pokemon/wartortle.png",
     "type": ["water"],
     "generation": 1
   },
   {
     "name": "Blastoise",
-    "imgUrl": "blastoise",
+    "imgUrl": "/images/pokemon/blastoise.png",
     "type": ["water"],
     "generation": 1
   },
   {
     "name": "Caterpie",
-    "imgUrl": "caterpie",
+    "imgUrl": "/images/pokemon/caterpie.png",
     "type": ["bug"],
     "generation": 1
   },
   {
     "name": "Metapod",
-    "imgUrl": "metapod",
+    "imgUrl": "/images/pokemon/metapod.png",
     "type": ["bug"],
     "generation": 1
   },
   {
     "name": "Butterfree",
-    "imgUrl": "butterfree",
+    "imgUrl": "/images/pokemon/butterfree.png",
     "type": ["bug", "flying"],
     "generation": 1
   },
   {
     "name": "Weedle",
-    "imgUrl": "weedle",
+    "imgUrl": "/images/pokemon/weedle.png",
     "type": ["bug", "Poison"],
     "generation": 1
   },
   {
     "name": "Kakuna",
-    "imgUrl": "kakuna",
+    "imgUrl": "/images/pokemon/kakuna.png",
     "type": ["bug", "Poison"],
     "generation": 1
   },
   {
     "name": "Beedrill",
-    "imgUrl": "beedrill",
+    "imgUrl": "/images/pokemon/beedrill.png",
     "type": ["bug", "Poison"],
     "generation": 1
   },
   {
     "name": "Pidgey",
-    "imgUrl": "pidgey",
+    "imgUrl": "/images/pokemon/pidgey.png",
     "type": ["normal", "flying"],
     "generation": 1
   },
   {
     "name": "Pidgeotto",
-    "imgUrl": "pidgeotto",
+    "imgUrl": "/images/pokemon/pidgeotto.png",
     "type": ["normal", "flying"],
     "generation": 1
   },
   {
     "name": "Pidgeot",
-    "imgUrl": "pidgeot",
+    "imgUrl": "/images/pokemon/pidgeot.png",
     "type": ["normal", "flying"],
     "generation": 1
   },
   {
     "name": "Rattata",
-    "imgUrl": "rattata",
+    "imgUrl": "/images/pokemon/rattata.png",
     "type": ["normal"],
     "generation": 1
   },
   {
     "name": "Raticate",
-    "imgUrl": "raticate",
+    "imgUrl": "/images/pokemon/raticate.png",
     "type": ["normal"],
     "generation": 1
   },
   {
     "name": "Spearow",
-    "imgUrl": "spearow",
+    "imgUrl": "/images/pokemon/spearow.png",
     "type": ["normal"],
     "generation": 1
   },
   {
     "name": "Fearow",
-    "imgUrl": "fearow",
+    "imgUrl": "/images/pokemon/fearow.png",
     "type": ["normal", "flying"],
     "generation": 1
   },
   {
     "name": "Ekans",
-    "imgUrl": "ekans",
+    "imgUrl": "/images/pokemon/ekans.png",
     "type": ["poison"],
     "generation": 1
   },
   {
     "name": "Arbok",
-    "imgUrl": "arbok",
+    "imgUrl": "/images/pokemon/arbok.png",
     "type": ["poison"],
     "generation": 1
   },
   {
     "name": "Pikachu",
-    "imgUrl": "pikachu",
+    "imgUrl": "/images/pokemon/pikachu.png",
     "type": ["electric"],
     "generation": 1
   },
   {
     "name": "Raichu",
-    "imgUrl": "raichu",
+    "imgUrl": "/images/pokemon/raichu.png",
     "type": ["electric"],
     "generation": 1
   },
   {
     "name": "Sandshrew",
-    "imgUrl": "sandshrew",
+    "imgUrl": "/images/pokemon/sandshrew.png",
     "type": ["ground"],
     "generation": 1
   },
   {
     "name": "Sandslash",
-    "imgUrl": "sandslash",
+    "imgUrl": "/images/pokemon/sandslash.png",
     "type": ["ground"],
     "generation": 1
   },
   {
     "name": "Nidoran♀",
-    "imgUrl": "nidoran-f",
+    "imgUrl": "/images/pokemon/nidoran-f.png",
     "type": ["poison"],
     "generation": 1
   },
   {
     "name": "Nidorina",
-    "imgUrl": "nidorina",
+    "imgUrl": "/images/pokemon/nidorina.png",
     "type": ["poison"],
     "generation": 1
   },
   {
     "name": "Nidoqueen",
-    "imgUrl": "nidoqueen",
+    "imgUrl": "/images/pokemon/nidoqueen.png",
     "type": ["poison", "ground"],
     "generation": 1
   },
   {
     "name": "Nidoran♀",
-    "imgUrl": "nidoran-m",
+    "imgUrl": "/images/pokemon/nidoran-m.png",
     "type": ["poison"],
     "generation": 1
   },
   {
     "name": "Nidorino",
-    "imgUrl": "nidorino",
+    "imgUrl": "/images/pokemon/nidorino.png",
     "type": ["poison"],
     "generation": 1
   },
   {
     "name": "Nidoking",
-    "imgUrl": "nidoking",
+    "imgUrl": "/images/pokemon/nidoking.png",
     "type": ["poison", "ground"],
     "generation": 1
   },
   {
     "name": "Clefairy",
-    "imgUrl": "clefairy",
+    "imgUrl": "/images/pokemon/clefairy.png",
     "type": ["fairy"],
     "generation": 1
   },
   {
     "name": "Clefable",
-    "imgUrl": "clefable",
+    "imgUrl": "/images/pokemon/clefable.png",
     "type": ["fairy"],
     "generation": 1
   },
   {
     "name": "Vulpix",
-    "imgUrl": "vulpix",
+    "imgUrl": "/images/pokemon/vulpix.png",
     "type": ["fire"],
     "generation": 1
   },
   {
     "name": "Ninetales",
-    "imgUrl": "ninetales",
+    "imgUrl": "/images/pokemon/ninetales.png",
     "type": ["fire"],
     "generation": 1
   },
   {
     "name": "Jigglypuff",
-    "imgUrl": "jigglypuff",
+    "imgUrl": "/images/pokemon/jigglypuff.png",
     "type": ["normal", "fairy"],
     "generation": 1
   },
   {
     "name": "Wigglytuff",
-    "imgUrl": "wigglytuff",
+    "imgUrl": "/images/pokemon/wigglytuff.png",
     "type": ["normal", "fairy"],
     "generation": 1
   },
   {
     "name": "Zubat",
-    "imgUrl": "zubat",
+    "imgUrl": "/images/pokemon/zubat.png",
     "type": ["poison", "flying"],
     "generation": 1
   },
   {
     "name": "Golbat",
-    "imgUrl": "golbat",
+    "imgUrl": "/images/pokemon/golbat.png",
     "type": ["poison", "flying"],
     "generation": 1
   },
   {
     "name": "Oddish",
-    "imgUrl": "oddish",
+    "imgUrl": "/images/pokemon/oddish.png",
     "type": ["grass", "poison"],
     "generation": 1
   },
   {
     "name": "Gloom",
-    "imgUrl": "gloom",
+    "imgUrl": "/images/pokemon/gloom.png",
     "type": ["grass", "poison"],
     "generation": 1
   },
   {
     "name": "Vileplume",
-    "imgUrl": "vileplume",
+    "imgUrl": "/images/pokemon/vileplume.png",
     "type": ["grass", "poison"],
     "generation": 1
   },
   {
     "name": "Paras",
-    "imgUrl": "paras",
+    "imgUrl": "/images/pokemon/paras.png",
     "type": ["bug", "grass"],
     "generation": 1
   },
   {
     "name": "Parasect",
-    "imgUrl": "parasect",
+    "imgUrl": "/images/pokemon/parasect.png",
     "type": ["bug", "grass"],
     "generation": 1
   },
   {
     "name": "Venonat",
-    "imgUrl": "venonat",
+    "imgUrl": "/images/pokemon/venonat.png",
     "type": ["bug", "poison"],
     "generation": 1
   },
   {
     "name": "Venomoth",
-    "imgUrl": "venomoth",
+    "imgUrl": "/images/pokemon/venomoth.png",
     "type": ["bug", "poison"],
     "generation": 1
   },
   {
     "name": "Diglett",
-    "imgUrl": "diglett",
+    "imgUrl": "/images/pokemon/diglett.png",
     "type": ["ground"],
     "generation": 1
   },
   {
     "name": "Dugtrio",
-    "imgUrl": "dugtrio",
+    "imgUrl": "/images/pokemon/dugtrio.png",
     "type": ["ground"],
     "generation": 1
   },
   {
     "name": "Meowth",
-    "imgUrl": "meowth",
+    "imgUrl": "/images/pokemon/meowth.png",
     "type": ["normal"],
     "generation": 1
   },
   {
     "name": "Persian",
-    "imgUrl": "persian",
+    "imgUrl": "/images/pokemon/persian.png",
     "type": ["normal"],
     "generation": 1
   },
   {
     "name": "Psyduck",
-    "imgUrl": "psyduck",
+    "imgUrl": "/images/pokemon/psyduck.png",
     "type": ["water"],
     "generation": 1
   },
   {
     "name": "Golduck",
-    "imgUrl": "golduck",
+    "imgUrl": "/images/pokemon/golduck.png",
     "type": ["water"],
     "generation": 1
   },
   {
     "name": "Mankey",
-    "imgUrl": "mankey",
+    "imgUrl": "/images/pokemon/mankey.png",
     "type": ["fighting"],
     "generation": 1
   },
   {
     "name": "Primape",
-    "imgUrl": "primeape",
+    "imgUrl": "/images/pokemon/primeape.png",
     "type": ["fighting"],
     "generation": 1
   },
   {
     "name": "Growlithe",
-    "imgUrl": "growlithe",
+    "imgUrl": "/images/pokemon/growlithe.png",
     "type": ["fire"],
     "generation": 1
   },
   {
     "name": "Arcanine",
-    "imgUrl": "arcanine",
+    "imgUrl": "/images/pokemon/arcanine.png",
     "type": ["fire"],
     "generation": 1
   },
   {
     "name": "Poliwag",
-    "imgUrl": "poliwag",
+    "imgUrl": "/images/pokemon/poliwag.png",
     "type": ["water"],
     "generation": 1
   },
   {
     "name": "Poliwhirl",
-    "imgUrl": "poliwhirl",
+    "imgUrl": "/images/pokemon/poliwhirl.png",
     "type": ["water"],
     "generation": 1
   },
   {
     "name": "Poliwrath",
-    "imgUrl": "poliwrath",
+    "imgUrl": "/images/pokemon/poliwrath.png",
     "type": ["water", "fighting"],
     "generation": 1
   },
   {
     "name": "Abra",
-    "imgUrl": "abra",
+    "imgUrl": "/images/pokemon/abra.png",
     "type": ["psychic"],
     "generation": 1
   },
   {
     "name": "Kadabra",
-    "imgUrl": "kadabra",
+    "imgUrl": "/images/pokemon/kadabra.png",
     "type": ["psychic"],
     "generation": 1
   },
   {
     "name": "Alakazam",
-    "imgUrl": "alakazam",
+    "imgUrl": "/images/pokemon/alakazam.png",
     "type": ["psychic"],
     "generation": 1
   },
   {
     "name": "Machop",
-    "imgUrl": "machop",
+    "imgUrl": "/images/pokemon/machop.png",
     "type": ["fighting"],
     "generation": 1
   },
   {
     "name": "Machoke",
-    "imgUrl": "machoke",
+    "imgUrl": "/images/pokemon/machoke.png",
     "type": ["fighting"],
     "generation": 1
   },
   {
     "name": "Machamp",
-    "imgUrl": "machamp",
+    "imgUrl": "/images/pokemon/machamp.png",
     "type": ["fighting"],
     "generation": 1
   },
   {
     "name": "Bellsprout",
-    "imgUrl": "bellsprout",
+    "imgUrl": "/images/pokemon/bellsprout.png",
     "type": ["grass", "poison"],
     "generation": 1
   },
   {
     "name": "Weepinbell",
-    "imgUrl": "weepinbell",
+    "imgUrl": "/images/pokemon/weepinbell.png",
     "type": ["grass", "poison"],
     "generation": 1
   },
   {
     "name": "Victreebel",
-    "imgUrl": "victreebel",
+    "imgUrl": "/images/pokemon/victreebel.png",
     "type": ["grass", "poison"],
     "generation": 1
   },
   {
     "name": "Tentacool",
-    "imgUrl": "tentacool",
+    "imgUrl": "/images/pokemon/tentacool.png",
     "type": ["water", "poison"],
     "generation": 1
   },
   {
     "name": "Tentacruel",
-    "imgUrl": "tentacruel",
+    "imgUrl": "/images/pokemon/tentacruel.png",
     "type": ["water", "poison"],
     "generation": 1
   },
   {
     "name": "Geodude",
-    "imgUrl": "geodude",
+    "imgUrl": "/images/pokemon/geodude.png",
     "type": ["rock", "ground"],
     "generation": 1
   },
   {
     "name": "Graveler",
-    "imgUrl": "graveler",
+    "imgUrl": "/images/pokemon/graveler.png",
     "type": ["rock", "ground"],
     "generation": 1
   },
   {
     "name": "Golem",
-    "imgUrl": "golem",
+    "imgUrl": "/images/pokemon/golem.png",
     "type": ["rock", "ground"],
     "generation": 1
   },
   {
     "name": "Ponyta",
-    "imgUrl": "ponyta",
+    "imgUrl": "/images/pokemon/ponyta.png",
     "type": ["fire"],
     "generation": 1
   },
   {
     "name": "Rapidash",
-    "imgUrl": "rapidash",
+    "imgUrl": "/images/pokemon/rapidash.png",
     "type": ["fire"],
     "generation": 1
   },
   {
     "name": "Slowpoke",
-    "imgUrl": "slowpoke",
+    "imgUrl": "/images/pokemon/slowpoke.png",
     "type": ["water", "psychic"],
     "generation": 1
   },
   {
     "name": "Slowbro",
-    "imgUrl": "slowbro",
+    "imgUrl": "/images/pokemon/slowbro.png",
     "type": ["water", "psychic"],
     "generation": 1
   },
   {
     "name": "Magnemite",
-    "imgUrl": "magnemite",
+    "imgUrl": "/images/pokemon/magnemite.png",
     "type": ["electric", "steel"],
     "generation": 1
   },
   {
     "name": "Magneton",
-    "imgUrl": "magneton",
+    "imgUrl": "/images/pokemon/magneton.png",
     "type": ["electric", "steel"],
     "generation": 1
   },
   {
     "name": "Farfetch'd",
-    "imgUrl": "farfetchd",
+    "imgUrl": "/images/pokemon/farfetchd.png",
     "type": ["normal", "flying"],
     "generation": 1
   },
   {
     "name": "Doduo",
-    "imgUrl": "doduo",
+    "imgUrl": "/images/pokemon/doduo.png",
     "type": ["normal", "flying"],
     "generation": 1
   },
   {
     "name": "Dodrio",
-    "imgUrl": "dodrio",
+    "imgUrl": "/images/pokemon/dodrio.png",
     "type": ["normal", "flying"],
     "generation": 1
   },
   {
     "name": "Seel",
-    "imgUrl": "seel",
+    "imgUrl": "/images/pokemon/seel.png",
     "type": ["water"],
     "generation": 1
   },
   {
     "name": "Dewgong",
-    "imgUrl": "dewgong",
+    "imgUrl": "/images/pokemon/dewgong.png",
     "type": ["water", "ice"],
     "generation": 1
   },
   {
     "name": "Grimer",
-    "imgUrl": "grimer",
+    "imgUrl": "/images/pokemon/grimer.png",
     "type": ["Poison"],
     "generation": 1
   },
   {
     "name": "Muk",
-    "imgUrl": "muk",
+    "imgUrl": "/images/pokemon/muk.png",
     "type": ["Poison"],
     "generation": 1
   },
   {
     "name": "Shellder",
-    "imgUrl": "shellder",
+    "imgUrl": "/images/pokemon/shellder.png",
     "type": ["water"],
     "generation": 1
   },
   {
     "name": "Cloyster",
-    "imgUrl": "cloyster",
+    "imgUrl": "/images/pokemon/cloyster.png",
     "type": ["water", "ice"],
     "generation": 1
   },
   {
     "name": "Gastly",
-    "imgUrl": "gastly",
+    "imgUrl": "/images/pokemon/gastly.png",
     "type": ["ghost", "poison"],
     "generation": 1
   },
   {
     "name": "Haunter",
-    "imgUrl": "haunter",
+    "imgUrl": "/images/pokemon/haunter.png",
     "type": ["ghost", "poison"],
     "generation": 1
   },
   {
     "name": "Gengar",
-    "imgUrl": "gengar",
+    "imgUrl": "/images/pokemon/gengar.png",
     "type": ["ghost", "poison"],
     "generation": 1
   },
   {
     "name": "Onix",
-    "imgUrl": "onix",
+    "imgUrl": "/images/pokemon/onix.png",
     "type": ["rock", "ground"],
     "generation": 1
   },
   {
     "name": "Drowzee",
-    "imgUrl": "drowzee",
+    "imgUrl": "/images/pokemon/drowzee.png",
     "type": ["psychic"],
     "generation": 1
   },
   {
     "name": "Hypno",
-    "imgUrl": "hypno",
+    "imgUrl": "/images/pokemon/hypno.png",
     "type": ["psychic"],
     "generation": 1
   },
   {
     "name": "Krabby",
-    "imgUrl": "krabby",
+    "imgUrl": "/images/pokemon/krabby.png",
     "type": ["water"],
     "generation": 1
   },
   {
     "name": "Kingler",
-    "imgUrl": "kingler",
+    "imgUrl": "/images/pokemon/kingler.png",
     "type": ["water"],
     "generation": 1
   },
   {
     "name": "Voltorb",
-    "imgUrl": "voltorb",
+    "imgUrl": "/images/pokemon/voltorb.png",
     "type": ["electric"],
     "generation": 1
   },
   {
     "name": "Electrode",
-    "imgUrl": "electrode",
+    "imgUrl": "/images/pokemon/electrode.png",
     "type": ["electric"],
     "generation": 1
   },
   {
     "name": "Exeggcute",
-    "imgUrl": "exeggcute",
+    "imgUrl": "/images/pokemon/exeggcute.png",
     "type": ["grass", "psychic"],
     "generation": 1
   },
   {
     "name": "Exeggutor",
-    "imgUrl": "exeggutor",
+    "imgUrl": "/images/pokemon/exeggutor.png",
     "type": ["grass", "psychic"],
     "generation": 1
   },
   {
     "name": "Cubone",
-    "imgUrl": "cubone",
+    "imgUrl": "/images/pokemon/cubone.png",
     "type": ["ground"],
     "generation": 1
   },
   {
     "name": "Marowak",
-    "imgUrl": "marowak",
+    "imgUrl": "/images/pokemon/marowak.png",
     "type": ["ground"],
     "generation": 1
   },
   {
     "name": "Hitmonlee",
-    "imgUrl": "hitmonlee",
+    "imgUrl": "/images/pokemon/hitmonlee.png",
     "type": ["fighting"],
     "generation": 1
   },
   {
     "name": "Hitmonchan",
-    "imgUrl": "hitmonchan",
+    "imgUrl": "/images/pokemon/hitmonchan.png",
     "type": ["fighting"],
     "generation": 1
   },
   {
     "name": "Lickitung",
-    "imgUrl": "lickitung",
+    "imgUrl": "/images/pokemon/lickitung.png",
     "type": ["normal"],
     "generation": 1
   },
   {
     "name": "Koffing",
-    "imgUrl": "koffing",
+    "imgUrl": "/images/pokemon/koffing.png",
     "type": ["poison"],
     "generation": 1
   },
   {
     "name": "Weezing",
-    "imgUrl": "weezing",
+    "imgUrl": "/images/pokemon/weezing.png",
     "type": ["poison"],
     "generation": 1
   },
   {
     "name": "Rhyhorn",
-    "imgUrl": "rhyhorn",
+    "imgUrl": "/images/pokemon/rhyhorn.png",
     "type": ["ground", "rock"],
     "generation": 1
   },
   {
     "name": "Rhydon",
-    "imgUrl": "rhydon",
+    "imgUrl": "/images/pokemon/rhydon.png",
     "type": ["ground", "rock"],
     "generation": 1
   },
   {
     "name": "Chansey",
-    "imgUrl": "chansey",
+    "imgUrl": "/images/pokemon/chansey.png",
     "type": ["normal"],
     "generation": 1
   },
   {
     "name": "Tangela",
-    "imgUrl": "tangela",
+    "imgUrl": "/images/pokemon/tangela.png",
     "type": ["grass"],
     "generation": 1
   },
   {
     "name": "Kangaskhan",
-    "imgUrl": "kangaskhan",
+    "imgUrl": "/images/pokemon/kangaskhan.png",
     "type": ["normal"],
     "generation": 1
   },
   {
     "name": "Horsea",
-    "imgUrl": "horsea",
+    "imgUrl": "/images/pokemon/horsea.png",
     "type": ["water"],
     "generation": 1
   },
   {
     "name": "Seadra",
-    "imgUrl": "seadra",
+    "imgUrl": "/images/pokemon/seadra.png",
     "type": ["water"],
     "generation": 1
   },
   {
     "name": "Goldeen",
-    "imgUrl": "goldeen",
+    "imgUrl": "/images/pokemon/goldeen.png",
     "type": ["water"],
     "generation": 1
   },
   {
     "name": "Seaking",
-    "imgUrl": "seaking",
+    "imgUrl": "/images/pokemon/seaking.png",
     "type": ["water"],
     "generation": 1
   },
   {
     "name": "Staryu",
-    "imgUrl": "staryu",
+    "imgUrl": "/images/pokemon/staryu.png",
     "type": ["water"],
     "generation": 1
   },
   {
     "name": "Starmie",
-    "imgUrl": "starmie",
+    "imgUrl": "/images/pokemon/starmie.png",
     "type": ["water", "psychic"],
     "generation": 1
   },
   {
     "name": "Mr. Mime",
-    "imgUrl": "mr-mime",
+    "imgUrl": "/images/pokemon/mr-mime.png",
     "type": ["psychic"],
     "generation": 1
   },
   {
     "name": "Scyther",
-    "imgUrl": "scyther",
+    "imgUrl": "/images/pokemon/scyther.png",
     "type": ["bug", "flying"],
     "generation": 1
   },
   {
     "name": "jynx",
-    "imgUrl": "jynx",
+    "imgUrl": "/images/pokemon/jynx.png",
     "type": ["psychic"],
     "generation": 1
   },
   {
     "name": "Electabuzz",
-    "imgUrl": "electabuzz",
+    "imgUrl": "/images/pokemon/electabuzz.png",
     "type": ["electric"],
     "generation": 1
   },
   {
     "name": "Magmar",
-    "imgUrl": "magmar",
+    "imgUrl": "/images/pokemon/magmar.png",
     "type": ["fire"],
     "generation": 1
   },
   {
     "name": "Pinsir",
-    "imgUrl": "pinsir",
+    "imgUrl": "/images/pokemon/pinsir.png",
     "type": ["bug"],
     "generation": 1
   },
   {
     "name": "Tauros",
-    "imgUrl": "tauros",
+    "imgUrl": "/images/pokemon/tauros.png",
     "type": ["normal"],
     "generation": 1
   },
   {
     "name": "Magikarp",
-    "imgUrl": "magikarp",
+    "imgUrl": "/images/pokemon/magikarp.png",
     "type": ["water"],
     "generation": 1
   },
   {
     "name": "Gyarados",
-    "imgUrl": "gyarados",
+    "imgUrl": "/images/pokemon/gyarados.png",
     "type": ["water", "flying"],
     "generation": 1
   },
   {
     "name": "Lapras",
-    "imgUrl": "lapras",
+    "imgUrl": "/images/pokemon/lapras.png",
     "type": ["water", "ice"],
     "generation": 1
   },
   {
     "name": "Ditto",
-    "imgUrl": "ditto",
+    "imgUrl": "/images/pokemon/ditto.png",
     "type": ["normal"],
     "generation": 1
   },
   {
     "name": "Eevee",
-    "imgUrl": "eevee",
+    "imgUrl": "/images/pokemon/eevee.png",
     "type": ["normal"],
     "generation": 1
   },
   {
     "name": "Vaporeon",
-    "imgUrl": "vaporeon",
+    "imgUrl": "/images/pokemon/vaporeon.png",
     "type": ["water"],
     "generation": 1
   },
   {
     "name": "Jolteon",
-    "imgUrl": "jolteon",
+    "imgUrl": "/images/pokemon/jolteon.png",
     "type": ["electric"],
     "generation": 1
   },
   {
     "name": "Flareon",
-    "imgUrl": "flareon",
+    "imgUrl": "/images/pokemon/flareon.png",
     "type": ["fire"],
     "generation": 1
   },
   {
     "name": "Porygon",
-    "imgUrl": "porygon",
+    "imgUrl": "/images/pokemon/porygon.png",
     "type": ["normal"],
     "generation": 1
   },
   {
     "name": "Omanyte",
-    "imgUrl": "omanyte",
+    "imgUrl": "/images/pokemon/omanyte.png",
     "type": ["rock", "water"],
     "generation": 1
   },
   {
     "name": "Omastar",
-    "imgUrl": "omastar",
+    "imgUrl": "/images/pokemon/omastar.png",
     "type": ["rock", "water"],
     "generation": 1
   },
   {
     "name": "Kabuto",
-    "imgUrl": "kabuto",
+    "imgUrl": "/images/pokemon/kabuto.png",
     "type": ["rock", "water"],
     "generation": 1
   },
   {
     "name": "Kabutops",
-    "imgUrl": "kabutops",
+    "imgUrl": "/images/pokemon/kabutops.png",
     "type": ["rock", "water"],
     "generation": 1
   },
   {
     "name": "Aerodactyl",
-    "imgUrl": "aerodactyl",
+    "imgUrl": "/images/pokemon/aerodactyl.png",
     "type": ["rock", "flying"],
     "generation": 1
   },
   {
     "name": "Snorlax",
-    "imgUrl": "snorlax",
+    "imgUrl": "/images/pokemon/snorlax.png",
     "type": ["normal"],
     "generation": 1
   },
   {
     "name": "Articuno",
-    "imgUrl": "articuno",
+    "imgUrl": "/images/pokemon/articuno.png",
     "type": ["ice", "flying"],
     "generation": 1
   },
   {
     "name": "Zapdos",
-    "imgUrl": "zapdos",
+    "imgUrl": "/images/pokemon/zapdos.png",
     "type": ["electic", "flying"],
     "generation": 1
   },
   {
     "name": "Moltres",
-    "imgUrl": "moltres",
+    "imgUrl": "/images/pokemon/moltres.png",
     "type": ["fire", "flying"],
     "generation": 1
   },
   {
     "name": "Dratini",
-    "imgUrl": "dratini",
+    "imgUrl": "/images/pokemon/dratini.png",
     "type": ["dragon"],
     "generation": 1
   },
   {
     "name": "Dragonair",
-    "imgUrl": "dragonair",
+    "imgUrl": "/images/pokemon/dragonair.png",
     "type": ["dragon"],
     "generation": 1
   },
   {
     "name": "Dragonite",
-    "imgUrl": "dragonite",
+    "imgUrl": "/images/pokemon/dragonite.png",
     "type": ["dragon", "flying"],
     "generation": 1
   },
   {
     "name": "Mewtwo",
-    "imgUrl": "mewtwo",
+    "imgUrl": "/images/pokemon/mewtwo.png",
     "type": ["psychic"],
     "generation": 1
   },
   {
     "name": "Mew",
-    "imgUrl": "mew",
+    "imgUrl": "/images/pokemon/mew.png",
     "type": ["psychic"],
     "generation": 1
   }

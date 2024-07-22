@@ -8,6 +8,7 @@
       <input
         class="tw-w-full tw-py-1 tw-px-2 tw-border tw-border-gray-800"
         type="text"
+        :placeholder="searchPlaceholderText"
         v-model="searchText"
       >
       <Filter @filter="filterPokemonByType" />
@@ -17,9 +18,10 @@
         class="pokemon-picker__sprite"
         v-for="(pokemon, key) in pokemonResults"
         :key="key"
-        @click="addPokemonToCanvas(getImageUrl(pokemon.imgUrl))"
+        @click="addPokemonToCanvas(pokemon.imgUrl)"
       >
-        <img :src="getImageUrl(pokemon.imgUrl)" :alt="pokemon.name" />
+        <img class="-tw-mb-2.5" :src="pokemon.imgUrl" :alt="pokemon.name" loading="lazy" />
+        <span class="tw-text-sm">{{ pokemon.name }}</span>
       </div>
     </div>
   </div>
@@ -33,6 +35,7 @@ import { DrawApp } from '../util/drawApp';
 import pokemonJSON from '../assets/json/pokemon.json';
 
 let drawApp: DrawApp = new DrawApp();
+const itemsPerPage = 24;
 
 export default defineComponent({
   components: {
@@ -52,12 +55,15 @@ export default defineComponent({
       isVisible: false,
       allPokemon: pokemonJSON as Array<Pokemon>,
       pokemonResults: new Array<Pokemon>,
+      searchPlaceholderText: 'Type a pokemon name here...',
       searchText: '',
       filteredPokemon: new Array<Pokemon>,
     };
   },
   watch: {
     searchText(text: string): void {
+      this.pokemonResults = [];
+
       if (!text) {
         this.pokemonResults = this.filteredPokemon;
       } else {
@@ -67,8 +73,9 @@ export default defineComponent({
       }
     },
   },
-  mounted() {
+  async mounted() {
     this.pokemonResults = this.allPokemon;
+    this.filteredPokemon = this.allPokemon;
     const canvasEl = document.querySelector(`#${this.canvasId}`);
     drawApp.setCanvasElement(canvasEl);
     drawApp.animate();
@@ -107,8 +114,14 @@ export default defineComponent({
         }
       });
     },
-    getImageUrl(imageName: string): string {
-      return new URL(`../assets/images/pokemon/${imageName}.png`, import.meta.url).href
+    loadPokemon(fromArray: Array<Pokemon>): void {
+      const loadedPokemonLength = this.pokemonResults.length;
+
+      for (let i = loadedPokemonLength; i < itemsPerPage + loadedPokemonLength; i++) {
+        if (fromArray[i]) {
+          this.pokemonResults.push(fromArray[i]);
+        }
+      }
     },
     addPokemonToCanvas(imgSrc: string): void {
       const x = Math.floor(Math.random() * window.innerWidth) + 1;
@@ -140,9 +153,10 @@ export default defineComponent({
   tw-inline-block
   tw-h-24
   tw-w-24
-  tw-relative
+  tw-text-center
   tw-cursor-pointer
   tw-rounded-lg
+  tw-relative
   tw-z-10;
 }
 
