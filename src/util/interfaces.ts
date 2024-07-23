@@ -1,3 +1,5 @@
+export type Ref = string | number | symbol;
+
 export interface VueComponent {
   $el: HTMLElement,
 }

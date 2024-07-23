@@ -1,5 +1,3 @@
-import { type Pokemon } from "./interfaces";
-
 interface Coord {
   x: number,
   y: number,
@@ -78,8 +76,8 @@ export class PokemonObject {
   }
 
   detectCollision(): void {
-    const minAngleDiscrepancy: number = -20;
-    const maxAngleDiscrepancy: number = 20;
+    const minAngleDiscrepancy: number = -10;
+    const maxAngleDiscrepancy: number = 10;
 
     const setOppositeVerticalAngle = (): void => {
       this.angle = 180 * (Math.PI / 180) - this.angle + getRandomNumberInRange(maxAngleDiscrepancy, minAngleDiscrepancy);

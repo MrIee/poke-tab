@@ -1,10 +1,15 @@
 <template>
-  <div :ref="canvasRef" class="tw-absolute tw-top-0 tw-left-0 tw-bottom-0 tw-right-0 tw-overflow-hidden">
+  <div
+    :ref="canvasRef"
+    class="tw-absolute tw-top-0 tw-left-0 tw-bottom-0 tw-right-0 tw-overflow-hidden tw-select-none"
+    @click="openPokemonPicker"
+  >
   </div>
   <PokemonPicker
     v-if="isPickerVisible"
     :ref="pickerRef"
     :pokemon="allPokemon"
+    @close="isPickerVisible = false"
     @add-to-canvas="addPokemonToCanvas"
   />
 </template>
@@ -14,6 +19,7 @@ import { defineComponent } from 'vue';
 import PokemonPicker from './components/PokemonPicker.vue';
 import { type VueComponent, type Pokemon } from './util/interfaces';
 import { DrawApp } from './util/drawApp';
+import { positionElementAtCursor } from './util/helpers';
 import pokemonJSON from './assets/json/pokemon.json';
 
 let drawApp: DrawApp = new DrawApp();
@@ -32,16 +38,14 @@ export default defineComponent({
       savedPokemon: new Array<Pokemon>,
     }
   },
-  mounted() {
+  mounted(): void {
     const canvasEl: HTMLElement = this.$refs[this.canvasRef] as HTMLElement;
     drawApp.intialize(canvasEl);
-    canvasEl.addEventListener('click', this.setupPokemonPicker);
     this.saveInitialPokemon();
     this.addSavedPokemonToCavvas();
   },
   methods: {
-    setupPokemonPicker(event: Event) {
-      const e = event as PointerEvent;
+    openPokemonPicker(event: Event): void {
       this.isPickerVisible = !this.isPickerVisible;
 
       this.$nextTick(() => {
@@ -50,32 +54,21 @@ export default defineComponent({
         }
 
         const pickerEl: HTMLElement = (this.$refs[this.pickerRef] as VueComponent).$el;
-        const pickerRect: DOMRect = pickerEl.getBoundingClientRect();
-
-        pickerEl.style.top = `${e.clientY}px`;
-        pickerEl.style.left = `${e.clientX}px`;
-
-        if (e.clientY + pickerRect.height > window.innerHeight) {
-          pickerEl.style.top = `${window.innerHeight - pickerRect.height}px`;
-        }
-
-        if (e.clientX + pickerRect.width > window.innerWidth) {
-          pickerEl.style.left = `${window.innerWidth - pickerRect.width}px`;
-        }
+        positionElementAtCursor(pickerEl, event as PointerEvent);
       });
     },
-    saveInitialPokemon() {
+    saveInitialPokemon(): void {
       for (let i = 0; i < pokemonDefaultAmount; i++) {
         const randomIndex: number = Math.floor(Math.random() * this.allPokemon.length);
         this.savedPokemon.push(this.allPokemon[randomIndex]);
       };
     },
-    addSavedPokemonToCavvas() {
+    addSavedPokemonToCavvas(): void {
       this.savedPokemon.forEach((pokemon: Pokemon) => {
         this.addPokemonToCanvas(pokemon.imgUrl);
       });
     },
-    addPokemonToCanvas(imgUrl: string) {
+    addPokemonToCanvas(imgUrl: string): void {
       const x = Math.floor(Math.random() * window.innerWidth) + 1;
       const y = Math.floor(Math.random() * window.innerHeight) + 1;
       drawApp.addPokemonToCanvas(imgUrl, {x, y});

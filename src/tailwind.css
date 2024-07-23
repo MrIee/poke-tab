@@ -14,3 +14,7 @@ html, body {
 body {
   @apply tw-relative;
 }
+
+.pokemon-sprite {
+  @apply tw-fixed;
+}
