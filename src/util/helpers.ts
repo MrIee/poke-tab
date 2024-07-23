@@ -1,18 +1,10 @@
-export const getDistinctValuesFromArrayOfObjects = (
-  array: Array<any>,
-  key: string
-): Array<string> => {
-  const unique: Array<any> = [];
-  const distinct: Array<any> = [];
+export const getRandomNumberInRange = (max: number, min: number): number => {
+  return Math.floor(Math.random() * (max + 1 - min) + min);
+}
 
-  for (let i = 0; i < array.length; i++) {
-    if (!unique[array[i][key]]) {
-      distinct.push(array[i][key]);
-      unique[array[i][key]] = 1;
-    }
-  }
-  return distinct;
-};
+export const degreesToRadians = (degrees: number): number => {
+  return degrees * (Math.PI / 180);
+}
 
 export const keepElementWithinScreen = (element: HTMLElement, elementLeft: number, elementTop: number): void => {
   const elRect: DOMRect = element.getBoundingClientRect();

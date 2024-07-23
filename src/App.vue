@@ -42,7 +42,7 @@ export default defineComponent({
     const canvasEl: HTMLElement = this.$refs[this.canvasRef] as HTMLElement;
     drawApp.intialize(canvasEl);
     this.saveInitialPokemon();
-    this.addSavedPokemonToCavvas();
+    this.addSavedPokemonToCanvas();
   },
   methods: {
     openPokemonPicker(event: Event): void {
@@ -63,7 +63,7 @@ export default defineComponent({
         this.savedPokemon.push(this.allPokemon[randomIndex]);
       };
     },
-    addSavedPokemonToCavvas(): void {
+    addSavedPokemonToCanvas(): void {
       this.savedPokemon.forEach((pokemon: Pokemon) => {
         this.addPokemonToCanvas(pokemon.imgUrl);
       });

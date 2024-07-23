@@ -1,17 +1,10 @@
+import { getRandomNumberInRange, degreesToRadians } from "./helpers";
 interface Coord {
   x: number,
   y: number,
 }
 
 const maxAngle: number = 360;
-
-const getRandomNumberInRange = (max: number, min: number) => {
-  return Math.random() * (max + 1 - min) + min;
-}
-
-const degreesToRadians = (degrees: number) => {
-  return degrees * (Math.PI / 180);
-}
 
 export class PokemonObject {
   position: Coord;
@@ -76,11 +69,11 @@ export class PokemonObject {
   }
 
   detectCollision(): void {
-    const minAngleDiscrepancy: number = -10;
-    const maxAngleDiscrepancy: number = 10;
+    const minAngleDiscrepancy: number = -15;
+    const maxAngleDiscrepancy: number = 15;
 
     const setOppositeVerticalAngle = (): void => {
-      this.angle = 180 * (Math.PI / 180) - this.angle + getRandomNumberInRange(maxAngleDiscrepancy, minAngleDiscrepancy);
+      this.angle = -this.angle + getRandomNumberInRange(maxAngleDiscrepancy, minAngleDiscrepancy);
     }
 
     const setOppositeHorizontalAngle = (): void => {
@@ -91,8 +84,8 @@ export class PokemonObject {
     };
 
     // Detect collision with top of screen
-    if (this.getY() < 0) {
-      this.img.style.top = '0px';
+    if (this.getY() < 1) {
+      this.img.style.top = '1px';
       setOppositeVerticalAngle();
     }
 
@@ -103,8 +96,8 @@ export class PokemonObject {
     }
 
     // Detect collision with left of screen
-    if (this.getX() < 0) {
-      this.img.style.left = '0px';
+    if (this.getX() < 1) {
+      this.img.style.left = '1px';
       setOppositeHorizontalAngle();
     }
 
@@ -148,8 +141,9 @@ export class DrawApp {
     this.objects.forEach((object: PokemonObject) => {
       object.detectCollision();
       object.setFacingAngle();
-      const x: number = object.speed * Math.cos(degreesToRadians(object.angle));
-      const y: number = object.speed * Math.sin(degreesToRadians(object.angle));
+
+      const x: number = Math.floor(object.speed * Math.cos(degreesToRadians(object.angle)));
+      const y: number = Math.floor(object.speed * Math.sin(degreesToRadians(object.angle)));
 
       object.incrementImgX(x);
       object.incrementImgY(y);
