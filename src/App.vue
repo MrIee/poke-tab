@@ -58,9 +58,18 @@ export default defineComponent({
       });
     },
     saveInitialPokemon(): void {
-      for (let i = 0; i < pokemonDefaultAmount; i++) {
+      const unique: Array<number> = [];
+      let i: number = 0;
+
+      while (i < pokemonDefaultAmount) {
         const randomIndex: number = Math.floor(Math.random() * this.allPokemon.length);
-        this.savedPokemon.push(this.allPokemon[randomIndex]);
+
+        if (unique.indexOf(randomIndex) === -1) {
+          this.savedPokemon.push(this.allPokemon[randomIndex]);
+          i++;
+        }
+
+        unique.push(randomIndex);
       };
     },
     addSavedPokemonToCanvas(): void {
