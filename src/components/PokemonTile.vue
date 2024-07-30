@@ -1,43 +1,46 @@
 <template>
-  <div class="tw-h-1/5 tw-w-1/6 tw-relative" v-click-outside="() => isOptionsVisible = false">
+  <div
+    :class="{
+      'tw-h-1/5 tw-w-1/6': true,
+      'tw-bg-blue-200': isSelected,
+    }"
+  >
     <img
       class="tw-cursor-pointer"
-      :src="pokemon.imgUrl"
-      :alt="pokemon.name"
-      @click="isOptionsVisible = !isOptionsVisible"
+      :src="imgUrl"
+      :alt="name"
+      @click="onSelect"
     />
-    <ul v-if="optionsEnabled && isOptionsVisible" class="tw-absolute tw-top-full tw-z-10">
-      <li><button class="btn-sm" @click="onRemove(pokemon.id)">Remove</button></li>
-    </ul>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { mapActions } from 'pinia'
-import { usePokemonStore } from '../store/pokemonStore';
 
 export default defineComponent({
   props: {
-    pokemon: {
-      type: Object,
-      default: () => ({}),
+    id: {
+      type: String,
+      default: '',
     },
-    optionsEnabled: {
-      type: Boolean,
-      default: false,
+    imgUrl: {
+      type: String,
+      default: '',
+    },
+    name: {
+      type: String,
+      default: '',
     },
   },
   data() {
     return {
-      isOptionsVisible: false,
+      isSelected: false,
     };
   },
   methods: {
-    ...mapActions(usePokemonStore, { setIdOfPokemonToRemove: 'setIdOfPokemonToRemove' }),
-    onRemove(id: string): void {
-      this.setIdOfPokemonToRemove(id);
-      this.isOptionsVisible = false;
+    onSelect(): void {
+      this.isSelected = !this.isSelected;
+      this.$emit('select', this.id);
     },
   },
 });

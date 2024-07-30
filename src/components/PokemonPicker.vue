@@ -1,28 +1,18 @@
 <template>
-  <div :ref="pickerRef" class="pokemon-picker">
-    <div class="tw-h-8 tw-flex tw-bg-sky-400 tw-relative">
-      <div :ref="dragBarRef" class="tw-w-full tw-cursor-grab active:tw-cursor-grabbing">
-        <DragIndicator class="tw-hidden sm:tw-block tw-opacity-40 tw-absolute -tw-translate-y-1/2 tw-top-1/2 tw-right-0 tw-left-0 tw-mx-auto" />
-      </div>
-      <div class="tw-flex tw-items-center tw-h-full tw-p-1 tw-ml-auto tw-cursor-pointer" @click="onClose">
-        <Cross class="tw-h-6 tw-w-6" />
-      </div>
-    </div>
-    <div>
-      <input
-        class="tw-w-full tw-py-1 tw-px-2 tw-border tw-border-gray-800"
-        type="text"
-        :placeholder="searchPlaceholderText"
-        v-model="searchText"
-      >
-      <Filter @filter="filterPokemonByType" />
-    </div>
-    <div class="tw-inline-block tw-h-full sm:tw-h-[550px] tw-overflow-auto">
+  <div class="pokemon-picker">
+    <input
+      class="tw-w-full tw-py-1 tw-px-2 tw-mb-3 tw-border tw-border-gray-800"
+      type="text"
+      :placeholder="searchPlaceholderText"
+      v-model="searchText"
+    >
+    <Filter @filter="filterPokemonByType" />
+    <div class="tw-inline-block tw-h-full tw-overflow-auto">
       <div
         class="pokemon-picker__sprite"
         v-for="(pokemon, key) in pokemonResults"
         :key="key"
-        @click="onAddPokemonToCanvas(pokemon.imgUrl)"
+        @click="onAddPokemonToCanvas(pokemon)"
       >
         <img class="-tw-mb-2.5" :src="pokemon.imgUrl" :alt="pokemon.name" loading="lazy" />
         <span class="tw-text-sm">{{ pokemon.name }}</span>
@@ -33,16 +23,13 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import DragIndicator from './icons/DragIndicator.vue';
-import Cross from './icons/Cross.vue';
+import { mapActions } from 'pinia';
+import { usePokemonStore } from '../store/pokemonStore';
 import Filter from './Filter.vue';
 import { type Pokemon } from '../util/interfaces';
-import { makeElementDraggable } from '../util/helpers';
 
 export default defineComponent({
   components: {
-    DragIndicator,
-    Cross,
     Filter,
   },
   props: {
@@ -53,8 +40,6 @@ export default defineComponent({
   },
   data() {
     return {
-      pickerRef: 'pickerRef',
-      dragBarRef: 'dragBarRef',
       pokemonResults: new Array<Pokemon>,
       searchPlaceholderText: 'Type a pokemon name here...',
       searchText: '',
@@ -77,22 +62,11 @@ export default defineComponent({
   mounted() {
     this.pokemonResults = this.pokemon;
     this.filteredPokemon = this.pokemon;
-    this.setupDragAndDrop();
   },
   methods: {
-    onClose(): void {
-      this.$emit('close');
-    },
-    setupDragAndDrop(): void {
-      const pickerEl: HTMLElement = this.$refs[this.pickerRef] as HTMLElement;
-      const dragBarEl: HTMLElement = this.$refs[this.dragBarRef] as HTMLElement;
-
-      if (pickerEl && dragBarEl) {
-        makeElementDraggable(pickerEl, dragBarEl);
-      }
-    },
-    onAddPokemonToCanvas(imgUrl: string): void {
-      this.$emit('addToCanvas', imgUrl);
+    ...mapActions(usePokemonStore, { setPokemonToAdd: 'setPokemonToAdd' }),
+    onAddPokemonToCanvas(pokemon: Pokemon): void {
+      this.setPokemonToAdd(pokemon);
     },
     filterPokemonByType(type: string): void {
       if (type) {
@@ -111,17 +85,17 @@ export default defineComponent({
 
 <style>
 .pokemon-picker {
-  @apply tw-fixed
-  tw-h-full
+  @apply tw-h-full
   tw-w-full
   sm:tw-h-auto
-  sm:tw-w-[403px]
+  sm:tw-w-full
   tw-flex
   tw-flex-col
   tw-border
   tw-border-gray-800
   tw-bg-white
-  tw-rounded-lg
+  tw-rounded-bl-lg
+  tw-rounded-br-lg
   tw-z-10;
 }
 
@@ -148,7 +122,7 @@ export default defineComponent({
 
 /* Fancy border hover effect */
 /* .pokemon-picker__sprite:hover {
-  box-shadow: inset 0 0 0 4px rgb(75, 85, 99);
+  box-shadow: inset 0 0 0 4px theme('colors.gray.800');
 }
 
 .pokemon-picker__sprite::before,

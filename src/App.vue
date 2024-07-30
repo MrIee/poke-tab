@@ -17,7 +17,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { mapState } from 'pinia';
+import { mapState, mapActions } from 'pinia';
 import { usePokemonStore } from './store/pokemonStore';
 import Options from './components/Options.vue';
 import { type VueComponent, type Pokemon, type PokemonBox, type DockedEvent } from './util/interfaces';
@@ -26,6 +26,7 @@ import { positionElementAtCursor, makeElementDraggable, makeElementDockable, app
 import { saveToLocal, loadFromLocal } from './util/localStorage';
 import { POKEMON_STORAGE_LIMIT, OPTIONS_DRAGBAR_ID, LOCAL_OPTIONS_DOCK } from './util/constants';
 import pokemonJSON from './assets/json/pokemon.json';
+import { v4 as uuidv4 } from 'uuid';
 
 let drawApp: DrawApp = new DrawApp();
 
@@ -46,15 +47,17 @@ export default defineComponent({
     };
   },
   computed: {
-    ...mapState(usePokemonStore, ['idOfPokemonToRemove'])
+    ...mapState(usePokemonStore, ['pokemonToAdd', 'pokemonIdsToRemove'])
   },
   watch: {
-    idOfPokemonToRemove(id) {
-      drawApp.removePokemonFromCanvas(id);
-      const index: number = this.savedPokemon[this.selectedBox].pokemon.findIndex((pokemon: Pokemon) => pokemon.id === id);
-
-      if (index > -1) {
-        this.savedPokemon[this.selectedBox].pokemon.splice(index, 1);
+    pokemonToAdd(pokemon: Pokemon): void {
+      if (pokemon) {
+        this.addPokemonToBox(pokemon);
+      }
+    },
+    pokemonIdsToRemove(ids: Array<string>): void {
+      if (ids.length > 0) {
+        this.removePokemonFromBox();
       }
     },
   },
@@ -66,6 +69,10 @@ export default defineComponent({
     this.addSavedPokemonToCanvas();
   },
   methods: {
+    ...mapActions(usePokemonStore, {
+      setPokemonToAdd: 'setPokemonToAdd',
+      setIdsOfPokemonToRemove: 'setIdsOfPokemonToRemove',
+    }),
     async openOptions(event: Event): Promise<void> {
       this.isOptionsVisible = !this.isOptionsVisible;
 
@@ -126,7 +133,7 @@ export default defineComponent({
     },
     addSavedPokemonToCanvas(loadFromIndex: number = 0): void {
       this.savedPokemon[loadFromIndex].pokemon.forEach((pokemon: Pokemon) => {
-        const pokemonObj = this.addPokemonToCanvas(pokemon.imgUrl);
+        const pokemonObj: PokemonObject = this.addPokemonToCanvas(pokemon.imgUrl);
         pokemon.id = pokemonObj.id;
       });
     },
@@ -137,6 +144,40 @@ export default defineComponent({
       const y = Math.floor(Math.random() * height) + 1;
       return drawApp.addPokemonToCanvas(imgUrl, {x, y});
     },
+    addPokemonToBox(pokemon: Pokemon): void {
+      let id: string = '';
+      const pokemonInBox: Array<Pokemon> = this.savedPokemon[this.selectedBox].pokemon;
+
+      if (pokemonInBox.length === POKEMON_STORAGE_LIMIT) {
+        drawApp.removePokemonFromCanvas(pokemonInBox[pokemonInBox.length - 1].id as string);
+        this.savedPokemon[this.selectedBox].pokemon.pop();
+      }
+
+      if (this.savedPokemon[this.selectedBox].default) {
+        id = this.addPokemonToCanvas(pokemon.imgUrl).id;
+      } else {
+        id = uuidv4();
+      }
+
+      this.savedPokemon[this.selectedBox].pokemon.unshift({ ...pokemon, id });
+      this.setPokemonToAdd(null);
+    },
+    removePokemonFromBox(): void {
+      this.pokemonIdsToRemove.forEach((id: string): void => {
+        const index: number =
+          this.savedPokemon[this.selectedBox].pokemon.findIndex((pokemon: Pokemon) => pokemon.id === id);
+
+        if (index > -1) {
+          this.savedPokemon[this.selectedBox].pokemon.splice(index, 1);
+        }
+
+        if (this.savedPokemon[this.selectedBox].default) {
+          drawApp.removePokemonFromCanvas(id);
+        }
+      });
+
+      this.setIdsOfPokemonToRemove([]);
+    }
   },
 });
 </script>

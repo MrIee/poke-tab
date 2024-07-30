@@ -19,12 +19,32 @@ button {
   @apply tw-px-3 tw-py-1 tw-text-white tw-bg-blue-400 tw-rounded-md tw-border tw-border-gray-800;
 }
 
+button:disabled {
+  @apply tw-opacity-50;
+}
+
+button.alert {
+  @apply tw-bg-red-600;
+}
+
 button.btn-sm {
   @apply tw-px-2 tw-text-sm;
 }
 
 button:hover {
   @apply tw-bg-sky-700;
+}
+
+button:disabled:hover {
+  @apply tw-bg-blue-400;
+}
+
+button.alert:hover {
+  @apply tw-bg-red-800;
+}
+
+button.alert:disabled:hover {
+  @apply tw-bg-red-600;
 }
 
 .pokemon-sprite {
