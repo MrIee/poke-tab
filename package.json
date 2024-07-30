@@ -9,11 +9,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "pinia": "^2.1.7",
+    "lodash.throttle": "^4.1.1",
+    "pinia": "^2.2.0",
+    "uuid": "^10.0.0",
     "vue": "^3.4.29"
   },
   "devDependencies": {
+    "@types/chrome": "^0.0.269",
+    "@types/lodash.throttle": "^4.1.9",
     "@types/node": "^20.14.11",
+    "@types/uuid": "^10.0.0",
     "@vitejs/plugin-vue": "^5.0.5",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.39",

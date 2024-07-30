@@ -9,8 +9,18 @@ export interface CanvasObject {
 }
 
 export interface Pokemon {
+  id?: string;
   name: string;
   imgUrl: string;
   type: Array<string>;
   generation: 1;
 }
+
+export interface PokemonBox {
+  pokemon: Array<Pokemon>;
+  default: boolean;
+}
+export interface DockedEvent {
+  docked: boolean;
+  side: string;
+};

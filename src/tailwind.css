@@ -15,6 +15,18 @@ body {
   @apply tw-relative;
 }
 
+button {
+  @apply tw-px-3 tw-py-1 tw-text-white tw-bg-blue-400 tw-rounded-md tw-border tw-border-gray-800;
+}
+
+button.btn-sm {
+  @apply tw-px-2 tw-text-sm;
+}
+
+button:hover {
+  @apply tw-bg-sky-700;
+}
+
 .pokemon-sprite {
   @apply tw-fixed;
 }

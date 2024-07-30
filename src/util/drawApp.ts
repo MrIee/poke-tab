@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import { getRandomNumberInRange, degreesToRadians } from "./helpers";
 interface Coord {
   x: number,
@@ -14,6 +15,7 @@ export class PokemonObject {
   img: HTMLImageElement;
   angle: number;
   className: string;
+  id: string;
 
   constructor({
     position = { x: 0, y: 0 },
@@ -21,6 +23,7 @@ export class PokemonObject {
     speed = 5,
     angle = 0,
   }, className = 'pokemon-sprite') {
+    this.id = uuidv4();
     this.className = className;
     this.position = position;
     this.prevPosition = position;
@@ -31,6 +34,7 @@ export class PokemonObject {
   }
 
   draw(): void {
+    this.img.id = this.id;
     this.img.src = this.src;
     this.img.classList.add(this.className);
     this.img.style.top = `${this.position.y}px`;
@@ -68,7 +72,8 @@ export class PokemonObject {
     }
   }
 
-  detectCollision(): void {
+  detectCollision(canvas: HTMLElement): void {
+    const canvasRect: DOMRect = canvas.getBoundingClientRect();
     const minAngleDiscrepancy: number = -15;
     const maxAngleDiscrepancy: number = 15;
 
@@ -89,40 +94,36 @@ export class PokemonObject {
       setOppositeVerticalAngle();
     }
 
+    // Detect collision with right of screen
+    if (this.getX() + this.img.width > canvas.offsetWidth) {
+      this.img.style.left = `${canvas.offsetWidth - this.img.width}px`;
+      setOppositeHorizontalAngle();
+    }
+
     // Detect collision with bottom of screen
-    if (this.getY() + this.img.height > window.innerHeight) {
-      this.img.style.top = `${window.innerHeight - this.img.height}px`;
+    if (this.getY() + this.img.height > canvas.offsetHeight) {
+      this.img.style.top = `${canvas.offsetHeight - this.img.height}px`;
       setOppositeVerticalAngle();
     }
 
     // Detect collision with left of screen
-    if (this.getX() < 1) {
-      this.img.style.left = '1px';
-      setOppositeHorizontalAngle();
-    }
-
-    // Detect collision with right of screen
-    if (this.getX() + this.img.width > window.innerWidth) {
-      this.img.style.left = `${window.innerWidth - this.img.width}px`;
+    if (this.getX() < canvasRect.left + 1) {
+      this.img.style.left = canvasRect.left + 'px';
       setOppositeHorizontalAngle();
     }
   }
 };
 
 export class DrawApp {
-  height: number;
-  width: number;
-  canvas: Element | null;
-  objects: Array<PokemonObject>;
+  canvas: HTMLElement | null;
+  pokemon: Array<PokemonObject>;
 
   constructor() {
-    this.width = window.innerWidth;
-    this.height = window.innerHeight;
-    this.objects = [];
+    this.pokemon = [];
     this.canvas = null;
   };
 
-  intialize(el: Element | null): void {
+  intialize(el: HTMLElement | null): void {
     this.canvas = el;
     this.animate();
   }
@@ -130,16 +131,25 @@ export class DrawApp {
   addPokemonToCanvas(imgSrc: string, position: Coord): PokemonObject {
     const pokemonObj = new PokemonObject({position, src: imgSrc});
     this.canvas?.appendChild(pokemonObj.img);
-    this.objects.push(pokemonObj);
+    this.pokemon.push(pokemonObj);
     pokemonObj.draw();
     return pokemonObj;
+  }
+
+  removePokemonFromCanvas(id: string) {
+    const index = this.pokemon.findIndex((pokemon: PokemonObject): boolean => pokemon.id === id);
+
+    if (index > -1) {
+      this.pokemon[index].img.remove();
+      this.pokemon.splice(index, 1);
+    }
   }
 
   animate(): void {
     setTimeout(() => this.animate(), 20);
 
-    this.objects.forEach((object: PokemonObject) => {
-      object.detectCollision();
+    this.pokemon.forEach((object: PokemonObject) => {
+      object.detectCollision(this.canvas as HTMLElement);
       object.setFacingAngle();
 
       const x: number = Math.floor(object.speed * Math.cos(degreesToRadians(object.angle)));

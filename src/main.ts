@@ -1,3 +1,4 @@
+import { createPinia } from 'pinia';
 import { createApp } from 'vue';
 import App from './App.vue';
 import './tailwind.css';
@@ -16,5 +17,5 @@ app.directive('click-outside', {
     document.body.removeEventListener('click', el.clickOutsideEvent);
   }
 });
-
+app.use(createPinia());
 app.mount('#app');

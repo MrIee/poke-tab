@@ -37,7 +37,7 @@ import DragIndicator from './icons/DragIndicator.vue';
 import Cross from './icons/Cross.vue';
 import Filter from './Filter.vue';
 import { type Pokemon } from '../util/interfaces';
-import {makeElementDraggable } from '../util/helpers';
+import { makeElementDraggable } from '../util/helpers';
 
 export default defineComponent({
   components: {
@@ -48,11 +48,11 @@ export default defineComponent({
   props: {
     pokemon: {
       type: Array<Pokemon>,
-        default: () => [],
-      },
+      default: () => [],
     },
-    data() {
-      return {
+  },
+  data() {
+    return {
       pickerRef: 'pickerRef',
       dragBarRef: 'dragBarRef',
       pokemonResults: new Array<Pokemon>,

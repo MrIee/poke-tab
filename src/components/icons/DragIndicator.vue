@@ -2,7 +2,7 @@
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    fill="#000000"
+    fill="#ffffff"
     width="16px"
     height="10px"
     viewBox="0.23 0.13 20 12"

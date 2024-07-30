@@ -1,3 +1,11 @@
+import throttle from "lodash.throttle";
+import { DockedEvent } from './interfaces';
+
+interface DockableElementOptions {
+  handleElement: HTMLElement | null;
+  backgroundElement?: HTMLElement | null;
+};
+
 export const getRandomNumberInRange = (max: number, min: number): number => {
   return Math.floor(Math.random() * (max + 1 - min) + min);
 }
@@ -48,7 +56,7 @@ export const makeElementDraggable = (draggableElement: HTMLElement, handleElemen
   let clientX: number = 0;
   let clientY: number = 0;
 
-  const drag = (event: Event): void => {
+  const drag = throttle((event: Event): void => {
     if (event instanceof MouseEvent) {
       const e = event as MouseEvent;
       e.preventDefault();
@@ -78,16 +86,16 @@ export const makeElementDraggable = (draggableElement: HTMLElement, handleElemen
         const e = event as TouchEvent;
         moveAt(Math.floor(e.touches[0].clientX), Math.floor(e.touches[0].clientY));
       }
-    }
+    };
 
-    const onMouseUp = (): void => {
+    const onMouseUp = throttle((): void => {
       removeListenerFromEvents(document, ['mousemove', 'touchmove'], onMouseMove);
       removeListenerFromEvents(handleEl, ['mouseup', 'touchend'], onMouseUp);
-    }
+    }, 100);
 
     addListenerToEvents(document, ['mousemove', 'touchmove'], onMouseMove);
     addListenerToEvents(handleEl, ['mouseup', 'touchend'], onMouseUp);
-  }
+  }, 100);
 
   removeListenerFromEvents(handleEl, ['mousedown', 'touchstart'], drag);
   addListenerToEvents(handleEl, ['mousedown', 'touchstart'], drag);
@@ -106,4 +114,94 @@ export const positionElementAtCursor = (el: HTMLElement, event: PointerEvent): v
   if (event.clientX + pickerRect.width > window.innerWidth) {
     el.style.left = `${window.innerWidth - pickerRect.width}px`;
   }
-}
+};
+
+export const makeElementDockable = (dockableElement: HTMLElement, options: DockableElementOptions = {
+  handleElement: null,
+  backgroundElement: null,
+}): void => {
+  const dockableEl: HTMLElement = dockableElement;
+  const handleEl: HTMLElement = options.handleElement || dockableEl;
+  let undockedEvent = new CustomEvent('undocked');
+  let dockedEvent = new CustomEvent('docked');
+  let elementDockedEvent: DockedEvent = {} as DockedEvent;
+
+  const dockOnMouseUp = throttle(() => {
+    const event = new Event('mouseup');
+    handleEl.dispatchEvent(event);
+
+    if (elementDockedEvent.docked) {
+      dockableElement.dispatchEvent(dockedEvent);
+    } else {
+      dockableElement.dispatchEvent(undockedEvent);
+    }
+  }, 100);
+
+  const dockElement = throttle((): void => {
+    elementDockedEvent = dockElementIfTouchingSide(dockableEl, options.backgroundElement as HTMLElement);
+    dockedEvent = new CustomEvent('docked', { detail: elementDockedEvent });
+    undockedEvent = new CustomEvent('undocked', { detail: elementDockedEvent });
+  }, 100);
+
+  removeListenerFromEvents(handleEl, ['mousemove', 'touchmove'], dockElement);
+  removeListenerFromEvents(dockableEl, ['mousemove', 'touchmove'], dockElement);
+  removeListenerFromEvents(dockableEl, ['mouseup', 'touchend'], dockOnMouseUp);
+
+  addListenerToEvents(handleEl, ['mousemove', 'touchmove'], dockElement);
+  addListenerToEvents(dockableEl, ['mousemove', 'touchmove'], dockElement);
+  addListenerToEvents(dockableEl, ['mouseup', 'touchend'], dockOnMouseUp);
+};
+
+export const applyDockedStyles = (dockedElement: HTMLElement, backgroundElement: HTMLElement, side: string): void => {
+  dockedElement.style.top = '0px';
+
+  if (side === 'left') {
+    dockedElement.style.height = '100%';
+    dockedElement.style.left = '0px';
+    backgroundElement.style.left = dockedElement.offsetWidth + `px`;
+  } else {
+    dockedElement.style.height = '100%';
+    dockedElement.style.left = window.innerWidth - dockedElement.offsetWidth + 'px';
+    backgroundElement.style.width = window.innerWidth - dockedElement.offsetWidth + `px`;
+  }
+};
+
+export const removeDockedStyles = (dockableElement: HTMLElement, backgroundElement: HTMLElement): void => {
+  dockableElement.style.height = 'auto';
+  backgroundElement.style.width = 'auto';
+  backgroundElement.style.left = '0px';
+};
+
+export const dockElementIfTouchingSide = (dockableElement: HTMLElement, backgroundElement: HTMLElement): DockedEvent => {
+  const elRect: DOMRect = dockableElement.getBoundingClientRect();
+  const isTouchingLeftSideOfScreen: boolean = elRect.left <= 0;
+  const isElTouchingRightSideOfScreen: boolean = elRect.left + elRect.width >= window.innerWidth;
+  let isDocked: boolean = false;
+  let dockedSide: string = '';
+
+  if (isTouchingLeftSideOfScreen) {
+    applyDockedStyles(dockableElement, backgroundElement, 'left');
+    isDocked = true;
+    dockedSide = 'left';
+  } else if (!isElTouchingRightSideOfScreen) {
+    removeDockedStyles(dockableElement, backgroundElement);
+    isDocked = false;
+    dockedSide = '';
+  }
+
+  if (isElTouchingRightSideOfScreen) {
+    applyDockedStyles(dockableElement, backgroundElement, 'right');
+    isDocked = true;
+    dockedSide = 'right';
+  } else if (!isTouchingLeftSideOfScreen) {
+    removeDockedStyles(dockableElement, backgroundElement);
+    isDocked = false;
+    dockedSide = '';
+  }
+
+  return {
+    docked: isDocked,
+    side: dockedSide,
+  };
+};
+
