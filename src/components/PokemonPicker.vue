@@ -1,21 +1,25 @@
 <template>
   <div class="pokemon-picker">
-    <input
-      class="tw-w-full tw-py-1 tw-px-2 tw-mb-3 tw-border tw-border-gray-800"
-      type="text"
-      :placeholder="searchPlaceholderText"
-      v-model="searchText"
-    >
-    <TypeFilter @filter="filterPokemonByType" />
-    <div class="tw-inline-block tw-h-full tw-overflow-auto">
-      <div
-        class="pokemon-picker__sprite"
-        v-for="(pokemon, key) in pokemonResults"
-        :key="key"
-        @click="onAddPokemonToCanvas(pokemon)"
+    <div class="tw-p-3">
+      <input
+        class="tw-w-full tw-py-1 tw-px-2 tw-mb-1 tw-border tw-border-gray-800"
+        type="text"
+        :placeholder="searchPlaceholderText"
+        v-model="searchText"
       >
-        <img class="-tw-mb-2.5" :src="pokemon.imgUrl" :alt="pokemon.name" loading="lazy" />
-        <span class="tw-text-sm">{{ pokemon.name }}</span>
+      <TypeFilter @filter="filterPokemonByType" />
+    </div>
+    <div class="tw-h-full tw-flex tw-justify-center tw-overflow-auto">
+      <div class="tw-inline-block tw-h-full tw-w-72 xs:tw-w-full">
+        <div
+          class="pokemon-picker__sprite"
+          v-for="(pokemon, key) in pokemonResults"
+          :key="key"
+          @click="onAddPokemonToCanvas(pokemon)"
+        >
+          <img class="-tw-mb-2.5" :src="pokemon.imgUrl" :alt="pokemon.name" loading="lazy" />
+          <span class="tw-text-sm">{{ pokemon.name }}</span>
+        </div>
       </div>
     </div>
   </div>
@@ -100,9 +104,7 @@ export default defineComponent({
   tw-w-24
   tw-text-center
   tw-cursor-pointer
-  tw-rounded-lg
-  tw-relative
-  tw-z-10;
+  tw-rounded-lg;
 }
 
 /* Pokeball hover effect */
