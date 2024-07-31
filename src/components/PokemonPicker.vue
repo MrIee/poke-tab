@@ -6,7 +6,7 @@
       :placeholder="searchPlaceholderText"
       v-model="searchText"
     >
-    <Filter @filter="filterPokemonByType" />
+    <TypeFilter @filter="filterPokemonByType" />
     <div class="tw-inline-block tw-h-full tw-overflow-auto">
       <div
         class="pokemon-picker__sprite"
@@ -23,20 +23,14 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { mapActions } from 'pinia';
+import { mapState, mapActions } from 'pinia';
 import { usePokemonStore } from '../store/pokemonStore';
-import Filter from './Filter.vue';
+import TypeFilter from './TypeFilter.vue';
 import { type Pokemon } from '../util/interfaces';
 
 export default defineComponent({
   components: {
-    Filter,
-  },
-  props: {
-    pokemon: {
-      type: Array<Pokemon>,
-      default: () => [],
-    },
+    TypeFilter,
   },
   data() {
     return {
@@ -45,6 +39,9 @@ export default defineComponent({
       searchText: '',
       filteredPokemon: new Array<Pokemon>,
     };
+  },
+  computed: {
+    ...mapState(usePokemonStore, ['allPokemon']),
   },
   watch: {
     searchText(text: string): void {
@@ -60,8 +57,8 @@ export default defineComponent({
     },
   },
   mounted() {
-    this.pokemonResults = this.pokemon;
-    this.filteredPokemon = this.pokemon;
+    this.pokemonResults = this.allPokemon;
+    this.filteredPokemon = this.allPokemon;
   },
   methods: {
     ...mapActions(usePokemonStore, { setPokemonToAdd: 'setPokemonToAdd' }),
@@ -70,12 +67,12 @@ export default defineComponent({
     },
     filterPokemonByType(type: string): void {
       if (type) {
-        this.pokemonResults = this.pokemon.filter((pokemon: Pokemon): boolean => {
+        this.pokemonResults = this.allPokemon.filter((pokemon: Pokemon): boolean => {
           return pokemon.type.some((t: string) => t === type);
         });
         this.filteredPokemon = this.pokemonResults;
       } else {
-        this.filteredPokemon = this.pokemon;
+        this.filteredPokemon = this.allPokemon;
         this.pokemonResults = this.filteredPokemon;
       }
     },
@@ -91,12 +88,9 @@ export default defineComponent({
   sm:tw-w-full
   tw-flex
   tw-flex-col
-  tw-border
-  tw-border-gray-800
   tw-bg-white
   tw-rounded-bl-lg
-  tw-rounded-br-lg
-  tw-z-10;
+  tw-rounded-br-lg;
 }
 
 .pokemon-picker__sprite {

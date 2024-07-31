@@ -8,7 +8,6 @@
   <Options
     v-if="isOptionsVisible"
     :ref="optionsRef"
-    :pokemon="allPokemon"
     :saved-pokemon="savedPokemon"
     @close="closeOptions"
     @selectBox="selectedBox = $event"
@@ -22,10 +21,16 @@ import { usePokemonStore } from './store/pokemonStore';
 import Options from './components/Options.vue';
 import { type VueComponent, type Pokemon, type PokemonBox, type DockedEvent } from './util/interfaces';
 import { PokemonObject, DrawApp } from './util/drawApp';
-import { positionElementAtCursor, makeElementDraggable, makeElementDockable, applyDockedStyles, removeDockedStyles } from './util/helpers';
+import {
+  getUniqueRandomItems,
+  positionElementAtCursor,
+  makeElementDraggable,
+  makeElementDockable,
+  applyDockedStyles,
+  removeDockedStyles,
+} from './util/helpers';
 import { saveToLocal, loadFromLocal } from './util/localStorage';
 import { POKEMON_STORAGE_LIMIT, OPTIONS_DRAGBAR_ID, LOCAL_OPTIONS_DOCK } from './util/constants';
-import pokemonJSON from './assets/json/pokemon.json';
 import { v4 as uuidv4 } from 'uuid';
 
 let drawApp: DrawApp = new DrawApp();
@@ -41,15 +46,26 @@ export default defineComponent({
       optionsRef: 'optionsRef',
       canvasRef: 'canvasRef',
       isOptionsVisible: false,
-      allPokemon: pokemonJSON as Array<Pokemon>,
       savedPokemon: new Array<PokemonBox>,
       selectedBox: 0,
     };
   },
   computed: {
-    ...mapState(usePokemonStore, ['pokemonToAdd', 'pokemonIdsToRemove'])
+    ...mapState(usePokemonStore, [
+      'allPokemon',
+      'pokemonToAdd',
+      'pokemonIdsToRemove',
+      'randomizeBoxId',
+      'shouldRandomizeBox',
+      'defaultBoxId',
+    ]),
   },
   watch: {
+    defaultBoxId(id: number, prevId: number): void {
+      if (id >= 0) {
+        this.usePokemonBox(id, prevId);
+      }
+    },
     pokemonToAdd(pokemon: Pokemon): void {
       if (pokemon) {
         this.addPokemonToBox(pokemon);
@@ -58,6 +74,11 @@ export default defineComponent({
     pokemonIdsToRemove(ids: Array<string>): void {
       if (ids.length > 0) {
         this.removePokemonFromBox();
+      }
+    },
+    shouldRandomizeBox(): void {
+      if (this.randomizeBoxId >= 0) {
+        this.randomizeBox();
       }
     },
   },
@@ -72,6 +93,7 @@ export default defineComponent({
     ...mapActions(usePokemonStore, {
       setPokemonToAdd: 'setPokemonToAdd',
       setIdsOfPokemonToRemove: 'setIdsOfPokemonToRemove',
+      setRandomizeBox: 'setRandomizeBox,'
     }),
     async openOptions(event: Event): Promise<void> {
       this.isOptionsVisible = !this.isOptionsVisible;
@@ -116,20 +138,8 @@ export default defineComponent({
       }
     },
     saveRandomPokemon(saveToIndex: number = 0, isDefault: boolean = false): void {
-      const unique: Array<number> = [];
-      let i: number = 0;
-
-      while (i < POKEMON_STORAGE_LIMIT) {
-        const randomIndex: number = Math.floor(Math.random() * this.allPokemon.length);
-
-        if (unique.indexOf(randomIndex) === -1) {
-          this.savedPokemon[saveToIndex].pokemon.push(this.allPokemon[randomIndex]);
-          this.savedPokemon[saveToIndex].default = isDefault;
-          i++;
-        }
-
-        unique.push(randomIndex);
-      };
+      this.savedPokemon[saveToIndex].default = isDefault;
+      this.savedPokemon[saveToIndex].pokemon = getUniqueRandomItems(this.allPokemon, POKEMON_STORAGE_LIMIT);
     },
     addSavedPokemonToCanvas(loadFromIndex: number = 0): void {
       this.savedPokemon[loadFromIndex].pokemon.forEach((pokemon: Pokemon) => {
@@ -177,6 +187,19 @@ export default defineComponent({
       });
 
       this.setIdsOfPokemonToRemove([]);
+    },
+    randomizeBox() {
+      const id: number = this.randomizeBoxId;
+      this.savedPokemon[id].pokemon = [];
+      drawApp.removeAllPokemonFromCanvas();
+      this.saveRandomPokemon(id, this.savedPokemon[id].default);
+      this.addSavedPokemonToCanvas(id);
+    },
+    usePokemonBox(boxId: number, prevBoxId: number): void {
+      this.savedPokemon[prevBoxId].default = false;
+      this.savedPokemon[boxId].default = true;
+      drawApp.removeAllPokemonFromCanvas();
+      this.addSavedPokemonToCanvas(boxId);
     }
   },
 });

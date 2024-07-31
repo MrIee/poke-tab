@@ -28,6 +28,7 @@
           </select>
         </div>
         <PokemonBox
+          :id="selectedBoxId"
           :default="savedPokemon[selectedBoxId].default"
           :pokemon="savedPokemon[selectedBoxId].pokemon"
           @add="openPicker"
@@ -41,7 +42,7 @@
         </span>
         <span class="tw-w-full tw-text-center tw-text-white">{{ tabTitle }}</span>
       </div>
-      <PokemonPicker v-if="isPickerVisible" class="tw-h-[calc(100%-64px)]" :pokemon="pokemon" />
+      <PokemonPicker v-if="isPickerVisible" class="tw-h-[calc(100%-64px)]" />
     </div>
   </div>
 </template>
@@ -53,7 +54,7 @@ import Cross from './icons/Cross.vue';
 import Chevron from './icons/Chevron.vue';
 import PokemonBoxComponent from './PokemonBox.vue';
 import PokemonPicker from './PokemonPicker.vue';
-import { type Pokemon, type PokemonBox } from '../util/interfaces';
+import { type PokemonBox } from '../util/interfaces';
 import { OPTIONS_DRAGBAR_ID } from '../util/constants';
 
 export default defineComponent({
@@ -65,10 +66,6 @@ export default defineComponent({
     PokemonPicker,
   },
   props: {
-    pokemon: {
-      type: Array<Pokemon>,
-      default: () => [],
-    },
     savedPokemon: {
       type: Array<PokemonBox>,
       default: () => [],
@@ -94,7 +91,7 @@ export default defineComponent({
       this.$emit('close');
     },
     openPicker(): void {
-      this.tabTitle = 'Pokemon Picker'
+      this.tabTitle = 'Pokemon Picker';
       this.isTabVisible = true;
       this.isPickerVisible = true;
     },

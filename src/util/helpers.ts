@@ -14,6 +14,26 @@ export const degreesToRadians = (degrees: number): number => {
   return degrees * (Math.PI / 180);
 }
 
+export const getUniqueRandomItems = (array: Array<any>, numberOfItems: number): Array<any> => {
+  const uniqueArray: Array<any> = [];
+  const size = numberOfItems || array.length;
+  const unique: Array<number> = [];
+  let i: number = 0;
+
+  while (i < size) {
+    const randomIndex: number = Math.floor(Math.random() * array.length);
+
+    if (unique.indexOf(randomIndex) === -1) {
+      uniqueArray.push(array[randomIndex]);
+      i++;
+    }
+
+    unique.push(randomIndex);
+  };
+
+  return uniqueArray;
+};
+
 export const keepElementWithinScreen = (element: HTMLElement, elementLeft: number, elementTop: number): void => {
   const elRect: DOMRect = element.getBoundingClientRect();
 

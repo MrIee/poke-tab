@@ -1,7 +1,7 @@
 <template>
   <ul class="tw-text-center">
     <li class="tw-inline-block">
-      <button class="filter__button" @click="onClickFilter(null)">All</button>
+      <button class="filter__button hover:tw-bg-black" @click="onClickFilter(null)">All</button>
     </li>
     <li class="tw-inline-block" v-for="(type, key) in types" :key="key">
       <button :class="{['filter__button ' + type]: true}" @click="onClickFilter(type)">

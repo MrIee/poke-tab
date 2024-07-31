@@ -145,6 +145,14 @@ export class DrawApp {
     }
   }
 
+  removeAllPokemonFromCanvas() {
+    this.pokemon.forEach((pokemon: PokemonObject): void => {
+      pokemon.img.remove();
+    });
+
+    this.pokemon = [];
+  }
+
   animate(): void {
     setTimeout(() => this.animate(), 20);
 
