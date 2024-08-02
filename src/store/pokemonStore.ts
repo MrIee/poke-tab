@@ -11,6 +11,7 @@ export const usePokemonStore: StoreDefinition = defineStore('pokemonStore', {
     randomizeBoxId: -1,
     shouldRandomizeBox: 0,
     defaultBoxId: 0,
+    isRandomOnStartUp: false,
   }),
   actions: {
     setPokemonToAdd(pokemon: Pokemon | null): void {
@@ -25,6 +26,9 @@ export const usePokemonStore: StoreDefinition = defineStore('pokemonStore', {
     },
     setDefaultBoxId(id: number): void {
       this.defaultBoxId = id;
+    },
+    setAlwaysRandom(isRandom: boolean): void {
+      this.isRandomOnStartUp = isRandom;
     },
   },
 });

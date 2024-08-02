@@ -7,8 +7,10 @@
     <button class="tw-w-full tw-mb-2" :disabled="defaultBoxId === id" @click="onUse">Use Box</button>
     <div class="tw-h-60 tw-w-72 tw-flex tw-flex-wrap tw-content-start tw-mb-2 tw-rounded tw-border-2 tw-border-gray-800 tw-box-content">
       <PokemonTile
+        class="tw-max-h-12 tw-max-w-12"
         v-for="pokemon in pokemon"
         :key="pokemon.id"
+        selectable
         :id="pokemon.id"
         :img-url="pokemon.imgUrl"
         :name="pokemon.name"

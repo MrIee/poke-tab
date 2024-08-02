@@ -16,6 +16,12 @@
     </div>
     <div class="tw-h-full sm:tw-h-[650px] tw-p-3 tw-overflow-auto">
       <p class="tw-mb-3">
+        <label class="tw-cursor-pointer" for="randomizeOnNewTab">
+          <input id="randomizeOnNewTab" class="tw-mr-2" type="checkbox" v-model="isRandom" />
+          <span>Always random on new tab</span>
+        </label>
+      </p>
+      <p class="tw-mb-3">
         You may store up to 10 sets of pokemon to use in your new tab(s).
       </p>
       <div>
@@ -44,11 +50,14 @@
       </div>
       <PokemonPicker v-if="isPickerVisible" class="tw-h-[calc(100%-64px)]" />
     </div>
+    <button class="tw-mt-auto tw-m-3" @click="onSave">Save Settings</button>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { mapState, mapActions } from 'pinia';
+import { usePokemonStore } from '../store/pokemonStore';
 import DragIndicator from './icons/DragIndicator.vue';
 import Cross from './icons/Cross.vue';
 import Chevron from './icons/Chevron.vue';
@@ -75,18 +84,30 @@ export default defineComponent({
     return {
       title: 'Options',
       selectedBoxId: 0,
+      isRandom: false,
       dragBarId: OPTIONS_DRAGBAR_ID,
       isPickerVisible: false,
       isTabVisible: false,
       tabTitle: '',
     };
   },
+  computed: {
+    ...mapState(usePokemonStore, ['defaultBoxId', 'isRandomOnStartUp']),
+  },
   watch: {
+    isRandomOnStartUp(isRandom: boolean): void {
+      this.setAlwaysRandom(isRandom);
+    },
     selectedBoxId(id: number): void {
       this.$emit('selectBox', id);
     },
   },
+  mounted(): void {
+    this.selectedBoxId = this.defaultBoxId;
+    this.isRandom = this.isRandomOnStartUp;
+  },
   methods: {
+    ...mapActions(usePokemonStore, { setAlwaysRandom: 'setAlwaysRandom' }),
     onClose(): void {
       this.$emit('close');
     },
@@ -98,6 +119,9 @@ export default defineComponent({
     closePicker(): void {
       this.isTabVisible = false;
       this.isPickerVisible = false;
+    },
+    onSave(): void {
+      this.$emit('save');
     },
   },
 });

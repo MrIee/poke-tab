@@ -1,6 +1,6 @@
 <template>
   <div class="pokemon-picker">
-    <div class="tw-p-3">
+    <div class="tw-p-3 tw-pb-0">
       <input
         class="tw-w-full tw-py-1 tw-px-2 tw-mb-1 tw-border tw-border-gray-800"
         type="text"
@@ -11,15 +11,14 @@
     </div>
     <div class="tw-h-full tw-flex tw-justify-center tw-overflow-auto">
       <div class="tw-inline-block tw-h-full tw-w-72 xs:tw-w-full">
-        <div
-          class="pokemon-picker__sprite"
+        <PokemonTile
           v-for="(pokemon, key) in pokemonResults"
           :key="key"
+          :img-url="pokemon.imgUrl"
+          :name="pokemon.name"
+          :label="pokemon.name"
           @click="onAddPokemonToCanvas(pokemon)"
-        >
-          <img class="-tw-mb-2.5" :src="pokemon.imgUrl" :alt="pokemon.name" loading="lazy" />
-          <span class="tw-text-sm">{{ pokemon.name }}</span>
-        </div>
+        />
       </div>
     </div>
   </div>
@@ -30,11 +29,13 @@ import { defineComponent } from 'vue';
 import { mapState, mapActions } from 'pinia';
 import { usePokemonStore } from '../store/pokemonStore';
 import TypeFilter from './TypeFilter.vue';
+import PokemonTile from './PokemonTile.vue';
 import { type Pokemon } from '../util/interfaces';
 
 export default defineComponent({
   components: {
     TypeFilter,
+    PokemonTile,
   },
   data() {
     return {
@@ -96,43 +97,4 @@ export default defineComponent({
   tw-rounded-bl-lg
   tw-rounded-br-lg;
 }
-
-.pokemon-picker__sprite {
-  @apply
-  tw-inline-block
-  tw-h-24
-  tw-w-24
-  tw-text-center
-  tw-cursor-pointer
-  tw-rounded-lg;
-}
-
-/* Pokeball hover effect */
-/* .pokemon-picker__sprite::before {
-  content: '';
-  background-image: url(../assets//images/pokeball.png);
-
-  @apply tw-h-full tw-w-full tw-absolute tw-top-0 tw-left-0 tw-opacity-0 hover:tw-opacity-20 -tw-z-10;
-} */
-
-
-/* Fancy border hover effect */
-/* .pokemon-picker__sprite:hover {
-  box-shadow: inset 0 0 0 4px theme('colors.gray.800');
-}
-
-.pokemon-picker__sprite::before,
-.pokemon-picker__sprite::after {
-  content: '';
-
-  @apply tw-absolute -tw-z-10;
-}
-
-.pokemon-picker__sprite::before:hover {
-  @apply tw-w-1/2 tw-h-full tw-bg-white tw-left-1/4;
-}
-
-.pokemon-picker__sprite::after:hover {
-  @apply tw-h-1/2 tw-w-full tw-bg-white tw-top-1/4;
-} */
 </style>
