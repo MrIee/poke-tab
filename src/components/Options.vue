@@ -8,40 +8,59 @@
       </div>
       <div class="tw-flex tw-justify-center tw-items-center tw-relative tw-pointer-events-none">
         <DragIndicator class="tw-hidden sm:tw-block tw-absolute -tw-translate-y-1/2 tw-top-1/2 -tw-left-7" />
-        <strong>{{ title }}</strong>
+        <strong>Options</strong>
       </div>
       <div class="tw-flex tw-items-center tw-h-full tw-p-1 tw-cursor-pointer tw-absolute tw-right-0" @click="onClose">
         <Cross class="tw-h-6 tw-w-6" />
       </div>
     </div>
+    <div class="tw-flex">
+      <span
+        :class="{
+          'options__tab': true,
+          'active': activeTab === tabPokemon,
+        }"
+        @click="activeTab = tabPokemon"
+        >
+        Pokemon
+      </span>
+      <span
+        :class="{
+          'options__tab': true,
+          'active': activeTab === tabSettings,
+        }"
+        @click="activeTab = tabSettings"
+        >
+        Settings
+      </span>
+    </div>
     <div class="tw-h-full sm:tw-h-[650px] tw-p-3 tw-overflow-auto">
-      <p class="tw-mb-3">
-        <label class="tw-cursor-pointer" for="randomizeOnNewTab">
-          <input id="randomizeOnNewTab" class="tw-mr-2" type="checkbox" v-model="isRandom" />
-          <span>Always random on new tab</span>
-        </label>
-      </p>
-      <p class="tw-mb-3">
-        You may store up to 10 sets of pokemon to use in your new tab(s).
-      </p>
-      <div>
-        <div class="tw-mb-1">
-          <select
-            class="tw-self-start tw-mr-2 tw-rounded tw-border-2 tw-border-gray-800 tw-cursor-pointer"
-            v-model="selectedBoxId"
-          >
-            <option v-for="(index, key) in savedPokemon.length" :key="key" :value="key">Box {{ index }}</option>
-          </select>
+      <div v-if="activeTab === tabSettings">
+        <Settings />
+      </div>
+      <div v-if="activeTab === tabPokemon">
+        <p class="tw-mb-3">
+          You may store up to 10 sets of pokemon to use in your new tab(s).
+        </p>
+        <div>
+          <div class="tw-mb-1">
+            <select
+              class="tw-self-start tw-mr-2 tw-rounded tw-border-2 tw-border-gray-800 tw-cursor-pointer"
+              v-model="selectedBoxId"
+            >
+              <option v-for="(index, key) in savedPokemon.length" :key="key" :value="key">Box {{ index }}</option>
+            </select>
+          </div>
+          <PokemonBox
+            :id="selectedBoxId"
+            :default="savedPokemon[selectedBoxId].default"
+            :pokemon="savedPokemon[selectedBoxId].pokemon"
+            @add="openPicker"
+          />
         </div>
-        <PokemonBox
-          :id="selectedBoxId"
-          :default="savedPokemon[selectedBoxId].default"
-          :pokemon="savedPokemon[selectedBoxId].pokemon"
-          @add="openPicker"
-        />
       </div>
     </div>
-    <div v-if="isTabVisible" class="tw-h-full tw-w-full tw-rounded-bl-lg tw-rounded-br-lg tw-absolute tw-top-8 tw-z-10">
+    <div v-if="isWindowVisible" class="tw-h-full tw-w-full tw-rounded-bl-lg tw-rounded-br-lg tw-absolute tw-top-8 tw-z-10">
       <div class="tw-h-8 tw-flex tw-items-center tw-bg-blue-400 tw-border-t tw-border-gray-800 tw-relative">
         <span class="tw-px-1 tw-cursor-pointer tw-absolute tw-left-1.5" @click="closePicker">
           <Chevron class="tw-h-2.5 tw-w-4 tw-fill-white -tw-rotate-90" />
@@ -56,11 +75,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { mapState, mapActions } from 'pinia';
-import { usePokemonStore } from '../store/pokemonStore';
+import { mapState } from 'pinia';
+import { useAppStore } from '../store/appStore';
 import DragIndicator from './icons/DragIndicator.vue';
 import Cross from './icons/Cross.vue';
 import Chevron from './icons/Chevron.vue';
+import Settings from './Settings.vue';
 import PokemonBoxComponent from './PokemonBox.vue';
 import PokemonPicker from './PokemonPicker.vue';
 import { type PokemonBox } from '../util/interfaces';
@@ -73,6 +93,7 @@ export default defineComponent({
     Chevron,
     PokemonBox: PokemonBoxComponent,
     PokemonPicker,
+    Settings,
   },
   props: {
     savedPokemon: {
@@ -82,42 +103,40 @@ export default defineComponent({
   },
   data() {
     return {
-      title: 'Options',
       selectedBoxId: 0,
       isRandom: false,
       dragBarId: OPTIONS_DRAGBAR_ID,
       isPickerVisible: false,
-      isTabVisible: false,
+      isWindowVisible: false,
       tabTitle: '',
+      activeTab: '',
+      tabPokemon: 'pokemon',
+      tabSettings: 'settings',
     };
   },
   computed: {
-    ...mapState(usePokemonStore, ['defaultBoxId', 'isRandomOnStartUp']),
+    ...mapState(useAppStore, ['defaultBoxId']),
   },
   watch: {
-    isRandomOnStartUp(isRandom: boolean): void {
-      this.setAlwaysRandom(isRandom);
-    },
     selectedBoxId(id: number): void {
       this.$emit('selectBox', id);
     },
   },
   mounted(): void {
     this.selectedBoxId = this.defaultBoxId;
-    this.isRandom = this.isRandomOnStartUp;
+    this.activeTab = this.tabPokemon;
   },
   methods: {
-    ...mapActions(usePokemonStore, { setAlwaysRandom: 'setAlwaysRandom' }),
     onClose(): void {
       this.$emit('close');
     },
     openPicker(): void {
       this.tabTitle = 'Pokemon Picker';
-      this.isTabVisible = true;
+      this.isWindowVisible = true;
       this.isPickerVisible = true;
     },
     closePicker(): void {
-      this.isTabVisible = false;
+      this.isWindowVisible = false;
       this.isPickerVisible = false;
     },
     onSave(): void {
@@ -142,4 +161,13 @@ export default defineComponent({
   tw-rounded-lg
   tw-z-10;
 }
+
+.options__tab {
+  @apply tw-h-8 tw-flex tw-justify-center tw-items-center tw-grow tw-font-bold tw-border-b-2 tw-border-b-blue-400 tw-bg-gray-300 tw-cursor-pointer;
+}
+
+.options__tab.active {
+  @apply tw-border-b-0 tw-bg-white;
+}
+
 </style>

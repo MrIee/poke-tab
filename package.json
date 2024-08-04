@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@cyhnkckali/vue3-color-picker": "^2.0.2",
     "lodash.throttle": "^4.1.1",
     "pinia": "^2.2.0",
     "uuid": "^10.0.0",

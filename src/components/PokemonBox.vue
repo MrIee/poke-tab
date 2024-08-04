@@ -31,7 +31,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { mapState, mapActions } from 'pinia';
-import { usePokemonStore } from '../store/pokemonStore';
+import { useAppStore } from '../store/appStore';
 import PokemonTile from './PokemonTile.vue';
 import { type Pokemon } from '../util/interfaces';
 import { POKEMON_STORAGE_LIMIT } from '../util/constants';
@@ -62,10 +62,10 @@ export default defineComponent({
     };
   },
   computed: {
-    ...mapState(usePokemonStore, ['allPokemon', 'defaultBoxId']),
+    ...mapState(useAppStore, ['allPokemon', 'defaultBoxId']),
   },
   methods: {
-    ...mapActions(usePokemonStore, {
+    ...mapActions(useAppStore, {
       setDefaultBoxId: 'setDefaultBoxId',
       setIdsOfPokemonToRemove: 'setIdsOfPokemonToRemove',
       setRandomizeBoxId: 'setRandomizeBoxId',

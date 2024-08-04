@@ -31,38 +31,38 @@ export class PokemonObject {
     this.speed = speed;
     this.img = new Image();
     this.angle = angle;
-  }
+  };
 
   draw(): void {
     this.img.id = this.id;
     this.img.src = this.src;
     this.img.classList.add(this.className);
-    this.img.style.top = `${this.position.y}px`;
-    this.img.style.left = `${this.position.x}px`;
+    this.img.style.top = this.position.y + 'px';
+    this.img.style.left = this.position.x + 'px';
     this.setRandomAngle();
-  }
+  };
 
   getX(): number {
     return parseInt(this.img.style.left, 10);
-  }
+  };
 
   getY(): number {
     return parseInt(this.img.style.top, 10);
-  }
+  };
 
-  incrementImgX(x: number) {
+  incrementImgX(x: number): void {
     this.prevPosition.x = this.getX();
-    this.img.style.left = `${this.getX() + x}px`;
-  }
+    this.img.style.left = this.getX() + x + 'px';
+  };
 
-  incrementImgY(y: number) {
+  incrementImgY(y: number): void {
     this.prevPosition.y = this.getY();
-    this.img.style.top = `${this.getY() + y}px`;
-  }
+    this.img.style.top = this.getY() + y + 'px';
+  };
 
   setRandomAngle(): void {
     this.angle = Math.floor(Math.random() * maxAngle) + 1;
-  }
+  };
 
   setFacingAngle(): void {
     if (this.getX() > this.prevPosition.x) {
@@ -70,7 +70,12 @@ export class PokemonObject {
     } else {
       this.img.style.transform = 'scaleX(1)';
     }
-  }
+  };
+
+  setSize(size: number): void {
+    this.img.style.height = size + 'px';
+    this.img.style.width = size + 'px';
+  };
 
   detectCollision(canvas: HTMLElement): void {
     const canvasRect: DOMRect = canvas.getBoundingClientRect();
@@ -111,7 +116,7 @@ export class PokemonObject {
       this.img.style.left = canvasRect.left + 'px';
       setOppositeHorizontalAngle();
     }
-  }
+  };
 };
 
 export class DrawApp {
@@ -126,7 +131,7 @@ export class DrawApp {
   intialize(el: HTMLElement | null): void {
     this.canvas = el;
     this.animate();
-  }
+  };
 
   addPokemonToCanvas(imgSrc: string, position: Coord): PokemonObject {
     const pokemonObj = new PokemonObject({position, src: imgSrc});
@@ -134,24 +139,32 @@ export class DrawApp {
     this.pokemon.push(pokemonObj);
     pokemonObj.draw();
     return pokemonObj;
-  }
+  };
 
-  removePokemonFromCanvas(id: string) {
+  removePokemonFromCanvas(id: string): void {
     const index = this.pokemon.findIndex((pokemon: PokemonObject): boolean => pokemon.id === id);
 
     if (index > -1) {
       this.pokemon[index].img.remove();
       this.pokemon.splice(index, 1);
     }
-  }
+  };
 
-  removeAllPokemonFromCanvas() {
+  removeAllPokemonFromCanvas(): void {
     this.pokemon.forEach((pokemon: PokemonObject): void => {
       pokemon.img.remove();
     });
 
     this.pokemon = [];
-  }
+  };
+
+  setSpeed(speed: number): void {
+    this.pokemon.forEach((pokemon: PokemonObject) => pokemon.speed = speed);
+  };
+
+  setSize(size: number): void {
+    this.pokemon.forEach((pokemon: PokemonObject) => pokemon.setSize(size));
+  };
 
   animate(): void {
     setTimeout(() => this.animate(), 20);

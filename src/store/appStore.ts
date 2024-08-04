@@ -2,7 +2,7 @@ import { defineStore, StoreDefinition } from "pinia";
 import { type Pokemon } from "../util/interfaces";
 import pokemonJSON from '../assets/json/pokemon.json';
 
-export const usePokemonStore: StoreDefinition = defineStore('pokemonStore', {
+export const useAppStore: StoreDefinition = defineStore('appStore', {
   state: () => ({
     allPokemon: pokemonJSON,
     pokemonIdsToRemove: new Array<string>,
@@ -12,6 +12,9 @@ export const usePokemonStore: StoreDefinition = defineStore('pokemonStore', {
     shouldRandomizeBox: 0,
     defaultBoxId: 0,
     isRandomOnStartUp: false,
+    backgroundColor: '#ffffff',
+    speed: 5,
+    size: 96,
   }),
   actions: {
     setPokemonToAdd(pokemon: Pokemon | null): void {
@@ -29,6 +32,21 @@ export const usePokemonStore: StoreDefinition = defineStore('pokemonStore', {
     },
     setAlwaysRandom(isRandom: boolean): void {
       this.isRandomOnStartUp = isRandom;
+    },
+    setBackgroundColor(color: string): void {
+      if (color) {
+        this.backgroundColor = color;
+      }
+    },
+    setSpeed(speed: number): void {
+      if (speed) {
+        this.speed = speed;
+      }
+    },
+    setSize(size: number): void {
+      if (size) {
+        this.size = size;
+      }
     },
   },
 });

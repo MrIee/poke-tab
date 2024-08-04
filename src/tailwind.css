@@ -1,3 +1,4 @@
+@import '@cyhnkckali/vue3-color-picker/dist/style.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,10 +13,12 @@ html, body {
 }
 
 body {
-  @apply tw-text-base tw-relative;
+  font-size: 16px;
+
+  @apply tw-relative;
 }
 
-button {
+button:not(.disable-button-styles *) {
   @apply tw-px-3 tw-py-1 tw-text-white tw-bg-blue-400 tw-rounded-md tw-border tw-border-gray-800;
 }
 
@@ -31,7 +34,7 @@ button.btn-sm {
   @apply tw-px-2 tw-text-sm;
 }
 
-button:hover {
+button:hover:not(.disable-button-styles *) {
   @apply tw-bg-sky-700;
 }
 
@@ -40,12 +43,21 @@ button:disabled:hover {
 }
 
 button.alert:hover {
-  @apply tw-bg-red-800;
+  @apply tw-bg-red-700;
 }
 
 button.alert:disabled:hover {
   @apply tw-bg-red-600;
 }
+
+button:active:not(.disable-button-styles *) {
+  @apply tw-bg-sky-900;
+}
+
+button.alert:active {
+  @apply tw-bg-red-900;
+}
+
 
 .pokemon-sprite {
   @apply tw-fixed tw-pointer-events-none;

@@ -27,7 +27,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { mapState, mapActions } from 'pinia';
-import { usePokemonStore } from '../store/pokemonStore';
+import { useAppStore } from '../store/appStore';
 import TypeFilter from './TypeFilter.vue';
 import PokemonTile from './PokemonTile.vue';
 import { type Pokemon } from '../util/interfaces';
@@ -46,7 +46,7 @@ export default defineComponent({
     };
   },
   computed: {
-    ...mapState(usePokemonStore, ['allPokemon']),
+    ...mapState(useAppStore, ['allPokemon']),
   },
   watch: {
     searchText(text: string): void {
@@ -66,7 +66,7 @@ export default defineComponent({
     this.filteredPokemon = this.allPokemon;
   },
   methods: {
-    ...mapActions(usePokemonStore, { setPokemonToAdd: 'setPokemonToAdd' }),
+    ...mapActions(useAppStore, { setPokemonToAdd: 'setPokemonToAdd' }),
     onAddPokemonToCanvas(pokemon: Pokemon): void {
       this.setPokemonToAdd(pokemon);
     },

@@ -1,15 +1,14 @@
 <template>
   <div v-click-outside="() => isVisible = false">
     <span>Filter by Type:</span>
-    <div class="tw-relative">
+    <div class="disable-button-styles tw-relative">
       <div
-        class="tw-flex tw-justify-between tw-items-center tw-border tw-border-gray-800 tw-rounded-lg tw-cursor-pointer tw-relative"
+        class="tw-flex tw-justify-between tw-items-center tw-rounded-lg tw-cursor-pointer tw-relative"
         @click="isVisible = !isVisible"
       >
         <span
           :class="{
-            'type-filter__button tw-h-8 tw-rounded-lg': true,
-            'hover:tw-bg-white': !selected,
+            'type-filter__button tw-h-8': true,
             [selected]: selected,
           }"
         >
@@ -24,12 +23,12 @@
       </div>
       <ul
         :class="{
-          'tw-h-80 tw-w-full tw-overflow-auto tw-absolute': true,
+          'tw-w-full tw-overflow-auto tw-absolute': true,
           'tw-hidden': !isVisible,
         }"
       >
         <li class="tw-inline-block tw-w-1/3">
-          <button class="type-filter__button hover:tw-bg-white" @click="onClickFilter(null)">All</button>
+          <button class="type-filter__button" @click="onClickFilter(null)">All</button>
         </li>
         <li class="tw-inline-block tw-w-1/3" v-for="(type, key) in types" :key="key">
           <button :class="{['type-filter__button ' + type]: true}" @click="onClickFilter(type)">
@@ -79,14 +78,17 @@ export default defineComponent({
   tw-items-center
   tw-px-2
   tw-mx-px
-  tw-rounded-lg
-  tw-text-xs
-  tw-align-middle
-  tw-font-bold
   tw-text-white
-  tw-bg-white
+  tw-text-xs
+  tw-font-bold
   tw-uppercase
-  tw-cursor-pointer;
+  tw-align-middle
+  tw-rounded-lg
+  tw-border
+  tw-border-gray-800
+  tw-bg-white
+  tw-cursor-pointer
+  tw-select-none;
 }
 
 .type-filter__button.normal {

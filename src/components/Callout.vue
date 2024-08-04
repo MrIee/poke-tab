@@ -24,7 +24,7 @@ export default defineComponent({
     },
   },
   mounted() {
-    setTimeout(this.onClose, 10000);
+    setTimeout(this.onClose, 5000);
   },
   methods: {
     onClose(): void {
