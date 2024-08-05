@@ -31,6 +31,7 @@ import { useAppStore } from '../store/appStore';
 import TypeFilter from './TypeFilter.vue';
 import PokemonTile from './PokemonTile.vue';
 import { type Pokemon } from '../util/interfaces';
+import { makePokemonShiny } from '../util/helpers';
 
 export default defineComponent({
   components: {
@@ -67,8 +68,8 @@ export default defineComponent({
   },
   methods: {
     ...mapActions(useAppStore, { setPokemonToAdd: 'setPokemonToAdd' }),
-    onAddPokemonToCanvas(pokemon: Pokemon): void {
-      this.setPokemonToAdd(pokemon);
+    onAddPokemonToCanvas(pokemon: Pokemon): void {;
+      this.setPokemonToAdd(makePokemonShiny(pokemon));
     },
     filterPokemonByType(type: string): void {
       if (type) {

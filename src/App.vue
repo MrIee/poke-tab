@@ -34,6 +34,7 @@ import {
   makeElementDockable,
   applyDockedStyles,
   removeDockedStyles,
+  makePokemonShiny,
 } from './util/helpers';
 import { saveToLocal, loadFromLocal } from './util/localStorage';
 import {
@@ -201,20 +202,22 @@ export default defineComponent({
     },
     saveRandomPokemon(saveToIndex: number = 0, isDefault: boolean = false): void {
       this.savedPokemon[saveToIndex].default = isDefault;
-      this.savedPokemon[saveToIndex].pokemon = getUniqueRandomItems(this.allPokemon, POKEMON_STORAGE_LIMIT);
+      this.savedPokemon[saveToIndex].pokemon = getUniqueRandomItems(this.allPokemon, POKEMON_STORAGE_LIMIT, makePokemonShiny);
     },
     addSavedPokemonToCanvas(pokemon?: Array<Pokemon>): void {
       const pokemonToAdd: Array<Pokemon> = pokemon || this.savedPokemon[0].pokemon;
+
       pokemonToAdd.forEach((pokemon: Pokemon) => {
-        const pokemonObj: PokemonObject = this.addPokemonToCanvas(pokemon.imgUrl);
+        const pokemonObj: PokemonObject = this.addPokemonToCanvas(pokemon);
         pokemon.id = pokemonObj.id;
       });
     },
-    addPokemonToCanvas(imgUrl: string): PokemonObject {
+    addPokemonToCanvas(pokemon: Pokemon): PokemonObject {
       const height: number = drawApp.canvas?.offsetHeight || window.innerHeight;
       const width: number = drawApp.canvas?.offsetWidth || window.innerWidth;
       const x = Math.floor(Math.random() * width) + 1;
       const y = Math.floor(Math.random() * height) + 1;
+      const imgUrl = pokemon.isShiny ? pokemon.shinyImgUrl : pokemon.imgUrl;
       return drawApp.addPokemonToCanvas(imgUrl, {x, y});
     },
     addPokemonToBox(pokemon: Pokemon): void {
@@ -227,7 +230,7 @@ export default defineComponent({
       }
 
       if (this.savedPokemon[this.selectedBox].default) {
-        id = this.addPokemonToCanvas(pokemon.imgUrl).id;
+        id = this.addPokemonToCanvas(pokemon).id;
       } else {
         id = uuidv4();
       }

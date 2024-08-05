@@ -12,7 +12,7 @@
         :key="pokemon.id"
         selectable
         :id="pokemon.id"
-        :img-url="pokemon.imgUrl"
+        :img-url="getImgUrl(pokemon)"
         :name="pokemon.name"
         @select="onSelect"
       />
@@ -70,6 +70,9 @@ export default defineComponent({
       setIdsOfPokemonToRemove: 'setIdsOfPokemonToRemove',
       setRandomizeBoxId: 'setRandomizeBoxId',
     }),
+    getImgUrl(pokemon: Pokemon): string {
+      return pokemon.isShiny ? pokemon.shinyImgUrl : pokemon.imgUrl;
+    },
     onUse(): void {
       if (this.id !== this.defaultBoxId) {
         this.setDefaultBoxId(this.id);

@@ -12,8 +12,10 @@ export interface Pokemon {
   id?: string;
   name: string;
   imgUrl: string;
+  shinyImgUrl: string;
   type: Array<string>;
   generation: 1;
+  isShiny?: boolean;
 }
 
 export interface PokemonBox {

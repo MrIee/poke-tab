@@ -1,10 +1,12 @@
 import throttle from "lodash.throttle";
-import { DockedEvent } from './interfaces';
-
+import { type DockedEvent, type Pokemon } from './interfaces';
 interface DockableElementOptions {
   handleElement: HTMLElement | null;
   backgroundElement?: HTMLElement | null;
 };
+
+
+// ================ Utility Functions ================
 
 export const getRandomNumberInRange = (max: number, min: number): number => {
   return Math.floor(Math.random() * (max + 1 - min) + min);
@@ -14,7 +16,7 @@ export const degreesToRadians = (degrees: number): number => {
   return degrees * (Math.PI / 180);
 }
 
-export const getUniqueRandomItems = (array: Array<any>, numberOfItems: number): Array<any> => {
+export const getUniqueRandomItems = (array: Array<any>, numberOfItems: number, callback?: Function): Array<any> => {
   const uniqueArray: Array<any> = [];
   const size = numberOfItems || array.length;
   const unique: Array<number> = [];
@@ -24,6 +26,7 @@ export const getUniqueRandomItems = (array: Array<any>, numberOfItems: number): 
     const randomIndex: number = Math.floor(Math.random() * array.length);
 
     if (unique.indexOf(randomIndex) === -1) {
+      callback && callback(array[randomIndex], randomIndex);
       uniqueArray.push(array[randomIndex]);
       i++;
     }
@@ -33,6 +36,9 @@ export const getUniqueRandomItems = (array: Array<any>, numberOfItems: number): 
 
   return uniqueArray;
 };
+
+
+// ================ DOM Functions ================
 
 export const keepElementWithinScreen = (element: HTMLElement, elementLeft: number, elementTop: number): void => {
   const elRect: DOMRect = element.getBoundingClientRect();
@@ -225,3 +231,16 @@ export const dockElementIfTouchingSide = (dockableElement: HTMLElement, backgrou
   };
 };
 
+
+// ================ Pokemon Functions ================
+
+export const makePokemonShiny = (pokemon: Pokemon): Pokemon => {
+  if (!pokemon.isShiny) {
+    const shinyChance: number = 1;
+    const shinyMaximum: number = 100;
+    const chance: number =  Math.floor(Math.random() * shinyMaximum) + 1;
+    pokemon.isShiny = chance <= shinyChance;
+  }
+
+  return pokemon;
+};
