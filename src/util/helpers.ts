@@ -197,13 +197,13 @@ export const applyDockedStyles = (
   dockedElement.style.top = options.padding.top + 'px';
   dockedElement.style.bottom = options.padding.bottom + 'px';
   dockedElement.style.height = `calc(100% - (${options.padding.top + options.padding.bottom}px))`;
+  backgroundElement.style.width = window.innerWidth - dockedElement.offsetWidth + `px`;
 
   if (options.side && options.side === 'left') {
     dockedElement.style.left = options.padding.left + 'px';
     backgroundElement.style.left = dockedElement.offsetWidth + `px`;
   } else {
     dockedElement.style.left = window.innerWidth - dockedElement.offsetWidth - options.padding.right + 'px';
-    backgroundElement.style.width = window.innerWidth - dockedElement.offsetWidth + `px`;
   }
 };
 

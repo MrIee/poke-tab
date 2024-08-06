@@ -100,8 +100,8 @@ export class PokemonObject {
     }
 
     // Detect collision with right of screen
-    if (this.getX() + this.img.width > canvas.offsetWidth) {
-      this.img.style.left = `${canvas.offsetWidth - this.img.width}px`;
+    if (this.getX() + this.img.width > canvas.offsetWidth + canvasRect.left) {
+      this.img.style.left = `${canvas.offsetWidth + canvasRect.left - this.img.width}px`;
       setOppositeHorizontalAngle();
     }
 
