@@ -1,8 +1,15 @@
 import throttle from "lodash.throttle";
-import { type DockedEvent, type Pokemon } from './interfaces';
+import { type DockedEvent, type Pokemon, type Padding } from './interfaces';
+
 interface DockableElementOptions {
   handleElement: HTMLElement | null;
   backgroundElement?: HTMLElement | null;
+  padding: Padding;
+};
+
+interface DockedStylesOptions {
+  side: String;
+  padding: Padding;
 };
 
 
@@ -40,27 +47,27 @@ export const getUniqueRandomItems = (array: Array<any>, numberOfItems: number, c
 
 // ================ DOM Functions ================
 
-export const keepElementWithinScreen = (element: HTMLElement, elementLeft: number, elementTop: number): void => {
+export const keepElementWithinScreen = (element: HTMLElement, padding: Padding = {top: 0, right: 0, bottom: 0, left: 0 }): void => {
   const elRect: DOMRect = element.getBoundingClientRect();
 
   // Top
-  if (elementTop < 0) {
-    element.style.top = '0px';
+  if (elRect.top < 0 + padding.top) {
+    element.style.top = padding.top + 'px';
   }
 
   // Bottom
-  if (elementTop + elRect.height > window.innerHeight) {
-    element.style.top = `${window.innerHeight - elRect.height}px`;
+  if (elRect.top + elRect.height > window.innerHeight - padding.bottom) {
+    element.style.top = `${window.innerHeight - padding.bottom - elRect.height}px`;
   }
 
   // Left
-  if (elementLeft < 0) {
-    element.style.left = '0px';
+  if (elRect.left < 0 + padding.left) {
+    element.style.left = padding.left + 'px';
   }
 
   // Right
-  if (elementLeft + elRect.width > window.innerWidth) {
-    element.style.left = `${window.innerWidth - elRect.width}px`;
+  if (elRect.left + elRect.width > window.innerWidth - padding.right) {
+    element.style.left = `${window.innerWidth - padding.right - elRect.width}px`;
   }
 };
 
@@ -76,7 +83,7 @@ export const removeListenerFromEvents = (el: HTMLElement | Document, events: Arr
   });
 };
 
-export const makeElementDraggable = (draggableElement: HTMLElement, handleElement?: HTMLElement): void => {
+export const makeElementDraggable = (draggableElement: HTMLElement, handleElement?: HTMLElement, padding: Padding = {top: 0, right: 0, bottom: 0, left: 0 }): void => {
   const draggableEl: HTMLElement = draggableElement;
   const handleEl: HTMLElement = handleElement || draggableElement;
   let clientX: number = 0;
@@ -100,7 +107,7 @@ export const makeElementDraggable = (draggableElement: HTMLElement, handleElemen
     const moveAt = (pageX: number, pageY: number): void => {
       draggableEl.style.left = pageX - shiftX + 'px';
       draggableEl.style.top = pageY - shiftY + 'px';
-      keepElementWithinScreen(draggableEl, parseInt(draggableEl.style.left, 10), parseInt(draggableEl.style.top, 10));
+      keepElementWithinScreen(draggableEl, padding);
     }
 
     const onMouseMove = (event: Event): void => {
@@ -127,24 +134,25 @@ export const makeElementDraggable = (draggableElement: HTMLElement, handleElemen
   addListenerToEvents(handleEl, ['mousedown', 'touchstart'], drag);
 };
 
-export const positionElementAtCursor = (el: HTMLElement, event: PointerEvent): void => {
+export const positionElementAtCursor = (el: HTMLElement, event: PointerEvent, padding: Padding = { top:0, right: 0, bottom: 0, left: 0 }): void => {
   const pickerRect: DOMRect = el.getBoundingClientRect();
 
   el.style.top = `${event.clientY}px`;
   el.style.left = `${event.clientX}px`;
 
-  if (event.clientY + pickerRect.height > window.innerHeight) {
-    el.style.top = `${window.innerHeight - pickerRect.height}px`;
+  if (event.clientY + pickerRect.height > window.innerHeight - padding.bottom) {
+    el.style.top = `${window.innerHeight - pickerRect.height - padding.bottom}px`;
   }
 
-  if (event.clientX + pickerRect.width > window.innerWidth) {
-    el.style.left = `${window.innerWidth - pickerRect.width}px`;
+  if (event.clientX + pickerRect.width > window.innerWidth - padding.right) {
+    el.style.left = `${window.innerWidth - pickerRect.width - padding.right}px`;
   }
 };
 
 export const makeElementDockable = (dockableElement: HTMLElement, options: DockableElementOptions = {
   handleElement: null,
   backgroundElement: null,
+  padding: { top:0, right: 0, bottom: 0, left: 0 },
 }): void => {
   const dockableEl: HTMLElement = dockableElement;
   const handleEl: HTMLElement = options.handleElement || dockableEl;
@@ -164,7 +172,7 @@ export const makeElementDockable = (dockableElement: HTMLElement, options: Docka
   }, 100);
 
   const dockElement = throttle((): void => {
-    elementDockedEvent = dockElementIfTouchingSide(dockableEl, options.backgroundElement as HTMLElement);
+    elementDockedEvent = dockElementIfTouchingSide(dockableEl, options.backgroundElement as HTMLElement, options.padding);
     dockedEvent = new CustomEvent('docked', { detail: elementDockedEvent });
     undockedEvent = new CustomEvent('undocked', { detail: elementDockedEvent });
   }, 100);
@@ -178,16 +186,23 @@ export const makeElementDockable = (dockableElement: HTMLElement, options: Docka
   addListenerToEvents(dockableEl, ['mouseup', 'touchend'], dockOnMouseUp);
 };
 
-export const applyDockedStyles = (dockedElement: HTMLElement, backgroundElement: HTMLElement, side: string): void => {
-  dockedElement.style.top = '0px';
+export const applyDockedStyles = (
+  dockedElement: HTMLElement,
+  backgroundElement: HTMLElement,
+  options: DockedStylesOptions = {
+    side: '',
+    padding: { top: 0, right: 0, bottom: 0, left: 0 },
+  },
+): void => {
+  dockedElement.style.top = options.padding.top + 'px';
+  dockedElement.style.bottom = options.padding.bottom + 'px';
+  dockedElement.style.height = `calc(100% - (${options.padding.top + options.padding.bottom}px))`;
 
-  if (side === 'left') {
-    dockedElement.style.height = '100%';
-    dockedElement.style.left = '0px';
+  if (options.side && options.side === 'left') {
+    dockedElement.style.left = options.padding.left + 'px';
     backgroundElement.style.left = dockedElement.offsetWidth + `px`;
   } else {
-    dockedElement.style.height = '100%';
-    dockedElement.style.left = window.innerWidth - dockedElement.offsetWidth + 'px';
+    dockedElement.style.left = window.innerWidth - dockedElement.offsetWidth - options.padding.right + 'px';
     backgroundElement.style.width = window.innerWidth - dockedElement.offsetWidth + `px`;
   }
 };
@@ -196,17 +211,22 @@ export const removeDockedStyles = (dockableElement: HTMLElement, backgroundEleme
   dockableElement.style.height = 'auto';
   backgroundElement.style.width = 'auto';
   backgroundElement.style.left = '0px';
+  dockableElement.style.bottom = 'auto';
 };
 
-export const dockElementIfTouchingSide = (dockableElement: HTMLElement, backgroundElement: HTMLElement): DockedEvent => {
+export const dockElementIfTouchingSide = (
+  dockableElement: HTMLElement,
+  backgroundElement: HTMLElement,
+  padding: Padding = { top: 0, right: 0, bottom: 0, left: 0 },
+): DockedEvent => {
   const elRect: DOMRect = dockableElement.getBoundingClientRect();
-  const isTouchingLeftSideOfScreen: boolean = elRect.left <= 0;
-  const isElTouchingRightSideOfScreen: boolean = elRect.left + elRect.width >= window.innerWidth;
+  const isTouchingLeftSideOfScreen: boolean = elRect.left <= padding.left;
+  const isElTouchingRightSideOfScreen: boolean = elRect.left + elRect.width + padding.right >= window.innerWidth;
   let isDocked: boolean = false;
   let dockedSide: string = '';
 
   if (isTouchingLeftSideOfScreen) {
-    applyDockedStyles(dockableElement, backgroundElement, 'left');
+    applyDockedStyles(dockableElement, backgroundElement, { side: 'left', padding });
     isDocked = true;
     dockedSide = 'left';
   } else if (!isElTouchingRightSideOfScreen) {
@@ -216,7 +236,7 @@ export const dockElementIfTouchingSide = (dockableElement: HTMLElement, backgrou
   }
 
   if (isElTouchingRightSideOfScreen) {
-    applyDockedStyles(dockableElement, backgroundElement, 'right');
+    applyDockedStyles(dockableElement, backgroundElement, { side: 'right', padding });
     isDocked = true;
     dockedSide = 'right';
   } else if (!isTouchingLeftSideOfScreen) {

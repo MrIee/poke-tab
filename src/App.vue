@@ -4,7 +4,7 @@
   </Transition>
   <div
     :ref="canvasRef"
-    class="tw-absolute tw-top-0 tw-left-0 tw-bottom-0 tw-right-0 tw-overflow-hidden tw-select-none"
+    class="tw-absolute tw-top-0 tw-left-0 tw-bottom-12 tw-right-0 tw-overflow-hidden tw-select-none"
     :style="{ backgroundColor: backgroundColorStyle }"
     @click="toggleOptions"
   >
@@ -17,6 +17,7 @@
     @select-box="selectedBox = $event"
     @save="saveAllSettings"
   />
+  <Footer />
 </template>
 
 <script lang="ts">
@@ -25,7 +26,14 @@ import { mapState, mapActions } from 'pinia';
 import { useAppStore } from './store/appStore';
 import Callout from './components/Callout.vue';
 import Options from './components/Options.vue';
-import { type VueComponent, type Pokemon, type PokemonBox, type DockedEvent } from './util/interfaces';
+import Footer from './components/Footer.vue';
+import {
+  type VueComponent,
+  type Pokemon,
+  type PokemonBox,
+  type DockedEvent,
+  type Padding,
+} from './util/interfaces';
 import { PokemonObject, DrawApp } from './util/drawApp';
 import {
   getUniqueRandomItems,
@@ -55,6 +63,7 @@ export default defineComponent({
   components: {
     Callout,
     Options,
+    Footer,
   },
   data() {
     return {
@@ -169,15 +178,16 @@ export default defineComponent({
         const optionsEl: HTMLElement = (this.$refs[this.optionsRef] as VueComponent).$el;
         const dragBarEl: HTMLElement | null = document.getElementById(OPTIONS_DRAGBAR_ID);
         const optionsDock: DockedEvent = await loadFromLocal(LOCAL_OPTIONS_DOCK);
+        const padding: Padding = { top: 0, right: 0, bottom: 32, left: 0 };
 
         if (optionsDock && optionsDock.docked) {
-          applyDockedStyles(optionsEl, drawApp.canvas as HTMLElement, optionsDock.side);
+          applyDockedStyles(optionsEl, drawApp.canvas as HTMLElement, { side: optionsDock.side, padding });
         } else {
-          positionElementAtCursor(optionsEl, event as PointerEvent);
+          positionElementAtCursor(optionsEl, event as PointerEvent, padding);
         }
 
-        makeElementDraggable(optionsEl, dragBarEl as HTMLElement);
-        makeElementDockable(optionsEl, { handleElement: dragBarEl, backgroundElement: drawApp.canvas });
+        makeElementDraggable(optionsEl, dragBarEl as HTMLElement, padding);
+        makeElementDockable(optionsEl, { handleElement: dragBarEl, backgroundElement: drawApp.canvas, padding });
 
         optionsEl.removeEventListener('docked', this.saveDockedDetailsToLocal);
         optionsEl.removeEventListener('undocked', this.saveDockedDetailsToLocal);

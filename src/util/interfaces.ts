@@ -26,3 +26,10 @@ export interface DockedEvent {
   docked: boolean;
   side: string;
 };
+
+export interface Padding {
+  top: number;
+  right: number;
+  bottom: number;
+  left: number;
+}

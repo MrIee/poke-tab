@@ -94,7 +94,7 @@ export class PokemonObject {
     };
 
     // Detect collision with top of screen
-    if (this.getY() < 1) {
+    if (this.getY() < 0) {
       this.img.style.top = '1px';
       setOppositeVerticalAngle();
     }
@@ -112,7 +112,7 @@ export class PokemonObject {
     }
 
     // Detect collision with left of screen
-    if (this.getX() < canvasRect.left + 1) {
+    if (this.getX() < canvasRect.left) {
       this.img.style.left = canvasRect.left + 'px';
       setOppositeHorizontalAngle();
     }
