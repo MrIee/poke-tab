@@ -255,6 +255,8 @@ export const dockElementIfTouchingSide = (
 // ================ Pokemon Functions ================
 
 export const makePokemonShiny = (pokemon: Pokemon): Pokemon => {
+  pokemon.isShiny = false;
+
   if (!pokemon.isShiny) {
     const shinyChance: number = 1;
     const shinyMaximum: number = 100;
