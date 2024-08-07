@@ -156,8 +156,8 @@ export const makeElementDockable = (dockableElement: HTMLElement, options: Docka
 }): void => {
   const dockableEl: HTMLElement = dockableElement;
   const handleEl: HTMLElement = options.handleElement || dockableEl;
-  let undockedEvent = new CustomEvent('undocked');
-  let dockedEvent = new CustomEvent('docked');
+  let undockedEvent: CustomEvent = new CustomEvent('undocked');
+  let dockedEvent: CustomEvent = new CustomEvent('docked');
   let elementDockedEvent: DockedEvent = {} as DockedEvent;
 
   const dockOnMouseUp = throttle(() => {
@@ -166,8 +166,10 @@ export const makeElementDockable = (dockableElement: HTMLElement, options: Docka
 
     if (elementDockedEvent.docked) {
       dockableElement.dispatchEvent(dockedEvent);
+      dockableElement.setAttribute('docked', 'docked');
     } else {
       dockableElement.dispatchEvent(undockedEvent);
+      dockableElement.setAttribute('docked', 'undocked');
     }
   }, 100);
 
@@ -197,7 +199,7 @@ export const applyDockedStyles = (
   dockedElement.style.top = options.padding.top + 'px';
   dockedElement.style.bottom = options.padding.bottom + 'px';
   dockedElement.style.height = `calc(100% - (${options.padding.top + options.padding.bottom}px))`;
-  backgroundElement.style.width = window.innerWidth - dockedElement.offsetWidth + `px`;
+  backgroundElement.style.width = window.innerWidth - dockedElement.offsetWidth + `px`
 
   if (options.side && options.side === 'left') {
     dockedElement.style.left = options.padding.left + 'px';
@@ -208,6 +210,7 @@ export const applyDockedStyles = (
 };
 
 export const removeDockedStyles = (dockableElement: HTMLElement, backgroundElement: HTMLElement): void => {
+  dockableElement.setAttribute('docked', 'undocked');
   dockableElement.style.height = 'auto';
   backgroundElement.style.width = 'auto';
   backgroundElement.style.left = '0px';
@@ -225,8 +228,33 @@ export const dockElementIfTouchingSide = (
   let isDocked: boolean = false;
   let dockedSide: string = '';
 
+  const applyLeftDockedStyles = throttle(
+    (): void => {
+      if (dockableElement.getAttribute('docked') === 'undocked') {
+        window.removeEventListener('resize', applyLeftDockedStyles);
+      } else {
+        applyDockedStyles(dockableElement, backgroundElement, { side: 'left', padding });
+      }
+    },
+    100
+  );
+
+  const applyRightDockedStyles = throttle(
+    (): void => {
+      if (dockableElement.getAttribute('docked') === 'undocked') {
+        window.removeEventListener('resize', applyRightDockedStyles);
+      } else {
+        applyDockedStyles(dockableElement, backgroundElement, { side: 'right', padding });
+      }
+    },
+    100
+  );
+  window.removeEventListener('resize', applyLeftDockedStyles);
+  window.removeEventListener('resize', applyRightDockedStyles);
+
   if (isTouchingLeftSideOfScreen) {
-    applyDockedStyles(dockableElement, backgroundElement, { side: 'left', padding });
+    window.addEventListener('resize', applyLeftDockedStyles);
+    applyLeftDockedStyles();
     isDocked = true;
     dockedSide = 'left';
   } else if (!isElTouchingRightSideOfScreen) {
@@ -236,6 +264,7 @@ export const dockElementIfTouchingSide = (
   }
 
   if (isElTouchingRightSideOfScreen) {
+    window.addEventListener('resize', applyRightDockedStyles);
     applyDockedStyles(dockableElement, backgroundElement, { side: 'right', padding });
     isDocked = true;
     dockedSide = 'right';
