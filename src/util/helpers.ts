@@ -249,12 +249,13 @@ export const dockElementIfTouchingSide = (
     },
     100
   );
+
   window.removeEventListener('resize', applyLeftDockedStyles);
   window.removeEventListener('resize', applyRightDockedStyles);
 
   if (isTouchingLeftSideOfScreen) {
     window.addEventListener('resize', applyLeftDockedStyles);
-    applyLeftDockedStyles();
+    applyDockedStyles(dockableElement, backgroundElement, { side: 'left', padding });
     isDocked = true;
     dockedSide = 'left';
   } else if (!isElTouchingRightSideOfScreen) {
