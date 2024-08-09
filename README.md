@@ -1,5 +1,18 @@
-# Vue 3 + TypeScript + Vite
+# Poké Tab
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## What does it do?
+Display a collection (30) of pokemon sprites animated with JavaScript to move around the screen. 
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## How does it work?
+It uses the DOM to display the sprites and JavaScript to animate them, primarily using an recursive setTimeout(). Vue js
+is used to make coding the options panel easier.
+
+To use the app, either be entranced and watch the pokemon move around all day, or click anywhere in the browser window to
+open the options pane. From there let your creativity run wild.
+
+## What's next?
+Well currently it only support the first 151 pokemon, mostly due to my eagerness to start testing the concept.
+
+So next steps would be:
+- Add the rest of the pokemon.
+- Add beautiful pixel style backgrounds
