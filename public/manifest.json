@@ -2,6 +2,12 @@
   "name": "PokéTab",
   "version": "1.0.0",
   "manifest_version": 3,
+  "description": "Shows pokemon sprites moving around the screen when opening a new tab",
+  "icons": {
+    "16" : "/chrome_store_resources/icon16.png",
+    "48" : "/chrome_store_resources/icon48.png",
+    "128": "/chrome_store_resources/icon128.png"
+  },
   "chrome_url_overrides": {
     "newtab": "index.html"
   },

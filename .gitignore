@@ -23,5 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 
+# Ignore images
+*.jpg
+*.png
+*.psd
+
 pokemon.txt
-chrome_store_resources
+public/chrome_store_resources
