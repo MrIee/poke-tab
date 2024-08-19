@@ -1011,7 +1011,7 @@
     "name": "Zapdos",
     "imgUrl": "/images/pokemon/zapdos.png",
     "shinyImgUrl": "/images/pokemon/shiny/zapdos.png",
-    "type": ["electic", "flying"],
+    "type": ["electric", "flying"],
     "generation": 1
   },
   {
