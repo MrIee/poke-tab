@@ -29,4 +29,6 @@ dist-ssr
 *.psd
 
 pokemon.txt
+pokemon-generator.js
+pokemon-generator.cjs
 public/chrome_store_resources
