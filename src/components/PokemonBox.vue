@@ -10,7 +10,7 @@
         class="tw-max-h-12 tw-max-w-12"
         v-for="pokemon in pokemon"
         :key="pokemon.id"
-        selectable
+        is-selectable
         :id="pokemon.id"
         :img-url="getImgUrl(pokemon)"
         :name="pokemon.name"

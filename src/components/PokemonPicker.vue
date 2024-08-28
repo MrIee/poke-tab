@@ -17,7 +17,8 @@
           :img-url="pokemon.imgUrl"
           :name="pokemon.name"
           :label="pokemon.name"
-          @click="onAddPokemonToCanvas(pokemon)"
+          :forms="pokemon.forms"
+          @on-click-pokemon="setPokemonToAdd(pokemon)"
         />
       </div>
     </div>
@@ -31,7 +32,6 @@ import { useAppStore } from '../store/appStore';
 import TypeFilter from './TypeFilter.vue';
 import PokemonTile from './PokemonTile.vue';
 import { type Pokemon } from '../util/interfaces';
-import { makePokemonShiny } from '../util/helpers';
 
 export default defineComponent({
   components: {
@@ -68,9 +68,6 @@ export default defineComponent({
   },
   methods: {
     ...mapActions(useAppStore, { setPokemonToAdd: 'setPokemonToAdd' }),
-    onAddPokemonToCanvas(pokemon: Pokemon): void {;
-      this.setPokemonToAdd(makePokemonShiny(pokemon));
-    },
     filterPokemonByType(type: string): void {
       if (type) {
         this.pokemonResults = this.allPokemon.filter((pokemon: Pokemon): boolean => {

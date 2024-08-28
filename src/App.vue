@@ -281,7 +281,7 @@ export default defineComponent({
       this.addSavedPokemonToCanvas(this.savedPokemon[boxId].pokemon);
     },
     loadRandomPokemonToCanvas(): void {
-      const randomPokemon: Array<Pokemon> = getUniqueRandomItems(this.allPokemon, POKEMON_STORAGE_LIMIT);
+      const randomPokemon: Array<Pokemon> = getUniqueRandomItems(this.allPokemon, POKEMON_STORAGE_LIMIT, makePokemonShiny);
       this.selectedBox = this.defaultBoxId;
       drawApp.removeAllPokemonFromCanvas();
       this.addSavedPokemonToCanvas(randomPokemon);

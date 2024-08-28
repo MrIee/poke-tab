@@ -1,5 +1,6 @@
 import { defineStore, StoreDefinition } from "pinia";
 import { type Pokemon } from "../util/interfaces";
+import { makePokemonShiny } from '../util/helpers';
 import pokemonJSON from '../assets/json/pokemon.json';
 
 export const useAppStore: StoreDefinition = defineStore('appStore', {
@@ -18,7 +19,11 @@ export const useAppStore: StoreDefinition = defineStore('appStore', {
   }),
   actions: {
     setPokemonToAdd(pokemon: Pokemon | null): void {
-      this.pokemonToAdd = pokemon;
+      if (pokemon) {
+        this.pokemonToAdd = makePokemonShiny(pokemon);
+      } else {
+        this.pokemonToAdd = null;
+      }
     },
     setIdsOfPokemonToRemove(ids: Array<string>): void {
       this.pokemonIdsToRemove = ids;

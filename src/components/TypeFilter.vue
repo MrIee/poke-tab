@@ -23,14 +23,14 @@
       </div>
       <ul
         :class="{
-          'tw-w-full tw-overflow-auto tw-absolute': true,
+          'tw-w-full tw-overflow-auto tw-absolute tw-z-10': true,
           'tw-hidden': !isVisible,
         }"
       >
-        <li class="tw-inline-block tw-w-1/3">
+        <li class="tw-inline-block tw-w-1/3 tw-bg-white">
           <button class="type-filter__button" @click="onClickFilter(null)">All</button>
         </li>
-        <li class="tw-inline-block tw-w-1/3" v-for="(type, key) in types" :key="key">
+        <li class="tw-inline-block tw-w-1/3 tw-bg-white" v-for="(type, key) in types" :key="key">
           <button :class="{['type-filter__button ' + type]: true}" @click="onClickFilter(type)">
             {{ type }}
           </button>

@@ -15,6 +15,7 @@ export interface Pokemon {
   shinyImgUrl: string;
   type: Array<string>;
   generation: 1;
+  forms?: Array<Pokemon>;
   isShiny?: boolean;
 }
 

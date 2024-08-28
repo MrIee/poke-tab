@@ -28,6 +28,7 @@ dist-ssr
 *.png
 *.psd
 
+dist.zip
 pokemon.txt
 pokemon-generator.js
 pokemon-generator.cjs
