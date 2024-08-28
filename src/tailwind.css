@@ -62,3 +62,31 @@ button.alert:active {
 .pokemon-sprite {
   @apply tw-fixed tw-pointer-events-none;
 }
+
+.filter__button {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+  @apply
+  tw-h-8
+  tw-w-[calc(100%-1px)]
+  tw-flex
+  tw-justify-center
+  tw-items-center
+  tw-px-2
+  tw-mx-px
+  tw-text-white
+  tw-text-xs
+  tw-font-bold
+  tw-uppercase
+  tw-align-middle
+  tw-rounded-lg
+  tw-border
+  tw-border-gray-800
+  tw-bg-white
+  tw-cursor-pointer
+  tw-select-none;
+}
+
+.filter__button--lowercase {
+  @apply tw-normal-case;
+}

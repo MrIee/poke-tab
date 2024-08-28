@@ -113,10 +113,12 @@ export default defineComponent({
   tw-flex-wrap
   tw-w-96
   tw-py-4
+  -tw-mt-[126px]
   tw-rounded-lg
   tw-bg-white
-  tw-absolute
-  tw-top-0;
+  tw-fixed
+  tw-left-0
+  tw-z-10;
 }
 
 .pokemon-tile__forms-label {

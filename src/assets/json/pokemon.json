@@ -1398,200 +1398,209 @@
     "generation": 2
   },
   {
-    "name": "Unown A",
+    "name": "Unown",
     "imgUrl": "/images/pokemon/unown-a.png",
     "shinyImgUrl": "/images/pokemon/shiny/unown-a.png",
     "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown B",
-    "imgUrl": "/images/pokemon/unown-b.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-b.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown C",
-    "imgUrl": "/images/pokemon/unown-c.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-c.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown D",
-    "imgUrl": "/images/pokemon/unown-d.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-d.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown E",
-    "imgUrl": "/images/pokemon/unown-e.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-e.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown F",
-    "imgUrl": "/images/pokemon/unown-f.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-f.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown G",
-    "imgUrl": "/images/pokemon/unown-g.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-g.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown H",
-    "imgUrl": "/images/pokemon/unown-h.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-h.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown I",
-    "imgUrl": "/images/pokemon/unown-i.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-i.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown J",
-    "imgUrl": "/images/pokemon/unown-j.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-j.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown K",
-    "imgUrl": "/images/pokemon/unown-k.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-k.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown L",
-    "imgUrl": "/images/pokemon/unown-l.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-l.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown M",
-    "imgUrl": "/images/pokemon/unown-m.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-m.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown N",
-    "imgUrl": "/images/pokemon/unown-n.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-n.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown O",
-    "imgUrl": "/images/pokemon/unown-o.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-o.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown P",
-    "imgUrl": "/images/pokemon/unown-p.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-p.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown Q",
-    "imgUrl": "/images/pokemon/unown-q.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-q.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown R",
-    "imgUrl": "/images/pokemon/unown-r.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-r.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown S",
-    "imgUrl": "/images/pokemon/unown-s.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-s.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown T",
-    "imgUrl": "/images/pokemon/unown-t.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-t.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown U",
-    "imgUrl": "/images/pokemon/unown-u.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-u.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown V",
-    "imgUrl": "/images/pokemon/unown-v.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-v.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown W",
-    "imgUrl": "/images/pokemon/unown-w.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-w.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown X",
-    "imgUrl": "/images/pokemon/unown-x.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-x.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown Y",
-    "imgUrl": "/images/pokemon/unown-y.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-y.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown Z",
-    "imgUrl": "/images/pokemon/unown-z.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-z.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown EM",
-    "imgUrl": "/images/pokemon/unown-em.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-em.png",
-    "type": ["psychic"],
-    "generation": 2
-  },
-  {
-    "name": "Unown QM",
-    "imgUrl": "/images/pokemon/unown-qm.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-qm.png",
-    "type": ["psychic"],
-    "generation": 2
+    "generation": 2,
+    "forms": [
+      {
+        "name": "Unown A",
+        "imgUrl": "/images/pokemon/unown-a.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-a.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown B",
+        "imgUrl": "/images/pokemon/unown-b.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-b.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown C",
+        "imgUrl": "/images/pokemon/unown-c.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-c.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown D",
+        "imgUrl": "/images/pokemon/unown-d.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-d.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown E",
+        "imgUrl": "/images/pokemon/unown-e.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-e.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown F",
+        "imgUrl": "/images/pokemon/unown-f.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-f.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown G",
+        "imgUrl": "/images/pokemon/unown-g.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-g.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown H",
+        "imgUrl": "/images/pokemon/unown-h.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-h.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown I",
+        "imgUrl": "/images/pokemon/unown-i.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-i.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown J",
+        "imgUrl": "/images/pokemon/unown-j.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-j.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown K",
+        "imgUrl": "/images/pokemon/unown-k.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-k.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown L",
+        "imgUrl": "/images/pokemon/unown-l.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-l.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown M",
+        "imgUrl": "/images/pokemon/unown-m.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-m.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown N",
+        "imgUrl": "/images/pokemon/unown-n.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-n.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown O",
+        "imgUrl": "/images/pokemon/unown-o.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-o.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown P",
+        "imgUrl": "/images/pokemon/unown-p.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-p.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown Q",
+        "imgUrl": "/images/pokemon/unown-q.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-q.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown R",
+        "imgUrl": "/images/pokemon/unown-r.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-r.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown S",
+        "imgUrl": "/images/pokemon/unown-s.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-s.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown T",
+        "imgUrl": "/images/pokemon/unown-t.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-t.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown U",
+        "imgUrl": "/images/pokemon/unown-u.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-u.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown V",
+        "imgUrl": "/images/pokemon/unown-v.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-v.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown W",
+        "imgUrl": "/images/pokemon/unown-w.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-w.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown X",
+        "imgUrl": "/images/pokemon/unown-x.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-x.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown Y",
+        "imgUrl": "/images/pokemon/unown-y.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-y.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown Z",
+        "imgUrl": "/images/pokemon/unown-z.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-z.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown EM",
+        "imgUrl": "/images/pokemon/unown-em.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-em.png",
+        "type": ["psychic"],
+        "generation": 2
+      },
+      {
+        "name": "Unown QM",
+        "imgUrl": "/images/pokemon/unown-qm.png",
+        "shinyImgUrl": "/images/pokemon/shiny/unown-qm.png",
+        "type": ["psychic"],
+        "generation": 2
+      }
+    ]
   },
   {
     "name": "Wobbuffet",

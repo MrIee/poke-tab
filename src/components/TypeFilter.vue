@@ -8,7 +8,7 @@
       >
         <span
           :class="{
-            'type-filter__button tw-h-8': true,
+            'filter__button': true,
             [selected]: selected,
           }"
         >
@@ -27,11 +27,11 @@
           'tw-hidden': !isVisible,
         }"
       >
-        <li class="tw-inline-block tw-w-1/3 tw-bg-white">
-          <button class="type-filter__button" @click="onClickFilter(null)">All</button>
+        <li class="tw-inline-block tw-w-1/2 tw-bg-white">
+          <button class="filter__button" @click="onClickFilter(null)">All</button>
         </li>
-        <li class="tw-inline-block tw-w-1/3 tw-bg-white" v-for="(type, key) in types" :key="key">
-          <button :class="{['type-filter__button ' + type]: true}" @click="onClickFilter(type)">
+        <li class="tw-inline-block tw-w-1/2 tw-bg-white" v-for="(type, key) in types" :key="key">
+          <button :class="{['filter__button filter__button--' + type]: true}" @click="onClickFilter(type)">
             {{ type }}
           </button>
         </li>
@@ -67,99 +67,75 @@ export default defineComponent({
 </script>
 
 <style>
-.type-filter__button {
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-
-  @apply
-  tw-h-8
-  tw-w-[calc(100%-1px)]
-  tw-flex
-  tw-justify-center
-  tw-items-center
-  tw-px-2
-  tw-mx-px
-  tw-text-white
-  tw-text-xs
-  tw-font-bold
-  tw-uppercase
-  tw-align-middle
-  tw-rounded-lg
-  tw-border
-  tw-border-gray-800
-  tw-bg-white
-  tw-cursor-pointer
-  tw-select-none;
-}
-
-.type-filter__button.normal {
+button.filter__button--normal {
   @apply tw-bg-zinc-300;
 }
 
-.type-filter__button.fire {
+button.filter__button--fire {
   @apply tw-bg-orange-400;
 }
 
-.type-filter__button.water {
+button.filter__button--water {
   @apply tw-bg-blue-400;
 }
 
-.type-filter__button.grass {
+button.filter__button--grass {
   @apply tw-bg-green-400;
 }
 
-.type-filter__button.electric {
+button.filter__button--electric {
   @apply tw-bg-yellow-400;
 }
 
-.type-filter__button.ice {
+button.filter__button--ice {
   @apply tw-bg-teal-200;
 }
 
-.type-filter__button.fighting {
+button.filter__button--fighting {
   @apply tw-bg-red-700;
 }
 
-.type-filter__button.poison {
+button.filter__button--poison {
   @apply tw-bg-fuchsia-500;
 }
 
-.type-filter__button.ground {
+button.filter__button--ground {
   @apply tw-bg-yellow-500;
 }
 
-.type-filter__button.flying {
+button.filter__button--flying {
   @apply tw-bg-indigo-300;
 }
 
-.type-filter__button.psychic {
+button.filter__button--psychic {
   @apply tw-bg-pink-400;
 }
 
-.type-filter__button.bug {
+button.filter__button--bug {
   @apply tw-bg-lime-400;
 }
 
-.type-filter__button.rock {
+button.filter__button--rock {
   @apply tw-bg-yellow-600;
 }
 
-.type-filter__button.ghost {
+button.filter__button--ghost {
   @apply tw-bg-indigo-500;
 }
 
-.type-filter__button.dragon {
+button.filter__button--dragon {
   @apply tw-bg-purple-600;
 }
 
-.type-filter__button.dark {
+button.filter__button--dark {
   @apply tw-bg-orange-950;
 }
 
-.type-filter__button.steel {
+button.filter__button--steel {
   @apply tw-bg-slate-400;
 }
 
-.type-filter__button.fairy {
+button.filter__button--fairy {
   @apply tw-bg-pink-300;
 }
 </style>
