@@ -1399,8 +1399,8 @@
   },
   {
     "name": "Unown",
-    "imgUrl": "/images/pokemon/unown-a.png",
-    "shinyImgUrl": "/images/pokemon/shiny/unown-a.png",
+    "imgUrl": "/images/pokemon/unown-f.png",
+    "shinyImgUrl": "/images/pokemon/shiny/unown-f.png",
     "type": ["psychic"],
     "generation": 2,
     "forms": [

@@ -1,19 +1,25 @@
 <template>
   <div class="pokemon-picker">
     <div class="tw-p-3 tw-pb-0">
+      <button class="tw-w-full tw-mb-2" @click="toggleSearch">
+        {{ isSearch ? 'Use Filters' : 'Search' }}
+      </button>
       <input
-        class="tw-w-full tw-py-1 tw-px-2 tw-mb-1 tw-border tw-border-gray-800"
+        v-if="isSearch"
+        :ref="searchBarRef"
+        class="tw-w-full tw-py-1 tw-px-2 tw-mb-1 tw-rounded-md tw-border tw-border-gray-800"
         type="text"
         :placeholder="searchPlaceholderText"
         v-model="searchText"
       >
-      <div class="tw-flex">
+      <div v-else class="tw-flex tw-gap-1">
         <TypeFilter class="tw-w-1/2" @filter="filterPokemonByType" />
         <GenerationFilter class="tw-w-1/2" @filter="filterPokemonByGeneration" />
       </div>
     </div>
-    <div class="tw-h-full tw-flex tw-justify-center tw-overflow-auto tw-transform">
-      <div class="tw-inline-block tw-h-full tw-w-72 xs:tw-w-full">
+    <div class="tw-h-full tw-flex tw-justify-center tw-pt-4 tw-overflow-auto tw-transform">
+      <span v-if="showHint">Not seeing any pokemon? Try typing {{ minSearchLength }} or more letters</span>
+      <div v-else class="tw-inline-block tw-h-full tw-w-72 xs:tw-w-full">
         <PokemonTile
           v-for="(pokemon, key) in pokemonResults"
           :key="key"
@@ -45,11 +51,15 @@ export default defineComponent({
   },
   data() {
     return {
+      searchBarRef: 'searchBarRef',
       pokemonResults: new Array<Pokemon>,
       searchPlaceholderText: 'Type a pokemon name here...',
       searchText: '',
       filteredPokemon: new Array<Pokemon>,
       filters: { type: '', generation: 1 },
+      isSearch: false,
+      showHint: false,
+      minSearchLength: 3,
     };
   },
   computed: {
@@ -58,22 +68,40 @@ export default defineComponent({
   watch: {
     searchText(text: string): void {
       this.pokemonResults = [];
+      this.showHint = false;
 
       if (!text) {
-        this.pokemonResults = this.filteredPokemon;
+        this.resetPokemon();
       } else {
-        this.pokemonResults = this.filteredPokemon.filter((pokemon: Pokemon) => {
-          return pokemon.name.toLowerCase().indexOf(text) !== -1;
-        });
+        if (text.length >= this.minSearchLength) {
+          this.showHint = false;
+          this.pokemonResults = this.allPokemon.filter((pokemon: Pokemon) => {
+            return pokemon.name.toLowerCase().indexOf(text) !== -1;
+          });
+        } else {
+          this.showHint = true;
+        }
       }
     },
   },
   mounted() {
-    this.pokemonResults = this.allPokemon.filter((pokemon: Pokemon): boolean => pokemon.generation === 1);
-    this.filteredPokemon = this.pokemonResults;
+    this.resetPokemon();
   },
   methods: {
     ...mapActions(useAppStore, { setPokemonToAdd: 'setPokemonToAdd' }),
+    resetPokemon(): void {
+      this.pokemonResults = this.allPokemon.filter((pokemon: Pokemon): boolean => pokemon.generation === 1);
+      this.filteredPokemon = this.pokemonResults;
+    },
+    toggleSearch(): void {
+      this.isSearch = !this.isSearch;
+      this.resetPokemon();
+      this.$nextTick(() => {
+        const searchBarEl: HTMLElement = this.$refs[this.searchBarRef] as HTMLElement;
+        searchBarEl.focus();
+        this.searchText = '';
+      });
+    },
     filterPokemon(): void {
       const type: string = this.filters.type;
       const generation: number = this.filters.generation;
@@ -96,30 +124,6 @@ export default defineComponent({
       this.filters.generation = generation;
       this.filterPokemon();
     },
-    // filterPokemonByType(type: string): void {
-    //   if (type) {
-    //     this.filters.type = type;
-    //     this.pokemonResults = this.filteredPokemon.filter((pokemon: Pokemon): boolean => {
-    //       return pokemon.type.some((t: string) => t === type);
-    //     });
-    //     this.filteredPokemon = this.pokemonResults;
-    //   } else {
-    //     this.filters.type = '';
-    //     this.filteredPokemon = this.allPokemon;
-    //     this.pokemonResults = this.filteredPokemon;
-    //   }
-    // },
-    // filterPokemonByGeneration(generation: number): void {
-    //   if (generation) {
-    //     this.filters.generation = generation;
-    //     this.filteredPokemon = this.allPokemon.filter((pokemon: Pokemon): boolean => pokemon.generation === generation);
-    //     this.pokemonResults = this.filteredPokemon;
-
-    //     if (this.filters.type) {
-    //       this.filterPokemonByType(this.filters.type);
-    //     }
-    //   }
-    // },
   },
 });
 </script>

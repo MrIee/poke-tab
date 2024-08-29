@@ -1,6 +1,6 @@
 <template>
   <div v-click-outside="() => isVisible = false">
-    <span>Filter by Generation:</span>
+    <span class="tw-text-sm">Filter by Generation:</span>
     <div class="disable-button-styles tw-relative">
       <div
         class="tw-flex tw-justify-between tw-items-center tw-rounded-lg tw-cursor-pointer tw-relative"
