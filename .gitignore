@@ -30,6 +30,7 @@ dist-ssr
 
 dist.zip
 pokemon.txt
+changelog.txt
 pokemon-generator.js
 pokemon-generator.cjs
 public/chrome_store_resources

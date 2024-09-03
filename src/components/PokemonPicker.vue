@@ -67,12 +67,9 @@ export default defineComponent({
   },
   watch: {
     searchText(text: string): void {
-      this.pokemonResults = [];
       this.showHint = false;
 
-      if (!text) {
-        this.resetPokemon();
-      } else {
+      if (text) {
         if (text.length >= this.minSearchLength) {
           this.showHint = false;
           this.pokemonResults = this.allPokemon.filter((pokemon: Pokemon) => {
@@ -95,11 +92,23 @@ export default defineComponent({
     },
     toggleSearch(): void {
       this.isSearch = !this.isSearch;
-      this.resetPokemon();
+      this.showHint = false;
+
+      if (!this.isSearch) {
+        this.resetPokemon();
+      }
+
       this.$nextTick(() => {
-        const searchBarEl: HTMLElement = this.$refs[this.searchBarRef] as HTMLElement;
-        searchBarEl.focus();
+        if (this.isSearch) {
+          const searchBarEl: HTMLElement = this.$refs[this.searchBarRef] as HTMLElement;
+          searchBarEl.focus();
+          this.pokemonResults = [];
+        } else {
+          this.resetPokemon();
+        }
+
         this.searchText = '';
+        this.showHint = false;
       });
     },
     filterPokemon(): void {

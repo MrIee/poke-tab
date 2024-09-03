@@ -6,14 +6,14 @@
         class="tw-flex tw-justify-between tw-items-center tw-rounded-lg tw-cursor-pointer tw-relative"
         @click="isVisible = !isVisible"
       >
-        <span
+        <button
           :class="{
             'filter__button': true,
-            [selected]: selected,
+            ['filter__button--' + selected]: selected,
           }"
         >
           {{ selected || 'All' }}
-        </span>
+        </button>
         <chevron-icon
           :class="{
             'tw-absolute tw-right-2 tw-transition-all tw-duration-300': true,
