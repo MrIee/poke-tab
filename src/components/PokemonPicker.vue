@@ -17,7 +17,14 @@
         <GenerationFilter class="tw-w-1/2" @filter="filterPokemonByGeneration" />
       </div>
     </div>
-    <div class="tw-h-full tw-flex tw-justify-center tw-pt-4 tw-overflow-auto tw-transform">
+    <Reminder
+      v-if="showFormsReminder"
+      class="tw-top-[142px]"
+      :text="formReminderText"
+      :image-url="ReminderImage"
+      @dont-show-again="saveShowFormsReminder(false)"
+    />
+    <div class="tw-h-full tw-flex tw-justify-center tw-pt-4 tw-overflow-auto tw-transform tw-relative">
       <span v-if="showHint">Not seeing any pokemon? Try typing {{ minSearchLength }} or more letters</span>
       <div v-else class="tw-inline-block tw-h-full tw-w-72 xs:tw-w-full">
         <PokemonTile
@@ -41,6 +48,8 @@ import { useAppStore } from '../store/appStore';
 import TypeFilter from './TypeFilter.vue';
 import GenerationFilter from './GenerationFilter.vue';
 import PokemonTile from './PokemonTile.vue';
+import Reminder from './Reminder.vue';
+import ReminderImage from '../../public/images/pikachu-forms-reminder.png';
 import { type Pokemon } from '../util/interfaces';
 
 export default defineComponent({
@@ -48,6 +57,7 @@ export default defineComponent({
     TypeFilter,
     GenerationFilter,
     PokemonTile,
+    Reminder,
   },
   data() {
     return {
@@ -60,10 +70,12 @@ export default defineComponent({
       isSearch: false,
       showHint: false,
       minSearchLength: 3,
+      formReminderText: 'Pokemon with a plus (+) icon in the top right corner have additional forms. Click on them to reveal their forms.',
+      ReminderImage,
     };
   },
   computed: {
-    ...mapState(useAppStore, ['allPokemon']),
+    ...mapState(useAppStore, ['allPokemon', 'showFormsReminder']),
   },
   watch: {
     searchText(text: string): void {
@@ -83,9 +95,14 @@ export default defineComponent({
   },
   mounted() {
     this.resetPokemon();
+    this.loadShowFormsReminder();
   },
   methods: {
-    ...mapActions(useAppStore, { setPokemonToAdd: 'setPokemonToAdd' }),
+    ...mapActions(useAppStore, {
+      setPokemonToAdd: 'setPokemonToAdd',
+      saveShowFormsReminder: 'saveShowFormsReminder',
+      loadShowFormsReminder: 'loadShowFormsReminder',
+    }),
     resetPokemon(): void {
       this.pokemonResults = this.allPokemon.filter((pokemon: Pokemon): boolean => pokemon.generation === 1);
       this.filteredPokemon = this.pokemonResults;

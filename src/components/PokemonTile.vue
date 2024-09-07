@@ -5,6 +5,7 @@
       'tw-bg-blue-200': isSelectable && isSelected,
     }"
   >
+    <span v-if="forms.length > 0" class="pokemon-tile__form-icon">+</span>
     <img
       :class="{ '-tw-mb-2.5': label }"
       :src="imgUrl"
@@ -144,6 +145,12 @@ export default defineComponent({
   tw-absolute
   tw-top-0
   tw-right-0;
+}
+
+.pokemon-tile__form-icon {
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
+  @apply tw-text-blue-400 tw-text-xl tw-font-bold tw-leading-none tw-absolute tw-top-0 tw-right-0.5;
 }
 
 /* Pokeball hover effect */

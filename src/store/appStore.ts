@@ -1,6 +1,8 @@
 import { defineStore, StoreDefinition } from "pinia";
 import { type Pokemon } from "../util/interfaces";
 import { makePokemonShiny } from '../util/helpers';
+import { saveToLocal, loadFromLocal } from "../util/localStorage";
+import { LOCAL_OPTIONS_POKEMON_FORMS_REMINDER } from "../util/constants";
 import pokemonJSON from '../assets/json/pokemon.json';
 
 export const useAppStore: StoreDefinition = defineStore('appStore', {
@@ -16,6 +18,7 @@ export const useAppStore: StoreDefinition = defineStore('appStore', {
     backgroundColor: '#ffffff',
     speed: 5,
     size: 96,
+    showFormsReminder: true,
   }),
   actions: {
     setPokemonToAdd(pokemon: Pokemon | null): void {
@@ -53,5 +56,12 @@ export const useAppStore: StoreDefinition = defineStore('appStore', {
         this.size = size;
       }
     },
+    saveShowFormsReminder(showReminder: boolean): void {
+      saveToLocal(LOCAL_OPTIONS_POKEMON_FORMS_REMINDER, showReminder);
+    },
+    async loadShowFormsReminder(): Promise<void> {
+      const showFormsReminder: boolean = await loadFromLocal(LOCAL_OPTIONS_POKEMON_FORMS_REMINDER);
+      this.showFormsReminder = showFormsReminder === null ? true : showFormsReminder;
+    }
   },
 });
