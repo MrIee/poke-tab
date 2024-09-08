@@ -150,7 +150,6 @@ export default defineComponent({
     // watchers are asynchronous
     this.$nextTick(async () => {
       if (this.isRandomOnStartUp) {
-        // this.loadRandomPokemonToCanvas();
         this.selectedBox = MAX_NUM_BOXES;
         this.randomizeBox(this.selectedBox);
         this.setDefaultBoxId(this.selectedBox);
@@ -282,12 +281,6 @@ export default defineComponent({
       this.savedPokemon[boxId].default = true;
       drawApp.removeAllPokemonFromCanvas();
       this.addSavedPokemonToCanvas(this.savedPokemon[boxId].pokemon);
-    },
-    loadRandomPokemonToCanvas(): void {
-      const randomPokemon: Array<Pokemon> = getUniqueRandomItems(this.allPokemon, POKEMON_STORAGE_LIMIT, makePokemonShiny);
-      this.selectedBox = this.defaultBoxId;
-      drawApp.removeAllPokemonFromCanvas();
-      this.addSavedPokemonToCanvas(randomPokemon);
     },
     async saveAllSettings(): Promise<void> {
       await saveToLocal(LOCAL_OPTIONS_ALWAYS_RANDOM, this.isRandomOnStartUp);
