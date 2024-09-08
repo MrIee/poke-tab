@@ -47,6 +47,7 @@ import {
 import { saveToLocal, loadFromLocal } from './util/localStorage';
 import {
   POKEMON_STORAGE_LIMIT,
+  MAX_NUM_BOXES,
   OPTIONS_DRAGBAR_ID,
   LOCAL_OPTIONS_DOCK,
   LOCAL_SAVED_POKEMON,
@@ -72,7 +73,6 @@ export default defineComponent({
       isOptionsVisible: false,
       savedPokemon: new Array<PokemonBox>,
       selectedBox: 0,
-      savePokemonArrayLimit: 9,
       isCalloutVisible: false,
       calloutLabel: '',
       calloutDescription: '',
@@ -95,13 +95,13 @@ export default defineComponent({
   },
   watch: {
     defaultBoxId(id: number, prevId: number): void {
-      if (id >= 0 && id < this.savePokemonArrayLimit) {
+      if (id >= 0 && id < MAX_NUM_BOXES) {
         this.usePokemonBox(id, prevId);
       }
     },
     pokemonToAdd(pokemon: Pokemon): void {
       if (pokemon) {
-        this.addPokemonToBox(pokemon);
+        this.addPokemonToSelectedBox(pokemon);
       }
     },
     pokemonIdsToRemove(ids: Array<string>): void {
@@ -111,7 +111,7 @@ export default defineComponent({
     },
     shouldRandomizeBox(): void {
       if (this.randomizeBoxId >= 0) {
-        this.randomizeBox();
+        this.randomizeBox(this.randomizeBoxId);
       }
     },
     backgroundColor(color: string): void {
@@ -150,7 +150,10 @@ export default defineComponent({
     // watchers are asynchronous
     this.$nextTick(async () => {
       if (this.isRandomOnStartUp) {
-        this.loadRandomPokemonToCanvas();
+        // this.loadRandomPokemonToCanvas();
+        this.selectedBox = MAX_NUM_BOXES;
+        this.usePokemonBox(this.selectedBox, 0);
+        this.randomizeBox(this.selectedBox);
       }
       await this.loadAllSettings();
     });
@@ -206,7 +209,7 @@ export default defineComponent({
       removeDockedStyles(optionsEl, drawApp.canvas as HTMLElement);
     },
     initializeSavedPokemonArray() {
-      for (let i = 0; i < this.savePokemonArrayLimit + 1; i++) {
+      for (let i = 0; i < MAX_NUM_BOXES + 1; i++) {
         this.savedPokemon.push({ pokemon: [], default: false });
       }
     },
@@ -230,7 +233,7 @@ export default defineComponent({
       const imgUrl = pokemon.isShiny ? pokemon.shinyImgUrl : pokemon.imgUrl;
       return drawApp.addPokemonToCanvas(imgUrl, {x, y});
     },
-    addPokemonToBox(pokemon: Pokemon): void {
+    addPokemonToSelectedBox(pokemon: Pokemon): void {
       let id: string = '';
       const pokemonInBox: Array<Pokemon> = this.savedPokemon[this.selectedBox].pokemon;
 
@@ -264,21 +267,23 @@ export default defineComponent({
 
       this.setIdsOfPokemonToRemove([]);
     },
-    randomizeBox() {
-      const boxId: number = this.randomizeBoxId;
+    randomizeBox(boxId: number) {
       this.savedPokemon[boxId].pokemon = [];
       this.saveRandomPokemon(boxId, this.savedPokemon[boxId].default);
 
-      if (this.defaultBoxId === this.selectedBox) {
+      if (this.defaultBoxId === this.selectedBox || boxId === MAX_NUM_BOXES) {
         drawApp.removeAllPokemonFromCanvas();
         this.addSavedPokemonToCanvas(this.savedPokemon[boxId].pokemon);
       }
     },
-    usePokemonBox(boxId: number, prevBoxId: number): void {
+    usePokemonBox(boxId: number, prevBoxId: number, loadPokemonToCanvas: boolean = true): void {
       this.savedPokemon[prevBoxId].default = false;
       this.savedPokemon[boxId].default = true;
-      drawApp.removeAllPokemonFromCanvas();
-      this.addSavedPokemonToCanvas(this.savedPokemon[boxId].pokemon);
+
+      if (loadPokemonToCanvas) {
+        drawApp.removeAllPokemonFromCanvas();
+        this.addSavedPokemonToCanvas(this.savedPokemon[boxId].pokemon);
+      }
     },
     loadRandomPokemonToCanvas(): void {
       const randomPokemon: Array<Pokemon> = getUniqueRandomItems(this.allPokemon, POKEMON_STORAGE_LIMIT, makePokemonShiny);

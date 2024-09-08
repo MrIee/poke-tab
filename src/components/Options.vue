@@ -48,7 +48,7 @@
               class="tw-self-start tw-mr-2 tw-rounded tw-border-2 tw-border-gray-800 tw-cursor-pointer"
               v-model="selectedBoxId"
             >
-              <option v-for="(index, key) in savedPokemon.length" :key="key" :value="key">Box {{ index }}</option>
+              <option v-for="(index, key) in maxNumBoxes" :key="key" :value="key">Box {{ index }}</option>
             </select>
           </div>
           <PokemonBox
@@ -84,7 +84,7 @@ import Settings from './Settings.vue';
 import PokemonBoxComponent from './PokemonBox.vue';
 import PokemonPicker from './PokemonPicker.vue';
 import { type PokemonBox } from '../util/interfaces';
-import { OPTIONS_DRAGBAR_ID } from '../util/constants';
+import { MAX_NUM_BOXES, OPTIONS_DRAGBAR_ID } from '../util/constants';
 
 export default defineComponent({
   components: {
@@ -112,6 +112,7 @@ export default defineComponent({
       activeTab: '',
       tabPokemon: 'pokemon',
       tabSettings: 'settings',
+      maxNumBoxes: MAX_NUM_BOXES,
     };
   },
   computed: {
