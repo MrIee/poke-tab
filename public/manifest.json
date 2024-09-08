@@ -1,6 +1,6 @@
 {
   "name": "PokeTab - Pokemon in your New Tab",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "manifest_version": 3,
   "description": "Shows pokemon sprites moving around the screen when opening a new tab",
   "icons": {

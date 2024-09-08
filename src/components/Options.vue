@@ -124,7 +124,7 @@ export default defineComponent({
     },
   },
   mounted(): void {
-    this.selectedBoxId = this.defaultBoxId;
+    this.selectedBoxId = this.defaultBoxId > MAX_NUM_BOXES ? this.defaultBoxId : 0;
     this.activeTab = this.tabPokemon;
   },
   methods: {

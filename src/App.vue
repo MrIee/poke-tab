@@ -152,8 +152,8 @@ export default defineComponent({
       if (this.isRandomOnStartUp) {
         // this.loadRandomPokemonToCanvas();
         this.selectedBox = MAX_NUM_BOXES;
-        this.usePokemonBox(this.selectedBox, 0);
         this.randomizeBox(this.selectedBox);
+        this.setDefaultBoxId(this.selectedBox);
       }
       await this.loadAllSettings();
     });
@@ -267,23 +267,21 @@ export default defineComponent({
 
       this.setIdsOfPokemonToRemove([]);
     },
-    randomizeBox(boxId: number) {
+    randomizeBox(boxId: number, loadPokemonToCanvas: boolean = true) {
       this.savedPokemon[boxId].pokemon = [];
       this.saveRandomPokemon(boxId, this.savedPokemon[boxId].default);
 
-      if (this.defaultBoxId === this.selectedBox || boxId === MAX_NUM_BOXES) {
+      if (loadPokemonToCanvas && (this.defaultBoxId === this.selectedBox || boxId === MAX_NUM_BOXES)) {
         drawApp.removeAllPokemonFromCanvas();
         this.addSavedPokemonToCanvas(this.savedPokemon[boxId].pokemon);
       }
     },
-    usePokemonBox(boxId: number, prevBoxId: number, loadPokemonToCanvas: boolean = true): void {
+    usePokemonBox(boxId: number, prevBoxId: number): void {
+      this.selectedBox = boxId;
       this.savedPokemon[prevBoxId].default = false;
       this.savedPokemon[boxId].default = true;
-
-      if (loadPokemonToCanvas) {
-        drawApp.removeAllPokemonFromCanvas();
-        this.addSavedPokemonToCanvas(this.savedPokemon[boxId].pokemon);
-      }
+      drawApp.removeAllPokemonFromCanvas();
+      this.addSavedPokemonToCanvas(this.savedPokemon[boxId].pokemon);
     },
     loadRandomPokemonToCanvas(): void {
       const randomPokemon: Array<Pokemon> = getUniqueRandomItems(this.allPokemon, POKEMON_STORAGE_LIMIT, makePokemonShiny);
