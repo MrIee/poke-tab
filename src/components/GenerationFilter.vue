@@ -50,7 +50,7 @@ export default defineComponent({
   },
   data() {
     return {
-      generations: ['I', 'II', 'III', 'IV', 'V', 'VI'],
+      generations: ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII'],
       isVisible: false,
       selected: '',
     };
@@ -97,5 +97,10 @@ span.filter__button--genV-bg,
 span.filter__button--genVI-bg,
 .filter__button--genVI:hover {
   @apply tw-bg-gradient-to-r tw-from-blue-600 tw-to-red-600;
+}
+
+span.filter__button--genVII-bg,
+.filter__button--genVII:hover {
+  @apply tw-bg-gradient-to-r tw-from-indigo-600 tw-to-orange-600;
 }
 </style>
