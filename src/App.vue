@@ -95,7 +95,7 @@ export default defineComponent({
   },
   watch: {
     defaultBoxId(id: number, prevId: number): void {
-      if (id >= 0 && id < MAX_NUM_BOXES) {
+      if (id >= 0) {
         this.usePokemonBox(id, prevId);
       }
     },
