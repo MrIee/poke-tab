@@ -6895,119 +6895,119 @@
         "imgUrl": "/images/pokemon/silvally-normal.png",
         "shinyImgUrl": "/images/pokemon/shiny/silvally-normal.png",
         "type": ["normal"],
-        "generation": 4
+        "generation": 7
       },
       {
         "name": "Fire",
         "imgUrl": "/images/pokemon/silvally-fire.png",
         "shinyImgUrl": "/images/pokemon/shiny/silvally-fire.png",
         "type": ["fire"],
-        "generation": 4
+        "generation": 7
       },
       {
         "name": "Water",
         "imgUrl": "/images/pokemon/silvally-water.png",
         "shinyImgUrl": "/images/pokemon/shiny/silvally-water.png",
         "type": ["water"],
-        "generation": 4
+        "generation": 7
       },
       {
         "name": "Electric",
         "imgUrl": "/images/pokemon/silvally-electric.png",
         "shinyImgUrl": "/images/pokemon/shiny/silvally-electric.png",
         "type": ["electric"],
-        "generation": 4
+        "generation": 7
       },
       {
         "name": "Ice",
         "imgUrl": "/images/pokemon/silvally-ice.png",
         "shinyImgUrl": "/images/pokemon/shiny/silvally-ice.png",
         "type": ["ice"],
-        "generation": 4
+        "generation": 7
       },
       {
         "name": "Fighting",
         "imgUrl": "/images/pokemon/silvally-fighting.png",
         "shinyImgUrl": "/images/pokemon/shiny/silvally-fighting.png",
         "type": ["fighting"],
-        "generation": 4
+        "generation": 7
       },
       {
         "name": "Poison",
         "imgUrl": "/images/pokemon/silvally-poison.png",
         "shinyImgUrl": "/images/pokemon/shiny/silvally-poison.png",
         "type": ["poison"],
-        "generation": 4
+        "generation": 7
       },
       {
         "name": "Ground",
         "imgUrl": "/images/pokemon/silvally-ground.png",
         "shinyImgUrl": "/images/pokemon/shiny/silvally-ground.png",
         "type": ["ground"],
-        "generation": 4
+        "generation": 7
       },
       {
         "name": "Flying",
         "imgUrl": "/images/pokemon/silvally-flying.png",
         "shinyImgUrl": "/images/pokemon/shiny/silvally-flying.png",
         "type": ["flying"],
-        "generation": 4
+        "generation": 7
       },
       {
         "name": "Psychic",
         "imgUrl": "/images/pokemon/silvally-psychic.png",
         "shinyImgUrl": "/images/pokemon/shiny/silvally-psychic.png",
         "type": ["psychic"],
-        "generation": 4
+        "generation": 7
       },
       {
         "name": "Bug",
         "imgUrl": "/images/pokemon/silvally-bug.png",
         "shinyImgUrl": "/images/pokemon/shiny/silvally-bug.png",
         "type": ["bug"],
-        "generation": 4
+        "generation": 7
       },
       {
         "name": "Rock",
         "imgUrl": "/images/pokemon/silvally-rock.png",
         "shinyImgUrl": "/images/pokemon/shiny/silvally-rock.png",
         "type": ["rock"],
-        "generation": 4
+        "generation": 7
       },
       {
         "name": "Ghost",
         "imgUrl": "/images/pokemon/silvally-ghost.png",
         "shinyImgUrl": "/images/pokemon/shiny/silvally-ghost.png",
         "type": ["ghost"],
-        "generation": 4
+        "generation": 7
       },
       {
         "name": "Dragon",
         "imgUrl": "/images/pokemon/silvally-dragon.png",
         "shinyImgUrl": "/images/pokemon/shiny/silvally-dragon.png",
         "type": ["dragon"],
-        "generation": 4
+        "generation": 7
       },
       {
         "name": "Dark",
         "imgUrl": "/images/pokemon/silvally-dark.png",
         "shinyImgUrl": "/images/pokemon/shiny/silvally-dark.png",
         "type": ["dark"],
-        "generation": 4
+        "generation": 7
       },
       {
         "name": "Steel",
         "imgUrl": "/images/pokemon/silvally-steel.png",
         "shinyImgUrl": "/images/pokemon/shiny/silvally-steel.png",
         "type": ["steel"],
-        "generation": 4
+        "generation": 7
       },
       {
         "name": "Fairy",
         "imgUrl": "/images/pokemon/silvally-fairy.png",
         "shinyImgUrl": "/images/pokemon/shiny/silvally-fairy.png",
         "type": ["fairy"],
-        "generation": 4
+        "generation": 7
       }
     ]
   },
@@ -7319,6 +7319,139 @@
     "imgUrl": "/images/pokemon/melmetal.png",
     "shinyImgUrl": "/images/pokemon/shiny/melmetal.png",
     "type": ["steel"],
+    "generation": 7
+  },
+  {
+    "name": "Melmetal",
+    "imgUrl": "/images/pokemon/melmetal.png",
+    "shinyImgUrl": "/images/pokemon/shiny/melmetal.png",
+    "type": ["steel"],
+    "generation": 7
+  },
+  {
+    "name": "Alolan Rattata",
+    "imgUrl": "/images/pokemon/rattata-alolan.png",
+    "shinyImgUrl": "/images/pokemon/shiny/rattata-alolan.png",
+    "type": ["dark", "normal"],
+    "generation": 7
+  },
+  {
+    "name": "Alolan Raticate",
+    "imgUrl": "/images/pokemon/raticate-alolan.png",
+    "shinyImgUrl": "/images/pokemon/shiny/raticate-alolan.png",
+    "type": ["dark", "normal"],
+    "generation": 7
+  },
+  {
+    "name": "Alolan Raichu",
+    "imgUrl": "/images/pokemon/raichu-alolan.png",
+    "shinyImgUrl": "/images/pokemon/shiny/raichu-alolan.png",
+    "type": ["electric", "psychic"],
+    "generation": 7
+  },
+  {
+    "name": "Alolan Sandshrew",
+    "imgUrl": "/images/pokemon/sandshrew-alolan.png",
+    "shinyImgUrl": "/images/pokemon/shiny/sandshrew-alolan.png",
+    "type": ["ice", "steel"],
+    "generation": 7
+  },
+  {
+    "name": "Alolan Sandslash",
+    "imgUrl": "/images/pokemon/sandslash-alolan.png",
+    "shinyImgUrl": "/images/pokemon/shiny/sandslash-alolan.png",
+    "type": ["ice", "steel"],
+    "generation": 7
+  },
+  {
+    "name": "Alolan Vulpix",
+    "imgUrl": "/images/pokemon/vulpix-alolan.png",
+    "shinyImgUrl": "/images/pokemon/shiny/vulpix-alolan.png",
+    "type": ["ice"],
+    "generation": 7
+  },
+  {
+    "name": "Alolan Ninetales",
+    "imgUrl": "/images/pokemon/ninetales-alolan.png",
+    "shinyImgUrl": "/images/pokemon/shiny/ninetales-alolan.png",
+    "type": ["ice", "fairy"],
+    "generation": 7
+  },
+  {
+    "name": "Alolan Diglett",
+    "imgUrl": "/images/pokemon/diglett-alolan.png",
+    "shinyImgUrl": "/images/pokemon/shiny/diglett-alolan.png",
+    "type": ["ground", "steel"],
+    "generation": 7
+  },
+  {
+    "name": "Alolan Dugtrio",
+    "imgUrl": "/images/pokemon/dugtrio-alolan.png",
+    "shinyImgUrl": "/images/pokemon/shiny/dugtrio-alolan.png",
+    "type": ["ground", "steel"],
+    "generation": 7
+  },
+  {
+    "name": "Alolan Meowth",
+    "imgUrl": "/images/pokemon/meowth-alolan.png",
+    "shinyImgUrl": "/images/pokemon/shiny/meowth-alolan.png",
+    "type": ["dark"],
+    "generation": 7
+  },
+  {
+    "name": "Alolan Persian",
+    "imgUrl": "/images/pokemon/persian-alolan.png",
+    "shinyImgUrl": "/images/pokemon/shiny/persian-alolan.png",
+    "type": ["dark"],
+    "generation": 7
+  },
+  {
+    "name": "Alolan Geodude",
+    "imgUrl": "/images/pokemon/geodude-alolan.png",
+    "shinyImgUrl": "/images/pokemon/shiny/geodude-alolan.png",
+    "type": ["rock", "electric"],
+    "generation": 7
+  },
+  {
+    "name": "Alolan Graveler",
+    "imgUrl": "/images/pokemon/graveler-alolan.png",
+    "shinyImgUrl": "/images/pokemon/shiny/graveler-alolan.png",
+    "type": ["rock", "electric"],
+    "generation": 7
+  },
+  {
+    "name": "Alolan Golem",
+    "imgUrl": "/images/pokemon/golem-alolan.png",
+    "shinyImgUrl": "/images/pokemon/shiny/golem-alolan.png",
+    "type": ["rock", "electric"],
+    "generation": 7
+  },
+  {
+    "name": "Alolan Grimer",
+    "imgUrl": "/images/pokemon/grimer-alolan.png",
+    "shinyImgUrl": "/images/pokemon/shiny/grimer-alolan.png",
+    "type": ["poison", "dark"],
+    "generation": 7
+  },
+  {
+    "name": "Alolan Muk",
+    "imgUrl": "/images/pokemon/muk-alolan.png",
+    "shinyImgUrl": "/images/pokemon/shiny/muk-alolan.png",
+    "type": ["poison", "dark"],
+    "generation": 7
+  },
+  {
+    "name": "Alolan Exeggutor",
+    "imgUrl": "/images/pokemon/exeggutor-alolan.png",
+    "shinyImgUrl": "/images/pokemon/shiny/exeggutor-alolan.png",
+    "type": ["grass", "dragon"],
+    "generation": 7
+  },
+  {
+    "name": "Alolan Marowak",
+    "imgUrl": "/images/pokemon/marowak-alolan.png",
+    "shinyImgUrl": "/images/pokemon/shiny/marowak-alolan.png",
+    "type": ["fire", "ghost"],
     "generation": 7
   }
 ]
