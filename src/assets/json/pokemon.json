@@ -8414,6 +8414,55 @@
     "generation": 8
   },
   {
+    "name": "Gigantamax Venusaur",
+    "imgUrl": "/images/pokemon/venusaur-gigantamax.png",
+    "shinyImgUrl": "/images/pokemon/shiny/venusaur-gigantamax.png",
+    "type": ["grass", "poison"],
+    "generation": 8
+  },
+  {
+    "name": "Gigantamax Blastoise",
+    "imgUrl": "/images/pokemon/blastoise-gigantamax.png",
+    "shinyImgUrl": "/images/pokemon/shiny/blastoise-gigantamax.png",
+    "type": ["water"],
+    "generation": 8
+  },
+  {
+    "name": "Gigantamax Rillaboom",
+    "imgUrl": "/images/pokemon/rillaboom-gigantamax.png",
+    "shinyImgUrl": "/images/pokemon/shiny/rillaboom-gigantamax.png",
+    "type": ["grass"],
+    "generation": 8
+  },
+  {
+    "name": "Gigantamax Cinderace",
+    "imgUrl": "/images/pokemon/cinderace-gigantamax.png",
+    "shinyImgUrl": "/images/pokemon/shiny/cinderace-gigantamax.png",
+    "type": ["fire"],
+    "generation": 8
+  },
+  {
+    "name": "Gigantamax Inteleon",
+    "imgUrl": "/images/pokemon/inteleon-gigantamax.png",
+    "shinyImgUrl": "/images/pokemon/shiny/inteleon-gigantamax.png",
+    "type": ["water"],
+    "generation": 8
+  },
+  {
+    "name": "Gigantamax Urshifu SS",
+    "imgUrl": "/images/pokemon/urshifu-single-strike-gigantamax.png",
+    "shinyImgUrl": "/images/pokemon/shiny/urshifu-single-strike-gigantamax.png",
+    "type": ["fighting", "dark"],
+    "generation": 8
+  },
+  {
+    "name": "Gigantamax Urshifu RS",
+    "imgUrl": "/images/pokemon/urshifu-rapid-strike-gigantamax.png",
+    "shinyImgUrl": "/images/pokemon/shiny/urshifu-rapid-strike-gigantamax.png",
+    "type": ["fighting", "water"],
+    "generation": 8
+  },
+  {
     "name": "Galarian Meowth",
     "imgUrl": "/images/pokemon/meowth-galarian.png",
     "shinyImgUrl": "/images/pokemon/shiny/meowth-galarian.png",
@@ -8551,6 +8600,132 @@
     "imgUrl": "/images/pokemon/moltres-galarian.png",
     "shinyImgUrl": "/images/pokemon/shiny/moltres-galarian.png",
     "type": ["dark", "flying"],
+    "generation": 8
+  },
+  {
+    "name": "Hisuian Decidueye",
+    "imgUrl": "/images/pokemon/decidueye-hisuian.png",
+    "shinyImgUrl": "/images/pokemon/shiny/decidueye-hisuian.png",
+    "type": ["grass", "fighting"],
+    "generation": 8
+  },
+  {
+    "name": "Hisuian Typhlosion",
+    "imgUrl": "/images/pokemon/typhlosion-hisuian.png",
+    "shinyImgUrl": "/images/pokemon/shiny/typhlosion-hisuian.png",
+    "type": ["fire", "ghost"],
+    "generation": 8
+  },
+  {
+    "name": "Hisuian Samurott",
+    "imgUrl": "/images/pokemon/samurott-hisuian.png",
+    "shinyImgUrl": "/images/pokemon/shiny/samurott-hisuian.png",
+    "type": ["water", "dark"],
+    "generation": 8
+  },
+  {
+    "name": "Hisuian Growlithe",
+    "imgUrl": "/images/pokemon/growlithe-hisuian.png",
+    "shinyImgUrl": "/images/pokemon/shiny/growlithe-hisuian.png",
+    "type": ["fire", "rock"],
+    "generation": 8
+  },
+  {
+    "name": "Hisuian Arcanine",
+    "imgUrl": "/images/pokemon/arcanine-hisuian.png",
+    "shinyImgUrl": "/images/pokemon/shiny/arcanine-hisuian.png",
+    "type": ["fire", "rock"],
+    "generation": 8
+  },
+  {
+    "name": "Hisuian Voltorb",
+    "imgUrl": "/images/pokemon/voltorb-hisuian.png",
+    "shinyImgUrl": "/images/pokemon/shiny/voltorb-hisuian.png",
+    "type": ["electric", "grass"],
+    "generation": 8
+  },
+  {
+    "name": "Hisuian Electrode",
+    "imgUrl": "/images/pokemon/electrode-hisuian.png",
+    "shinyImgUrl": "/images/pokemon/shiny/electrode-hisuian.png",
+    "type": ["electric", "grass"],
+    "generation": 8
+  },
+  {
+    "name": "Hisuian Qwilfish",
+    "imgUrl": "/images/pokemon/qwilfish-hisuian.png",
+    "shinyImgUrl": "/images/pokemon/shiny/qwilfish-hisuian.png",
+    "type": ["dark", "poison"],
+    "generation": 8
+  },
+  {
+    "name": "Hisuian Sneasel",
+    "imgUrl": "/images/pokemon/sneasel-hisuian.png",
+    "shinyImgUrl": "/images/pokemon/shiny/sneasel-hisuian.png",
+    "type": ["fighting", "poison"],
+    "generation": 8
+  },
+  {
+    "name": "Hisuian Lilligant",
+    "imgUrl": "/images/pokemon/lilligant-hisuian.png",
+    "shinyImgUrl": "/images/pokemon/shiny/lilligant-hisuian.png",
+    "type": ["grass", "fighting"],
+    "generation": 8
+  },
+  {
+    "name": "Hisuian Zorua",
+    "imgUrl": "/images/pokemon/zorua-hisuian.png",
+    "shinyImgUrl": "/images/pokemon/shiny/zorua-hisuian.png",
+    "type": ["normal", "ghost"],
+    "generation": 8
+  },
+  {
+    "name": "Hisuian Zoroark",
+    "imgUrl": "/images/pokemon/zoroark-hisuian.png",
+    "shinyImgUrl": "/images/pokemon/shiny/zoroark-hisuian.png",
+    "type": ["normal", "ghost"],
+    "generation": 8
+  },
+  {
+    "name": "Hisuian Braviary",
+    "imgUrl": "/images/pokemon/braviary-hisuian.png",
+    "shinyImgUrl": "/images/pokemon/shiny/braviary-hisuian.png",
+    "type": ["psychic", "flying"],
+    "generation": 8
+  },
+  {
+    "name": "Hisuian Sliggoo",
+    "imgUrl": "/images/pokemon/sliggoo-hisuian.png",
+    "shinyImgUrl": "/images/pokemon/shiny/sliggoo-hisuian.png",
+    "type": ["steel", "dragon"],
+    "generation": 8
+  },
+  {
+    "name": "Hisuian Goodra",
+    "imgUrl": "/images/pokemon/goodra-hisuian.png",
+    "shinyImgUrl": "/images/pokemon/shiny/goodra-hisuian.png",
+    "type": ["steel", "dragon"],
+    "generation": 8
+  },
+  {
+    "name": "Hisuian Avalugg",
+    "imgUrl": "/images/pokemon/avalugg-hisuian.png",
+    "shinyImgUrl": "/images/pokemon/shiny/avalugg-hisuian.png",
+    "type": ["ice", "rock"],
+    "generation": 8
+  },
+  {
+    "name": "Dialga Origin",
+    "imgUrl": "/images/pokemon/dialga-origin.png",
+    "shinyImgUrl": "/images/pokemon/shiny/dialga-origin.png",
+    "type": ["steel", "dragon"],
+    "generation": 8
+  },
+  {
+    "name": "Palkia Origin",
+    "imgUrl": "/images/pokemon/palkia-origin.png",
+    "shinyImgUrl": "/images/pokemon/shiny/palkia-origin.png",
+    "type": ["water", "dragon"],
     "generation": 8
   },
   {
