@@ -11,8 +11,10 @@ To use the app, either be entranced and watch the pokemon move around all day, o
 open the options pane. From there let your creativity run wild.
 
 ## What's next?
-Well currently its only support all the pokemon up to Gen VI, mostly due to my eagerness to start testing the concept.
+Well now that all pokemon up to and including Gen 9 have been added, there are still tons of other features that i'd like
+to add...
 
 So next steps would be:
-- Add the rest of the pokemon up to latest generation (Gen IX).
+- Add Shiny Charm (naturally it would increase the odds of a shiny appearing when adding pokemon to the page)
+- Add Pokeballs
 - Add beautiful pixel style backgrounds
