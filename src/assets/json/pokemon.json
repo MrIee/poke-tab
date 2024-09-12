@@ -8359,8 +8359,8 @@
   },
   {
     "name": "Gigantamax Sandaconda",
-    "imgUrl": "/images/pokemon/gengar-gigantamax.png",
-    "shinyImgUrl": "/images/pokemon/shiny/gengar-gigantamax.png",
+    "imgUrl": "/images/pokemon/sandaconda-gigantamax.png",
+    "shinyImgUrl": "/images/pokemon/shiny/sandaconda-gigantamax.png",
     "type": ["ground"],
     "generation": 8
   },
@@ -8552,5 +8552,1066 @@
     "shinyImgUrl": "/images/pokemon/shiny/moltres-galarian.png",
     "type": ["dark", "flying"],
     "generation": 8
+  },
+  {
+    "name": "Sprigatito",
+    "imgUrl": "/images/pokemon/sprigatito.png",
+    "shinyImgUrl": "/images/pokemon/shiny/sprigatito.png",
+    "type": ["grass"],
+    "generation": 9
+  },
+  {
+    "name": "Floragato",
+    "imgUrl": "/images/pokemon/floragato.png",
+    "shinyImgUrl": "/images/pokemon/shiny/floragato.png",
+    "type": ["grass"],
+    "generation": 9
+  },
+  {
+    "name": "Meowscarada",
+    "imgUrl": "/images/pokemon/meowscarada.png",
+    "shinyImgUrl": "/images/pokemon/shiny/meowscarada.png",
+    "type": ["grass", "dark"],
+    "generation": 9
+  },
+  {
+    "name": "Fuecoco",
+    "imgUrl": "/images/pokemon/fuecoco.png",
+    "shinyImgUrl": "/images/pokemon/shiny/fuecoco.png",
+    "type": ["fire"],
+    "generation": 9
+  },
+  {
+    "name": "Crocalor",
+    "imgUrl": "/images/pokemon/crocalor.png",
+    "shinyImgUrl": "/images/pokemon/shiny/crocalor.png",
+    "type": ["fire"],
+    "generation": 9
+  },
+  {
+    "name": "Skeledirge",
+    "imgUrl": "/images/pokemon/skeledirge.png",
+    "shinyImgUrl": "/images/pokemon/shiny/skeledirge.png",
+    "type": ["fire", "ghost"],
+    "generation": 9
+  },
+  {
+    "name": "Quaxly",
+    "imgUrl": "/images/pokemon/quaxly.png",
+    "shinyImgUrl": "/images/pokemon/shiny/quaxly.png",
+    "type": ["water"],
+    "generation": 9
+  },
+  {
+    "name": "Quaxwell",
+    "imgUrl": "/images/pokemon/quaxwell.png",
+    "shinyImgUrl": "/images/pokemon/shiny/quaxwell.png",
+    "type": ["water"],
+    "generation": 9
+  },
+  {
+    "name": "Quaquaval",
+    "imgUrl": "/images/pokemon/quaquaval.png",
+    "shinyImgUrl": "/images/pokemon/shiny/quaquaval.png",
+    "type": ["water", "fighting"],
+    "generation": 9
+  },
+  {
+    "name": "Lechonk",
+    "imgUrl": "/images/pokemon/lechonk.png",
+    "shinyImgUrl": "/images/pokemon/shiny/lechonk.png",
+    "type": ["normal"],
+    "generation": 9
+  },
+  {
+    "name": "Oinkologne M",
+    "imgUrl": "/images/pokemon/oinkologne-male.png",
+    "shinyImgUrl": "/images/pokemon/shiny/oinkologne-male.png",
+    "type": ["normal"],
+    "generation": 9
+  },
+  {
+    "name": "Oinkologne F",
+    "imgUrl": "/images/pokemon/oinkologne-female.png",
+    "shinyImgUrl": "/images/pokemon/shiny/oinkologne-female.png",
+    "type": ["normal"],
+    "generation": 9
+  },
+  {
+    "name": "Tarountula",
+    "imgUrl": "/images/pokemon/tarountula.png",
+    "shinyImgUrl": "/images/pokemon/shiny/tarountula.png",
+    "type": ["bug"],
+    "generation": 9
+  },
+  {
+    "name": "Spidops",
+    "imgUrl": "/images/pokemon/spidops.png",
+    "shinyImgUrl": "/images/pokemon/shiny/spidops.png",
+    "type": ["bug"],
+    "generation": 9
+  },
+  {
+    "name": "Nymble",
+    "imgUrl": "/images/pokemon/nymble.png",
+    "shinyImgUrl": "/images/pokemon/shiny/nymble.png",
+    "type": ["bug"],
+    "generation": 9
+  },
+  {
+    "name": "Lokix",
+    "imgUrl": "/images/pokemon/lokix.png",
+    "shinyImgUrl": "/images/pokemon/shiny/lokix.png",
+    "type": ["bug", "dark"],
+    "generation": 9
+  },
+  {
+    "name": "Pawmi",
+    "imgUrl": "/images/pokemon/pawmi.png",
+    "shinyImgUrl": "/images/pokemon/shiny/pawmi.png",
+    "type": ["electric"],
+    "generation": 9
+  },
+  {
+    "name": "Pawmo",
+    "imgUrl": "/images/pokemon/pawmo.png",
+    "shinyImgUrl": "/images/pokemon/shiny/pawmo.png",
+    "type": ["electric", "fighting"],
+    "generation": 9
+  },
+  {
+    "name": "Pawmot",
+    "imgUrl": "/images/pokemon/pawmot.png",
+    "shinyImgUrl": "/images/pokemon/shiny/pawmot.png",
+    "type": ["electric", "fighting"],
+    "generation": 9
+  },
+  {
+    "name": "Tandemaus",
+    "imgUrl": "/images/pokemon/tandemaus.png",
+    "shinyImgUrl": "/images/pokemon/shiny/tandemaus.png",
+    "type": ["normal"],
+    "generation": 9
+  },
+  {
+    "name": "Maushold Three",
+    "imgUrl": "/images/pokemon/maushold-three.png",
+    "shinyImgUrl": "/images/pokemon/shiny/maushold-three.png",
+    "type": ["normal"],
+    "generation": 9
+  },
+  {
+    "name": "Maushold Four",
+    "imgUrl": "/images/pokemon/maushold-four.png",
+    "shinyImgUrl": "/images/pokemon/shiny/maushold-four.png",
+    "type": ["normal"],
+    "generation": 9
+  },
+  {
+    "name": "Fidough",
+    "imgUrl": "/images/pokemon/fidough.png",
+    "shinyImgUrl": "/images/pokemon/shiny/fidough.png",
+    "type": ["fairy"],
+    "generation": 9
+  },
+  {
+    "name": "Dachsbun",
+    "imgUrl": "/images/pokemon/dachsbun.png",
+    "shinyImgUrl": "/images/pokemon/shiny/dachsbun.png",
+    "type": ["fairy"],
+    "generation": 9
+  },
+  {
+    "name": "Smoliv",
+    "imgUrl": "/images/pokemon/smoliv.png",
+    "shinyImgUrl": "/images/pokemon/shiny/smoliv.png",
+    "type": ["grass", "normal"],
+    "generation": 9
+  },
+  {
+    "name": "Dolliv",
+    "imgUrl": "/images/pokemon/dolliv.png",
+    "shinyImgUrl": "/images/pokemon/shiny/dolliv.png",
+    "type": ["grass", "normal"],
+    "generation": 9
+  },
+  {
+    "name": "Arboliva",
+    "imgUrl": "/images/pokemon/arboliva.png",
+    "shinyImgUrl": "/images/pokemon/shiny/arboliva.png",
+    "type": ["grass", "normal"],
+    "generation": 9
+  },
+  {
+    "name": "Squawkabilly Green",
+    "imgUrl": "/images/pokemon/squawkabilly-green.png",
+    "shinyImgUrl": "/images/pokemon/shiny/squawkabilly-green.png",
+    "type": ["normal", "flying"],
+    "generation": 9,
+    "forms": [
+      {
+        "name": "Green",
+        "imgUrl": "/images/pokemon/squawkabilly-green.png",
+        "shinyImgUrl": "/images/pokemon/shiny/squawkabilly-green.png",
+        "type": ["normal", "flying"],
+        "generation": 9
+      },
+      {
+        "name": "Blue",
+        "imgUrl": "/images/pokemon/squawkabilly-blue.png",
+        "shinyImgUrl": "/images/pokemon/shiny/squawkabilly-blue.png",
+        "type": ["normal", "flying"],
+        "generation": 9
+      },
+      {
+        "name": "Yellow",
+        "imgUrl": "/images/pokemon/squawkabilly-yellow.png",
+        "shinyImgUrl": "/images/pokemon/shiny/squawkabilly-yellow.png",
+        "type": ["normal", "flying"],
+        "generation": 9
+      },
+      {
+        "name": "White",
+        "imgUrl": "/images/pokemon/squawkabilly-white.png",
+        "shinyImgUrl": "/images/pokemon/shiny/squawkabilly-white.png",
+        "type": ["normal", "flying"],
+        "generation": 9
+      }
+    ]
+  },
+  {
+    "name": "Nacli",
+    "imgUrl": "/images/pokemon/nacli.png",
+    "shinyImgUrl": "/images/pokemon/shiny/nacli.png",
+    "type": ["rock"],
+    "generation": 9
+  },
+  {
+    "name": "Naclstack",
+    "imgUrl": "/images/pokemon/naclstack.png",
+    "shinyImgUrl": "/images/pokemon/shiny/naclstack.png",
+    "type": ["rock"],
+    "generation": 9
+  },
+  {
+    "name": "Garganacl",
+    "imgUrl": "/images/pokemon/garganacl.png",
+    "shinyImgUrl": "/images/pokemon/shiny/garganacl.png",
+    "type": ["rock"],
+    "generation": 9
+  },
+  {
+    "name": "Charcadet",
+    "imgUrl": "/images/pokemon/charcadet.png",
+    "shinyImgUrl": "/images/pokemon/shiny/charcadet.png",
+    "type": ["fire"],
+    "generation": 9
+  },
+  {
+    "name": "Armarouge",
+    "imgUrl": "/images/pokemon/armarouge.png",
+    "shinyImgUrl": "/images/pokemon/shiny/armarouge.png",
+    "type": ["fire", "psychic"],
+    "generation": 9
+  },
+  {
+    "name": "Ceruledge",
+    "imgUrl": "/images/pokemon/ceruledge.png",
+    "shinyImgUrl": "/images/pokemon/shiny/ceruledge.png",
+    "type": ["fire", "ghost"],
+    "generation": 9
+  },
+  {
+    "name": "Tadbulb",
+    "imgUrl": "/images/pokemon/tadbulb.png",
+    "shinyImgUrl": "/images/pokemon/shiny/tadbulb.png",
+    "type": ["electric"],
+    "generation": 9
+  },
+  {
+    "name": "Bellibolt",
+    "imgUrl": "/images/pokemon/bellibolt.png",
+    "shinyImgUrl": "/images/pokemon/shiny/bellibolt.png",
+    "type": ["electric"],
+    "generation": 9
+  },
+  {
+    "name": "Wattrel",
+    "imgUrl": "/images/pokemon/wattrel.png",
+    "shinyImgUrl": "/images/pokemon/shiny/wattrel.png",
+    "type": ["electric", "flying"],
+    "generation": 9
+  },
+  {
+    "name": "Kilowattrel",
+    "imgUrl": "/images/pokemon/kilowattrel.png",
+    "shinyImgUrl": "/images/pokemon/shiny/kilowattrel.png",
+    "type": ["electric", "flying"],
+    "generation": 9
+  },
+  {
+    "name": "Maschiff",
+    "imgUrl": "/images/pokemon/maschiff.png",
+    "shinyImgUrl": "/images/pokemon/shiny/maschiff.png",
+    "type": ["dark"],
+    "generation": 9
+  },
+  {
+    "name": "Mabosstiff",
+    "imgUrl": "/images/pokemon/mabosstiff.png",
+    "shinyImgUrl": "/images/pokemon/shiny/mabosstiff.png",
+    "type": ["dark"],
+    "generation": 9
+  },
+  {
+    "name": "Shroodle",
+    "imgUrl": "/images/pokemon/shroodle.png",
+    "shinyImgUrl": "/images/pokemon/shiny/shroodle.png",
+    "type": ["poison", "normal"],
+    "generation": 9
+  },
+  {
+    "name": "Grafaiai",
+    "imgUrl": "/images/pokemon/grafaiai.png",
+    "shinyImgUrl": "/images/pokemon/shiny/grafaiai.png",
+    "type": ["poison", "normal"],
+    "generation": 9
+  },
+  {
+    "name": "Bramblin",
+    "imgUrl": "/images/pokemon/bramblin.png",
+    "shinyImgUrl": "/images/pokemon/shiny/bramblin.png",
+    "type": ["grass", "ghost"],
+    "generation": 9
+  },
+  {
+    "name": "Brambleghast",
+    "imgUrl": "/images/pokemon/brambleghast.png",
+    "shinyImgUrl": "/images/pokemon/shiny/brambleghast.png",
+    "type": ["grass", "ghost"],
+    "generation": 9
+  },
+  {
+    "name": "Toedscool",
+    "imgUrl": "/images/pokemon/toedscool.png",
+    "shinyImgUrl": "/images/pokemon/shiny/toedscool.png",
+    "type": ["ground", "grass"],
+    "generation": 9
+  },
+  {
+    "name": "Toedscruel",
+    "imgUrl": "/images/pokemon/toedscruel.png",
+    "shinyImgUrl": "/images/pokemon/shiny/toedscruel.png",
+    "type": ["ground", "grass"],
+    "generation": 9
+  },
+  {
+    "name": "Klawf",
+    "imgUrl": "/images/pokemon/klawf.png",
+    "shinyImgUrl": "/images/pokemon/shiny/klawf.png",
+    "type": ["rock"],
+    "generation": 9
+  },
+  {
+    "name": "Capsakid",
+    "imgUrl": "/images/pokemon/capsakid.png",
+    "shinyImgUrl": "/images/pokemon/shiny/capsakid.png",
+    "type": ["grass"],
+    "generation": 9
+  },
+  {
+    "name": "Scovillain",
+    "imgUrl": "/images/pokemon/scovillain.png",
+    "shinyImgUrl": "/images/pokemon/shiny/scovillain.png",
+    "type": ["grass", "fire"],
+    "generation": 9
+  },
+  {
+    "name": "Rellor",
+    "imgUrl": "/images/pokemon/rellor.png",
+    "shinyImgUrl": "/images/pokemon/shiny/rellor.png",
+    "type": ["bug"],
+    "generation": 9
+  },
+  {
+    "name": "Rabsca",
+    "imgUrl": "/images/pokemon/rabsca.png",
+    "shinyImgUrl": "/images/pokemon/shiny/rabsca.png",
+    "type": ["bug", "psychic"],
+    "generation": 9
+  },
+  {
+    "name": "Flittle",
+    "imgUrl": "/images/pokemon/flittle.png",
+    "shinyImgUrl": "/images/pokemon/shiny/flittle.png",
+    "type": ["psychic"],
+    "generation": 9
+  },
+  {
+    "name": "Espathra",
+    "imgUrl": "/images/pokemon/espathra.png",
+    "shinyImgUrl": "/images/pokemon/shiny/espathra.png",
+    "type": ["psychic"],
+    "generation": 9
+  },
+  {
+    "name": "Tinkatink",
+    "imgUrl": "/images/pokemon/tinkatink.png",
+    "shinyImgUrl": "/images/pokemon/shiny/tinkatink.png",
+    "type": ["fairy", "steel"],
+    "generation": 9
+  },
+  {
+    "name": "Tinkatuff",
+    "imgUrl": "/images/pokemon/tinkatuff.png",
+    "shinyImgUrl": "/images/pokemon/shiny/tinkatuff.png",
+    "type": ["fairy", "steel"],
+    "generation": 9
+  },
+  {
+    "name": "Tinkaton",
+    "imgUrl": "/images/pokemon/tinkaton.png",
+    "shinyImgUrl": "/images/pokemon/shiny/tinkaton.png",
+    "type": ["fairy", "steel"],
+    "generation": 9
+  },
+  {
+    "name": "Wiglett",
+    "imgUrl": "/images/pokemon/wiglett.png",
+    "shinyImgUrl": "/images/pokemon/shiny/wiglett.png",
+    "type": ["water"],
+    "generation": 9
+  },
+  {
+    "name": "Wugtrio",
+    "imgUrl": "/images/pokemon/wugtrio.png",
+    "shinyImgUrl": "/images/pokemon/shiny/wugtrio.png",
+    "type": ["water"],
+    "generation": 9
+  },
+  {
+    "name": "Bombirdier",
+    "imgUrl": "/images/pokemon/bombirdier.png",
+    "shinyImgUrl": "/images/pokemon/shiny/bombirdier.png",
+    "type": ["flying", "dark"],
+    "generation": 9
+  },
+  {
+    "name": "Finizen",
+    "imgUrl": "/images/pokemon/finizen.png",
+    "shinyImgUrl": "/images/pokemon/shiny/finizen.png",
+    "type": ["water"],
+    "generation": 9
+  },
+  {
+    "name": "Palafin Zero",
+    "imgUrl": "/images/pokemon/palafin-zero.png",
+    "shinyImgUrl": "/images/pokemon/shiny/palafin-zero.png",
+    "type": ["water"],
+    "generation": 9
+  },
+  {
+    "name": "Palafin Hero",
+    "imgUrl": "/images/pokemon/palafin-hero.png",
+    "shinyImgUrl": "/images/pokemon/shiny/palafin-hero.png",
+    "type": ["water"],
+    "generation": 9
+  },
+  {
+    "name": "Varoom",
+    "imgUrl": "/images/pokemon/varoom.png",
+    "shinyImgUrl": "/images/pokemon/shiny/varoom.png",
+    "type": ["steel", "poison"],
+    "generation": 9
+  },
+  {
+    "name": "Revavroom",
+    "imgUrl": "/images/pokemon/revavroom.png",
+    "shinyImgUrl": "/images/pokemon/shiny/revavroom.png",
+    "type": ["steel", "poison"],
+    "generation": 9
+  },
+  {
+    "name": "Cyclizar",
+    "imgUrl": "/images/pokemon/cyclizar.png",
+    "shinyImgUrl": "/images/pokemon/shiny/cyclizar.png",
+    "type": ["dragon", "normal"],
+    "generation": 9
+  },
+  {
+    "name": "Orthworm",
+    "imgUrl": "/images/pokemon/orthworm.png",
+    "shinyImgUrl": "/images/pokemon/shiny/orthworm.png",
+    "type": ["steel"],
+    "generation": 9
+  },
+  {
+    "name": "Glimmet",
+    "imgUrl": "/images/pokemon/glimmet.png",
+    "shinyImgUrl": "/images/pokemon/shiny/glimmet.png",
+    "type": ["rock", "poison"],
+    "generation": 9
+  },
+  {
+    "name": "Glimmora",
+    "imgUrl": "/images/pokemon/glimmora.png",
+    "shinyImgUrl": "/images/pokemon/shiny/glimmora.png",
+    "type": ["rock", "poison"],
+    "generation": 9
+  },
+  {
+    "name": "Greavard",
+    "imgUrl": "/images/pokemon/greavard.png",
+    "shinyImgUrl": "/images/pokemon/shiny/greavard.png",
+    "type": ["ghost"],
+    "generation": 9
+  },
+  {
+    "name": "Houndstone",
+    "imgUrl": "/images/pokemon/houndstone.png",
+    "shinyImgUrl": "/images/pokemon/shiny/houndstone.png",
+    "type": ["ghost"],
+    "generation": 9
+  },
+  {
+    "name": "Flamigo",
+    "imgUrl": "/images/pokemon/flamigo.png",
+    "shinyImgUrl": "/images/pokemon/shiny/flamigo.png",
+    "type": ["flying", "fighting"],
+    "generation": 9
+  },
+  {
+    "name": "Cetoddle",
+    "imgUrl": "/images/pokemon/cetoddle.png",
+    "shinyImgUrl": "/images/pokemon/shiny/cetoddle.png",
+    "type": ["ice"],
+    "generation": 9
+  },
+  {
+    "name": "Cetitan",
+    "imgUrl": "/images/pokemon/cetitan.png",
+    "shinyImgUrl": "/images/pokemon/shiny/cetitan.png",
+    "type": ["ice"],
+    "generation": 9
+  },
+  {
+    "name": "Veluza",
+    "imgUrl": "/images/pokemon/veluza.png",
+    "shinyImgUrl": "/images/pokemon/shiny/veluza.png",
+    "type": ["water", "psychic"],
+    "generation": 9
+  },
+  {
+    "name": "Dondozo",
+    "imgUrl": "/images/pokemon/dondozo.png",
+    "shinyImgUrl": "/images/pokemon/shiny/dondozo.png",
+    "type": ["water"],
+    "generation": 9
+  },
+  {
+    "name": "Tatsugiri Curly",
+    "imgUrl": "/images/pokemon/tatsugiri-curly.png",
+    "shinyImgUrl": "/images/pokemon/shiny/tatsugiri-curly.png",
+    "type": ["dragon", "water"],
+    "generation": 9
+  },
+  {
+    "name": "Tatsugiri Droopy",
+    "imgUrl": "/images/pokemon/tatsugiri-droopy.png",
+    "shinyImgUrl": "/images/pokemon/shiny/tatsugiri-droopy.png",
+    "type": ["dragon", "water"],
+    "generation": 9
+  },
+  {
+    "name": "Tatsugiri Stretchy",
+    "imgUrl": "/images/pokemon/tatsugiri-stretchy.png",
+    "shinyImgUrl": "/images/pokemon/shiny/tatsugiri-stretchy.png",
+    "type": ["dragon", "water"],
+    "generation": 9
+  },
+  {
+    "name": "Annihilape",
+    "imgUrl": "/images/pokemon/annihilape.png",
+    "shinyImgUrl": "/images/pokemon/shiny/annihilape.png",
+    "type": ["fighting", "ghost"],
+    "generation": 9
+  },
+  {
+    "name": "Clodsire",
+    "imgUrl": "/images/pokemon/clodsire.png",
+    "shinyImgUrl": "/images/pokemon/shiny/clodsire.png",
+    "type": ["poison", "ground"],
+    "generation": 9
+  },
+  {
+    "name": "Farigiraf",
+    "imgUrl": "/images/pokemon/farigiraf.png",
+    "shinyImgUrl": "/images/pokemon/shiny/farigiraf.png",
+    "type": ["normal", "psychic"],
+    "generation": 9
+  },
+  {
+    "name": "Dudunsparce Two",
+    "imgUrl": "/images/pokemon/dudunsparce-two.png",
+    "shinyImgUrl": "/images/pokemon/shiny/dudunsparce-two.png",
+    "type": ["normal"],
+    "generation": 9
+  },
+  {
+    "name": "Dudunsparce Three",
+    "imgUrl": "/images/pokemon/dudunsparce-three.png",
+    "shinyImgUrl": "/images/pokemon/shiny/dudunsparce-three.png",
+    "type": ["normal"],
+    "generation": 9
+  },
+  {
+    "name": "Kingambit",
+    "imgUrl": "/images/pokemon/kingambit.png",
+    "shinyImgUrl": "/images/pokemon/shiny/kingambit.png",
+    "type": ["dark", "steel"],
+    "generation": 9
+  },
+  {
+    "name": "Great-tusk",
+    "imgUrl": "/images/pokemon/great-tusk.png",
+    "shinyImgUrl": "/images/pokemon/shiny/great-tusk.png",
+    "type": ["ground", "fighting"],
+    "generation": 9
+  },
+  {
+    "name": "Scream Tail",
+    "imgUrl": "/images/pokemon/scream-tail.png",
+    "shinyImgUrl": "/images/pokemon/shiny/scream-tail.png",
+    "type": ["fairy", "psychic"],
+    "generation": 9
+  },
+  {
+    "name": "Brute Bonnet",
+    "imgUrl": "/images/pokemon/brute-bonnet.png",
+    "shinyImgUrl": "/images/pokemon/shiny/brute-bonnet.png",
+    "type": ["grass", "dark"],
+    "generation": 9
+  },
+  {
+    "name": "Flutter Mane",
+    "imgUrl": "/images/pokemon/flutter-mane.png",
+    "shinyImgUrl": "/images/pokemon/shiny/flutter-mane.png",
+    "type": ["ghost", "fairy"],
+    "generation": 9
+  },
+  {
+    "name": "Slither Wing",
+    "imgUrl": "/images/pokemon/slither-wing.png",
+    "shinyImgUrl": "/images/pokemon/shiny/slither-wing.png",
+    "type": ["bug", "fighting"],
+    "generation": 9
+  },
+  {
+    "name": "Sandy Shocks",
+    "imgUrl": "/images/pokemon/sandy-shocks.png",
+    "shinyImgUrl": "/images/pokemon/shiny/sandy-shocks.png",
+    "type": ["electric", "ground"],
+    "generation": 9
+  },
+  {
+    "name": "Iron Treads",
+    "imgUrl": "/images/pokemon/iron-treads.png",
+    "shinyImgUrl": "/images/pokemon/shiny/iron-treads.png",
+    "type": ["ground", "steel"],
+    "generation": 9
+  },
+  {
+    "name": "Iron Bundle",
+    "imgUrl": "/images/pokemon/iron-bundle.png",
+    "shinyImgUrl": "/images/pokemon/shiny/iron-bundle.png",
+    "type": ["ice", "water"],
+    "generation": 9
+  },
+  {
+    "name": "Iron Hands",
+    "imgUrl": "/images/pokemon/iron-hands.png",
+    "shinyImgUrl": "/images/pokemon/shiny/iron-hands.png",
+    "type": ["fighting", "electric"],
+    "generation": 9
+  },
+  {
+    "name": "Iron Jugulis",
+    "imgUrl": "/images/pokemon/iron-jugulis.png",
+    "shinyImgUrl": "/images/pokemon/shiny/iron-jugulis.png",
+    "type": ["dark", "flying"],
+    "generation": 9
+  },
+  {
+    "name": "Iron Moth",
+    "imgUrl": "/images/pokemon/iron-moth.png",
+    "shinyImgUrl": "/images/pokemon/shiny/iron-moth.png",
+    "type": ["fire", "poison"],
+    "generation": 9
+  },
+  {
+    "name": "Iron Thorns",
+    "imgUrl": "/images/pokemon/iron-thorns.png",
+    "shinyImgUrl": "/images/pokemon/shiny/iron-thorns.png",
+    "type": ["rock", "electric"],
+    "generation": 9
+  },
+  {
+    "name": "Frigibax",
+    "imgUrl": "/images/pokemon/frigibax.png",
+    "shinyImgUrl": "/images/pokemon/shiny/frigibax.png",
+    "type": ["dragon", "ice"],
+    "generation": 9
+  },
+  {
+    "name": "Arctibax",
+    "imgUrl": "/images/pokemon/arctibax.png",
+    "shinyImgUrl": "/images/pokemon/shiny/arctibax.png",
+    "type": ["dragon", "ice"],
+    "generation": 9
+  },
+  {
+    "name": "Baxcalibur",
+    "imgUrl": "/images/pokemon/baxcalibur.png",
+    "shinyImgUrl": "/images/pokemon/shiny/baxcalibur.png",
+    "type": ["dragon", "ice"],
+    "generation": 9
+  },
+  {
+    "name": "Gimmighoul Chest",
+    "imgUrl": "/images/pokemon/gimmighoul-chest.png",
+    "shinyImgUrl": "/images/pokemon/shiny/gimmighoul-chest.png",
+    "type": ["ghost"],
+    "generation": 9
+  },
+  {
+    "name": "Gimmighoul Roaming",
+    "imgUrl": "/images/pokemon/gimmighoul-roaming.png",
+    "shinyImgUrl": "/images/pokemon/shiny/gimmighoul-roaming.png",
+    "type": ["ghost"],
+    "generation": 9
+  },
+  {
+    "name": "Gholdengo",
+    "imgUrl": "/images/pokemon/gholdengo.png",
+    "shinyImgUrl": "/images/pokemon/shiny/gholdengo.png",
+    "type": ["steel", "ghost"],
+    "generation": 9
+  },
+  {
+    "name": "Wo-Chien",
+    "imgUrl": "/images/pokemon/wo-chien.png",
+    "shinyImgUrl": "/images/pokemon/shiny/wo-chien.png",
+    "type": ["dark", "grass"],
+    "generation": 9
+  },
+  {
+    "name": "Chien-Pao",
+    "imgUrl": "/images/pokemon/chien-pao.png",
+    "shinyImgUrl": "/images/pokemon/shiny/chien-pao.png",
+    "type": ["dark", "ice"],
+    "generation": 9
+  },
+  {
+    "name": "Ting-Lu",
+    "imgUrl": "/images/pokemon/ting-lu.png",
+    "shinyImgUrl": "/images/pokemon/shiny/ting-lu.png",
+    "type": ["dark", "ground"],
+    "generation": 9
+  },
+  {
+    "name": "Chi-Yu",
+    "imgUrl": "/images/pokemon/chi-yu.png",
+    "shinyImgUrl": "/images/pokemon/shiny/chi-yu.png",
+    "type": ["dark", "fire"],
+    "generation": 9
+  },
+  {
+    "name": "Roaring Moon",
+    "imgUrl": "/images/pokemon/roaring-moon.png",
+    "shinyImgUrl": "/images/pokemon/shiny/roaring-moon.png",
+    "type": ["dragon", "dark"],
+    "generation": 9
+  },
+  {
+    "name": "Iron Valiant",
+    "imgUrl": "/images/pokemon/iron-valiant.png",
+    "shinyImgUrl": "/images/pokemon/shiny/iron-valiant.png",
+    "type": ["fairy", "fighting"],
+    "generation": 9
+  },
+  {
+    "name": "Koraidon Apex",
+    "imgUrl": "/images/pokemon/koraidon-apex.png",
+    "shinyImgUrl": "/images/pokemon/shiny/koraidon-apex.png",
+    "type": ["fighting", "dragon"],
+    "generation": 9
+  },
+  {
+    "name": "Koraidon Limited",
+    "imgUrl": "/images/pokemon/koraidon-limited.png",
+    "shinyImgUrl": "/images/pokemon/shiny/koraidon-limited.png",
+    "type": ["fighting", "dragon"],
+    "generation": 9
+  },
+  {
+    "name": "Miraidon Ultimate",
+    "imgUrl": "/images/pokemon/miraidon-ultimate.png",
+    "shinyImgUrl": "/images/pokemon/shiny/miraidon-ultimate.png",
+    "type": ["electric", "dragon"],
+    "generation": 9
+  },
+  {
+    "name": "Miraidon Low Power",
+    "imgUrl": "/images/pokemon/miraidon-low-power.png",
+    "shinyImgUrl": "/images/pokemon/shiny/miraidon-low-power.png",
+    "type": ["electric", "dragon"],
+    "generation": 9
+  },
+  {
+    "name": "Walking Wake",
+    "imgUrl": "/images/pokemon/walking-wake.png",
+    "shinyImgUrl": "/images/pokemon/shiny/walking-wake.png",
+    "type": ["water", "dragon"],
+    "generation": 9
+  },
+  {
+    "name": "Iron Leaves",
+    "imgUrl": "/images/pokemon/iron-leaves.png",
+    "shinyImgUrl": "/images/pokemon/shiny/iron-leaves.png",
+    "type": ["grass", "psychic"],
+    "generation": 9
+  },
+  {
+    "name": "Poltchageist",
+    "imgUrl": "/images/pokemon/poltchageist.png",
+    "shinyImgUrl": "/images/pokemon/shiny/poltchageist.png",
+    "type": ["grass", "ghost"],
+    "generation": 9
+  },
+  {
+    "name": "Sinistcha",
+    "imgUrl": "/images/pokemon/sinistcha.png",
+    "shinyImgUrl": "/images/pokemon/shiny/sinistcha.png",
+    "type": ["grass", "ghost"],
+    "generation": 9
+  },
+  {
+    "name": "Okidogi",
+    "imgUrl": "/images/pokemon/okidogi.png",
+    "shinyImgUrl": "/images/pokemon/shiny/okidogi.png",
+    "type": ["poison", "fighting"],
+    "generation": 9
+  },
+  {
+    "name": "Munkidori",
+    "imgUrl": "/images/pokemon/munkidori.png",
+    "shinyImgUrl": "/images/pokemon/shiny/munkidori.png",
+    "type": ["poison", "psychic"],
+    "generation": 9
+  },
+  {
+    "name": "Fezandipiti",
+    "imgUrl": "/images/pokemon/fezandipiti.png",
+    "shinyImgUrl": "/images/pokemon/shiny/fezandipiti.png",
+    "type": ["poison", "fairy"],
+    "generation": 9
+  },
+  {
+    "name": "Ogerpon",
+    "imgUrl": "/images/pokemon/ogerpon-teal.png",
+    "shinyImgUrl": "/images/pokemon/shiny/ogerpon-teal.png",
+    "type": ["grass"],
+    "generation": 9,
+    "forms": [
+      {
+        "name": "Teal",
+        "imgUrl": "/images/pokemon/ogerpon-teal.png",
+        "shinyImgUrl": "/images/pokemon/shiny/ogerpon-teal.png",
+        "type": ["grass"],
+        "generation": 9
+      },
+      {
+        "name": "Mask",
+        "imgUrl": "/images/pokemon/ogerpon-teal-mask.png",
+        "shinyImgUrl": "/images/pokemon/shiny/ogerpon-teal-mask.png",
+        "type": ["grass"],
+        "generation": 9
+      },
+      {
+        "name": "Terastallized",
+        "imgUrl": "/images/pokemon/ogerpon-teal-mask-terastallized.png",
+        "shinyImgUrl": "/images/pokemon/shiny/ogerpon-teal-mask-terastallized.png",
+        "type": ["grass"],
+        "generation": 9
+      },
+      {
+        "name": "Wellspring",
+        "imgUrl": "/images/pokemon/ogerpon-wellspring.png",
+        "shinyImgUrl": "/images/pokemon/shiny/ogerpon-wellspring.png",
+        "type": ["grass"],
+        "generation": 9
+      },
+      {
+        "name": "Mask",
+        "imgUrl": "/images/pokemon/ogerpon-wellspring-mask.png",
+        "shinyImgUrl": "/images/pokemon/shiny/ogerpon-wellspring-mask.png",
+        "type": ["grass"],
+        "generation": 9
+      },
+      {
+        "name": "Terastallized",
+        "imgUrl": "/images/pokemon/ogerpon-wellspring-mask-terastallized.png",
+        "shinyImgUrl": "/images/pokemon/shiny/ogerpon-wellspring-mask-terastallized.png",
+        "type": ["grass"],
+        "generation": 9
+      },
+      {
+        "name": "Hearthflame",
+        "imgUrl": "/images/pokemon/ogerpon-hearthflame.png",
+        "shinyImgUrl": "/images/pokemon/shiny/ogerpon-hearthflame.png",
+        "type": ["grass"],
+        "generation": 9
+      },
+      {
+        "name": "Mask",
+        "imgUrl": "/images/pokemon/ogerpon-hearthflame-mask.png",
+        "shinyImgUrl": "/images/pokemon/shiny/ogerpon-hearthflame-mask.png",
+        "type": ["grass"],
+        "generation": 9
+      },
+      {
+        "name": "Terastallized",
+        "imgUrl": "/images/pokemon/ogerpon-hearthflame-mask-terastallized.png",
+        "shinyImgUrl": "/images/pokemon/shiny/ogerpon-hearthflame-mask-terastallized.png",
+        "type": ["grass"],
+        "generation": 9
+      },
+      {
+        "name": "Cornerstone",
+        "imgUrl": "/images/pokemon/ogerpon-cornerstone.png",
+        "shinyImgUrl": "/images/pokemon/shiny/ogerpon-cornerstone.png",
+        "type": ["grass"],
+        "generation": 9
+      },
+      {
+        "name": "Mask",
+        "imgUrl": "/images/pokemon/ogerpon-cornerstone-mask.png",
+        "shinyImgUrl": "/images/pokemon/shiny/ogerpon-cornerstone-mask.png",
+        "type": ["grass"],
+        "generation": 9
+      },
+      {
+        "name": "Terastallized",
+        "imgUrl": "/images/pokemon/ogerpon-cornerstone-mask-terastallized.png",
+        "shinyImgUrl": "/images/pokemon/shiny/ogerpon-cornerstone-mask-terastallized.png",
+        "type": ["grass"],
+        "generation": 9
+      }
+    ]
+  },
+  {
+    "name": "Archaludon",
+    "imgUrl": "/images/pokemon/archaludon.png",
+    "shinyImgUrl": "/images/pokemon/shiny/archaludon.png",
+    "type": ["steel", "dragon"],
+    "generation": 9
+  },
+  {
+    "name": "Hydrapple",
+    "imgUrl": "/images/pokemon/hydrapple.png",
+    "shinyImgUrl": "/images/pokemon/shiny/hydrapple.png",
+    "type": ["grass", "dragon"],
+    "generation": 9
+  },
+  {
+    "name": "Gouging Fire",
+    "imgUrl": "/images/pokemon/gouging-fire.png",
+    "shinyImgUrl": "/images/pokemon/shiny/gouging-fire.png",
+    "type": ["fire", "dragon"],
+    "generation": 9
+  },
+  {
+    "name": "Raging Bolt",
+    "imgUrl": "/images/pokemon/raging-bolt.png",
+    "shinyImgUrl": "/images/pokemon/shiny/raging-bolt.png",
+    "type": ["electric", "dragon"],
+    "generation": 9
+  },
+  {
+    "name": "Iron Boulder",
+    "imgUrl": "/images/pokemon/iron-boulder.png",
+    "shinyImgUrl": "/images/pokemon/shiny/iron-boulder.png",
+    "type": ["rock", "psychic"],
+    "generation": 9
+  },
+  {
+    "name": "Iron Crown",
+    "imgUrl": "/images/pokemon/iron-crown.png",
+    "shinyImgUrl": "/images/pokemon/shiny/iron-crown.png",
+    "type": ["steel", "psychic"],
+    "generation": 9
+  },
+  {
+    "name": "Terapagos Normal",
+    "imgUrl": "/images/pokemon/terapagos.png",
+    "shinyImgUrl": "/images/pokemon/shiny/terapagos.png",
+    "type": ["normal"],
+    "generation": 9
+  },
+  {
+    "name": "Terapagos Terastal",
+    "imgUrl": "/images/pokemon/terapagos-terastal.png",
+    "shinyImgUrl": "/images/pokemon/shiny/terapagos-terastal.png",
+    "type": ["normal"],
+    "generation": 9
+  },
+  {
+    "name": "Terapagos Stellar",
+    "imgUrl": "/images/pokemon/terapagos-stellar.png",
+    "shinyImgUrl": "/images/pokemon/shiny/terapagos-stellar.png",
+    "type": ["normal"],
+    "generation": 9
+  },
+  {
+    "name": "Pecharunt Open",
+    "imgUrl": "/images/pokemon/pecharunt-open.png",
+    "shinyImgUrl": "/images/pokemon/shiny/pecharunt-open.png",
+    "type": ["poison", "ghost"],
+    "generation": 9
+  },
+  {
+    "name": "Pecharunt Closed",
+    "imgUrl": "/images/pokemon/pecharunt-closed.png",
+    "shinyImgUrl": "/images/pokemon/shiny/pecharunt-closed.png",
+    "type": ["poison", "ghost"],
+    "generation": 9
+  },
+  {
+    "name": "Tauros Combat",
+    "imgUrl": "/images/pokemon/tauros-paldean-combat.png",
+    "shinyImgUrl": "/images/pokemon/shiny/tauros-paldean-combat.png",
+    "type": ["fighting"],
+    "generation": 9
+  },
+  {
+    "name": "Tauros Blaze",
+    "imgUrl": "/images/pokemon/tauros-paldean-blaze.png",
+    "shinyImgUrl": "/images/pokemon/shiny/tauros-paldean-blaze.png",
+    "type": ["fighting", "fire"],
+    "generation": 9
+  },
+  {
+    "name": "Tauros Aqua",
+    "imgUrl": "/images/pokemon/tauros-paldean-aqua.png",
+    "shinyImgUrl": "/images/pokemon/shiny/tauros-paldean-aqua.png",
+    "type": ["fighting", "water"],
+    "generation": 9
+  },
+  {
+    "name": "Wooper",
+    "imgUrl": "/images/pokemon/wooper-paldean.png",
+    "shinyImgUrl": "/images/pokemon/shiny/wooper-paldean.png",
+    "type": ["water", "ground"],
+    "generation": 9
   }
 ]
