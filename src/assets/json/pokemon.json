@@ -7322,13 +7322,6 @@
     "generation": 7
   },
   {
-    "name": "Melmetal",
-    "imgUrl": "/images/pokemon/melmetal.png",
-    "shinyImgUrl": "/images/pokemon/shiny/melmetal.png",
-    "type": ["steel"],
-    "generation": 7
-  },
-  {
     "name": "Alolan Rattata",
     "imgUrl": "/images/pokemon/rattata-alolan.png",
     "shinyImgUrl": "/images/pokemon/shiny/rattata-alolan.png",
