@@ -270,7 +270,7 @@ export default defineComponent({
       this.savedPokemon[boxId].pokemon = [];
       this.saveRandomPokemon(boxId, this.savedPokemon[boxId].default);
 
-      if (loadPokemonToCanvas && (this.defaultBoxId === this.selectedBox || boxId === MAX_NUM_BOXES)) {
+      if (loadPokemonToCanvas && (boxId === this.defaultBoxId)) {
         drawApp.removeAllPokemonFromCanvas();
         this.addSavedPokemonToCanvas(this.savedPokemon[boxId].pokemon);
       }
