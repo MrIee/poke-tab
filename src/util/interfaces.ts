@@ -34,3 +34,10 @@ export interface Padding {
   bottom: number;
   left: number;
 }
+
+export interface Callout {
+  id?: string;
+  imgUrl?: string;
+  label: string;
+  description?: string;
+}

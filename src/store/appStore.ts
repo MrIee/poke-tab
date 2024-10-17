@@ -1,4 +1,5 @@
 import { defineStore, StoreDefinition } from "pinia";
+import { useAchievementStore } from "./achievementStore";
 import { type Pokemon } from "../util/interfaces";
 import { makePokemonShiny } from '../util/helpers';
 import { saveToLocal, loadFromLocal } from "../util/localStorage";
@@ -24,6 +25,7 @@ export const useAppStore: StoreDefinition = defineStore('appStore', {
     setPokemonToAdd(pokemon: Pokemon | null): void {
       if (pokemon) {
         this.pokemonToAdd = makePokemonShiny(pokemon);
+        useAchievementStore().addPokemonToAchievements(this.pokemonToAdd);
       } else {
         this.pokemonToAdd = null;
       }
@@ -62,6 +64,6 @@ export const useAppStore: StoreDefinition = defineStore('appStore', {
     async loadShowFormsReminder(): Promise<void> {
       const showFormsReminder: boolean = await loadFromLocal(LOCAL_OPTIONS_POKEMON_FORMS_REMINDER);
       this.showFormsReminder = showFormsReminder === null ? true : showFormsReminder;
-    }
+    },
   },
 });

@@ -1,7 +1,5 @@
 <template>
-  <Transition name="callout">
-    <Callout v-if="isCalloutVisible" :label="calloutLabel" @close="isCalloutVisible = false" />
-  </Transition>
+  <CalloutQueue />
   <div
     :ref="canvasRef"
     class="tw-absolute tw-top-0 tw-left-0 tw-bottom-12 tw-right-0 tw-overflow-hidden tw-select-none"
@@ -24,7 +22,9 @@
 import { defineComponent } from 'vue';
 import { mapState, mapActions } from 'pinia';
 import { useAppStore } from './store/appStore';
-import Callout from './components/Callout.vue';
+import { useCalloutStore } from './store/calloutStore';
+import { useAchievementStore } from './store/achievementStore';
+import CalloutQueue from './components/CalloutQueue.vue';
 import Options from './components/Options.vue';
 import Footer from './components/Footer.vue';
 import {
@@ -33,6 +33,7 @@ import {
   type PokemonBox,
   type DockedEvent,
   type Padding,
+  type Callout,
 } from './util/interfaces';
 import { PokemonObject, DrawApp } from './util/drawApp';
 import {
@@ -62,7 +63,7 @@ let drawApp: DrawApp = new DrawApp();
 
 export default defineComponent({
   components: {
-    Callout,
+    CalloutQueue,
     Options,
     Footer,
   },
@@ -158,8 +159,8 @@ export default defineComponent({
     });
   },
   methods: {
+    ...mapActions(useCalloutStore, { addCallout: 'addCallout', removeCallout: 'removeCallout'  }),
     ...mapActions(useAppStore, {
-      setPokemonToAdd: 'setPokemonToAdd',
       setIdsOfPokemonToRemove: 'setIdsOfPokemonToRemove',
       setRandomizeBox: 'setRandomizeBox,',
       setDefaultBoxId: 'setDefaultBoxId',
@@ -167,6 +168,9 @@ export default defineComponent({
       setBackgroundColor: 'setBackgroundColor',
       setSpeed: 'setSpeed',
       setSize: 'setSize',
+    }),
+    ...mapActions(useAchievementStore, {
+      addPokemonToAchievements: 'addPokemonToAchievements',
     }),
     async toggleOptions(event: Event): Promise<void> {
       if (this.isOptionsVisible) {
@@ -214,7 +218,9 @@ export default defineComponent({
     },
     saveRandomPokemon(saveToIndex: number = 0, isDefault: boolean = false): void {
       this.savedPokemon[saveToIndex].default = isDefault;
-      this.savedPokemon[saveToIndex].pokemon = getUniqueRandomItems(this.allPokemon, POKEMON_STORAGE_LIMIT, makePokemonShiny);
+      const pokemon: Array<Pokemon> = getUniqueRandomItems(this.allPokemon, POKEMON_STORAGE_LIMIT, makePokemonShiny);
+        pokemon.forEach((pokemon: Pokemon) => this.addPokemonToAchievements(pokemon));
+      this.savedPokemon[saveToIndex].pokemon = pokemon;
     },
     addSavedPokemonToCanvas(pokemon?: Array<Pokemon>): void {
       const pokemonToAdd: Array<Pokemon> = pokemon || this.savedPokemon[0].pokemon;
@@ -248,7 +254,6 @@ export default defineComponent({
       }
 
       this.savedPokemon[this.selectedBox].pokemon.unshift({ ...pokemon, id });
-      this.setPokemonToAdd(null);
     },
     removePokemonFromBox(): void {
       this.pokemonIdsToRemove.forEach((id: string): void => {
@@ -288,8 +293,10 @@ export default defineComponent({
       await saveToLocal(LOCAL_OPTIONS_BACKGROUND_COLOR, this.backgroundColor);
       await saveToLocal(LOCAL_OPTIONS_SPEED, this.speed);
       await saveToLocal(LOCAL_OPTIONS_SIZE, this.size);
-      this.isCalloutVisible = true;
-      this.calloutLabel = 'Settings saved!';
+
+      const callout: Callout = { id: 'save', label: 'Settings saved!' };
+      this.removeCallout(callout);
+      this.$nextTick(() => this.addCallout(callout));
     },
     async loadAllSettings(): Promise<void> {
       const bgColor: string = await loadFromLocal(LOCAL_OPTIONS_BACKGROUND_COLOR);
@@ -304,14 +311,4 @@ export default defineComponent({
 });
 </script>
 
-<style>
-.callout-enter-active,
-.callout-leave-active {
-  @apply tw-transition-opacity tw-duration-500;
-}
 
-.callout-enter-from,
-.callout-leave-to {
-  @apply tw-opacity-0;
-}
-</style>

@@ -44,11 +44,8 @@ export default defineComponent({
   tw-mx-auto
   tw-text-white
   tw-rounded-lg
-  tw-bg-green-500
-  tw-fixed
-  tw-top-0
-  tw-right-0
-  tw-left-0
-  tw-z-50;
+  tw-border
+  tw-border-gray-800
+  tw-bg-green-500;
 }
 </style>
