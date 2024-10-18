@@ -18,3 +18,6 @@ So next steps would be:
 - Add Shiny Charm (naturally it would increase the odds of a shiny appearing when adding pokemon to the page)
 - Add Pokeballs
 - Add beautiful pixel style backgrounds
+
+## Chrome Extension
+I have turned this project into a chrome extension. Check it out [here](https://chromewebstore.google.com/detail/poketab-pokemon-in-your-n/eboakcaphhgldoakdlkmdlnfemkmobab)
