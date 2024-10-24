@@ -9,7 +9,11 @@ export default {
       'xs': '425px',
       ...defaultTheme.screens,
     },
-    extend: {}
+    extend: {
+      colors: {
+        'gold': '#D4AF37',
+      },
+    },
   },
   plugins: []
 };

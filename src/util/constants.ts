@@ -8,3 +8,5 @@ export const LOCAL_OPTIONS_ALWAYS_RANDOM: string = 'alwaysRandom';
 export const LOCAL_OPTIONS_BACKGROUND_COLOR: string = 'backgroundColor';
 export const LOCAL_OPTIONS_SPEED: string = 'speed';
 export const LOCAL_OPTIONS_SIZE: string = 'size';
+
+export const SPECIAL_POKEMON_CATEGORIES: Object = { 100: 'RED BLUE', 101: 'YELLOW', 102: 'SPECIAL' };

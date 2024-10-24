@@ -16,29 +16,19 @@
     </div>
     <div class="tw-flex">
       <span
+        v-for="(tab, key) in tabs"
+        :key="key"
         :class="{
           'options__tab': true,
-          'active': activeTab === tabPokemon,
+          'active': activeTab === tab,
         }"
-        @click="activeTab = tabPokemon"
+        @click="activeTab = tab"
         >
-        Pokemon
-      </span>
-      <span
-        :class="{
-          'options__tab': true,
-          'active': activeTab === tabSettings,
-        }"
-        @click="activeTab = tabSettings"
-        >
-        Settings
+        {{ tab }}
       </span>
     </div>
     <div class="tw-h-full sm:tw-h-[650px] tw-p-3 tw-overflow-auto">
-      <div v-if="activeTab === tabSettings">
-        <Settings />
-      </div>
-      <div v-if="activeTab === tabPokemon">
+      <div v-if="activeTab === tabs[0]">
         <p class="tw-mb-3">
           You may store up to 10 sets of pokemon to use in your new tab(s).
         </p>
@@ -59,6 +49,8 @@
           />
         </div>
       </div>
+      <Settings v-if="activeTab === tabs[1]" />
+      <Achievements v-if="activeTab === tabs[2]" />
     </div>
     <div v-if="isWindowVisible" class="tw-h-full tw-w-full tw-rounded-bl-lg tw-rounded-br-lg tw-absolute tw-top-8 tw-z-10">
       <div class="tw-h-8 tw-flex tw-items-center tw-bg-blue-400 tw-border-t tw-border-gray-800 tw-relative">
@@ -80,9 +72,10 @@ import { useAppStore } from '../store/appStore';
 import DragIndicator from './icons/DragIndicator.vue';
 import Cross from './icons/Cross.vue';
 import Chevron from './icons/Chevron.vue';
-import Settings from './Settings.vue';
 import PokemonBoxComponent from './PokemonBox.vue';
 import PokemonPicker from './PokemonPicker.vue';
+import Settings from './Settings.vue';
+import Achievements from './Achievements.vue';
 import { type PokemonBox } from '../util/interfaces';
 import { MAX_NUM_BOXES, OPTIONS_DRAGBAR_ID } from '../util/constants';
 
@@ -94,6 +87,7 @@ export default defineComponent({
     PokemonBox: PokemonBoxComponent,
     PokemonPicker,
     Settings,
+    Achievements,
   },
   props: {
     savedPokemon: {
@@ -110,8 +104,11 @@ export default defineComponent({
       isWindowVisible: false,
       tabTitle: '',
       activeTab: '',
-      tabPokemon: 'pokemon',
-      tabSettings: 'settings',
+      tabs: [
+        'Pokemon',
+        'Settings',
+        'Achievements',
+      ],
       maxNumBoxes: MAX_NUM_BOXES,
     };
   },
@@ -125,7 +122,7 @@ export default defineComponent({
   },
   mounted(): void {
     this.selectedBoxId = this.defaultBoxId > MAX_NUM_BOXES ? this.defaultBoxId : 0;
-    this.activeTab = this.tabPokemon;
+    this.activeTab = this.tabs[0];
   },
   methods: {
     onClose(): void {

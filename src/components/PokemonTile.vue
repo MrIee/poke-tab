@@ -1,20 +1,23 @@
 <template>
   <div
     :class="{
-      'tw-inline-block tw-h-24 tw-w-24 tw-text-center tw-cursor-pointer tw-relative': true,
+      'tw-inline-flex tw-flex-col tw-justify-center tw-items-center tw-h-24 tw-w-24 tw-text-center tw-cursor-pointer tw-relative': true,
       'tw-bg-blue-200': isSelectable && isSelected,
     }"
   >
     <span v-if="forms.length > 0" class="pokemon-tile__form-icon">+</span>
     <img
-      :class="{ '-tw-mb-2.5': label }"
+      :class="{
+        '-tw-mb-2.5': label,
+        'tw-brightness-0 tw-opacity-30 tw-pointer-events-none': locked,
+      }"
       :src="imgUrl"
       :alt="name"
       loading="lazy"
       @click="onClick"
     />
     <span
-      v-if="label"
+      v-if="label && !locked"
       :class="{
         'tw-inline-block': true,
         [getLabelClass(label)]: true,
@@ -74,6 +77,10 @@ export default defineComponent({
       type: Array<Pokemon>,
       default: () => [],
     },
+    locked: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -88,13 +95,15 @@ export default defineComponent({
       this.$emit('select', this.id);
     },
     onClick(): void {
-      if (this.isSelectable) {
-        this.onSelect();
-      } else {
-        if (this.forms.length > 0) {
-          this.isFormsPanelVisible = !this.isFormsPanelVisible;
+      if (!this.locked) {
+        if (this.isSelectable) {
+          this.onSelect();
         } else {
-          this.$emit('on-click-pokemon');
+          if (this.forms.length > 0) {
+            this.isFormsPanelVisible = !this.isFormsPanelVisible;
+          } else {
+            this.$emit('on-click-pokemon');
+          }
         }
       }
     },

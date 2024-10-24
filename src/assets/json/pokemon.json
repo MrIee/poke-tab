@@ -905,7 +905,7 @@
     "generation": 1
   },
   {
-    "name": "jynx",
+    "name": "Jynx",
     "imgUrl": "/images/pokemon/jynx.png",
     "shinyImgUrl": "/images/pokemon/shiny/jynx.png",
     "type": ["psychic"],
@@ -7012,7 +7012,7 @@
     ]
   },
   {
-    "name": "Minor",
+    "name": "Minior",
     "imgUrl": "/images/pokemon/minior-meteor.png",
     "shinyImgUrl": "/images/pokemon/shiny/minior-meteor.png",
     "type": ["rock", "flying"],
@@ -8911,7 +8911,7 @@
     "generation": 9
   },
   {
-    "name": "Squawkabilly Green",
+    "name": "Squawkabilly",
     "imgUrl": "/images/pokemon/squawkabilly-green.png",
     "shinyImgUrl": "/images/pokemon/shiny/squawkabilly-green.png",
     "type": ["normal", "flying"],
@@ -9781,5 +9781,2126 @@
     "shinyImgUrl": "/images/pokemon/shiny/wooper-paldean.png",
     "type": ["water", "ground"],
     "generation": 9
+  },
+  {
+    "name": "Bulbasaur",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/bulbasaur-color.png",
+    "type": ["grass", "poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Ivysaur",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/ivysaur-color.png",
+    "type": ["grass", "poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Venusaur",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/venusaur-color.png",
+    "type": ["grass", "poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Charmander",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/charmander-color.png",
+    "type": ["fire"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Charmeleon",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/charmeleon-color.png",
+    "type": ["fire"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Charizard",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/charizard-color.png",
+    "type": ["fire", "flying"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Squirtle",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/squirtle-color.png",
+    "type": ["water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Wartortle",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/wartortle-color.png",
+    "type": ["water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Blastoise",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/blastoise-color.png",
+    "type": ["water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Caterpie",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/caterpie-color.png",
+    "type": ["bug"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Metapod",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/metapod-color.png",
+    "type": ["bug"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Butterfree",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/butterfree-color.png",
+    "type": ["bug", "flying"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Weedle",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/weedle-color.png",
+    "type": ["bug", "Poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Kakuna",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/kakuna-color.png",
+    "type": ["bug", "Poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Beedrill",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/beedrill-color.png",
+    "type": ["bug", "Poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Pidgey",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/pidgey-color.png",
+    "type": ["normal", "flying"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Pidgeotto",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/pidgeotto-color.png",
+    "type": ["normal", "flying"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Pidgeot",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/pidgeot-color.png",
+    "type": ["normal", "flying"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Rattata",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/rattata-color.png",
+    "type": ["normal"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Raticate",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/raticate-color.png",
+    "type": ["normal"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Spearow",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/spearow-color.png",
+    "type": ["normal"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Fearow",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/fearow-color.png",
+    "type": ["normal", "flying"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Ekans",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/ekans-color.png",
+    "type": ["poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Arbok",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/arbok-color.png",
+    "type": ["poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Pikachu",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/pikachu-color.png",
+    "type": ["electric"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Raichu",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/raichu-color.png",
+    "type": ["electric"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Sandshrew",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/sandshrew-color.png",
+    "type": ["ground"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Sandslash",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/sandslash-color.png",
+    "type": ["ground"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Nidoran F",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/nidoran-f-color.png",
+    "type": ["poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Nidorina",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/nidorina-color.png",
+    "type": ["poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Nidoqueen",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/nidoqueen-color.png",
+    "type": ["poison", "ground"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Nidoran M",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/nidoran-m-color.png",
+    "type": ["poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Nidorino",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/nidorino-color.png",
+    "type": ["poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Nidoking",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/nidoking-color.png",
+    "type": ["poison", "ground"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Clefairy",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/clefairy-color.png",
+    "type": ["fairy"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Clefable",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/clefable-color.png",
+    "type": ["fairy"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Vulpix",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/vulpix-color.png",
+    "type": ["fire"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Ninetales",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/ninetales-color.png",
+    "type": ["fire"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Jigglypuff",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/jigglypuff-color.png",
+    "type": ["normal", "fairy"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Wigglytuff",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/wigglytuff-color.png",
+    "type": ["normal", "fairy"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Zubat",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/zubat-color.png",
+    "type": ["poison", "flying"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Golbat",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/golbat-color.png",
+    "type": ["poison", "flying"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Oddish",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/oddish-color.png",
+    "type": ["grass", "poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Gloom",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/gloom-color.png",
+    "type": ["grass", "poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Vileplume",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/vileplume-color.png",
+    "type": ["grass", "poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Paras",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/paras-color.png",
+    "type": ["bug", "grass"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Parasect",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/parasect-color.png",
+    "type": ["bug", "grass"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Venonat",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/venonat-color.png",
+    "type": ["bug", "poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Venomoth",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/venomoth-color.png",
+    "type": ["bug", "poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Diglett",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/diglett-color.png",
+    "type": ["ground"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Dugtrio",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/dugtrio-color.png",
+    "type": ["ground"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Meowth",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/meowth-color.png",
+    "type": ["normal"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Persian",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/persian-color.png",
+    "type": ["normal"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Psyduck",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/psyduck-color.png",
+    "type": ["water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Golduck",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/golduck-color.png",
+    "type": ["water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Mankey",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/mankey-color.png",
+    "type": ["fighting"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Primape",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/primeape-color.png",
+    "type": ["fighting"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Growlithe",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/growlithe-color.png",
+    "type": ["fire"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Arcanine",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/arcanine-color.png",
+    "type": ["fire"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Poliwag",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/poliwag-color.png",
+    "type": ["water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Poliwhirl",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/poliwhirl-color.png",
+    "type": ["water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Poliwrath",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/poliwrath-color.png",
+    "type": ["water", "fighting"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Abra",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/abra-color.png",
+    "type": ["psychic"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Kadabra",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/kadabra-color.png",
+    "type": ["psychic"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Alakazam",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/alakazam-color.png",
+    "type": ["psychic"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Machop",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/machop-color.png",
+    "type": ["fighting"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Machoke",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/machoke-color.png",
+    "type": ["fighting"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Machamp",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/machamp-color.png",
+    "type": ["fighting"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Bellsprout",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/bellsprout-color.png",
+    "type": ["grass", "poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Weepinbell",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/weepinbell-color.png",
+    "type": ["grass", "poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Victreebel",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/victreebel-color.png",
+    "type": ["grass", "poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Tentacool",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/tentacool-color.png",
+    "type": ["water", "poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Tentacruel",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/tentacruel-color.png",
+    "type": ["water", "poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Geodude",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/geodude-color.png",
+    "type": ["rock", "ground"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Graveler",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/graveler-color.png",
+    "type": ["rock", "ground"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Golem",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/golem-color.png",
+    "type": ["rock", "ground"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Ponyta",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/ponyta-color.png",
+    "type": ["fire"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Rapidash",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/rapidash-color.png",
+    "type": ["fire"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Slowpoke",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/slowpoke-color.png",
+    "type": ["water", "psychic"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Slowbro",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/slowbro-color.png",
+    "type": ["water", "psychic"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Magnemite",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/magnemite-color.png",
+    "type": ["electric", "steel"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Magneton",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/magneton-color.png",
+    "type": ["electric", "steel"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Farfetch'd",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/farfetchd-color.png",
+    "type": ["normal", "flying"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Doduo",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/doduo-color.png",
+    "type": ["normal", "flying"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Dodrio",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/dodrio-color.png",
+    "type": ["normal", "flying"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Seel",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/seel-color.png",
+    "type": ["water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Dewgong",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/dewgong-color.png",
+    "type": ["water", "ice"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Grimer",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/grimer-color.png",
+    "type": ["Poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Muk",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/muk-color.png",
+    "type": ["Poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Shellder",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/shellder-color.png",
+    "type": ["water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Cloyster",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/cloyster-color.png",
+    "type": ["water", "ice"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Gastly",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/gastly-color.png",
+    "type": ["ghost", "poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Haunter",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/haunter-color.png",
+    "type": ["ghost", "poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Gengar",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/gengar-color.png",
+    "type": ["ghost", "poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Onix",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/onix-color.png",
+    "type": ["rock", "ground"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Drowzee",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/drowzee-color.png",
+    "type": ["psychic"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Hypno",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/hypno-color.png",
+    "type": ["psychic"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Krabby",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/krabby-color.png",
+    "type": ["water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Kingler",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/kingler-color.png",
+    "type": ["water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Voltorb",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/voltorb-color.png",
+    "type": ["electric"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Electrode",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/electrode-color.png",
+    "type": ["electric"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Exeggcute",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/exeggcute-color.png",
+    "type": ["grass", "psychic"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Exeggutor",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/exeggutor-color.png",
+    "type": ["grass", "psychic"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Cubone",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/cubone-color.png",
+    "type": ["ground"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Marowak",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/marowak-color.png",
+    "type": ["ground"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Hitmonlee",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/hitmonlee-color.png",
+    "type": ["fighting"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Hitmonchan",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/hitmonchan-color.png",
+    "type": ["fighting"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Lickitung",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/lickitung-color.png",
+    "type": ["normal"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Koffing",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/koffing-color.png",
+    "type": ["poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Weezing",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/weezing-color.png",
+    "type": ["poison"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Rhyhorn",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/rhyhorn-color.png",
+    "type": ["ground", "rock"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Rhydon",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/rhydon-color.png",
+    "type": ["ground", "rock"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Chansey",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/chansey-color.png",
+    "type": ["normal"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Tangela",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/tangela-color.png",
+    "type": ["grass"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Kangaskhan",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/kangaskhan-color.png",
+    "type": ["normal"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Horsea",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/horsea-color.png",
+    "type": ["water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Seadra",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/seadra-color.png",
+    "type": ["water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Goldeen",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/goldeen-color.png",
+    "type": ["water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Seaking",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/seaking-color.png",
+    "type": ["water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Staryu",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/staryu-color.png",
+    "type": ["water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Starmie",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/starmie-color.png",
+    "type": ["water", "psychic"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Mr. Mime",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/mr-mime-color.png",
+    "type": ["psychic", "fairy"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Scyther",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/scyther-color.png",
+    "type": ["bug", "flying"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Jynx",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/jynx-color.png",
+    "type": ["psychic"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Electabuzz",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/electabuzz-color.png",
+    "type": ["electric"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Magmar",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/magmar-color.png",
+    "type": ["fire"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Pinsir",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/pinsir-color.png",
+    "type": ["bug"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Tauros",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/tauros-color.png",
+    "type": ["normal"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Magikarp",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/magikarp-color.png",
+    "type": ["water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Gyarados",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/gyarados-color.png",
+    "type": ["water", "flying"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Lapras",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/lapras-color.png",
+    "type": ["water", "ice"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Ditto",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/ditto-color.png",
+    "type": ["normal"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Eevee",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/eevee-color.png",
+    "type": ["normal"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Vaporeon",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/vaporeon-color.png",
+    "type": ["water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Jolteon",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/jolteon-color.png",
+    "type": ["electric"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Flareon",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/flareon-color.png",
+    "type": ["fire"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Porygon",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/porygon-color.png",
+    "type": ["normal"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Omanyte",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/omanyte-color.png",
+    "type": ["rock", "water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Omastar",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/omastar-color.png",
+    "type": ["rock", "water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Kabuto",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/kabuto-color.png",
+    "type": ["rock", "water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Kabutops",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/kabutops-color.png",
+    "type": ["rock", "water"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Aerodactyl",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/aerodactyl-color.png",
+    "type": ["rock", "flying"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Snorlax",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/snorlax-color.png",
+    "type": ["normal"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Articuno",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/articuno-color.png",
+    "type": ["ice", "flying"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Zapdos",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/zapdos-color.png",
+    "type": ["electric", "flying"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Moltres",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/moltres-color.png",
+    "type": ["fire", "flying"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Dratini",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/dratini-color.png",
+    "type": ["dragon"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Dragonair",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/dragonair-color.png",
+    "type": ["dragon"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Dragonite",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/dragonite-color.png",
+    "type": ["dragon", "flying"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Mewtwo",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/mewtwo-color.png",
+    "type": ["psychic"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Mew",
+    "imgUrl": "/images/achievements/pokemon/gen1/redblue/mew-color.png",
+    "type": ["psychic"],
+    "generation": 100,
+    "achievement": "First 151"
+  },
+  {
+    "name": "Bulbasaur",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/bulbasaur-color.png",
+    "type": ["grass", "poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Ivysaur",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/ivysaur-color.png",
+    "type": ["grass", "poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Venusaur",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/venusaur-color.png",
+    "type": ["grass", "poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Charmander",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/charmander-color.png",
+    "type": ["fire"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Charmeleon",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/charmeleon-color.png",
+    "type": ["fire"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Charizard",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/charizard-color.png",
+    "type": ["fire", "flying"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Squirtle",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/squirtle-color.png",
+    "type": ["water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Wartortle",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/wartortle-color.png",
+    "type": ["water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Blastoise",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/blastoise-color.png",
+    "type": ["water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Caterpie",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/caterpie-color.png",
+    "type": ["bug"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Metapod",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/metapod-color.png",
+    "type": ["bug"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Butterfree",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/butterfree-color.png",
+    "type": ["bug", "flying"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Weedle",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/weedle-color.png",
+    "type": ["bug", "Poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Kakuna",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/kakuna-color.png",
+    "type": ["bug", "Poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Beedrill",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/beedrill-color.png",
+    "type": ["bug", "Poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Pidgey",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/pidgey-color.png",
+    "type": ["normal", "flying"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Pidgeotto",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/pidgeotto-color.png",
+    "type": ["normal", "flying"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Pidgeot",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/pidgeot-color.png",
+    "type": ["normal", "flying"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Rattata",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/rattata-color.png",
+    "type": ["normal"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Raticate",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/raticate-color.png",
+    "type": ["normal"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Spearow",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/spearow-color.png",
+    "type": ["normal"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Fearow",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/fearow-color.png",
+    "type": ["normal", "flying"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Ekans",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/ekans-color.png",
+    "type": ["poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Arbok",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/arbok-color.png",
+    "type": ["poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Pikachu",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/pikachu-color.png",
+    "type": ["electric"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Raichu",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/raichu-color.png",
+    "type": ["electric"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Sandshrew",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/sandshrew-color.png",
+    "type": ["ground"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Sandslash",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/sandslash-color.png",
+    "type": ["ground"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Nidoran F",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/nidoran-f-color.png",
+    "type": ["poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Nidorina",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/nidorina-color.png",
+    "type": ["poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Nidoqueen",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/nidoqueen-color.png",
+    "type": ["poison", "ground"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Nidoran M",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/nidoran-m-color.png",
+    "type": ["poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Nidorino",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/nidorino-color.png",
+    "type": ["poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Nidoking",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/nidoking-color.png",
+    "type": ["poison", "ground"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Clefairy",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/clefairy-color.png",
+    "type": ["fairy"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Clefable",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/clefable-color.png",
+    "type": ["fairy"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Vulpix",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/vulpix-color.png",
+    "type": ["fire"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Ninetales",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/ninetales-color.png",
+    "type": ["fire"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Jigglypuff",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/jigglypuff-color.png",
+    "type": ["normal", "fairy"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Wigglytuff",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/wigglytuff-color.png",
+    "type": ["normal", "fairy"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Zubat",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/zubat-color.png",
+    "type": ["poison", "flying"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Golbat",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/golbat-color.png",
+    "type": ["poison", "flying"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Oddish",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/oddish-color.png",
+    "type": ["grass", "poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Gloom",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/gloom-color.png",
+    "type": ["grass", "poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Vileplume",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/vileplume-color.png",
+    "type": ["grass", "poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Paras",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/paras-color.png",
+    "type": ["bug", "grass"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Parasect",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/parasect-color.png",
+    "type": ["bug", "grass"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Venonat",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/venonat-color.png",
+    "type": ["bug", "poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Venomoth",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/venomoth-color.png",
+    "type": ["bug", "poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Diglett",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/diglett-color.png",
+    "type": ["ground"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Dugtrio",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/dugtrio-color.png",
+    "type": ["ground"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Meowth",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/meowth-color.png",
+    "type": ["normal"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Persian",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/persian-color.png",
+    "type": ["normal"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Psyduck",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/psyduck-color.png",
+    "type": ["water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Golduck",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/golduck-color.png",
+    "type": ["water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Mankey",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/mankey-color.png",
+    "type": ["fighting"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Primape",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/primeape-color.png",
+    "type": ["fighting"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Growlithe",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/growlithe-color.png",
+    "type": ["fire"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Arcanine",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/arcanine-color.png",
+    "type": ["fire"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Poliwag",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/poliwag-color.png",
+    "type": ["water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Poliwhirl",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/poliwhirl-color.png",
+    "type": ["water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Poliwrath",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/poliwrath-color.png",
+    "type": ["water", "fighting"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Abra",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/abra-color.png",
+    "type": ["psychic"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Kadabra",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/kadabra-color.png",
+    "type": ["psychic"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Alakazam",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/alakazam-color.png",
+    "type": ["psychic"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Machop",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/machop-color.png",
+    "type": ["fighting"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Machoke",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/machoke-color.png",
+    "type": ["fighting"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Machamp",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/machamp-color.png",
+    "type": ["fighting"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Bellsprout",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/bellsprout-color.png",
+    "type": ["grass", "poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Weepinbell",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/weepinbell-color.png",
+    "type": ["grass", "poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Victreebel",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/victreebel-color.png",
+    "type": ["grass", "poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Tentacool",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/tentacool-color.png",
+    "type": ["water", "poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Tentacruel",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/tentacruel-color.png",
+    "type": ["water", "poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Geodude",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/geodude-color.png",
+    "type": ["rock", "ground"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Graveler",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/graveler-color.png",
+    "type": ["rock", "ground"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Golem",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/golem-color.png",
+    "type": ["rock", "ground"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Ponyta",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/ponyta-color.png",
+    "type": ["fire"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Rapidash",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/rapidash-color.png",
+    "type": ["fire"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Slowpoke",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/slowpoke-color.png",
+    "type": ["water", "psychic"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Slowbro",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/slowbro-color.png",
+    "type": ["water", "psychic"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Magnemite",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/magnemite-color.png",
+    "type": ["electric", "steel"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Magneton",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/magneton-color.png",
+    "type": ["electric", "steel"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Farfetch'd",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/farfetchd-color.png",
+    "type": ["normal", "flying"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Doduo",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/doduo-color.png",
+    "type": ["normal", "flying"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Dodrio",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/dodrio-color.png",
+    "type": ["normal", "flying"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Seel",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/seel-color.png",
+    "type": ["water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Dewgong",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/dewgong-color.png",
+    "type": ["water", "ice"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Grimer",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/grimer-color.png",
+    "type": ["Poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Muk",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/muk-color.png",
+    "type": ["Poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Shellder",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/shellder-color.png",
+    "type": ["water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Cloyster",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/cloyster-color.png",
+    "type": ["water", "ice"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Gastly",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/gastly-color.png",
+    "type": ["ghost", "poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Haunter",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/haunter-color.png",
+    "type": ["ghost", "poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Gengar",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/gengar-color.png",
+    "type": ["ghost", "poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Onix",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/onix-color.png",
+    "type": ["rock", "ground"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Drowzee",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/drowzee-color.png",
+    "type": ["psychic"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Hypno",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/hypno-color.png",
+    "type": ["psychic"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Krabby",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/krabby-color.png",
+    "type": ["water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Kingler",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/kingler-color.png",
+    "type": ["water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Voltorb",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/voltorb-color.png",
+    "type": ["electric"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Electrode",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/electrode-color.png",
+    "type": ["electric"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Exeggcute",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/exeggcute-color.png",
+    "type": ["grass", "psychic"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Exeggutor",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/exeggutor-color.png",
+    "type": ["grass", "psychic"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Cubone",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/cubone-color.png",
+    "type": ["ground"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Marowak",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/marowak-color.png",
+    "type": ["ground"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Hitmonlee",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/hitmonlee-color.png",
+    "type": ["fighting"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Hitmonchan",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/hitmonchan-color.png",
+    "type": ["fighting"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Lickitung",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/lickitung-color.png",
+    "type": ["normal"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Koffing",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/koffing-color.png",
+    "type": ["poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Weezing",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/weezing-color.png",
+    "type": ["poison"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Rhyhorn",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/rhyhorn-color.png",
+    "type": ["ground", "rock"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Rhydon",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/rhydon-color.png",
+    "type": ["ground", "rock"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Chansey",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/chansey-color.png",
+    "type": ["normal"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Tangela",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/tangela-color.png",
+    "type": ["grass"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Kangaskhan",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/kangaskhan-color.png",
+    "type": ["normal"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Horsea",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/horsea-color.png",
+    "type": ["water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Seadra",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/seadra-color.png",
+    "type": ["water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Goldeen",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/goldeen-color.png",
+    "type": ["water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Seaking",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/seaking-color.png",
+    "type": ["water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Staryu",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/staryu-color.png",
+    "type": ["water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Starmie",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/starmie-color.png",
+    "type": ["water", "psychic"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Mr. Mime",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/mr-mime-color.png",
+    "type": ["psychic", "fairy"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Scyther",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/scyther-color.png",
+    "type": ["bug", "flying"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Jynx",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/jynx-color.png",
+    "type": ["psychic"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Electabuzz",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/electabuzz-color.png",
+    "type": ["electric"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Magmar",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/magmar-color.png",
+    "type": ["fire"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Pinsir",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/pinsir-color.png",
+    "type": ["bug"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Tauros",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/tauros-color.png",
+    "type": ["normal"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Magikarp",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/magikarp-color.png",
+    "type": ["water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Gyarados",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/gyarados-color.png",
+    "type": ["water", "flying"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Lapras",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/lapras-color.png",
+    "type": ["water", "ice"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Ditto",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/ditto-color.png",
+    "type": ["normal"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Eevee",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/eevee-color.png",
+    "type": ["normal"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Vaporeon",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/vaporeon-color.png",
+    "type": ["water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Jolteon",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/jolteon-color.png",
+    "type": ["electric"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Flareon",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/flareon-color.png",
+    "type": ["fire"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Porygon",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/porygon-color.png",
+    "type": ["normal"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Omanyte",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/omanyte-color.png",
+    "type": ["rock", "water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Omastar",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/omastar-color.png",
+    "type": ["rock", "water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Kabuto",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/kabuto-color.png",
+    "type": ["rock", "water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Kabutops",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/kabutops-color.png",
+    "type": ["rock", "water"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Aerodactyl",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/aerodactyl-color.png",
+    "type": ["rock", "flying"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Snorlax",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/snorlax-color.png",
+    "type": ["normal"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Articuno",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/articuno-color.png",
+    "type": ["ice", "flying"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Zapdos",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/zapdos-color.png",
+    "type": ["electric", "flying"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Moltres",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/moltres-color.png",
+    "type": ["fire", "flying"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Dratini",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/dratini-color.png",
+    "type": ["dragon"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Dragonair",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/dragonair-color.png",
+    "type": ["dragon"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Dragonite",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/dragonite-color.png",
+    "type": ["dragon", "flying"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Mewtwo",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/mewtwo-color.png",
+    "type": ["psychic"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Mew",
+    "imgUrl": "/images/achievements/pokemon/gen1/yellow/mew-color.png",
+    "type": ["psychic"],
+    "generation": 101,
+    "achievement": "Red, Blue & Yellow"
+  },
+  {
+    "name": "Venustoise",
+    "imgUrl": "/images/achievements/pokemon/venustoise.png",
+    "type": ["psychic"],
+    "generation": 102,
+    "achievement": true
   }
 ]

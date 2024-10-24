@@ -161,6 +161,7 @@ export default defineComponent({
   methods: {
     ...mapActions(useCalloutStore, { addCallout: 'addCallout', removeCallout: 'removeCallout'  }),
     ...mapActions(useAppStore, {
+      setPokemonToAdd: 'setPokemonToAdd',
       setIdsOfPokemonToRemove: 'setIdsOfPokemonToRemove',
       setRandomizeBox: 'setRandomizeBox,',
       setDefaultBoxId: 'setDefaultBoxId',
@@ -242,6 +243,10 @@ export default defineComponent({
       let id: string = '';
       const pokemonInBox: Array<Pokemon> = this.savedPokemon[this.selectedBox].pokemon;
 
+      console.log('selectedBox:', this.selectedBox);
+      console.log('pokemonInBox.length:', pokemonInBox.length);
+      console.log('pokemonInBox.length:', pokemonInBox.length);
+
       if (pokemonInBox.length === POKEMON_STORAGE_LIMIT) {
         drawApp.removePokemonFromCanvas(pokemonInBox[pokemonInBox.length - 1].id as string);
         this.savedPokemon[this.selectedBox].pokemon.pop();
@@ -254,6 +259,7 @@ export default defineComponent({
       }
 
       this.savedPokemon[this.selectedBox].pokemon.unshift({ ...pokemon, id });
+      this.setPokemonToAdd('');
     },
     removePokemonFromBox(): void {
       this.pokemonIdsToRemove.forEach((id: string): void => {

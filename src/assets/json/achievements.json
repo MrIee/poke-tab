@@ -1,0 +1,41 @@
+{
+  "First151": {
+    "name": "First 151",
+    "imgUrl": "/images/achievements/pokeballs/pokeball.png",
+    "description": "Use the first 151 pokemon",
+    "unlock": "Pokemon Red & Blue sprites",
+    "unlocked": false,
+    "requirements": {
+      "length": 151
+    }
+  },
+  "RBY": {
+    "name": "Red, Blue & Yellow",
+    "imgUrl": "/images/achievements/pokeballs/greatball.png",
+    "description": "Fill a box with red & blue sprites",
+    "unlock": "Pokemon Yellow sprites",
+    "unlocked": false,
+    "requirements": {
+      "length": 151
+    }
+  },
+  "GhastlyFusion": {
+    "name": "A Ghastly Fusion",
+    "imgUrl": "/images/achievements/venustoise.png",
+    "description": "Use Bulbasaur, Charmander, Squirtle and their evolutions",
+    "unlock": "Venustoise sprite",
+    "unlocked": false,
+    "requirements": {
+      "pokemon": [
+        "Bulbasaur",
+        "Ivysaur",
+        "Venusaur",
+        "Squirtle",
+        "Wartortle",
+        "Blastoise"
+      ]
+    }
+  }
+}
+
+

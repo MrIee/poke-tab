@@ -17,6 +17,7 @@ export interface Pokemon {
   generation: 1;
   forms?: Array<Pokemon>;
   isShiny?: boolean;
+  achievement?: string;
 }
 
 export interface PokemonBox {
@@ -36,6 +37,7 @@ export interface Padding {
 }
 
 export interface Callout {
+  type?: string,
   id?: string;
   imgUrl?: string;
   label: string;

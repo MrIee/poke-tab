@@ -34,6 +34,7 @@
           :name="pokemon.name"
           :label="pokemon.name"
           :forms="pokemon.forms"
+          :locked="isPokemonLocked(pokemon.achievement as string)"
           @on-click-pokemon="setPokemonToAdd(pokemon)"
         />
       </div>
@@ -45,6 +46,7 @@
 import { defineComponent } from 'vue';
 import { mapState, mapActions } from 'pinia';
 import { useAppStore } from '../store/appStore';
+import { useAchievementStore } from '../store/achievementStore';
 import TypeFilter from './TypeFilter.vue';
 import GenerationFilter from './GenerationFilter.vue';
 import PokemonTile from './PokemonTile.vue';
@@ -76,6 +78,7 @@ export default defineComponent({
   },
   computed: {
     ...mapState(useAppStore, ['allPokemon', 'showFormsReminder']),
+    ...mapState(useAchievementStore, ['unlockedAchievements']),
   },
   watch: {
     searchText(text: string): void {
@@ -149,6 +152,9 @@ export default defineComponent({
     filterPokemonByGeneration(generation: number): void {
       this.filters.generation = generation;
       this.filterPokemon();
+    },
+    isPokemonLocked(achievement: string): boolean {
+      return !!achievement && this.unlockedAchievements.indexOf(achievement) === -1;
     },
   },
 });

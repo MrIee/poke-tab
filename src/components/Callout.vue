@@ -1,6 +1,18 @@
 <template>
-  <div class="callout">
-    <strong>{{ label }}</strong>
+  <div
+    :class="{
+      'callout': true,
+      'tw-bg-green-500': type === 'success',
+      'tw-bg-gold': type === 'achievement',
+    }"
+  >
+    <div class="tw-flex">
+      <img v-if="imgUrl" class="tw-mr-2.5" :src="imgUrl" :alt="label">
+      <div>
+        <strong>{{ label }}</strong>
+        <p>{{ description }}</p>
+      </div>
+    </div>
     <Cross class="tw-h-6 tw-w-6 tw-cursor-pointer" @click="onClose" />
   </div>
 </template>
@@ -14,6 +26,17 @@ export default defineComponent({
     Cross,
   },
   props: {
+    type: {
+      type: String,
+      default: 'success',
+      validator(value: string) {
+        return ['success', 'achievement'].includes(value)
+      },
+    },
+    imgUrl: {
+      type: String,
+      default: '',
+    },
     label: {
       type: String,
       default: '',
@@ -24,7 +47,7 @@ export default defineComponent({
     },
   },
   mounted() {
-    setTimeout(this.onClose, 5000);
+    // setTimeout(this.onClose, 10000);
   },
   methods: {
     onClose(): void {
@@ -45,7 +68,6 @@ export default defineComponent({
   tw-text-white
   tw-rounded-lg
   tw-border
-  tw-border-gray-800
-  tw-bg-green-500;
+  tw-border-gray-800;
 }
 </style>

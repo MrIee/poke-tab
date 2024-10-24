@@ -1,7 +1,7 @@
 <template>
   <div class="tw-mb-4">
-    <label class="tw-inline-flex tw-items-center tw-cursor-pointer" for="js-randomize-on-new-tab">
-      <input id="js-randomize-on-new-tab" class="tw-mr-2 tw-cursor-pointer" type="checkbox" v-model="isRandom" />
+    <label class="tw-inline-flex tw-items-center tw-cursor-pointer">
+      <input class="tw-mr-2 tw-cursor-pointer" type="checkbox" v-model="isRandom" />
       <span>Always random on new tab</span>
     </label>
   </div>
@@ -9,11 +9,10 @@
     <ColorPicker @confirm="setBackgroundColor" label="Background Color" />
   </div>
   <div class="tw-mb-4">
-    <label for="js-speed">
+    <label>
       <span>Pokemon Speed</span>
       <br />
       <input
-        id="js-speed"
         class="tw-w-full tw-cursor-pointer"
         type="range"
         list="js-speed-values"
@@ -31,12 +30,11 @@
       <option value="14" label="Very Fast"></option>
     </datalist>
   </div>
-  <div>
-    <label for="js-size">
+  <div class="tw-mb-4">
+    <label>
       <span>Pokemon Size</span>
       <br />
       <input
-        id="js-size"
         class="tw-w-full tw-cursor-pointer"
         type="range"
         list="js-size-values"
@@ -52,6 +50,12 @@
       <option value="120" label="Large"></option>
       <option value="144" label="Extra Large"></option>
     </datalist>
+  </div>
+  <div>
+    <label class="tw-cursor-pointer">
+      <input class="tw-mr-2 tw-cursor-pointer" type="checkbox">
+      <span>Enable Pokemon Red/Blue sprites</span>
+    </label>
   </div>
 </template>
 
