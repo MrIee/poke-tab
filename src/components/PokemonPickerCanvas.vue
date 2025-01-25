@@ -2,17 +2,17 @@
   <div
     v-if="isVisible"
     :ref="pickerRef"
-    class="tw-fixed tw-w-[403px] tw-h-[676px] tw-flex tw-flex-col tw-border tw-border-gray-800 tw-bg-white tw-z-10"
+    class="tw:fixed tw:w-[403px] tw:h-[676px] tw:flex tw:flex-col tw:border tw:border-gray-800 tw:bg-white tw:z-10"
   >
     <input
       :ref="searchBarRef"
-      class="tw-w-full tw-py-1 tw-px-2 tw-border tw-border-gray-800"
+      class="tw:w-full tw:py-1 tw:px-2 tw:border tw:border-gray-800"
       type="text"
       v-model="searchText"
     >
-    <div :ref="pokemonListRef" class="tw-inline-block tw-overflow-auto">
+    <div :ref="pokemonListRef" class="tw:inline-block tw:overflow-auto">
       <div
-        class="tw-inline-block tw-h-24 tw-w-24 tw-cursor-pointer"
+        class="tw:inline-block tw:h-24 tw:w-24 tw:cursor-pointer"
         v-for="(pokemon, key) in pokemonResults"
         :key="key"
         @click="addPokemonToCanvas(getImageUrl(pokemon.imgUrl))"

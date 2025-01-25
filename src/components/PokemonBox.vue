@@ -1,13 +1,13 @@
 <template>
-  <div class="tw-w-72 tw-flex tw-flex-col tw-items-center">
-    <div class="tw-w-full tw-flex tw-mb-1">
+  <div class="tw:w-72 tw:flex tw:flex-col tw:items-center">
+    <div class="tw:w-full tw:flex tw:mb-1">
       <strong v-if="default">In Use</strong>
-      <span class="tw-ml-auto"><strong>{{ pokemon.length }}/{{ storageLimit }}</strong> pokemon</span>
+      <span class="tw:ml-auto"><strong>{{ pokemon.length }}/{{ storageLimit }}</strong> pokemon</span>
     </div>
-    <button class="tw-w-full tw-mb-2" :disabled="defaultBoxId === id" @click="onUse">Use Box</button>
-    <div class="tw-h-60 tw-w-72 tw-flex tw-flex-wrap tw-content-start tw-mb-2 tw-rounded tw-border-2 tw-border-gray-800 tw-box-content">
+    <button class="tw:w-full tw:mb-2" :disabled="defaultBoxId === id" @click="onUse">Use Box</button>
+    <div class="tw:h-60 tw:w-72 tw:flex tw:flex-wrap tw:content-start tw:mb-2 tw:rounded tw:border-2 tw:border-gray-800 tw:box-content">
       <PokemonTile
-        class="tw-max-h-12 tw-max-w-12"
+        class="tw:max-h-12 tw:max-w-12"
         v-for="pokemon in pokemon"
         :key="pokemon.id"
         is-selectable
@@ -17,13 +17,13 @@
         @select="onSelect"
       />
     </div>
-    <div class="tw-flex tw-justify-center tw-flex-wrap">
-      <button class="tw-mr-2 tw-mb-2 tw-flex-grow" @click="onAdd">Add</button>
-      <button class="alert tw-mb-2 tw-flex-grow" :disabled="idsToRemove.length === 0" @click="onRemove">
+    <div class="tw:flex tw:justify-center tw:flex-wrap">
+      <button class="tw:mr-2 tw:mb-2 tw:grow" @click="onAdd">Add</button>
+      <button class="alert tw:mb-2 tw:grow" :disabled="idsToRemove.length === 0" @click="onRemove">
         Remove
       </button>
-      <button class="tw-w-[calc(50%-4px)] tw-mr-2" @click="onRandomize">Randomize</button>
-      <button class="alert tw-w-[calc(50%-4px)]" @click="onRemoveAll">Remove all</button>
+      <button class="tw:w-[calc(50%-4px)] tw:mr-2" @click="onRandomize">Randomize</button>
+      <button class="alert tw:w-[calc(50%-4px)]" @click="onRemoveAll">Remove all</button>
     </div>
   </div>
 </template>

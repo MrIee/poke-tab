@@ -1,11 +1,39 @@
-@import '@cyhnkckali/vue3-color-picker/dist/style.css';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* @import '@cyhnkckali/vue3-color-picker/dist/style.css' layer(base); */
+@import 'tailwindcss' prefix(tw);
 
-* {
-  box-sizing: border-box;
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-xs: 425px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  --color-gold: #d4af37;
 }
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+/* * {
+  box-sizing: border-box;
+} */
 
 html, body {
   height: 100%;
@@ -15,78 +43,78 @@ html, body {
 body {
   font-size: 16px;
 
-  @apply tw-relative;
+  @apply tw:relative;
 }
 
 button:not(.disable-button-styles *) {
-  @apply tw-px-3 tw-py-1 tw-text-white tw-bg-blue-400 tw-rounded-md tw-border tw-border-gray-800;
+  @apply tw:px-3 tw:py-1 tw:text-white tw:bg-blue-400 tw:rounded-md tw:border tw:border-gray-800;
 }
 
 button:disabled {
-  @apply tw-opacity-40;
+  @apply tw:opacity-40;
 }
 
 button.alert {
-  @apply tw-bg-red-600;
+  @apply tw:bg-red-600;
 }
 
 button.btn-sm {
-  @apply tw-px-2 tw-text-sm;
+  @apply tw:px-2 tw:text-sm;
 }
 
 button:hover:not(.disable-button-styles *) {
-  @apply tw-bg-sky-700;
+  @apply tw:bg-sky-700;
 }
 
 button:disabled:hover {
-  @apply tw-bg-blue-400;
+  @apply tw:bg-blue-400;
 }
 
 button.alert:hover {
-  @apply tw-bg-red-700;
+  @apply tw:bg-red-700;
 }
 
 button.alert:disabled:hover {
-  @apply tw-bg-red-600;
+  @apply tw:bg-red-600;
 }
 
 button:active:not(.disable-button-styles *) {
-  @apply tw-bg-sky-900;
+  @apply tw:bg-sky-900;
 }
 
 button.alert:active {
-  @apply tw-bg-red-900;
+  @apply tw:bg-red-900;
 }
 
 
 .pokemon-sprite {
-  @apply tw-fixed tw-pointer-events-none;
+  @apply tw:fixed tw:pointer-events-none;
 }
 
 .filter__button {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
   @apply
-  tw-h-8
-  tw-w-[calc(100%-1px)]
-  tw-flex
-  tw-justify-center
-  tw-items-center
-  tw-px-2
-  tw-mx-px
-  tw-text-white
-  tw-text-xs
-  tw-font-bold
-  tw-uppercase
-  tw-align-middle
-  tw-rounded-lg
-  tw-border
-  tw-border-gray-800
-  tw-bg-white
-  tw-cursor-pointer
-  tw-select-none;
+  tw:h-8
+  tw:w-[calc(100%-1px)]
+  tw:flex
+  tw:justify-center
+  tw:items-center
+  tw:px-2
+  tw:mx-px
+  tw:text-white
+  tw:text-xs
+  tw:font-bold
+  tw:uppercase
+  tw:align-middle
+  tw:rounded-lg
+  tw:border
+  tw:border-gray-800
+  tw:bg-white
+  tw:cursor-pointer
+  tw:select-none;
 }
 
 .filter__button--lowercase {
-  @apply tw-normal-case;
+  @apply tw:normal-case;
 }

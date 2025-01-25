@@ -1,15 +1,15 @@
 <template>
   <div
     :class="{
-      'tw-inline-flex tw-flex-col tw-justify-center tw-items-center tw-h-24 tw-w-24 tw-text-center tw-cursor-pointer tw-relative': true,
-      'tw-bg-blue-200': isSelectable && isSelected,
+      'tw:inline-flex tw:flex-col tw:justify-center tw:items-center tw:h-24 tw:w-24 tw:text-center tw:cursor-pointer tw:relative': true,
+      'tw:bg-blue-200': isSelectable && isSelected,
     }"
   >
     <span v-if="forms.length > 0" class="pokemon-tile__form-icon">+</span>
     <img
       :class="{
-        '-tw-mb-2.5': label,
-        'tw-brightness-0 tw-opacity-30 tw-pointer-events-none': locked,
+        'tw:-mb-2.5': label,
+        'tw:brightness-0 tw:opacity-30 tw:pointer-events-none': locked,
       }"
       :src="imgUrl"
       :alt="name"
@@ -19,7 +19,7 @@
     <span
       v-if="label && !locked"
       :class="{
-        'tw-inline-block': true,
+        'tw:inline-block': true,
         [getLabelClass(label)]: true,
       }"
     >
@@ -109,57 +109,59 @@ export default defineComponent({
     },
     getLabelClass(label: string): string {
       const maxLabelLength = 10;
-      return label.length > maxLabelLength ? 'tw-text-xs' : 'tw-text-sm';
+      return label.length > maxLabelLength ? 'tw:text-xs' : 'tw:text-sm';
     },
   },
 });
 </script>
 
 <style>
+@reference "../tailwind.css";
+
 .pokemon-tile__forms-wrapper {
   box-shadow: inset 0 0 0 2px theme('colors.blue.400');
 
-  @apply tw-flex
-  tw-flex-wrap
-  tw-w-96
-  tw-py-4
-  -tw-mt-[126px]
-  tw-rounded-lg
-  tw-bg-white
-  tw-fixed
-  tw-left-0
-  tw-z-10;
+  @apply tw:flex
+  tw:flex-wrap
+  tw:w-96
+  tw:py-4
+  tw:-mt-[126px]
+  tw:rounded-lg
+  tw:bg-white
+  tw:fixed
+  tw:left-0
+  tw:z-10;
 }
 
 .pokemon-tile__forms-label {
-  @apply tw-px-2
-  tw-text-white
-  tw-rounded-tl-lg
-  tw-rounded-br-lg
-  tw-bg-blue-400
-  tw-absolute
-  tw-top-0
-  tw-left-0;
+  @apply tw:px-2
+  tw:text-white
+  tw:rounded-tl-lg
+  tw:rounded-br-lg
+  tw:bg-blue-400
+  tw:absolute
+  tw:top-0
+  tw:left-0;
 }
 
 .pokemon-tile-forms-cross {
-  @apply tw-h-6
-  tw-flex
-  tw-justify-center
-  tw-items-center
-  tw-px-1.5
-  tw-rounded-bl-lg
-  tw-rounded-tr-lg
-  tw-bg-blue-400
-  tw-absolute
-  tw-top-0
-  tw-right-0;
+  @apply tw:h-6
+  tw:flex
+  tw:justify-center
+  tw:items-center
+  tw:px-1.5
+  tw:rounded-bl-lg
+  tw:rounded-tr-lg
+  tw:bg-blue-400
+  tw:absolute
+  tw:top-0
+  tw:right-0;
 }
 
 .pokemon-tile__form-icon {
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 
-  @apply tw-text-blue-400 tw-text-xl tw-font-bold tw-leading-none tw-absolute tw-top-0 tw-right-0.5;
+  @apply tw:text-blue-400 tw:text-xl tw:font-bold tw:leading-none tw:absolute tw:top-0 tw:right-0.5;
 }
 
 /* Pokeball hover effect */
@@ -167,7 +169,7 @@ export default defineComponent({
   content: '';
   background-image: url(../assets//images/pokeball.png);
 
-  @apply tw-h-full tw-w-full tw-absolute tw-top-0 tw-left-0 tw-opacity-0 hover:tw-opacity-20 -tw-z-10;
+  @apply tw:h-full tw:w-full tw:absolute tw:top-0 tw:left-0 tw:opacity-0 tw:hover:opacity-20 tw:-z-10;
 } */
 
 
@@ -175,21 +177,21 @@ export default defineComponent({
 /* .pokemon-tile:hover {
   box-shadow: inset 0 0 0 4px theme('colors.gray.800');
 
-  @apply tw-rounded-lg tw-relative tw-z-10;
+  @apply tw:rounded-lg tw:relative tw:z-10;
 }
 
 .pokemon-tile::before,
 .pokemon-tile::after {
   content: '';
 
-  @apply tw-absolute -tw-z-10;
+  @apply tw:absolute tw:-z-10;
 }
 
 .pokemon-tile::before:hover {
-  @apply tw-w-1/2 tw-h-full tw-bg-white tw-left-1/4;
+  @apply tw:w-1/2 tw:h-full tw:bg-white tw:left-1/4;
 }
 
 .pokemon-tile::after:hover {
-  @apply tw-h-1/2 tw-w-full tw-bg-white tw-top-1/4 tw-left-0;
+  @apply tw:h-1/2 tw:w-full tw:bg-white tw:top-1/4 tw:left-0;
 } */
 </style>

@@ -2,7 +2,7 @@
   <CalloutQueue />
   <div
     :ref="canvasRef"
-    class="tw-absolute tw-top-0 tw-left-0 tw-bottom-12 tw-right-0 tw-overflow-hidden tw-select-none"
+    class="tw:absolute tw:top-0 tw:left-0 tw:bottom-12 tw:right-0 tw:overflow-hidden tw:select-none"
     :style="{ backgroundColor: backgroundColorStyle }"
     @click="toggleOptions"
   >

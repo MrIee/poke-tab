@@ -1,32 +1,32 @@
 <template>
-  <div class="pokemon-picker">
-    <div class="tw-p-3 tw-pb-0">
-      <button class="tw-w-full tw-mb-2" @click="toggleSearch">
+  <div class="pokemon-picker" >
+    <div class="tw:p-3 tw:pb-0">
+      <button class="tw:w-full tw:mb-2" @click="toggleSearch">
         {{ isSearch ? 'Use Filters' : 'Search' }}
       </button>
       <input
         v-if="isSearch"
         :ref="searchBarRef"
-        class="tw-w-full tw-py-1 tw-px-2 tw-mb-1 tw-rounded-md tw-border tw-border-gray-800"
+        class="tw:w-full tw:py-1 tw:px-2 tw:mb-1 tw:rounded-md tw:border tw:border-gray-800"
         type="text"
         :placeholder="searchPlaceholderText"
         v-model="searchText"
       >
-      <div v-else class="tw-flex tw-gap-1">
-        <TypeFilter class="tw-w-1/2" @filter="filterPokemonByType" />
-        <GenerationFilter class="tw-w-1/2" @filter="filterPokemonByGeneration" />
+      <div v-else class="tw:flex tw:gap-1">
+        <TypeFilter class="tw:w-1/2" @filter="filterPokemonByType" />
+        <GenerationFilter class="tw:w-1/2" @filter="filterPokemonByGeneration" />
       </div>
     </div>
     <Reminder
       v-if="showFormsReminder"
-      class="tw-top-[142px]"
+      class="tw:top-[142px]"
       :text="formReminderText"
       :image-url="ReminderImage"
       @dont-show-again="saveShowFormsReminder(false)"
     />
-    <div class="tw-h-full tw-flex tw-justify-center tw-pt-4 tw-overflow-auto tw-transform tw-relative">
+    <div class="tw:h-full tw:flex tw:justify-center tw:pt-4 tw:overflow-auto tw:transform tw:relative">
       <span v-if="showHint">Not seeing any pokemon? Try typing {{ minSearchLength }} or more letters</span>
-      <div v-else class="tw-inline-block tw-h-full tw-w-72 xs:tw-w-full">
+      <div v-else class="tw:inline-block tw:h-full tw:w-72 tw:xs:w-full">
         <PokemonTile
           v-for="(pokemon, key) in pokemonResults"
           :key="key"
@@ -161,15 +161,16 @@ export default defineComponent({
 </script>
 
 <style>
+@reference "../tailwind.css";
+
 .pokemon-picker {
-  @apply tw-h-full
-  tw-w-full
-  sm:tw-h-auto
-  sm:tw-w-full
-  tw-flex
-  tw-flex-col
-  tw-bg-white
-  tw-rounded-bl-lg
-  tw-rounded-br-lg;
+  @apply tw:h-full
+  tw:w-full
+  tw:sm:w-full
+  tw:flex
+  tw:flex-col
+  tw:bg-white
+  tw:rounded-bl-lg
+  tw:rounded-br-lg;
 }
 </style>

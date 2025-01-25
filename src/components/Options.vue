@@ -1,20 +1,20 @@
 <template>
   <div class="options">
-    <div class="tw-h-8 tw-flex tw-text-white tw-bg-blue-400 tw-justify-center tw-items-center tw-rounded-tl-lg tw-rounded-tr-lg tw-relative">
+    <div class="tw:h-8 tw:flex tw:text-white tw:bg-blue-400 tw:justify-center tw:items-center tw:rounded-tl-lg tw:rounded-tr-lg tw:relative">
       <div
         :id="dragBarId"
-        class="tw-w-full tw-cursor-grab active:tw-cursor-grabbing tw-absolute tw-top-0 tw-right-8 tw-bottom-0 tw-left-0"
+        class="tw:w-full tw:cursor-grab tw:active:cursor-grabbing tw:absolute tw:top-0 tw:right-8 tw:bottom-0 tw:left-0"
       >
       </div>
-      <div class="tw-flex tw-justify-center tw-items-center tw-relative tw-pointer-events-none">
-        <DragIndicator class="tw-hidden sm:tw-block tw-absolute -tw-translate-y-1/2 tw-top-1/2 -tw-left-7" />
+      <div class="tw:flex tw:justify-center tw:items-center tw:relative tw:pointer-events-none">
+        <DragIndicator class="tw:hidden tw:sm:block tw:absolute tw:-translate-y-1/2 tw:top-1/2 tw:-left-7" />
         <strong>Options</strong>
       </div>
-      <div class="tw-flex tw-items-center tw-h-full tw-p-1 tw-cursor-pointer tw-absolute tw-right-0" @click="onClose">
-        <Cross class="tw-h-6 tw-w-6" />
+      <div class="tw:flex tw:items-center tw:h-full tw:p-1 tw:cursor-pointer tw:absolute tw:right-0" @click="onClose">
+        <Cross class="tw:h-6 tw:w-6" />
       </div>
     </div>
-    <div class="tw-flex">
+    <div class="tw:flex">
       <span
         v-for="(tab, key) in tabs"
         :key="key"
@@ -27,15 +27,15 @@
         {{ tab }}
       </span>
     </div>
-    <div class="tw-h-full sm:tw-h-[650px] tw-p-3 tw-overflow-auto">
+    <div class="tw:h-full tw:sm:h-[650px] tw:p-3 tw:overflow-auto">
       <div v-if="activeTab === tabs[0]">
-        <p class="tw-mb-3">
+        <p class="tw:mb-3">
           You may store up to 10 sets of pokemon to use in your new tab(s).
         </p>
         <div>
-          <div class="tw-mb-1">
+          <div class="tw:mb-1">
             <select
-              class="tw-self-start tw-mr-2 tw-rounded tw-border-2 tw-border-gray-800 tw-cursor-pointer"
+              class="tw:self-start tw:mr-2 tw:rounded tw:border-2 tw:border-gray-800 tw:cursor-pointer"
               v-model="selectedBoxId"
             >
               <option v-for="(index, key) in maxNumBoxes" :key="key" :value="key">Box {{ index }}</option>
@@ -52,16 +52,18 @@
       <Settings v-if="activeTab === tabs[1]" />
       <Achievements v-if="activeTab === tabs[2]" />
     </div>
-    <div v-if="isWindowVisible" class="tw-h-full tw-w-full tw-rounded-bl-lg tw-rounded-br-lg tw-absolute tw-top-8 tw-z-10">
-      <div class="tw-h-8 tw-flex tw-items-center tw-bg-blue-400 tw-border-t tw-border-gray-800 tw-relative">
-        <span class="tw-px-1 tw-cursor-pointer tw-absolute tw-left-1.5" @click="closePicker">
-          <Chevron class="tw-h-2.5 tw-w-4 tw-fill-white -tw-rotate-90" />
+    <div v-if="isWindowVisible" class="tw:h-full tw:w-full tw:rounded-bl-lg tw:rounded-br-lg tw:absolute tw:top-8 tw:z-10">
+      <div class="tw:h-8 tw:flex tw:items-center tw:bg-blue-400 tw:border-t tw:border-gray-800 tw:relative">
+        <span class="tw:px-1 tw:cursor-pointer tw:absolute tw:left-1.5" @click="closePicker">
+          <Chevron class="tw:h-2.5 tw:w-4 tw:fill-white tw:-rotate-90" />
         </span>
-        <span class="tw-w-full tw-text-center tw-text-white">{{ tabTitle }}</span>
+        <span class="tw:w-full tw:text-center tw:text-white">{{ tabTitle }}</span>
       </div>
-      <PokemonPicker v-if="isPickerVisible" class="tw-h-[calc(100%-64px)]" />
+      <div v-if="isPickerVisible" class="tw:h-[calc(100%-64px)]">
+        <PokemonPicker />
+      </div>
     </div>
-    <button class="tw-mt-auto tw-m-3" @click="onSave">Save Settings</button>
+    <button class="tw:mt-auto tw:m-3" @click="onSave">Save Settings</button>
   </div>
 </template>
 
@@ -145,27 +147,29 @@ export default defineComponent({
 </script>
 
 <style>
+@reference "../tailwind.css";
+
 .options {
-  @apply tw-fixed
-  tw-h-full
-  tw-w-full
-  sm:tw-h-auto
-  sm:tw-w-[405px]
-  tw-flex
-  tw-flex-col
-  tw-border
-  tw-border-gray-800
-  tw-bg-white
-  tw-rounded-lg
-  tw-z-10;
+  @apply tw:fixed
+  tw:h-full
+  tw:w-full
+  tw:sm:h-auto
+  tw:sm:w-[405px]
+  tw:flex
+  tw:flex-col
+  tw:border
+  tw:border-gray-800
+  tw:bg-white
+  tw:rounded-lg
+  tw:z-10;
 }
 
 .options__tab {
-  @apply tw-h-8 tw-flex tw-justify-center tw-items-center tw-grow tw-font-bold tw-border-b-2 tw-border-b-blue-400 tw-bg-gray-300 tw-cursor-pointer;
+  @apply tw:h-8 tw:flex tw:justify-center tw:items-center tw:grow tw:font-bold tw:border-b-2 tw:border-b-blue-400 tw:bg-gray-300 tw:cursor-pointer;
 }
 
 .options__tab.active {
-  @apply tw-border-b-0 tw-bg-white;
+  @apply tw:border-b-0 tw:bg-white;
 }
 
 </style>

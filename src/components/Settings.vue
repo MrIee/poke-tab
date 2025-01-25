@@ -1,19 +1,19 @@
 <template>
-  <div class="tw-mb-4">
-    <label class="tw-inline-flex tw-items-center tw-cursor-pointer">
-      <input class="tw-mr-2 tw-cursor-pointer" type="checkbox" v-model="isRandom" />
+  <div class="tw:mb-4">
+    <label class="tw:inline-flex tw:items-center tw:cursor-pointer">
+      <input class="tw:mr-2 tw:cursor-pointer" type="checkbox" v-model="isRandom" />
       <span>Always random on new tab</span>
     </label>
   </div>
-  <div class="tw-mb-4">
+  <div class="tw:mb-4">
     <ColorPicker @confirm="setBackgroundColor" label="Background Color" />
   </div>
-  <div class="tw-mb-4">
+  <div class="tw:mb-4">
     <label>
       <span>Pokemon Speed</span>
       <br />
       <input
-        class="tw-w-full tw-cursor-pointer"
+        class="tw:w-full tw:cursor-pointer"
         type="range"
         list="js-speed-values"
         min="2"
@@ -22,7 +22,7 @@
         v-model="pokemonSpeed"
       />
     </label>
-    <datalist id="js-speed-values" class="tw-flex tw-justify-between">
+    <datalist id="js-speed-values" class="tw:flex tw:justify-between">
       <option value="2" label="Slow"></option>
       <option value="5" label="Normal"></option>
       <option value="8" label="Fast"></option>
@@ -30,12 +30,12 @@
       <option value="14" label="Very Fast"></option>
     </datalist>
   </div>
-  <div class="tw-mb-4">
+  <div class="tw:mb-4">
     <label>
       <span>Pokemon Size</span>
       <br />
       <input
-        class="tw-w-full tw-cursor-pointer"
+        class="tw:w-full tw:cursor-pointer"
         type="range"
         list="js-size-values"
         min="72"
@@ -44,7 +44,7 @@
         v-model="pokemonSize"
       />
     </label>
-    <datalist id="js-size-values" class="tw-flex tw-justify-between">
+    <datalist id="js-size-values" class="tw:flex tw:justify-between">
       <option value="72" label="Small"></option>
       <option value="96" label="Normal"></option>
       <option value="120" label="Large"></option>
@@ -52,8 +52,8 @@
     </datalist>
   </div>
   <div>
-    <label class="tw-cursor-pointer">
-      <input class="tw-mr-2 tw-cursor-pointer" type="checkbox">
+    <label class="tw:cursor-pointer">
+      <input class="tw:mr-2 tw:cursor-pointer" type="checkbox">
       <span>Enable Pokemon Red/Blue sprites</span>
     </label>
   </div>
