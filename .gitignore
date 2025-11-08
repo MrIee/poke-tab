@@ -30,6 +30,7 @@ pokemon
 *.psd
 
 dist.zip
+dist.rar
 pokemon.txt
 changelog.txt
 pokemon-generator.js
