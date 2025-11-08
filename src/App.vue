@@ -23,7 +23,6 @@ import { defineComponent } from 'vue';
 import { mapState, mapActions } from 'pinia';
 import { useAppStore } from './store/appStore';
 import { useCalloutStore } from './store/calloutStore';
-import { useAchievementStore } from './store/achievementStore';
 import CalloutQueue from './components/CalloutQueue.vue';
 import Options from './components/Options.vue';
 import Footer from './components/Footer.vue';
@@ -169,9 +168,6 @@ export default defineComponent({
       setSpeed: 'setSpeed',
       setSize: 'setSize',
     }),
-    ...mapActions(useAchievementStore, {
-      addPokemonToAchievements: 'addPokemonToAchievements',
-    }),
     async toggleOptions(event: Event): Promise<void> {
       if (this.isOptionsVisible) {
         this.closeOptions();
@@ -219,7 +215,6 @@ export default defineComponent({
     saveRandomPokemon(saveToIndex: number = 0, isDefault: boolean = false): void {
       this.savedPokemon[saveToIndex].default = isDefault;
       const pokemon: Array<Pokemon> = getUniqueRandomItems(this.allPokemon, POKEMON_STORAGE_LIMIT, makePokemonShiny);
-        pokemon.forEach((pokemon: Pokemon) => this.addPokemonToAchievements(pokemon));
       this.savedPokemon[saveToIndex].pokemon = pokemon;
     },
     addSavedPokemonToCanvas(pokemon?: Array<Pokemon>): void {

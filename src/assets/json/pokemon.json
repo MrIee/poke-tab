@@ -9781,5 +9781,187 @@
     "shinyImgUrl": "/images/pokemon/shiny/wooper-paldean.png",
     "type": ["water", "ground"],
     "generation": 9
+  },
+  {
+    "name": "Mega Barbaracle",
+    "imgUrl": "/images/pokemon/barbaracle-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/barbaracle-mega.png",
+    "type": ["rock", "fighting"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Chandelure",
+    "imgUrl": "/images/pokemon/chandelure-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/chandelure-mega.png",
+    "type": ["ghost", "fire"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Chesnaught",
+    "imgUrl": "/images/pokemon/chesnaught-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/chesnaught-mega.png",
+    "type": ["grass", "fighting"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Clefable",
+    "imgUrl": "/images/pokemon/clefable-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/clefable-mega.png",
+    "type": ["fairy", "flying"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Delphox",
+    "imgUrl": "/images/pokemon/delphox-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/delphox-mega.png",
+    "type": ["fire", "psychic"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Dragagle",
+    "imgUrl": "/images/pokemon/dragagle-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/dragagle-mega.png",
+    "type": ["poison", "dragon"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Dragonite",
+    "imgUrl": "/images/pokemon/dragonite-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/dragonite-mega.png",
+    "type": ["dragon", "flying"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Drampa",
+    "imgUrl": "/images/pokemon/drampa-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/drampa-mega.png",
+    "type": ["normal", "dragon"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Eelektross",
+    "imgUrl": "/images/pokemon/eelektross-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/eelektross-mega.png",
+    "type": ["electric"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Emboar",
+    "imgUrl": "/images/pokemon/emboar-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/emboar-mega.png",
+    "type": ["fire", "fighting"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Excadrill",
+    "imgUrl": "/images/pokemon/excadrill-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/excadrill-mega.png",
+    "type": ["ground", "steel"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Falinks",
+    "imgUrl": "/images/pokemon/falinks-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/falinks-mega.png",
+    "type": ["fighting"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Feraligatr",
+    "imgUrl": "/images/pokemon/feraligatr-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/feraligatr-mega.png",
+    "type": ["water", "dragon"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Floette",
+    "imgUrl": "/images/pokemon/floette-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/floette-mega.png",
+    "type": ["fairy"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Froslass",
+    "imgUrl": "/images/pokemon/froslass-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/froslass-mega.png",
+    "type": ["ice", "ghost"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Geninja",
+    "imgUrl": "/images/pokemon/geninja-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/geninja-mega.png",
+    "type": ["water", "dark"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Hawlucha",
+    "imgUrl": "/images/pokemon/hawlucha-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/hawlucha-mega.png",
+    "type": ["fighting", "flying"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Malamar",
+    "imgUrl": "/images/pokemon/malamar-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/malamar-mega.png",
+    "type": ["dark", "psychic"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Meganium",
+    "imgUrl": "/images/pokemon/meganium-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/meganium-mega.png",
+    "type": ["grass", "fairy"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Pyroar",
+    "imgUrl": "/images/pokemon/pyroar-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/pyroar-mega.png",
+    "type": ["fire", "normal"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Scolipede",
+    "imgUrl": "/images/pokemon/scolipede-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/scolipede-mega.png",
+    "type": ["bug", "poison"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Scrafty",
+    "imgUrl": "/images/pokemon/scrafty-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/scrafty-mega.png",
+    "type": ["dark", "fighting"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Skarmory",
+    "imgUrl": "/images/pokemon/skarmory-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/skarmory-mega.png",
+    "type": ["steel", "flying"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Starmie",
+    "imgUrl": "/images/pokemon/starmie-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/starmie-mega.png",
+    "type": ["water", "psychic"],
+    "generation": 9
+  },
+  {
+    "name": "Mega Victreebel",
+    "imgUrl": "/images/pokemon/victreebel-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/victreebel-mega.png",
+    "type": ["grass", "poison", ""],
+    "generation": 9
+  },
+  {
+    "name": "Mega Zygarde",
+    "imgUrl": "/images/pokemon/zygarde-mega.png",
+    "shinyImgUrl": "/images/pokemon/shiny/zygarde-mega.png",
+    "type": ["dragon", "ground"],
+    "generation": 9
   }
 ]
