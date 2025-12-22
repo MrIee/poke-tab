@@ -160,6 +160,7 @@ export default defineComponent({
   methods: {
     ...mapActions(useCalloutStore, { addCallout: 'addCallout', removeCallout: 'removeCallout'  }),
     ...mapActions(useAppStore, {
+      setPokemonToAdd: 'setPokemonToAdd',
       setIdsOfPokemonToRemove: 'setIdsOfPokemonToRemove',
       setRandomizeBox: 'setRandomizeBox,',
       setDefaultBoxId: 'setDefaultBoxId',
@@ -249,6 +250,7 @@ export default defineComponent({
       }
 
       this.savedPokemon[this.selectedBox].pokemon.unshift({ ...pokemon, id });
+      this.setPokemonToAdd(null);
     },
     removePokemonFromBox(): void {
       this.pokemonIdsToRemove.forEach((id: string): void => {
