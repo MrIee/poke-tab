@@ -9613,6 +9613,13 @@
     "generation": 9
   },
   {
+    "name": "Dipplin",
+    "imgUrl": "/images/pokemon/dipplin.png",
+    "shinyImgUrl": "/images/pokemon/shiny/dipplin.png",
+    "type": ["grass", "dragon"],
+    "generation": 9
+  },
+  {
     "name": "Poltchageist",
     "imgUrl": "/images/pokemon/poltchageist.png",
     "shinyImgUrl": "/images/pokemon/shiny/poltchageist.png",
