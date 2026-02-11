@@ -175,6 +175,13 @@
     "generation": 1,
     "forms": [
       {
+        "name": "Pikachu",
+        "imgUrl": "/images/pokemon/pikachu.png",
+        "shinyImgUrl": "/images/pokemon/shiny/pikachu.png",
+        "type": ["electric"],
+        "generation": 1
+      },
+      {
         "name": "Cosplay",
         "imgUrl": "/images/pokemon/pikachu-cosplay.png",
         "shinyImgUrl": "/images/pokemon/shiny/pikachu-cosplay.png",
