@@ -222,6 +222,62 @@
         "shinyImgUrl": "/images/pokemon/shiny/pikachu-libre.png",
         "type": ["electric"],
         "generation": 6
+      },
+      {
+        "name": "Original Cap",
+        "imgUrl": "/images/pokemon/pikachu-original-cap.png",
+        "shinyImgUrl": "/images/pokemon/shiny/pikachu-original-cap.png",
+        "type": ["electric"],
+        "generation": 6
+      },
+      {
+        "name": "Hoenn Cap",
+        "imgUrl": "/images/pokemon/pikachu-hoenn-cap.png",
+        "shinyImgUrl": "/images/pokemon/shiny/pikachu-hoenn-cap.png",
+        "type": ["electric"],
+        "generation": 6
+      },
+      {
+        "name": "Sinnoh Cap",
+        "imgUrl": "/images/pokemon/pikachu-sinnoh-cap.png",
+        "shinyImgUrl": "/images/pokemon/shiny/pikachu-sinnoh-cap.png",
+        "type": ["electric"],
+        "generation": 6
+      },
+      {
+        "name": "Unova Cap",
+        "imgUrl": "/images/pokemon/pikachu-unova-cap.png",
+        "shinyImgUrl": "/images/pokemon/shiny/pikachu-unova-cap.png",
+        "type": ["electric"],
+        "generation": 6
+      },
+      {
+        "name": "Kalos Cap",
+        "imgUrl": "/images/pokemon/pikachu-kalos-cap.png",
+        "shinyImgUrl": "/images/pokemon/shiny/pikachu-kalos-cap.png",
+        "type": ["electric"],
+        "generation": 6
+      },
+      {
+        "name": "Alola Cap",
+        "imgUrl": "/images/pokemon/pikachu-alola-cap.png",
+        "shinyImgUrl": "/images/pokemon/shiny/pikachu-alola-cap.png",
+        "type": ["electric"],
+        "generation": 6
+      },
+      {
+        "name": "Partner Cap",
+        "imgUrl": "/images/pokemon/pikachu-partner-cap.png",
+        "shinyImgUrl": "/images/pokemon/shiny/pikachu-partner-cap.png",
+        "type": ["electric"],
+        "generation": 6
+      },
+      {
+        "name": "World Cap",
+        "imgUrl": "/images/pokemon/pikachu-world-cap.png",
+        "shinyImgUrl": "/images/pokemon/shiny/pikachu-world-cap.png",
+        "type": ["electric"],
+        "generation": 6
       }
     ]
   },
