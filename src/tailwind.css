@@ -66,8 +66,7 @@ button.alert:active {
 .filter__button {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
-  @apply
-  tw-h-8
+  @apply tw-h-8
   tw-w-[calc(100%-1px)]
   tw-flex
   tw-justify-center

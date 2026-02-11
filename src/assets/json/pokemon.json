@@ -9963,5 +9963,138 @@
     "shinyImgUrl": "/images/pokemon/shiny/zygarde-mega.png",
     "type": ["dragon", "ground"],
     "generation": 9
+  },
+  {
+    "name": "Raichu-mega-x",
+    "imgUrl": "/images/pokemon/raichu-mega-x.png",
+    "shinyImgUrl": "/images/pokemon/raichu-mega-x.png",
+    "type": ["electric"],
+    "generation": 9
+  },
+  {
+    "name": "Raichu-mega-y",
+    "imgUrl": "/images/pokemon/raichu-mega-y.png",
+    "shinyImgUrl": "/images/pokemon/raichu-mega-y.png",
+    "type": ["electric"],
+    "generation": 9
+  },
+  {
+    "name": "Chimecho-mega",
+    "imgUrl": "/images/pokemon/chimecho-mega.png",
+    "shinyImgUrl": "/images/pokemon/chimecho-mega.png",
+    "type": ["psychic", "steel"],
+    "generation": 9
+  },
+  {
+    "name": "Absol-mega-z",
+    "imgUrl": "/images/pokemon/absol-mega-z.png",
+    "shinyImgUrl": "/images/pokemon/absol-mega-z.png",
+    "type": ["dark", "ghost"],
+    "generation": 9
+  },
+  {
+    "name": "Staraptor-mega",
+    "imgUrl": "/images/pokemon/staraptor-mega.png",
+    "shinyImgUrl": "/images/pokemon/staraptor-mega.png",
+    "type": ["fighting", "flying"],
+    "generation": 9
+  },
+  {
+    "name": "Garchomp-mega-z",
+    "imgUrl": "/images/pokemon/garchomp-mega-z.png",
+    "shinyImgUrl": "/images/pokemon/garchomp-mega-z.png",
+    "type": ["dragon"],
+    "generation": 9
+  },
+  {
+    "name": "Lucario-mega-z",
+    "imgUrl": "/images/pokemon/lucario-mega-z.png",
+    "shinyImgUrl": "/images/pokemon/lucario-mega-z.png",
+    "type": ["fighting", "steel"],
+    "generation": 9
+  },
+  {
+    "name": "Heatran-mega",
+    "imgUrl": "/images/pokemon/heatran-mega.png",
+    "shinyImgUrl": "/images/pokemon/heatran-mega.png",
+    "type": ["fire", "steel"],
+    "generation": 9
+  },
+  {
+    "name": "Darkrai-mega",
+    "imgUrl": "/images/pokemon/darkrai-mega.png",
+    "shinyImgUrl": "/images/pokemon/darkrai-mega.png",
+    "type": ["dark"],
+    "generation": 9
+  },
+  {
+    "name": "Golurk-mega",
+    "imgUrl": "/images/pokemon/golurk-mega.png",
+    "shinyImgUrl": "/images/pokemon/golurk-mega.png",
+    "type": ["ground", "ghost"],
+    "generation": 9
+  },
+  {
+    "name": "Meowstic-mega",
+    "imgUrl": "/images/pokemon/meowstic-mega.png",
+    "shinyImgUrl": "/images/pokemon/meowstic-mega.png",
+    "type": ["psychic"],
+    "generation": 9
+  },
+  {
+    "name": "Crabominable-mega",
+    "imgUrl": "/images/pokemon/crabominable-mega.png",
+    "shinyImgUrl": "/images/pokemon/crabominable-mega.png",
+    "type": ["fighting", "ice"],
+    "generation": 9
+  },
+  {
+    "name": "Golisopod-mega",
+    "imgUrl": "/images/pokemon/golisopod-mega.png",
+    "shinyImgUrl": "/images/pokemon/golisopod-mega.png",
+    "type": ["bug", "steel"],
+    "generation": 9
+  },
+  {
+    "name": "Magearna-mega",
+    "imgUrl": "/images/pokemon/magearna-mega.png",
+    "shinyImgUrl": "/images/pokemon/magearna-mega.png",
+    "type": ["steel", "fairy"],
+    "generation": 9
+  },
+  {
+    "name": "Zeraora-mega",
+    "imgUrl": "/images/pokemon/zeraora-mega.png",
+    "shinyImgUrl": "/images/pokemon/zeraora-mega.png",
+    "type": ["electric"],
+    "generation": 9
+  },
+  {
+    "name": "Scovillain-mega",
+    "imgUrl": "/images/pokemon/scovillain-mega.png",
+    "shinyImgUrl": "/images/pokemon/scovillain-mega.png",
+    "type": ["grass", "fire"],
+    "generation": 9
+  },
+  {
+    "name": "Glimmora-mega",
+    "imgUrl": "/images/pokemon/glimmora-mega.png",
+    "shinyImgUrl": "/images/pokemon/glimmora-mega.png",
+    "type": ["rock", "poison"],
+    "generation": 9
+  },
+  {
+    "name": "Tatsugiri-mega",
+    "imgUrl": "/images/pokemon/tatsugiri-mega.png",
+    "shinyImgUrl": "/images/pokemon/tatsugiri-mega.png",
+    "type": ["dragon", "water"],
+    "generation": 9
+  },
+  {
+    "name": "Baxcalibur-mega",
+    "imgUrl": "/images/pokemon/baxcalibur-mega.png",
+    "shinyImgUrl": "/images/pokemon/baxcalibur-mega.png",
+    "type": ["dragon", "ice"],
+    "generation": 9
   }
 ]
