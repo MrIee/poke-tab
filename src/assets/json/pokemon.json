@@ -5188,9 +5188,23 @@
     "generation": 5
   },
   {
+    "name": "Kyurem Black Overdrive",
+    "imgUrl": "/images/pokemon/kyurem-black-overdrive.png",
+    "shinyImgUrl": "/images/pokemon/shiny/kyurem-black-overdrive.png",
+    "type": ["dragon", "ice"],
+    "generation": 5
+  },
+  {
     "name": "Kyurem White",
     "imgUrl": "/images/pokemon/kyurem-white.png",
     "shinyImgUrl": "/images/pokemon/shiny/kyurem-white.png",
+    "type": ["dragon", "ice"],
+    "generation": 5
+  },
+  {
+    "name": "Kyurem White Overdrive",
+    "imgUrl": "/images/pokemon/kyurem-white-overdrive.png",
+    "shinyImgUrl": "/images/pokemon/shiny/kyurem-white-overdrive.png",
     "type": ["dragon", "ice"],
     "generation": 5
   },
@@ -7318,6 +7332,27 @@
     "name": "Necrozma",
     "imgUrl": "/images/pokemon/necrozma.png",
     "shinyImgUrl": "/images/pokemon/shiny/necrozma.png",
+    "type": ["psychic"],
+    "generation": 7
+  },
+  {
+    "name": "Dusk Mane Necrozma",
+    "imgUrl": "/images/pokemon/necrozma-dusk-mane.png",
+    "shinyImgUrl": "/images/pokemon/shiny/necrozma-dusk-mane.png",
+    "type": ["psychic"],
+    "generation": 7
+  },
+  {
+    "name": "Dawn Wings Necrozma",
+    "imgUrl": "/images/pokemon/necrozma-dawn-wings.png",
+    "shinyImgUrl": "/images/pokemon/shiny/necrozma-dawn-wings.png",
+    "type": ["psychic"],
+    "generation": 7
+  },
+  {
+    "name": "Ultra Necrozma",
+    "imgUrl": "/images/pokemon/necrozma-ultra.png",
+    "shinyImgUrl": "/images/pokemon/shiny/necrozma-ultra.png",
     "type": ["psychic"],
     "generation": 7
   },
@@ -10303,6 +10338,20 @@
     "generation": 9
   },
   {
+    "name": "Wooper",
+    "imgUrl": "/images/pokemon/wooper-paldean.png",
+    "shinyImgUrl": "/images/pokemon/shiny/wooper-paldean.png",
+    "type": ["water", "ground"],
+    "generation": 9
+  },
+  {
+    "name": "Bloodmoon Ursaluna",
+    "imgUrl": "/images/pokemon/ursaluna-bloodmoon.png",
+    "shinyImgUrl": "/images/pokemon/shiny/ursaluna-bloodmoon.png",
+    "type": ["ground", "normal"],
+    "generation": 9
+  },
+  {
     "name": "Mega Barbaracle",
     "imgUrl": "/images/pokemon/barbaracle-mega.png",
     "shinyImgUrl": "/images/pokemon/shiny/barbaracle-mega.png",
@@ -10485,133 +10534,133 @@
     "generation": 9
   },
   {
-    "name": "Raichu-mega-x",
+    "name": "Mega Raichu",
     "imgUrl": "/images/pokemon/raichu-mega-x.png",
     "shinyImgUrl": "/images/pokemon/raichu-mega-x.png",
     "type": ["electric"],
     "generation": 9
   },
   {
-    "name": "Raichu-mega-y",
+    "name": "Mega Raichu",
     "imgUrl": "/images/pokemon/raichu-mega-y.png",
     "shinyImgUrl": "/images/pokemon/raichu-mega-y.png",
     "type": ["electric"],
     "generation": 9
   },
   {
-    "name": "Chimecho-mega",
+    "name": "Mega Chimecho",
     "imgUrl": "/images/pokemon/chimecho-mega.png",
     "shinyImgUrl": "/images/pokemon/chimecho-mega.png",
     "type": ["psychic", "steel"],
     "generation": 9
   },
   {
-    "name": "Absol-mega-z",
+    "name": "Mega Absol",
     "imgUrl": "/images/pokemon/absol-mega-z.png",
     "shinyImgUrl": "/images/pokemon/absol-mega-z.png",
     "type": ["dark", "ghost"],
     "generation": 9
   },
   {
-    "name": "Staraptor-mega",
+    "name": "Mega Staraptor",
     "imgUrl": "/images/pokemon/staraptor-mega.png",
     "shinyImgUrl": "/images/pokemon/staraptor-mega.png",
     "type": ["fighting", "flying"],
     "generation": 9
   },
   {
-    "name": "Garchomp-mega-z",
+    "name": "Mega Garchomp",
     "imgUrl": "/images/pokemon/garchomp-mega-z.png",
     "shinyImgUrl": "/images/pokemon/garchomp-mega-z.png",
     "type": ["dragon"],
     "generation": 9
   },
   {
-    "name": "Lucario-mega-z",
+    "name": "Mega Lucario",
     "imgUrl": "/images/pokemon/lucario-mega-z.png",
     "shinyImgUrl": "/images/pokemon/lucario-mega-z.png",
     "type": ["fighting", "steel"],
     "generation": 9
   },
   {
-    "name": "Heatran-mega",
+    "name": "Mega Heatran",
     "imgUrl": "/images/pokemon/heatran-mega.png",
     "shinyImgUrl": "/images/pokemon/heatran-mega.png",
     "type": ["fire", "steel"],
     "generation": 9
   },
   {
-    "name": "Darkrai-mega",
+    "name": "Mega Darkrai",
     "imgUrl": "/images/pokemon/darkrai-mega.png",
     "shinyImgUrl": "/images/pokemon/darkrai-mega.png",
     "type": ["dark"],
     "generation": 9
   },
   {
-    "name": "Golurk-mega",
+    "name": "Mega Golurk",
     "imgUrl": "/images/pokemon/golurk-mega.png",
     "shinyImgUrl": "/images/pokemon/golurk-mega.png",
     "type": ["ground", "ghost"],
     "generation": 9
   },
   {
-    "name": "Meowstic-mega",
+    "name": "Mega Meowstic",
     "imgUrl": "/images/pokemon/meowstic-mega.png",
     "shinyImgUrl": "/images/pokemon/meowstic-mega.png",
     "type": ["psychic"],
     "generation": 9
   },
   {
-    "name": "Crabominable-mega",
+    "name": "Mega Crabominable",
     "imgUrl": "/images/pokemon/crabominable-mega.png",
     "shinyImgUrl": "/images/pokemon/crabominable-mega.png",
     "type": ["fighting", "ice"],
     "generation": 9
   },
   {
-    "name": "Golisopod-mega",
+    "name": "Mega Golisopod",
     "imgUrl": "/images/pokemon/golisopod-mega.png",
     "shinyImgUrl": "/images/pokemon/golisopod-mega.png",
     "type": ["bug", "steel"],
     "generation": 9
   },
   {
-    "name": "Magearna-mega",
+    "name": "Mega Magearna",
     "imgUrl": "/images/pokemon/magearna-mega.png",
     "shinyImgUrl": "/images/pokemon/magearna-mega.png",
     "type": ["steel", "fairy"],
     "generation": 9
   },
   {
-    "name": "Zeraora-mega",
+    "name": "Mega Zeraora",
     "imgUrl": "/images/pokemon/zeraora-mega.png",
     "shinyImgUrl": "/images/pokemon/zeraora-mega.png",
     "type": ["electric"],
     "generation": 9
   },
   {
-    "name": "Scovillain-mega",
+    "name": "Mega Scovillain",
     "imgUrl": "/images/pokemon/scovillain-mega.png",
     "shinyImgUrl": "/images/pokemon/scovillain-mega.png",
     "type": ["grass", "fire"],
     "generation": 9
   },
   {
-    "name": "Glimmora-mega",
+    "name": "Mega Glimmora",
     "imgUrl": "/images/pokemon/glimmora-mega.png",
     "shinyImgUrl": "/images/pokemon/glimmora-mega.png",
     "type": ["rock", "poison"],
     "generation": 9
   },
   {
-    "name": "Tatsugiri-mega",
+    "name": "Mega Tatsugiri",
     "imgUrl": "/images/pokemon/tatsugiri-mega.png",
     "shinyImgUrl": "/images/pokemon/tatsugiri-mega.png",
     "type": ["dragon", "water"],
     "generation": 9
   },
   {
-    "name": "Baxcalibur-mega",
+    "name": "Mega Baxcalibur",
     "imgUrl": "/images/pokemon/baxcalibur-mega.png",
     "shinyImgUrl": "/images/pokemon/baxcalibur-mega.png",
     "type": ["dragon", "ice"],
