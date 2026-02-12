@@ -34,7 +34,7 @@
           :name="pokemon.name"
           :label="pokemon.name"
           :forms="pokemon.forms"
-          @on-click-pokemon="setPokemonToAdd(pokemon)"
+          @on-click-pokemon="(e: Pokemon) => setPokemonToAdd(e || pokemon)"
         />
       </div>
     </div>

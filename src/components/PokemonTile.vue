@@ -32,7 +32,7 @@
         :name="pokemon.name"
         :label="pokemon.name"
         :forms="pokemon.forms"
-        @on-click-pokemon="setPokemonToAdd(pokemon)"
+        @on-click-pokemon="onClickForm(pokemon)"
       />
     </div>
   </div>
@@ -92,11 +92,14 @@ export default defineComponent({
         this.onSelect();
       } else {
         if (this.forms.length > 0) {
-          this.isFormsPanelVisible = !this.isFormsPanelVisible;
+          this.isFormsPanelVisible = true;
         } else {
           this.$emit('on-click-pokemon');
         }
       }
+    },
+    onClickForm(pokemon: Pokemon): void {
+      this.$emit('on-click-pokemon', pokemon);
     },
     getLabelClass(label: string): string {
       const maxLabelLength = 10;

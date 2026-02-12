@@ -7946,10 +7946,453 @@
   },
   {
     "name": "Alcremie",
-    "imgUrl": "/images/pokemon/alcremie.png",
-    "shinyImgUrl": "/images/pokemon/shiny/alcremie.png",
+    "imgUrl": "/images/pokemon/alcremie-vanilla-cream-strawberry.png",
+    "shinyImgUrl": "/images/pokemon/shiny/alcremie-strawberry.png",
     "type": ["fairy"],
-    "generation": 8
+    "generation": 8,
+    "forms": [
+      {
+        "name": "Vanilla Strawberry",
+        "imgUrl": "/images/pokemon/alcremie-vanilla-cream-strawberry.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-strawberry.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Vanilla Berry",
+        "imgUrl": "/images/pokemon/alcremie-vanilla-cream-berry.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-berry.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Vanilla Love",
+        "imgUrl": "/images/pokemon/alcremie-vanilla-cream-love.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-love.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Vanilla Star",
+        "imgUrl": "/images/pokemon/alcremie-vanilla-cream-star.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-star.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Vanilla Clover",
+        "imgUrl": "/images/pokemon/alcremie-vanilla-cream-clover.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-clover.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Vanilla Flower",
+        "imgUrl": "/images/pokemon/alcremie-vanilla-cream-flower.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-flower.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Vanilla Ribbon",
+        "imgUrl": "/images/pokemon/alcremie-vanilla-cream-ribbon.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-ribbon.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Ruby Strawberry",
+        "imgUrl": "/images/pokemon/alcremie-ruby-cream-strawberry.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-strawberry.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Ruby Berry",
+        "imgUrl": "/images/pokemon/alcremie-ruby-cream-berry.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-berry.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Ruby Love",
+        "imgUrl": "/images/pokemon/alcremie-ruby-cream-love.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-love.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Ruby Star",
+        "imgUrl": "/images/pokemon/alcremie-ruby-cream-star.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-star.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Ruby Clover",
+        "imgUrl": "/images/pokemon/alcremie-ruby-cream-clover.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-clover.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Ruby Flower",
+        "imgUrl": "/images/pokemon/alcremie-ruby-cream-flower.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-flower.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Ruby Ribbon",
+        "imgUrl": "/images/pokemon/alcremie-ruby-cream-ribbon.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-ribbon.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Matcha Strawberry",
+        "imgUrl": "/images/pokemon/alcremie-matcha-cream-strawberry.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-strawberry.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Matcha Berry",
+        "imgUrl": "/images/pokemon/alcremie-matcha-cream-berry.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-berry.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Matcha Love",
+        "imgUrl": "/images/pokemon/alcremie-matcha-cream-love.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-love.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Matcha Star",
+        "imgUrl": "/images/pokemon/alcremie-matcha-cream-star.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-star.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Matcha Clover",
+        "imgUrl": "/images/pokemon/alcremie-matcha-cream-clover.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-clover.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Matcha Flower",
+        "imgUrl": "/images/pokemon/alcremie-matcha-cream-flower.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-flower.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Matcha Ribbon",
+        "imgUrl": "/images/pokemon/alcremie-matcha-cream-ribbon.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-ribbon.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Mint Strawberry",
+        "imgUrl": "/images/pokemon/alcremie-mint-cream-strawberry.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-strawberry.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Mint Berry",
+        "imgUrl": "/images/pokemon/alcremie-mint-cream-berry.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-berry.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Mint Love",
+        "imgUrl": "/images/pokemon/alcremie-mint-cream-love.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-love.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Mint Star",
+        "imgUrl": "/images/pokemon/alcremie-mint-cream-star.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-star.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Mint Clover",
+        "imgUrl": "/images/pokemon/alcremie-mint-cream-clover.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-clover.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Mint Flower",
+        "imgUrl": "/images/pokemon/alcremie-mint-cream-flower.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-flower.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Mint Ribbon",
+        "imgUrl": "/images/pokemon/alcremie-mint-cream-ribbon.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-ribbon.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Lemon Strawberry",
+        "imgUrl": "/images/pokemon/alcremie-lemon-cream-strawberry.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-strawberry.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Lemon Berry",
+        "imgUrl": "/images/pokemon/alcremie-lemon-cream-berry.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-berry.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Lemon Love",
+        "imgUrl": "/images/pokemon/alcremie-lemon-cream-love.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-love.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Lemon Star",
+        "imgUrl": "/images/pokemon/alcremie-lemon-cream-star.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-star.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Lemon Clover",
+        "imgUrl": "/images/pokemon/alcremie-lemon-cream-clover.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-clover.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Lemon Flower",
+        "imgUrl": "/images/pokemon/alcremie-lemon-cream-flower.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-flower.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Lemon Ribbon",
+        "imgUrl": "/images/pokemon/alcremie-lemon-cream-ribbon.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-ribbon.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Salted Strawberry",
+        "imgUrl": "/images/pokemon/alcremie-salted-cream-strawberry.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-strawberry.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Salted Berry",
+        "imgUrl": "/images/pokemon/alcremie-salted-cream-berry.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-berry.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Salted Love",
+        "imgUrl": "/images/pokemon/alcremie-salted-cream-love.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-love.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Salted Star",
+        "imgUrl": "/images/pokemon/alcremie-salted-cream-star.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-star.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Salted Clover",
+        "imgUrl": "/images/pokemon/alcremie-salted-cream-clover.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-clover.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Salted Flower",
+        "imgUrl": "/images/pokemon/alcremie-salted-cream-flower.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-flower.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Salted Ribbon",
+        "imgUrl": "/images/pokemon/alcremie-salted-cream-ribbon.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-ribbon.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Ruby Swirl Strawberry",
+        "imgUrl": "/images/pokemon/alcremie-ruby-swirl-strawberry.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-strawberry.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Ruby Swirl Berry",
+        "imgUrl": "/images/pokemon/alcremie-ruby-swirl-berry.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-berry.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Ruby Swirl Love",
+        "imgUrl": "/images/pokemon/alcremie-ruby-swirl-love.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-love.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Ruby Swirl Star",
+        "imgUrl": "/images/pokemon/alcremie-ruby-swirl-star.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-star.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Ruby Swirl Clover",
+        "imgUrl": "/images/pokemon/alcremie-ruby-swirl-clover.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-clover.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Ruby Swirl Flower",
+        "imgUrl": "/images/pokemon/alcremie-ruby-swirl-flower.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-flower.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Ruby Swirl Ribbon",
+        "imgUrl": "/images/pokemon/alcremie-ruby-swirl-ribbon.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-ribbon.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Caramel Strawberry",
+        "imgUrl": "/images/pokemon/alcremie-caramel-swirl-strawberry.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-strawberry.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Caramel Berry",
+        "imgUrl": "/images/pokemon/alcremie-caramel-swirl-berry.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-berry.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Caramel Love",
+        "imgUrl": "/images/pokemon/alcremie-caramel-swirl-love.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-love.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Caramel Star",
+        "imgUrl": "/images/pokemon/alcremie-caramel-swirl-star.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-star.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Caramel Clover",
+        "imgUrl": "/images/pokemon/alcremie-caramel-swirl-clover.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-clover.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Caramel Flower",
+        "imgUrl": "/images/pokemon/alcremie-caramel-swirl-flower.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-flower.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Caramel Ribbon",
+        "imgUrl": "/images/pokemon/alcremie-caramel-swirl-ribbon.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-ribbon.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Rainbow Strawberry",
+        "imgUrl": "/images/pokemon/alcremie-rainbow-swirl-strawberry.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-strawberry.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Rainbow Berry",
+        "imgUrl": "/images/pokemon/alcremie-rainbow-swirl-berry.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-berry.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Rainbow Love",
+        "imgUrl": "/images/pokemon/alcremie-rainbow-swirl-love.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-love.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Rainbow Star",
+        "imgUrl": "/images/pokemon/alcremie-rainbow-swirl-star.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-star.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Rainbow Clover",
+        "imgUrl": "/images/pokemon/alcremie-rainbow-swirl-clover.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-clover.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Rainbow Flower",
+        "imgUrl": "/images/pokemon/alcremie-rainbow-swirl-flower.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-flower.png",
+        "type": ["fairy"],
+        "generation": 8
+      },
+      {
+        "name": "Rainbow Ribbon",
+        "imgUrl": "/images/pokemon/alcremie-rainbow-swirl-ribbon.png",
+        "shinyImgUrl": "/images/pokemon/shiny/alcremie-ribbon.png",
+        "type": ["fairy"],
+        "generation": 8
+      }
+    ]
   },
   {
     "name": "Falinks",
@@ -8144,6 +8587,13 @@
     "name": "Eternatus",
     "imgUrl": "/images/pokemon/eternatus.png",
     "shinyImgUrl": "/images/pokemon/shiny/eternatus.png",
+    "type": ["poison", "dragon"],
+    "generation": 8
+  },
+  {
+    "name": "Eternamax Eternatus",
+    "imgUrl": "/images/pokemon/eternatus-eternamax.png",
+    "shinyImgUrl": "/images/pokemon/shiny/eternatus-eternamax.png",
     "type": ["poison", "dragon"],
     "generation": 8
   },
