@@ -10676,10 +10676,10 @@
     "generation": 9
   },
   {
-    "name": "Gold Gyarados",
-    "imgUrl": "/images/pokemon/extra/gyarados-gold.png",
-    "shinyImgUrl": "/images/pokemon/extra/gyarados-gold.png",
-    "type": ["water", "flying"],
+    "name": "Pink Butterfree",
+    "imgUrl": "/images/pokemon/extra/butterfree-pink.png",
+    "shinyImgUrl": "/images/pokemon/extra/butterfree-pink.png",
+    "type": ["bug", "flying"],
     "generation": 99
   },
   {
@@ -10687,13 +10687,6 @@
     "imgUrl": "/images/pokemon/extra/onix-crystal.png",
     "shinyImgUrl": "/images/pokemon/extra/onix-crystal.png",
     "type": ["rock", "ice"],
-    "generation": 99
-  },
-  {
-    "name": "Pink Butterfree",
-    "imgUrl": "/images/pokemon/extra/butterfree-pink.png",
-    "shinyImgUrl": "/images/pokemon/extra/butterfree-pink.png",
-    "type": ["bug", "flying"],
     "generation": 99
   },
   {
@@ -10774,10 +10767,52 @@
     "generation": 99
   },
   {
+    "name": "Gold Gyarados",
+    "imgUrl": "/images/pokemon/extra/gyarados-gold.png",
+    "shinyImgUrl": "/images/pokemon/extra/gyarados-gold.png",
+    "type": ["water", "flying"],
+    "generation": 99
+  },
+  {
     "name": "Surfing Pikachu",
     "imgUrl": "/images/pokemon/extra/pikachu-surfing.png",
     "shinyImgUrl": "/images/pokemon/extra/pikachu-surfing.png",
     "type": ["electric", "water"],
+    "generation": 99
+  },
+  {
+    "name": "Starmobile Segin",
+    "imgUrl": "/images/pokemon/extra/starmobile-segin.png",
+    "shinyImgUrl": "/images/pokemon/extra/shiny/starmobile-segin.png",
+    "type": ["dark"],
+    "generation": 99
+  },
+  {
+    "name": "Starmobile Schedar",
+    "imgUrl": "/images/pokemon/extra/starmobile-schedar.png",
+    "shinyImgUrl": "/images/pokemon/extra/shiny/starmobile-schedar.png",
+    "type": ["fire"],
+    "generation": 99
+  },
+  {
+    "name": "Starmobile Navi",
+    "imgUrl": "/images/pokemon/extra/starmobile-navi.png",
+    "shinyImgUrl": "/images/pokemon/extra/shiny/starmobile-navi.png",
+    "type": ["poison"],
+    "generation": 99
+  },
+  {
+    "name": "Starmobile Ruchbah",
+    "imgUrl": "/images/pokemon/extra/starmobile-ruchbah.png",
+    "shinyImgUrl": "/images/pokemon/extra/shiny/starmobile-ruchbah.png",
+    "type": ["fairy"],
+    "generation": 99
+  },
+  {
+    "name": "Starmobile Caph",
+    "imgUrl": "/images/pokemon/extra/starmobile-caph.png",
+    "shinyImgUrl": "/images/pokemon/extra/shiny/starmobile-caph.png",
+    "type": ["fighting"],
     "generation": 99
   }
 ]
