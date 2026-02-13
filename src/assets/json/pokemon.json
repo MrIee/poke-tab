@@ -10781,38 +10781,312 @@
     "generation": 99
   },
   {
-    "name": "Starmobile Segin",
+    "name": "Starmobiles",
     "imgUrl": "/images/pokemon/extra/starmobile-segin.png",
     "shinyImgUrl": "/images/pokemon/extra/shiny/starmobile-segin.png",
     "type": ["dark"],
-    "generation": 99
+    "generation": 99,
+    "forms": [
+      {
+        "name": "Segin",
+        "imgUrl": "/images/pokemon/extra/starmobile-segin.png",
+        "shinyImgUrl": "/images/pokemon/extra/shiny/starmobile-segin.png",
+        "type": ["dark"],
+        "generation": 99
+      },
+      {
+        "name": "Schedar",
+        "imgUrl": "/images/pokemon/extra/starmobile-schedar.png",
+        "shinyImgUrl": "/images/pokemon/extra/shiny/starmobile-schedar.png",
+        "type": ["fire"],
+        "generation": 99
+      },
+      {
+        "name": "Navi",
+        "imgUrl": "/images/pokemon/extra/starmobile-navi.png",
+        "shinyImgUrl": "/images/pokemon/extra/shiny/starmobile-navi.png",
+        "type": ["poison"],
+        "generation": 99
+      },
+      {
+        "name": "Ruchbah",
+        "imgUrl": "/images/pokemon/extra/starmobile-ruchbah.png",
+        "shinyImgUrl": "/images/pokemon/extra/shiny/starmobile-ruchbah.png",
+        "type": ["fairy"],
+        "generation": 99
+      },
+      {
+        "name": "Caph",
+        "imgUrl": "/images/pokemon/extra/starmobile-caph.png",
+        "shinyImgUrl": "/images/pokemon/extra/shiny/starmobile-caph.png",
+        "type": ["fighting"],
+        "generation": 99
+      }
+    ]
   },
   {
-    "name": "Starmobile Schedar",
-    "imgUrl": "/images/pokemon/extra/starmobile-schedar.png",
-    "shinyImgUrl": "/images/pokemon/extra/shiny/starmobile-schedar.png",
-    "type": ["fire"],
-    "generation": 99
+    "name": "Pinkan",
+    "imgUrl": "/images/pokemon/extra/rhyhorn-pinkan.png",
+    "shinyImgUrl": "/images/pokemon/extra/rhyhorn-pinkan.png",
+    "type": ["ground", "rock"],
+    "generation": 99,
+    "forms": [
+      {
+        "name": "Rhyhorn",
+        "imgUrl": "/images/pokemon/extra/rhyhorn-pinkan.png",
+        "shinyImgUrl": "/images/pokemon/extra/rhyhorn-pinkan.png",
+        "type": ["ground", "rock"],
+        "generation": 99
+      },
+      {
+        "name": "Rhydon",
+        "imgUrl": "/images/pokemon/extra/rhydon-pinkan.png",
+        "shinyImgUrl": "/images/pokemon/extra/rhydon-pinkan.png",
+        "type": ["ground", "rock"],
+        "generation": 99
+      },
+      {
+        "name": "Caterpie",
+        "imgUrl": "/images/pokemon/extra/caterpie-pinkan.png",
+        "shinyImgUrl": "/images/pokemon/extra/caterpie-pinkan.png",
+        "type": ["bug"],
+        "generation": 99
+      },
+      {
+        "name": "Weedle",
+        "imgUrl": "/images/pokemon/extra/weedle-pinkan.png",
+        "shinyImgUrl": "/images/pokemon/extra/weedle-pinkan.png",
+        "type": ["bug", "poison"],
+        "generation": 99
+      },
+      {
+        "name": "Pidgey",
+        "imgUrl": "/images/pokemon/extra/pidgey-pinkan.png",
+        "shinyImgUrl": "/images/pokemon/extra/pidgey-pinkan.png",
+        "type": ["normal", "flying"],
+        "generation": 99
+      },
+      {
+        "name": "Rattata",
+        "imgUrl": "/images/pokemon/extra/rattata-pinkan.png",
+        "shinyImgUrl": "/images/pokemon/extra/rattata-pinkan.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Bellsprout",
+        "imgUrl": "/images/pokemon/extra/bellsprout-pinkan.png",
+        "shinyImgUrl": "/images/pokemon/extra/bellsprout-pinkan.png",
+        "type": ["grass", "poison"],
+        "generation": 99
+      },
+      {
+        "name": "Diglett",
+        "imgUrl": "/images/pokemon/extra/diglett-pinkan.png",
+        "shinyImgUrl": "/images/pokemon/extra/diglett-pinkan.png",
+        "type": ["ground"],
+        "generation": 99
+      },
+      {
+        "name": "Paras",
+        "imgUrl": "/images/pokemon/extra/paras-pinkan.png",
+        "shinyImgUrl": "/images/pokemon/extra/paras-pinkan.png",
+        "type": ["bug", "grass"],
+        "generation": 99
+      },
+      {
+        "name": "Venonat",
+        "imgUrl": "/images/pokemon/extra/venonat-pinkan.png",
+        "shinyImgUrl": "/images/pokemon/extra/venonat-pinkan.png",
+        "type": ["bug", "poison"],
+        "generation": 99
+      },
+      {
+        "name": "Mankey",
+        "imgUrl": "/images/pokemon/extra/mankey-pinkan.png",
+        "shinyImgUrl": "/images/pokemon/extra/mankey-pinkan.png",
+        "type": ["fighting"],
+        "generation": 99
+      },
+      {
+        "name": "Primeape",
+        "imgUrl": "/images/pokemon/extra/primeape-pinkan.png",
+        "shinyImgUrl": "/images/pokemon/extra/primeape-pinkan.png",
+        "type": ["fighting"],
+        "generation": 99
+      },
+      {
+        "name": "Exeggutor",
+        "imgUrl": "/images/pokemon/extra/exeggutor-pinkan.png",
+        "shinyImgUrl": "/images/pokemon/extra/exeggutor-pinkan.png",
+        "type": ["grass", "psychic"],
+        "generation": 99
+      },
+      {
+        "name": "Vileplume",
+        "imgUrl": "/images/pokemon/extra/vileplume-pinkan.png",
+        "shinyImgUrl": "/images/pokemon/extra/vileplume-pinkan.png",
+        "type": ["grass", "poison"],
+        "generation": 99
+      },
+      {
+        "name": "Nidoran F",
+        "imgUrl": "/images/pokemon/extra/nidoran-f-pinkan.png",
+        "shinyImgUrl": "/images/pokemon/extra/nidoran-f-pinkan.png",
+        "type": ["poison"],
+        "generation": 99
+      },
+      {
+        "name": "Nidoran M",
+        "imgUrl": "/images/pokemon/extra/nidoran-m-pinkan.png",
+        "shinyImgUrl": "/images/pokemon/extra/nidoran-m-pinkan.png",
+        "type": ["poison"],
+        "generation": 99
+      },
+      {
+        "name": "Nidoking",
+        "imgUrl": "/images/pokemon/extra/nidoking-pinkan.png",
+        "shinyImgUrl": "/images/pokemon/extra/nidoking-pinkan.png",
+        "type": ["poison", "ground"],
+        "generation": 99
+      }
+    ]
   },
   {
-    "name": "Starmobile Navi",
-    "imgUrl": "/images/pokemon/extra/starmobile-navi.png",
-    "shinyImgUrl": "/images/pokemon/extra/shiny/starmobile-navi.png",
-    "type": ["poison"],
-    "generation": 99
+    "name": "Pokestar Studios",
+    "imgUrl": "/images/pokemon/extra/prop.png",
+    "shinyImgUrl": "/images/pokemon/extra/prop.png",
+    "type": ["normal"],
+    "generation": 99,
+    "forms": [
+      {
+        "name": "Prop",
+        "imgUrl": "/images/pokemon/extra/prop.png",
+        "shinyImgUrl": "/images/pokemon/extra/prop.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "F-00",
+        "imgUrl": "/images/pokemon/extra/F-00.png",
+        "shinyImgUrl": "/images/pokemon/extra/F-00.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "F-00 Damaged",
+        "imgUrl": "/images/pokemon/extra/F-00-damaged.png",
+        "shinyImgUrl": "/images/pokemon/extra/F-00-damaged.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "MT",
+        "imgUrl": "/images/pokemon/extra/MT.png",
+        "shinyImgUrl": "/images/pokemon/extra/MT.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "MT-2",
+        "imgUrl": "/images/pokemon/extra/MT-2.png",
+        "shinyImgUrl": "/images/pokemon/extra/MT-2.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Humanoid",
+        "imgUrl": "/images/pokemon/extra/humanoid.png",
+        "shinyImgUrl": "/images/pokemon/extra/humanoid.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Monster",
+        "imgUrl": "/images/pokemon/extra/monster.png",
+        "shinyImgUrl": "/images/pokemon/extra/monster.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Demon",
+        "imgUrl": "/images/pokemon/extra/demon.png",
+        "shinyImgUrl": "/images/pokemon/extra/demon.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Black Door",
+        "imgUrl": "/images/pokemon/extra/black-door.png",
+        "shinyImgUrl": "/images/pokemon/extra/black-door.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "White Door",
+        "imgUrl": "/images/pokemon/extra/white-door.png",
+        "shinyImgUrl": "/images/pokemon/extra/white-door.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "UFO",
+        "imgUrl": "/images/pokemon/extra/ufo.png",
+        "shinyImgUrl": "/images/pokemon/extra/ufo.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Transport",
+        "imgUrl": "/images/pokemon/extra/transport.png",
+        "shinyImgUrl": "/images/pokemon/extra/transport.png",
+        "type": ["normal"],
+        "generation": 99
+      }
+    ]
   },
   {
-    "name": "Starmobile Ruchbah",
-    "imgUrl": "/images/pokemon/extra/starmobile-ruchbah.png",
-    "shinyImgUrl": "/images/pokemon/extra/shiny/starmobile-ruchbah.png",
-    "type": ["fairy"],
-    "generation": 99
-  },
-  {
-    "name": "Starmobile Caph",
-    "imgUrl": "/images/pokemon/extra/starmobile-caph.png",
-    "shinyImgUrl": "/images/pokemon/extra/shiny/starmobile-caph.png",
-    "type": ["fighting"],
-    "generation": 99
+    "name": "Missingno",
+    "imgUrl": "/images/pokemon/extra/missingno-redblue.png",
+    "shinyImgUrl": "/images/pokemon/extra/missingno-redblue.png",
+    "type": ["normal"],
+    "generation": 99,
+    "forms": [
+      {
+        "name": "Red Blue",
+        "imgUrl": "/images/pokemon/extra/missingno-redblue.png",
+        "shinyImgUrl": "/images/pokemon/extra/missingno-redblue.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Yellow",
+        "imgUrl": "/images/pokemon/extra/missingno-yellow.png",
+        "shinyImgUrl": "/images/pokemon/extra/missingno-yellow.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Ghost",
+        "imgUrl": "/images/pokemon/extra/missingno-ghost.png",
+        "shinyImgUrl": "/images/pokemon/extra/missingno-ghost.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Aerodactyl",
+        "imgUrl": "/images/pokemon/extra/missingno-aerodactyl.png",
+        "shinyImgUrl": "/images/pokemon/extra/missingno-aerodactyl.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Kabutops",
+        "imgUrl": "/images/pokemon/extra/missingno-kabutops.png",
+        "shinyImgUrl": "/images/pokemon/extra/missingno-kabutops.png",
+        "type": ["normal"],
+        "generation": 99
+      }
+    ]
   }
 ]
