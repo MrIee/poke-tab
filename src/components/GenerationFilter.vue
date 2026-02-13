@@ -12,7 +12,8 @@
             ['filter__button--gen' + selected + '-bg']: selected,
           }"
         >
-          Gen {{ selected }}
+          <span v-if="selected !== 'Extra'">Gen {{ selected }}</span>
+          <span v-else>{{ selected }}</span>
         </span>
         <chevron-icon
           :class="{
@@ -27,13 +28,17 @@
           'tw-hidden': !isVisible,
         }"
       >
-        <li class="tw-inline-block tw-w-full tw-bg-white" v-for="(generation, key) in generations" :key="key">
-          <button
-            :class="{['filter__button filter__button--gen' + generation]: true}"
-            @click="onClickFilter(generation)"
-          >
-            Gen {{ generation }}
-          </button>
+        <li v-for="(generation, key) in generations" :key="key">
+          <div v-if="generation" class="tw-inline-block tw-w-full tw-bg-white">
+            <button
+              v-if="generation"
+              :class="{['filter__button filter__button--gen' + generation]: true}"
+              @click="onClickFilter(generation)"
+            >
+              <span v-if="generation !== 'Extra'">Gen {{ generation }}</span>
+              <span v-else>{{ generation }}</span>
+            </button>
+          </div>
         </li>
       </ul>
     </div>
@@ -57,6 +62,7 @@ export default defineComponent({
   },
   mounted(): void {
     this.selected = this.generations[0];
+    this.generations[98] = 'Extra';
   },
   methods: {
     onClickFilter(generation: string | null): void {
@@ -101,7 +107,7 @@ span.filter__button--genVI-bg,
 
 span.filter__button--genVII-bg,
 .filter__button--genVII:hover {
-  @apply tw-bg-gradient-to-r tw-from-indigo-600 tw-to-orange-600;
+  @apply tw-bg-gradient-to-r tw-from-orange-600 tw-to-indigo-800;
 }
 
 span.filter__button--genVIII-bg,
@@ -112,5 +118,10 @@ span.filter__button--genVIII-bg,
 span.filter__button--genIX-bg,
 .filter__button--genIX:hover {
   @apply tw-bg-gradient-to-r tw-from-red-500 tw-to-violet-500;
+}
+
+span.filter__button--genExtra-bg,
+.filter__button--genExtra:hover {
+  @apply tw-bg-gradient-to-br tw-from-orange-500 tw-via-cyan-500 tw-to-rose-500;
 }
 </style>

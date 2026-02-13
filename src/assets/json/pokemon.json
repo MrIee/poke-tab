@@ -1202,7 +1202,7 @@
     "name": "Typhlosion",
     "imgUrl": "/images/pokemon/typhlosion.png",
     "shinyImgUrl": "/images/pokemon/shiny/typhlosion.png",
-    "type": ["fire", "flying"],
+    "type": ["fire"],
     "generation": 2
   },
   {
@@ -5178,35 +5178,44 @@
     "imgUrl": "/images/pokemon/kyurem.png",
     "shinyImgUrl": "/images/pokemon/shiny/kyurem.png",
     "type": ["dragon", "ice"],
-    "generation": 5
-  },
-  {
-    "name": "Kyurem Black",
-    "imgUrl": "/images/pokemon/kyurem-black.png",
-    "shinyImgUrl": "/images/pokemon/shiny/kyurem-black.png",
-    "type": ["dragon", "ice"],
-    "generation": 5
-  },
-  {
-    "name": "Kyurem Black Overdrive",
-    "imgUrl": "/images/pokemon/kyurem-black-overdrive.png",
-    "shinyImgUrl": "/images/pokemon/shiny/kyurem-black-overdrive.png",
-    "type": ["dragon", "ice"],
-    "generation": 5
-  },
-  {
-    "name": "Kyurem White",
-    "imgUrl": "/images/pokemon/kyurem-white.png",
-    "shinyImgUrl": "/images/pokemon/shiny/kyurem-white.png",
-    "type": ["dragon", "ice"],
-    "generation": 5
-  },
-  {
-    "name": "Kyurem White Overdrive",
-    "imgUrl": "/images/pokemon/kyurem-white-overdrive.png",
-    "shinyImgUrl": "/images/pokemon/shiny/kyurem-white-overdrive.png",
-    "type": ["dragon", "ice"],
-    "generation": 5
+    "generation": 5,
+    "forms": [
+      {
+        "name": "Kyurem",
+        "imgUrl": "/images/pokemon/kyurem.png",
+        "shinyImgUrl": "/images/pokemon/shiny/kyurem.png",
+        "type": ["dragon", "ice"],
+        "generation": 5
+      },
+      {
+        "name": "Black",
+        "imgUrl": "/images/pokemon/kyurem-black.png",
+        "shinyImgUrl": "/images/pokemon/shiny/kyurem-black.png",
+        "type": ["dragon", "ice"],
+        "generation": 5
+      },
+      {
+        "name": "Black Overdrive",
+        "imgUrl": "/images/pokemon/kyurem-black-overdrive.png",
+        "shinyImgUrl": "/images/pokemon/shiny/kyurem-black-overdrive.png",
+        "type": ["dragon", "ice"],
+        "generation": 5
+      },
+      {
+        "name": "White",
+        "imgUrl": "/images/pokemon/kyurem-white.png",
+        "shinyImgUrl": "/images/pokemon/shiny/kyurem-white.png",
+        "type": ["dragon", "ice"],
+        "generation": 5
+      },
+      {
+        "name": "White Overdrive",
+        "imgUrl": "/images/pokemon/kyurem-white-overdrive.png",
+        "shinyImgUrl": "/images/pokemon/shiny/kyurem-white-overdrive.png",
+        "type": ["dragon", "ice"],
+        "generation": 5
+      }
+    ]
   },
   {
     "name": "Keldeo",
@@ -10665,5 +10674,110 @@
     "shinyImgUrl": "/images/pokemon/baxcalibur-mega.png",
     "type": ["dragon", "ice"],
     "generation": 9
+  },
+  {
+    "name": "Gold Gyarados",
+    "imgUrl": "/images/pokemon/extra/gyarados-gold.png",
+    "shinyImgUrl": "/images/pokemon/extra/gyarados-gold.png",
+    "type": ["water", "flying"],
+    "generation": 99
+  },
+  {
+    "name": "Crystal Onix",
+    "imgUrl": "/images/pokemon/extra/onix-crystal.png",
+    "shinyImgUrl": "/images/pokemon/extra/onix-crystal.png",
+    "type": ["rock", "ice"],
+    "generation": 99
+  },
+  {
+    "name": "Pink Butterfree",
+    "imgUrl": "/images/pokemon/extra/butterfree-pink.png",
+    "shinyImgUrl": "/images/pokemon/extra/butterfree-pink.png",
+    "type": ["bug", "flying"],
+    "generation": 99
+  },
+  {
+    "name": "Venustoise",
+    "imgUrl": "/images/pokemon/extra/venustoise.png",
+    "shinyImgUrl": "/images/pokemon/extra/shiny/venustoise.png",
+    "type": ["water", "grass", "poison"],
+    "generation": 99
+  },
+  {
+    "name": "Snow Snorlax",
+    "imgUrl": "/images/pokemon/extra/snowlax.png",
+    "shinyImgUrl": "/images/pokemon/extra/snowlax.png",
+    "type": ["normal", "ice"],
+    "generation": 99
+  },
+  {
+    "name": "Pokemopolis Jigglypuff",
+    "imgUrl": "/images/pokemon/extra/jigglypuff-pokemopolis.png",
+    "shinyImgUrl": "/images/pokemon/extra/jigglypuff-pokemopolis.png",
+    "type": ["normal", "fairy"],
+    "generation": 99
+  },
+  {
+    "name": "Pokemopolis Gengar",
+    "imgUrl": "/images/pokemon/extra/gengar-pokemopolis.png",
+    "shinyImgUrl": "/images/pokemon/extra/gengar-pokemopolis.png",
+    "type": ["ghost", "poison"],
+    "generation": 99
+  },
+  {
+    "name": "Pokemopolis Alakazam",
+    "imgUrl": "/images/pokemon/extra/alakazam-pokemopolis.png",
+    "shinyImgUrl": "/images/pokemon/extra/alakazam-pokemopolis.png",
+    "type": ["psychic"],
+    "generation": 99
+  },
+  {
+    "name": "Illusion Rayquaza",
+    "imgUrl": "/images/pokemon/extra/rayquaza-illusion.png",
+    "shinyImgUrl": "/images/pokemon/extra/rayquaza-illusion.png",
+    "type": ["dragon", "flying"],
+    "generation": 99
+  },
+  {
+    "name": "Gold Sudowoodo",
+    "imgUrl": "/images/pokemon/extra/sudowoodo-gold.png",
+    "shinyImgUrl": "/images/pokemon/extra/sudowoodo-gold.png",
+    "type": ["rock"],
+    "generation": 99
+  },
+  {
+    "name": "Typhlosion No Fire",
+    "imgUrl": "/images/pokemon/extra/typhlosion-nofire.png",
+    "shinyImgUrl": "/images/pokemon/extra/shiny/typhlosion-nofire.png",
+    "type": ["fire"],
+    "generation": 99
+  },
+  {
+    "name": "Ash Greninja",
+    "imgUrl": "/images/pokemon/extra/greninja-ash.png",
+    "shinyImgUrl": "/images/pokemon/extra/shiny/greninja-ash.png",
+    "type": ["water", "dark"],
+    "generation": 99
+  },
+  {
+    "name": "Shadow Lugia",
+    "imgUrl": "/images/pokemon/extra/lugia-shadow.png",
+    "shinyImgUrl": "/images/pokemon/extra/lugia-shadow.png",
+    "type": ["psychic", "flying"],
+    "generation": 99
+  },
+  {
+    "name": "Primal Dialga",
+    "imgUrl": "/images/pokemon/extra/dialga-primal.png",
+    "shinyImgUrl": "/images/pokemon/extra/shiny/dialga-primal.png",
+    "type": ["steel", "dragon"],
+    "generation": 99
+  },
+  {
+    "name": "Surfing Pikachu",
+    "imgUrl": "/images/pokemon/extra/pikachu-surfing.png",
+    "shinyImgUrl": "/images/pokemon/extra/pikachu-surfing.png",
+    "type": ["electric", "water"],
+    "generation": 99
   }
 ]

@@ -147,6 +147,7 @@ export default defineComponent({
       this.filterPokemon();
     },
     filterPokemonByGeneration(generation: number): void {
+      console.log('generation:', generation);
       this.filters.generation = generation;
       this.filterPokemon();
     },
