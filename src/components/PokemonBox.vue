@@ -17,7 +17,7 @@
         @select="onSelect"
       />
     </div>
-    <div class="tw-flex tw-justify-center tw-flex-wrap">
+    <div class="tw-flex tw-justify-center tw-flex-wrap tw-mb-2">
       <button class="tw-mr-2 tw-mb-2 tw-flex-grow" @click="onAdd">Add</button>
       <button class="alert tw-mb-2 tw-flex-grow" :disabled="idsToRemove.length === 0" @click="onRemove">
         Remove
@@ -25,6 +25,7 @@
       <button class="tw-w-[calc(50%-4px)] tw-mr-2" @click="onRandomize">Randomize</button>
       <button class="alert tw-w-[calc(50%-4px)]" @click="onRemoveAll">Remove all</button>
     </div>
+    <RandomizerOptions class="tw-self-start" />
   </div>
 </template>
 
@@ -32,13 +33,15 @@
 import { defineComponent } from 'vue';
 import { mapState, mapActions } from 'pinia';
 import { useAppStore } from '../store/appStore';
-import PokemonTile from './PokemonTile.vue';
 import { type Pokemon } from '../util/interfaces';
 import { POKEMON_STORAGE_LIMIT } from '../util/constants';
+import PokemonTile from './PokemonTile.vue';
+import RandomizerOptions from './RandomizerOptions.vue';
 
 export default defineComponent({
   components: {
     PokemonTile,
+    RandomizerOptions,
   },
   props: {
     id: {
@@ -62,7 +65,7 @@ export default defineComponent({
     };
   },
   computed: {
-    ...mapState(useAppStore, ['allPokemon', 'defaultBoxId']),
+    ...mapState(useAppStore, ['defaultBoxId']),
   },
   methods: {
     ...mapActions(useAppStore, {

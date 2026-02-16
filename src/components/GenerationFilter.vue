@@ -47,6 +47,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { EXTRA_GENERATION } from '../util/constants';
 import Chevron from './icons/Chevron.vue';
 
 export default defineComponent({
@@ -62,7 +63,7 @@ export default defineComponent({
   },
   mounted(): void {
     this.selected = this.generations[0];
-    this.generations[98] = 'Extra';
+    this.generations[EXTRA_GENERATION - 1] = 'Extra';
   },
   methods: {
     onClickFilter(generation: string | null): void {

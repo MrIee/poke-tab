@@ -26,13 +26,14 @@ import { useCalloutStore } from './store/calloutStore';
 import CalloutQueue from './components/CalloutQueue.vue';
 import Options from './components/Options.vue';
 import Footer from './components/Footer.vue';
-import {
-  type VueComponent,
-  type Pokemon,
-  type PokemonBox,
-  type DockedEvent,
-  type Padding,
-  type Callout,
+import type {
+  VueComponent,
+  Pokemon,
+  PokemonBox,
+  DockedEvent,
+  Padding,
+  Callout,
+  RandomizerOptions,
 } from './util/interfaces';
 import { PokemonObject, DrawApp } from './util/drawApp';
 import {
@@ -49,12 +50,14 @@ import {
   POKEMON_STORAGE_LIMIT,
   MAX_NUM_BOXES,
   OPTIONS_DRAGBAR_ID,
+  EXTRA_GENERATION,
   LOCAL_OPTIONS_DOCK,
   LOCAL_SAVED_POKEMON,
   LOCAL_OPTIONS_ALWAYS_RANDOM,
   LOCAL_OPTIONS_BACKGROUND_COLOR,
   LOCAL_OPTIONS_SPEED,
   LOCAL_OPTIONS_SIZE,
+  LOCAL_OPTIONS_RANDOMIZER_OPTIONS,
 } from './util/constants';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -72,6 +75,7 @@ export default defineComponent({
       canvasRef: 'canvasRef',
       isOptionsVisible: false,
       savedPokemon: new Array<PokemonBox>,
+      sortedPokemon: new Array<Pokemon>,
       selectedBox: 0,
       isCalloutVisible: false,
       calloutLabel: '',
@@ -91,6 +95,7 @@ export default defineComponent({
       'backgroundColor',
       'speed',
       'size',
+      'randomizerOptions',
     ]),
   },
   watch: {
@@ -111,7 +116,7 @@ export default defineComponent({
     },
     shouldRandomizeBox(): void {
       if (this.randomizeBoxId >= 0) {
-        this.randomizeBox(this.randomizeBoxId);
+        this.randomizeBox(this.randomizeBoxId, true, this.randomizerOptions);
       }
     },
     backgroundColor(color: string): void {
@@ -122,6 +127,12 @@ export default defineComponent({
     },
     size(size: number): void {
       drawApp.setSize(size);
+    },
+    ['randomizerOptions.includeExtras'](): void {
+      this.sortedPokemon = [];
+    },
+    ['randomizerOptions.includeForms'](): void {
+      this.sortedPokemon = [];
     },
   },
   async mounted(): Promise<void> {
@@ -135,7 +146,7 @@ export default defineComponent({
     this.setAlwaysRandom(alwaysRandom);
 
     if (!loadedPokemon) {
-      this.saveRandomPokemon(0, true);
+      this.saveRandomPokemonToBox(0, true);
       await saveToLocal(LOCAL_SAVED_POKEMON, this.savedPokemon);
     } else {
       this.savedPokemon = loadedPokemon;
@@ -150,8 +161,9 @@ export default defineComponent({
     // watchers are asynchronous
     this.$nextTick(async () => {
       if (this.isRandomOnStartUp) {
+        await this.loadRandomOptionsFromLocal();
         this.selectedBox = MAX_NUM_BOXES;
-        this.randomizeBox(this.selectedBox);
+        this.randomizeBox(this.selectedBox, true, this.randomizerOptions);
         this.setDefaultBoxId(this.selectedBox);
       }
       await this.loadAllSettings();
@@ -160,6 +172,7 @@ export default defineComponent({
   methods: {
     ...mapActions(useCalloutStore, { addCallout: 'addCallout', removeCallout: 'removeCallout'  }),
     ...mapActions(useAppStore, {
+      loadRandomOptionsFromLocal: 'loadRandomOptionsFromLocal',
       setPokemonToAdd: 'setPokemonToAdd',
       setIdsOfPokemonToRemove: 'setIdsOfPokemonToRemove',
       setRandomizeBox: 'setRandomizeBox,',
@@ -213,10 +226,45 @@ export default defineComponent({
         this.savedPokemon.push({ pokemon: [], default: false });
       }
     },
-    saveRandomPokemon(saveToIndex: number = 0, isDefault: boolean = false): void {
+    saveRandomPokemonToBox(saveToIndex: number = 0, isDefault: boolean = false, options?: RandomizerOptions): void {
       this.savedPokemon[saveToIndex].default = isDefault;
-      const pokemon: Array<Pokemon> = getUniqueRandomItems(this.allPokemon, POKEMON_STORAGE_LIMIT, makePokemonShiny);
-      this.savedPokemon[saveToIndex].pokemon = pokemon;
+      let pokemon: Array<Pokemon> = [];
+
+      if (this.sortedPokemon.length === 0) {
+        this.sortedPokemon = [ ...this.allPokemon ];
+
+        if (!options?.includeExtras) {
+          console.log('exclude extras');
+          pokemon = this.sortedPokemon.filter((p: Pokemon) => p.generation !== EXTRA_GENERATION);
+        } else {
+          console.log('include extras');
+          pokemon = [ ...this.allPokemon ];
+        }
+
+        if (options?.includeForms) {
+          this.sortedPokemon.forEach((p: Pokemon) => {
+            if (p.forms && p.forms.length > 0) {
+              p.forms.forEach((form: Pokemon) => pokemon.push(form));
+            } else {
+              pokemon.push(p);
+            }
+          });
+        }
+
+        this.sortedPokemon = [ ...pokemon ];
+      } else {
+        if (this.sortedPokemon.length > 0) {
+          pokemon = [ ...this.sortedPokemon ];
+        } else {
+          pokemon = pokemon.length > 0 ? pokemon : [ ...this.allPokemon];
+        }
+      }
+
+      console.log('count pokemon:', this.allPokemon.length);
+      console.log('count pokemon:', pokemon.length);
+
+      const randomPokemon: Array<Pokemon> = getUniqueRandomItems(pokemon, POKEMON_STORAGE_LIMIT, makePokemonShiny);
+      this.savedPokemon[saveToIndex].pokemon = randomPokemon;
     },
     addSavedPokemonToCanvas(pokemon?: Array<Pokemon>): void {
       const pokemonToAdd: Array<Pokemon> = pokemon || this.savedPokemon[0].pokemon;
@@ -268,9 +316,9 @@ export default defineComponent({
 
       this.setIdsOfPokemonToRemove([]);
     },
-    randomizeBox(boxId: number, loadPokemonToCanvas: boolean = true) {
+    randomizeBox(boxId: number, loadPokemonToCanvas: boolean = true, options?: RandomizerOptions): void {
       this.savedPokemon[boxId].pokemon = [];
-      this.saveRandomPokemon(boxId, this.savedPokemon[boxId].default);
+      this.saveRandomPokemonToBox(boxId, this.savedPokemon[boxId].default, options);
 
       if (loadPokemonToCanvas && (boxId === this.defaultBoxId)) {
         drawApp.removeAllPokemonFromCanvas();
@@ -289,6 +337,7 @@ export default defineComponent({
       await saveToLocal(LOCAL_SAVED_POKEMON, this.savedPokemon);
       await saveToLocal(LOCAL_OPTIONS_BACKGROUND_COLOR, this.backgroundColor);
       await saveToLocal(LOCAL_OPTIONS_SPEED, this.speed);
+      await saveToLocal(LOCAL_OPTIONS_RANDOMIZER_OPTIONS, this.randomizerOptions);
       await saveToLocal(LOCAL_OPTIONS_SIZE, this.size);
 
       const callout: Callout = { id: 'save', label: 'Settings saved!' };

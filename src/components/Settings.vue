@@ -4,6 +4,7 @@
       <input id="js-randomize-on-new-tab" class="tw-mr-2 tw-cursor-pointer" type="checkbox" v-model="isRandom" />
       <span>Always random on new tab</span>
     </label>
+    <RandomizerOptions class="tw-ml-4" />
   </div>
   <div class="tw-mb-4">
     <ColorPicker @confirm="setBackgroundColor" label="Background Color" />
@@ -59,10 +60,12 @@
 import { defineComponent } from 'vue';
 import { mapState, mapActions } from 'pinia';
 import { useAppStore } from '../store/appStore';
+import RandomizerOptions from './RandomizerOptions.vue';
 import ColorPicker from './ColorPicker.vue';
 
 export default defineComponent({
   components: {
+    RandomizerOptions,
     ColorPicker,
   },
   data() {
