@@ -1,7 +1,11 @@
 @import '@cyhnkckali/vue3-color-picker/dist/style.css';
+@import './assets/css/pokemon-sprite.css';
+@import './assets/css/star.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 * {
   box-sizing: border-box;
@@ -56,11 +60,6 @@ button:active:not(.disable-button-styles *) {
 
 button.alert:active {
   @apply tw-bg-red-900;
-}
-
-
-.pokemon-sprite {
-  @apply tw-fixed tw-pointer-events-none;
 }
 
 .filter__button {

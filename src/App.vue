@@ -141,7 +141,7 @@ export default defineComponent({
     const alwaysRandom: boolean = await loadFromLocal(LOCAL_OPTIONS_ALWAYS_RANDOM);
     let defaultBoxId: number = 0;
 
-    drawApp.intialize(canvasEl);
+    drawApp.initialize(canvasEl);
     this.initializeSavedPokemonArray();
     this.setAlwaysRandom(alwaysRandom);
 
@@ -234,10 +234,8 @@ export default defineComponent({
         this.sortedPokemon = [ ...this.allPokemon ];
 
         if (!options?.includeExtras) {
-          console.log('exclude extras');
           pokemon = this.sortedPokemon.filter((p: Pokemon) => p.generation !== EXTRA_GENERATION);
         } else {
-          console.log('include extras');
           pokemon = [ ...this.allPokemon ];
         }
 
@@ -260,9 +258,6 @@ export default defineComponent({
         }
       }
 
-      console.log('count pokemon:', this.allPokemon.length);
-      console.log('count pokemon:', pokemon.length);
-
       const randomPokemon: Array<Pokemon> = getUniqueRandomItems(pokemon, POKEMON_STORAGE_LIMIT, makePokemonShiny);
       this.savedPokemon[saveToIndex].pokemon = randomPokemon;
     },
@@ -280,7 +275,7 @@ export default defineComponent({
       const x = Math.floor(Math.random() * width) + 1;
       const y = Math.floor(Math.random() * height) + 1;
       const imgUrl = pokemon.isShiny ? pokemon.shinyImgUrl : pokemon.imgUrl;
-      return drawApp.addPokemonToCanvas(imgUrl, {x, y});
+      return drawApp.addPokemonToCanvas(imgUrl, {x, y}, pokemon.isShiny);
     },
     addPokemonToSelectedBox(pokemon: Pokemon): void {
       let id: string = '';

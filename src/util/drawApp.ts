@@ -12,10 +12,12 @@ export class PokemonObject {
   prevPosition: Coord;
   src: string;
   speed: number;
+  imgContainer: HTMLDivElement;
   img: HTMLImageElement;
   angle: number;
   className: string;
   id: string;
+  isShiny: boolean;
 
   constructor({
     position = { x: 0, y: 0 },
@@ -29,35 +31,38 @@ export class PokemonObject {
     this.prevPosition = position;
     this.src = src;
     this.speed = speed;
+    this.imgContainer = document.createElement('div');
     this.img = new Image();
     this.angle = angle;
+    this.isShiny = false;
   };
 
   draw(): void {
-    this.img.id = this.id;
+    this.imgContainer.id = this.id;
     this.img.src = this.src;
-    this.img.classList.add(this.className);
-    this.img.style.top = this.position.y + 'px';
-    this.img.style.left = this.position.x + 'px';
+    this.imgContainer.classList.add(this.className);
+    this.imgContainer.style.top = this.position.y + 'px';
+    this.imgContainer.style.left = this.position.x + 'px';
+    this.imgContainer.appendChild(this.img);
     this.setRandomAngle();
   };
 
   getX(): number {
-    return parseInt(this.img.style.left, 10);
+    return parseInt(this.imgContainer.style.left, 10);
   };
 
   getY(): number {
-    return parseInt(this.img.style.top, 10);
+    return parseInt(this.imgContainer.style.top, 10);
   };
 
   incrementImgX(x: number): void {
     this.prevPosition.x = this.getX();
-    this.img.style.left = this.getX() + x + 'px';
+    this.imgContainer.style.left = this.getX() + x + 'px';
   };
 
   incrementImgY(y: number): void {
     this.prevPosition.y = this.getY();
-    this.img.style.top = this.getY() + y + 'px';
+    this.imgContainer.style.top = this.getY() + y + 'px';
   };
 
   setRandomAngle(): void {
@@ -66,15 +71,15 @@ export class PokemonObject {
 
   setFacingAngle(): void {
     if (this.getX() > this.prevPosition.x) {
-      this.img.style.transform = 'scaleX(-1)';
+      this.imgContainer.style.transform = 'scaleX(-1)';
     } else {
-      this.img.style.transform = 'scaleX(1)';
+      this.imgContainer.style.transform = 'scaleX(1)';
     }
   };
 
   setSize(size: number): void {
-    this.img.style.height = size + 'px';
-    this.img.style.width = size + 'px';
+    this.imgContainer.style.height = size + 'px';
+    this.imgContainer.style.width = size + 'px';
   };
 
   detectCollision(canvas: HTMLElement): void {
@@ -95,27 +100,48 @@ export class PokemonObject {
 
     // Detect collision with top of screen
     if (this.getY() < 0) {
-      this.img.style.top = '1px';
+      this.imgContainer.style.top = '1px';
       setOppositeVerticalAngle();
     }
 
     // Detect collision with right of screen
-    if (this.getX() + this.img.width > canvas.offsetWidth + canvasRect.left) {
-      this.img.style.left = `${canvas.offsetWidth + canvasRect.left - this.img.width}px`;
+    if (this.getX() + this.imgContainer.offsetWidth > canvas.offsetWidth + canvasRect.left) {
+      this.imgContainer.style.left = `${canvas.offsetWidth + canvasRect.left - this.imgContainer.offsetWidth}px`;
       setOppositeHorizontalAngle();
     }
 
     // Detect collision with bottom of screen
-    if (this.getY() + this.img.height > canvas.offsetHeight) {
-      this.img.style.top = `${canvas.offsetHeight - this.img.height}px`;
+    if (this.getY() + this.imgContainer.offsetHeight > canvas.offsetHeight) {
+      this.imgContainer.style.top = `${canvas.offsetHeight - this.imgContainer.offsetHeight}px`;
       setOppositeVerticalAngle();
     }
 
     // Detect collision with left of screen
     if (this.getX() < canvasRect.left) {
-      this.img.style.left = canvasRect.left + 'px';
+      this.imgContainer.style.left = canvasRect.left + 'px';
       setOppositeHorizontalAngle();
     }
+  };
+
+  addShinyEffect(): void {
+    const effectDuration = 1500;
+    const star1: HTMLSpanElement = document.createElement('span');
+    const star2: HTMLSpanElement = document.createElement('span');
+    const star3: HTMLSpanElement = document.createElement('span');
+
+    star1.classList.add('star', 'star--tl');
+    star2.classList.add('star', 'star--tr');
+    star3.classList.add('star', 'star--bm');
+
+    this.imgContainer.appendChild(star1);
+    this.imgContainer.appendChild(star2);
+    this.imgContainer.appendChild(star3);
+
+    setTimeout(() => {
+      this.imgContainer.removeChild(star1);
+      this.imgContainer.removeChild(star2);
+      this.imgContainer.removeChild(star3);
+    }, effectDuration);
   };
 };
 
@@ -128,16 +154,21 @@ export class DrawApp {
     this.canvas = null;
   };
 
-  intialize(el: HTMLElement | null): void {
+  initialize(el: HTMLElement | null): void {
     this.canvas = el;
     this.animate();
   };
 
-  addPokemonToCanvas(imgSrc: string, position: Coord): PokemonObject {
+  addPokemonToCanvas(imgSrc: string, position: Coord, isShiny = false): PokemonObject {
     const pokemonObj = new PokemonObject({position, src: imgSrc});
-    this.canvas?.appendChild(pokemonObj.img);
+    this.canvas?.appendChild(pokemonObj.imgContainer);
     this.pokemon.push(pokemonObj);
     pokemonObj.draw();
+
+    if (isShiny) {
+      pokemonObj.addShinyEffect();
+    }
+
     return pokemonObj;
   };
 
@@ -145,14 +176,14 @@ export class DrawApp {
     const index = this.pokemon.findIndex((pokemon: PokemonObject): boolean => pokemon.id === id);
 
     if (index > -1) {
-      this.pokemon[index].img.remove();
+      this.pokemon[index].imgContainer.remove();
       this.pokemon.splice(index, 1);
     }
   };
 
   removeAllPokemonFromCanvas(): void {
     this.pokemon.forEach((pokemon: PokemonObject): void => {
-      pokemon.img.remove();
+      pokemon.imgContainer.remove();
     });
 
     this.pokemon = [];

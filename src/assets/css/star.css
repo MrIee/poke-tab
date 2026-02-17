@@ -1,0 +1,51 @@
+/* ============================================================================
+Star
+============================================================================= */
+
+.star {
+  background-image: url('/images/star.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  animation-name: grow;
+  animation-duration: 0.5s;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+}
+
+.star--tl {
+  height: 30px;
+  width: 30px;
+  top: 5px;
+  left: 5px;
+}
+
+.star--tr {
+  height: 25px;
+  width: 25px;
+  top: 20px;
+  right: 5px;
+}
+
+.star--bm {
+  height: 20px;
+  width: 20px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
