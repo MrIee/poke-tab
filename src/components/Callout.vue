@@ -1,7 +1,7 @@
 <template>
   <div class="callout">
     <strong>{{ label }}</strong>
-    <Cross class="tw-h-6 tw-w-6 tw-cursor-pointer" @click="onClose" />
+    <Cross class="tw:h-6 tw:w-6 tw:cursor-pointer" @click="onClose" />
   </div>
 </template>
 
@@ -35,17 +35,19 @@ export default defineComponent({
 </script>
 
 <style>
+@reference '../tailwind.css';
+
 .callout {
-  @apply tw-flex
-  tw-justify-between
-  tw-w-full
-  sm:tw-w-[405px]
-  tw-p-3
-  tw-mx-auto
-  tw-text-white
-  tw-rounded-lg
-  tw-border
-  tw-border-gray-800
-  tw-bg-green-500;
+  @apply tw:flex
+    tw:justify-between
+    tw:w-full
+    tw:sm:w-[405px]
+    tw:p-3
+    tw:mx-auto
+    tw:text-white
+    tw:rounded-lg
+    tw:border
+    tw:border-gray-800
+    tw:bg-green-500;
 }
 </style>

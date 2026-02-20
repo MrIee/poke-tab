@@ -1,5 +1,5 @@
 <template>
-  <div class="tw-flex tw-flex-col tw-fixed tw-top-0 tw-right-0 tw-left-0 tw-z-50">
+  <div class="tw:flex tw:flex-col tw:fixed tw:top-0 tw:right-0 tw:left-0 tw:z-50">
     <Callout
       v-for="callout in callouts"
       :key="callout.id"

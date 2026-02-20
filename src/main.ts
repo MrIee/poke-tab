@@ -1,6 +1,7 @@
 import { createPinia } from 'pinia';
 import { createApp } from 'vue';
 import App from './App.vue';
+import '@cyhnkckali/vue3-color-picker/dist/style.css';
 import './tailwind.css';
 
 const app = createApp(App);

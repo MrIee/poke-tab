@@ -1,18 +1,18 @@
 <template>
-  <div class="tw-flex tw-flex-col">
-    <label class="tw-inline-flex tw-items-center tw-cursor-pointer" for="js-random-include-extras">
+  <div class="tw:flex tw:flex-col">
+    <label class="tw:inline-flex tw:items-center tw:cursor-pointer" for="js-random-include-extras">
       <input
         id="js-random-include-extras"
-        class="tw-mr-2 tw-cursor-pointer"
+        class="tw:mr-2 tw:cursor-pointer"
         type="checkbox"
         v-model="includeExtras"
       />
       <span>Include Extras</span>
     </label>
-    <label class="tw-inline-flex tw-items-center tw-cursor-pointer" for="js-random-include-forms">
+    <label class="tw:inline-flex tw:items-center tw:cursor-pointer" for="js-random-include-forms">
       <input
         id="js-random-include-forms"
-        class="tw-mr-2 tw-cursor-pointer"
+        class="tw:mr-2 tw:cursor-pointer"
         type="checkbox"
         v-model="includeForms"
       />

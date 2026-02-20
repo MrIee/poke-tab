@@ -3,9 +3,9 @@ Pokemon Sprite
 ============================================================================= */
 
 .pokemon-sprite {
-  @apply tw-h-24 tw-w-24 tw-fixed tw-pointer-events-none;
+  @apply tw:h-24 tw:w-24 tw:fixed tw:pointer-events-none;
 }
 
 .pokemon-sprite img {
-  @apply tw-h-full tw-w-full;
+  @apply tw:h-full tw:w-full;
 }

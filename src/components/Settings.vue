@@ -1,21 +1,21 @@
 <template>
-  <div class="tw-mb-4">
-    <label class="tw-inline-flex tw-items-center tw-cursor-pointer" for="js-randomize-on-new-tab">
-      <input id="js-randomize-on-new-tab" class="tw-mr-2 tw-cursor-pointer" type="checkbox" v-model="randomOnStartup" />
+  <div class="tw:mb-4">
+    <label class="tw:inline-flex tw:items-center tw:cursor-pointer" for="js-randomize-on-new-tab">
+      <input id="js-randomize-on-new-tab" class="tw:mr-2 tw:cursor-pointer" type="checkbox" v-model="randomOnStartup" />
       <span>Always random on new tab</span>
     </label>
-    <RandomizerOptions class="tw-ml-4" />
+    <RandomizerOptions class="tw:ml-4" />
   </div>
-  <div class="tw-mb-4">
+  <div class="tw:mb-4">
     <ColorPicker @confirm="setBackgroundColor" label="Background Color" :default-color="backgroundColor" />
   </div>
-  <div class="tw-mb-4">
+  <div class="tw:mb-4">
     <label for="js-speed">
       <span>Pokemon Speed</span>
       <br />
       <input
         id="js-speed"
-        class="tw-w-full tw-cursor-pointer"
+        class="tw:w-full tw:cursor-pointer"
         type="range"
         list="js-speed-values"
         min="2"
@@ -24,7 +24,7 @@
         v-model="pokemonSpeed"
       />
     </label>
-    <datalist id="js-speed-values" class="tw-flex tw-justify-between">
+    <datalist id="js-speed-values" class="tw:flex tw:justify-between">
       <option value="2" label="Slow"></option>
       <option value="5" label="Normal"></option>
       <option value="8" label="Fast"></option>
@@ -38,7 +38,7 @@
       <br />
       <input
         id="js-size"
-        class="tw-w-full tw-cursor-pointer"
+        class="tw:w-full tw:cursor-pointer"
         type="range"
         list="js-size-values"
         min="72"
@@ -47,7 +47,7 @@
         v-model="pokemonSize"
       />
     </label>
-    <datalist id="js-size-values" class="tw-flex tw-justify-between">
+    <datalist id="js-size-values" class="tw:flex tw:justify-between">
       <option value="72" label="Small"></option>
       <option value="96" label="Normal"></option>
       <option value="120" label="Large"></option>

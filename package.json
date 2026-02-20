@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@cyhnkckali/vue3-color-picker": "^2.0.2",
+    "@cyhnkckali/vue3-color-picker": "^2.1.5",
     "axios": "^1.7.4",
     "lodash.throttle": "^4.1.1",
     "pinia": "^2.2.0",
@@ -17,14 +17,14 @@
     "vue": "^3.4.29"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.2.0",
     "@types/chrome": "^0.0.269",
     "@types/lodash.throttle": "^4.1.9",
-    "@types/node": "^20.14.11",
+    "@types/node": "^20.19.33",
     "@types/uuid": "^10.0.0",
     "@vitejs/plugin-vue": "^5.0.5",
     "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.39",
-    "tailwindcss": "^3.4.4",
+    "tailwindcss": "^4.2.0",
     "typescript": "^5.2.2",
     "vite": "^5.3.1",
     "vue-tsc": "^2.0.21"
