@@ -5,8 +5,7 @@
         id="js-random-include-extras"
         class="tw-mr-2 tw-cursor-pointer"
         type="checkbox"
-        :checked="randomizerOptions.includeExtras"
-        @change="handleOnChangeIncludeExtras"
+        v-model="includeExtras"
       />
       <span>Include Extras</span>
     </label>
@@ -15,8 +14,7 @@
         id="js-random-include-forms"
         class="tw-mr-2 tw-cursor-pointer"
         type="checkbox"
-        :checked="randomizerOptions.includeForms"
-        @change="handleOnChangeIncludeForms"
+        v-model="includeForms"
       />
       <span>Include Forms</span>
     </label>
@@ -26,27 +24,33 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { mapState, mapActions } from 'pinia';
-import { useAppStore } from '../store/appStore';
+import { useSettingsStore } from '../store/settingsStore';
 
 export default defineComponent({
   computed: {
-    ...mapState(useAppStore, ['randomizerOptions']),
+    ...mapState(useSettingsStore, ['randomizerOptions']),
+    includeExtras: {
+      get(): boolean {
+        return this.randomizerOptions.includeExtras;
+      },
+      set(isExtras: boolean) {
+        this.setRandomIncludeExtras(isExtras);
+      },
+    },
+    includeForms: {
+      get(): boolean {
+        return this.randomizerOptions.includeForms;
+      },
+      set(isForms: boolean) {
+        this.setRandomIncludeForms(isForms);
+      },
+    },
   },
   methods: {
-    ...mapActions(useAppStore, {
+    ...mapActions(useSettingsStore, {
       setRandomIncludeExtras: 'setRandomIncludeExtras',
       setRandomIncludeForms: 'setRandomIncludeForms',
     }),
-    handleOnChangeIncludeExtras(e: Event): void {
-      if (e.target instanceof HTMLInputElement) {
-        this.setRandomIncludeExtras(e.target.checked);
-      }
-    },
-    handleOnChangeIncludeForms(e: Event): void {
-      if (e.target instanceof HTMLInputElement) {
-        this.setRandomIncludeForms(e.target.checked);
-      }
-    },
   },
 });
 </script>

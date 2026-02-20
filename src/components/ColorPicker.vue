@@ -54,6 +54,10 @@ export default defineComponent({
       type: String,
       default: 'Color',
     },
+    defaultColor: {
+      type: String,
+      default: '#ffffff',
+    },
   },
   data() {
     return {
@@ -78,12 +82,19 @@ export default defineComponent({
   watch: {
     color(color: string): void {
       this.previewColor = color;
+      this.$emit('confirm', color);
     },
     isVisible(isVisible: boolean): void {
       if (isVisible) {
         this.prevPreviewColor = this.previewColor;
       }
     },
+  },
+  mounted() {
+    if (this.defaultColor) {
+      this.color = this.defaultColor;
+      this.previewColor = this.defaultColor;
+    }
   },
   methods: {
     onConfirm(): void {

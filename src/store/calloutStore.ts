@@ -1,5 +1,5 @@
-import { defineStore, StoreDefinition } from "pinia";
-import { type Callout } from "../util/interfaces";
+import { defineStore, StoreDefinition } from 'pinia';
+import { type Callout } from '../util/interfaces';
 import { v4 as uuidv4 } from 'uuid';
 
 export const useCalloutStore: StoreDefinition = defineStore('calloutStore', {

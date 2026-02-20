@@ -16,7 +16,7 @@ export default defineComponent({
   mounted(): void {
     const canvasObj = getCanvas();
     const canvasApp = new Canvas(canvasObj.canvas, canvasObj.ctx);
-    canvasApp.intialize();
+    canvasApp.initialize();
   },
 });
 </script>

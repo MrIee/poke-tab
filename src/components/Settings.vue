@@ -1,13 +1,13 @@
 <template>
   <div class="tw-mb-4">
     <label class="tw-inline-flex tw-items-center tw-cursor-pointer" for="js-randomize-on-new-tab">
-      <input id="js-randomize-on-new-tab" class="tw-mr-2 tw-cursor-pointer" type="checkbox" v-model="isRandom" />
+      <input id="js-randomize-on-new-tab" class="tw-mr-2 tw-cursor-pointer" type="checkbox" v-model="randomOnStartup" />
       <span>Always random on new tab</span>
     </label>
     <RandomizerOptions class="tw-ml-4" />
   </div>
   <div class="tw-mb-4">
-    <ColorPicker @confirm="setBackgroundColor" label="Background Color" />
+    <ColorPicker @confirm="setBackgroundColor" label="Background Color" :default-color="backgroundColor" />
   </div>
   <div class="tw-mb-4">
     <label for="js-speed">
@@ -59,7 +59,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { mapState, mapActions } from 'pinia';
-import { useAppStore } from '../store/appStore';
+import { useSettingsStore } from '../store/settingsStore';
 import RandomizerOptions from './RandomizerOptions.vue';
 import ColorPicker from './ColorPicker.vue';
 
@@ -68,19 +68,22 @@ export default defineComponent({
     RandomizerOptions,
     ColorPicker,
   },
-  data() {
-    return {
-      isRandom: false,
-      color: '',
-    };
-  },
   computed: {
-    ...mapState(useAppStore, {
-      isRandomOnStartUp: 'isRandomOnStartUp',
-      backgroundColor: 'backgroundColor',
-      speed: 'speed',
-      size: 'size',
-    }),
+    ...mapState(useSettingsStore, [
+      'randomizerOptions',
+      'alwaysRandom',
+      'backgroundColor',
+      'speed',
+      'size',
+    ]),
+    randomOnStartup: {
+      get(): boolean {
+        return this.alwaysRandom;
+      },
+      set(isRandom: boolean) {
+        this.setAlwaysRandom(isRandom);
+      },
+    },
     pokemonSpeed: {
       get(): number {
         return this.speed;
@@ -98,16 +101,8 @@ export default defineComponent({
       },
     },
   },
-  watch: {
-    isRandom(isRandom: boolean): void {
-      this.setAlwaysRandom(isRandom);
-    },
-  },
-  mounted(): void {
-    this.isRandom = this.isRandomOnStartUp;
-  },
   methods: {
-    ...mapActions(useAppStore, {
+    ...mapActions(useSettingsStore, {
       setAlwaysRandom: 'setAlwaysRandom',
       setBackgroundColor: 'setBackgroundColor',
       setSpeed: 'setSpeed',

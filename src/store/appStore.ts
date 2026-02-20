@@ -1,14 +1,9 @@
 import { defineStore, StoreDefinition } from "pinia";
-import type { Pokemon, RandomizerOptions } from "../util/interfaces";
+import type { Pokemon } from "../util/interfaces";
 import { makePokemonShiny } from '../util/helpers';
 import { saveToLocal, loadFromLocal } from '../util/localStorage';
-import { LOCAL_OPTIONS_POKEMON_FORMS_REMINDER, LOCAL_OPTIONS_RANDOMIZER_OPTIONS } from '../util/constants';
+import { LOCAL_OPTIONS_POKEMON_FORMS_REMINDER } from '../util/constants';
 import pokemonJSON from '../assets/json/pokemon.json';
-
-const randomizerOptions: RandomizerOptions = {
-  includeExtras: false,
-  includeForms: false,
-};
 
 export const useAppStore: StoreDefinition = defineStore('appStore', {
   state: () => ({
@@ -19,12 +14,7 @@ export const useAppStore: StoreDefinition = defineStore('appStore', {
     randomizeBoxId: -1,
     shouldRandomizeBox: 0,
     defaultBoxId: 0,
-    isRandomOnStartUp: false,
-    backgroundColor: '#ffffff',
-    speed: 5,
-    size: 96,
     showFormsReminder: true,
-    randomizerOptions,
   }),
   actions: {
     setPokemonToAdd(pokemon: Pokemon | null): void {
@@ -44,43 +34,12 @@ export const useAppStore: StoreDefinition = defineStore('appStore', {
     setDefaultBoxId(id: number): void {
       this.defaultBoxId = id;
     },
-    setAlwaysRandom(isRandom: boolean): void {
-      this.isRandomOnStartUp = isRandom;
-    },
-    setBackgroundColor(color: string): void {
-      if (color) {
-        this.backgroundColor = color;
-      }
-    },
-    setSpeed(speed: number): void {
-      if (speed) {
-        this.speed = speed;
-      }
-    },
-    setSize(size: number): void {
-      if (size) {
-        this.size = size;
-      }
-    },
     saveShowFormsReminder(showReminder: boolean): void {
       saveToLocal(LOCAL_OPTIONS_POKEMON_FORMS_REMINDER, showReminder);
     },
     async loadShowFormsReminder(): Promise<void> {
       const showFormsReminder: boolean = await loadFromLocal(LOCAL_OPTIONS_POKEMON_FORMS_REMINDER);
       this.showFormsReminder = showFormsReminder === null ? true : showFormsReminder;
-    },
-    async loadRandomOptionsFromLocal(): Promise<void> {
-      const options = await loadFromLocal(LOCAL_OPTIONS_RANDOMIZER_OPTIONS);
-
-      if (options) {
-        this.randomizerOptions = options;
-      }
-    },
-    setRandomIncludeExtras(includeExtras: boolean): void {
-      this.randomizerOptions.includeExtras = includeExtras;
-    },
-    setRandomIncludeForms(includeForms: boolean): void {
-      this.randomizerOptions.includeForms = includeForms;
     },
   },
 });

@@ -3,7 +3,7 @@
   <div
     :ref="canvasRef"
     class="tw-absolute tw-top-0 tw-left-0 tw-bottom-12 tw-right-0 tw-overflow-hidden tw-select-none"
-    :style="{ backgroundColor: backgroundColorStyle }"
+    :style="{ backgroundColor }"
     @click="toggleOptions"
   >
   </div>
@@ -22,6 +22,7 @@
 import { defineComponent } from 'vue';
 import { mapState, mapActions } from 'pinia';
 import { useAppStore } from './store/appStore';
+import { useSettingsStore } from './store/settingsStore';
 import { useCalloutStore } from './store/calloutStore';
 import CalloutQueue from './components/CalloutQueue.vue';
 import Options from './components/Options.vue';
@@ -53,11 +54,6 @@ import {
   EXTRA_GENERATION,
   LOCAL_OPTIONS_DOCK,
   LOCAL_SAVED_POKEMON,
-  LOCAL_OPTIONS_ALWAYS_RANDOM,
-  LOCAL_OPTIONS_BACKGROUND_COLOR,
-  LOCAL_OPTIONS_SPEED,
-  LOCAL_OPTIONS_SIZE,
-  LOCAL_OPTIONS_RANDOMIZER_OPTIONS,
 } from './util/constants';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -80,7 +76,6 @@ export default defineComponent({
       isCalloutVisible: false,
       calloutLabel: '',
       calloutDescription: '',
-      backgroundColorStyle: '',
     };
   },
   computed: {
@@ -91,11 +86,13 @@ export default defineComponent({
       'randomizeBoxId',
       'shouldRandomizeBox',
       'defaultBoxId',
-      'isRandomOnStartUp',
+    ]),
+    ...mapState(useSettingsStore, [
+      'randomizerOptions',
+      'alwaysRandom',
       'backgroundColor',
       'speed',
       'size',
-      'randomizerOptions',
     ]),
   },
   watch: {
@@ -119,14 +116,11 @@ export default defineComponent({
         this.randomizeBox(this.randomizeBoxId, true, this.randomizerOptions);
       }
     },
-    backgroundColor(color: string): void {
-      this.backgroundColorStyle = color;
+    speed(newSpeed: number): void {
+      drawApp.setSpeed(newSpeed);
     },
-    speed(speed: number): void {
-      drawApp.setSpeed(speed);
-    },
-    size(size: number): void {
-      drawApp.setSize(size);
+    size(newSize: number): void {
+      drawApp.setSize(newSize);
     },
     ['randomizerOptions.includeExtras'](): void {
       this.sortedPokemon = [];
@@ -138,12 +132,11 @@ export default defineComponent({
   async mounted(): Promise<void> {
     const canvasEl: HTMLElement = this.$refs[this.canvasRef] as HTMLElement;
     const loadedPokemon: Array<PokemonBox> = await loadFromLocal(LOCAL_SAVED_POKEMON);
-    const alwaysRandom: boolean = await loadFromLocal(LOCAL_OPTIONS_ALWAYS_RANDOM);
     let defaultBoxId: number = 0;
 
     drawApp.initialize(canvasEl);
+    await this.loadSettings();
     this.initializeSavedPokemonArray();
-    this.setAlwaysRandom(alwaysRandom);
 
     if (!loadedPokemon) {
       this.saveRandomPokemonToBox(0, true);
@@ -157,27 +150,27 @@ export default defineComponent({
 
     this.addSavedPokemonToCanvas(this.savedPokemon[defaultBoxId].pokemon);
 
-    // Using $nextTick to run the enclosed block of code after the defaultBoxId watcher is fired, since
-    // watchers are asynchronous
+    if (this.alwaysRandom) {
+      this.selectedBox = MAX_NUM_BOXES;
+      this.randomizeBox(this.selectedBox, true, this.randomizerOptions);
+      this.setDefaultBoxId(this.selectedBox);
+    }
+
     this.$nextTick(async () => {
-      if (this.isRandomOnStartUp) {
-        await this.loadRandomOptionsFromLocal();
-        this.selectedBox = MAX_NUM_BOXES;
-        this.randomizeBox(this.selectedBox, true, this.randomizerOptions);
-        this.setDefaultBoxId(this.selectedBox);
-      }
-      await this.loadAllSettings();
+      this.applySettings();
     });
   },
   methods: {
     ...mapActions(useCalloutStore, { addCallout: 'addCallout', removeCallout: 'removeCallout'  }),
     ...mapActions(useAppStore, {
-      loadRandomOptionsFromLocal: 'loadRandomOptionsFromLocal',
       setPokemonToAdd: 'setPokemonToAdd',
       setIdsOfPokemonToRemove: 'setIdsOfPokemonToRemove',
       setRandomizeBox: 'setRandomizeBox,',
       setDefaultBoxId: 'setDefaultBoxId',
-      setAlwaysRandom: 'setAlwaysRandom',
+    }),
+    ...mapActions(useSettingsStore, {
+      saveSettings: 'saveSettings',
+      loadSettings: 'loadSettings',
       setBackgroundColor: 'setBackgroundColor',
       setSpeed: 'setSpeed',
       setSize: 'setSize',
@@ -328,25 +321,14 @@ export default defineComponent({
       this.addSavedPokemonToCanvas(this.savedPokemon[boxId].pokemon);
     },
     async saveAllSettings(): Promise<void> {
-      await saveToLocal(LOCAL_OPTIONS_ALWAYS_RANDOM, this.isRandomOnStartUp);
-      await saveToLocal(LOCAL_SAVED_POKEMON, this.savedPokemon);
-      await saveToLocal(LOCAL_OPTIONS_BACKGROUND_COLOR, this.backgroundColor);
-      await saveToLocal(LOCAL_OPTIONS_SPEED, this.speed);
-      await saveToLocal(LOCAL_OPTIONS_RANDOMIZER_OPTIONS, this.randomizerOptions);
-      await saveToLocal(LOCAL_OPTIONS_SIZE, this.size);
-
+      await this.saveSettings();
       const callout: Callout = { id: 'save', label: 'Settings saved!' };
       this.removeCallout(callout);
       this.$nextTick(() => this.addCallout(callout));
     },
-    async loadAllSettings(): Promise<void> {
-      const bgColor: string = await loadFromLocal(LOCAL_OPTIONS_BACKGROUND_COLOR);
-      const speed: number = await loadFromLocal(LOCAL_OPTIONS_SPEED);
-      const size: number = await loadFromLocal(LOCAL_OPTIONS_SIZE);
-
-      this.setBackgroundColor(bgColor);
-      this.setSpeed(speed);
-      this.setSize(size);
+    applySettings(): void {
+      drawApp.setSpeed(this.speed);
+      drawApp.setSize(this.size);
     },
   },
 });
