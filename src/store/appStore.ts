@@ -15,6 +15,11 @@ export const useAppStore: StoreDefinition = defineStore('appStore', {
     shouldRandomizeBox: 0,
     defaultBoxId: 0,
     showFormsReminder: true,
+    pokemonIdsToTransfer: new Array<string>,
+    transferPokemonEvent: 0,
+    transferToBoxId: 0,
+    shouldClone: false,
+    transferErrorMsg: '',
   }),
   actions: {
     setPokemonToAdd(pokemon: Pokemon | null): void {
@@ -34,8 +39,17 @@ export const useAppStore: StoreDefinition = defineStore('appStore', {
     setDefaultBoxId(id: number): void {
       this.defaultBoxId = id;
     },
-    saveShowFormsReminder(showReminder: boolean): void {
-      saveToLocal(LOCAL_OPTIONS_POKEMON_FORMS_REMINDER, showReminder);
+    dispatchTransferPokemonEvent(boxId: number, pokemonIds, shouldClone = false): void {
+      this.transferToBoxId = boxId;
+      this.pokemonIdsToTransfer = pokemonIds;
+      this.shouldClone = shouldClone;
+      this.transferPokemonEvent++;
+    },
+    setTransferErrorMsg(message: string): void {
+      this.transferErrorMsg = message;
+    },
+    async saveShowFormsReminder(showReminder: boolean): Promise<void> {
+      await saveToLocal(LOCAL_OPTIONS_POKEMON_FORMS_REMINDER, showReminder);
     },
     async loadShowFormsReminder(): Promise<void> {
       const showFormsReminder: boolean = await loadFromLocal(LOCAL_OPTIONS_POKEMON_FORMS_REMINDER);

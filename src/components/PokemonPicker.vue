@@ -24,7 +24,7 @@
       :image-url="ReminderImage"
       @dont-show-again="saveShowFormsReminder(false)"
     />
-    <div class="tw:h-full tw:flex tw:justify-center tw:pt-4 tw:overflow-auto tw:transform tw:relative">
+    <div class="tw:h-full tw:flex tw:justify-center tw:pt-4 tw:overflow-auto tw:translate-0 tw:relative">
       <span v-if="showHint">Not seeing any pokemon? Try typing {{ minSearchLength }} or more letters</span>
       <div v-else class="tw:inline-block tw:h-full tw:w-72 tw:xs:w-full">
         <PokemonTile

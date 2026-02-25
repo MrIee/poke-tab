@@ -41,6 +41,10 @@ body {
   @apply tw:relative;
 }
 
+button {
+  @apply tw:cursor-pointer;
+}
+
 button:not(.disable-button-styles *) {
   @apply tw:px-3 tw:py-1 tw:text-white tw:bg-blue-400 tw:rounded-md tw:border tw:border-gray-800;
 }

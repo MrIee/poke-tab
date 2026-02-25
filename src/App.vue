@@ -12,7 +12,7 @@
     :ref="optionsRef"
     :saved-pokemon="savedPokemon"
     @close="closeOptions"
-    @select-box="selectedBox = $event"
+    @select-box="selectedBoxId = $event"
     @save="saveAllSettings"
   />
   <Footer />
@@ -72,7 +72,7 @@ export default defineComponent({
       isOptionsVisible: false,
       savedPokemon: new Array<PokemonBox>,
       sortedPokemon: new Array<Pokemon>,
-      selectedBox: 0,
+      selectedBoxId: 0,
       isCalloutVisible: false,
       calloutLabel: '',
       calloutDescription: '',
@@ -86,6 +86,10 @@ export default defineComponent({
       'randomizeBoxId',
       'shouldRandomizeBox',
       'defaultBoxId',
+      'transferToBoxId',
+      'pokemonIdsToTransfer',
+      'shouldClone',
+      'transferPokemonEvent',
     ]),
     ...mapState(useSettingsStore, [
       'randomizerOptions',
@@ -128,6 +132,9 @@ export default defineComponent({
     ['randomizerOptions.includeForms'](): void {
       this.sortedPokemon = [];
     },
+    transferPokemonEvent(): void {
+      this.transferPokemonToBox(this.transferToBoxId, this.pokemonIdsToTransfer, this.shouldClone);
+    },
   },
   async mounted(): Promise<void> {
     const canvasEl: HTMLElement = this.$refs[this.canvasRef] as HTMLElement;
@@ -145,15 +152,15 @@ export default defineComponent({
       this.savedPokemon = loadedPokemon;
       const defaultBoxId: number = this.savedPokemon.findIndex((box: PokemonBox,) => box.default);
       this.setDefaultBoxId(defaultBoxId);
-      this.selectedBox = defaultBoxId;
+      this.selectedBoxId = defaultBoxId;
     }
 
     this.addSavedPokemonToCanvas(this.savedPokemon[defaultBoxId].pokemon);
 
     if (this.alwaysRandom) {
-      this.selectedBox = MAX_NUM_BOXES;
-      this.randomizeBox(this.selectedBox, true, this.randomizerOptions);
-      this.setDefaultBoxId(this.selectedBox);
+      this.selectedBoxId = MAX_NUM_BOXES;
+      this.randomizeBox(this.selectedBoxId, true, this.randomizerOptions);
+      this.setDefaultBoxId(this.selectedBoxId);
     }
 
     this.$nextTick(async () => {
@@ -167,6 +174,7 @@ export default defineComponent({
       setIdsOfPokemonToRemove: 'setIdsOfPokemonToRemove',
       setRandomizeBox: 'setRandomizeBox,',
       setDefaultBoxId: 'setDefaultBoxId',
+      setTransferErrorMsg: 'setTransferErrorMsg',
     }),
     ...mapActions(useSettingsStore, {
       saveSettings: 'saveSettings',
@@ -272,32 +280,32 @@ export default defineComponent({
     },
     addPokemonToSelectedBox(pokemon: Pokemon): void {
       let id: string = '';
-      const pokemonInBox: Array<Pokemon> = this.savedPokemon[this.selectedBox].pokemon;
+      const pokemonInBox: Array<Pokemon> = this.savedPokemon[this.selectedBoxId].pokemon;
 
       if (pokemonInBox.length === POKEMON_STORAGE_LIMIT) {
         drawApp.removePokemonFromCanvas(pokemonInBox[pokemonInBox.length - 1].id as string);
-        this.savedPokemon[this.selectedBox].pokemon.pop();
+        this.savedPokemon[this.selectedBoxId].pokemon.pop();
       }
 
-      if (this.savedPokemon[this.selectedBox].default) {
+      if (this.savedPokemon[this.selectedBoxId].default) {
         id = this.addPokemonToCanvas(pokemon).id;
       } else {
         id = uuidv4();
       }
 
-      this.savedPokemon[this.selectedBox].pokemon.unshift({ ...pokemon, id });
+      this.savedPokemon[this.selectedBoxId].pokemon.unshift({ ...pokemon, id });
       this.setPokemonToAdd(null);
     },
     removePokemonFromBox(): void {
       this.pokemonIdsToRemove.forEach((id: string): void => {
         const index: number =
-          this.savedPokemon[this.selectedBox].pokemon.findIndex((pokemon: Pokemon) => pokemon.id === id);
+          this.savedPokemon[this.selectedBoxId].pokemon.findIndex((pokemon: Pokemon) => pokemon.id === id);
 
         if (index > -1) {
-          this.savedPokemon[this.selectedBox].pokemon.splice(index, 1);
+          this.savedPokemon[this.selectedBoxId].pokemon.splice(index, 1);
         }
 
-        if (this.savedPokemon[this.selectedBox].default) {
+        if (this.savedPokemon[this.selectedBoxId].default) {
           drawApp.removePokemonFromCanvas(id);
         }
       });
@@ -314,14 +322,43 @@ export default defineComponent({
       }
     },
     usePokemonBox(boxId: number, prevBoxId: number): void {
-      this.selectedBox = boxId;
+      this.selectedBoxId = boxId;
       this.savedPokemon[prevBoxId].default = false;
       this.savedPokemon[boxId].default = true;
       drawApp.removeAllPokemonFromCanvas();
       this.addSavedPokemonToCanvas(this.savedPokemon[boxId].pokemon);
     },
+    transferPokemonToBox(id: number, pokemonIds: Array<string>, shouldClone = false): void {
+      this.setTransferErrorMsg('');
+      const transferBoxId: number = id + 1;
+      const pokemonToTransfer: Array<Pokemon> = this.savedPokemon[this.selectedBoxId].pokemon.filter(
+        (p: Pokemon) => p.id && pokemonIds.indexOf(p.id) > -1);
+
+      if (pokemonIds.length === 0) {
+        this.setTransferErrorMsg('No pokemon selected for transfer');
+        return;
+      }
+
+      if (id === this.selectedBoxId) {
+        this.setTransferErrorMsg(`Cannot transfer pokemon from Box ${transferBoxId} to Box ${transferBoxId}`);
+        return;
+      }
+
+      if (this.savedPokemon[id].pokemon.length <= POKEMON_STORAGE_LIMIT - pokemonToTransfer.length) {
+        pokemonToTransfer.forEach((p: Pokemon) => this.savedPokemon[id].pokemon.push(p));
+
+        if (!shouldClone && id !== this.selectedBoxId) {
+          this.savedPokemon[this.selectedBoxId].pokemon = this.savedPokemon[this.selectedBoxId].pokemon.filter(
+            (p: Pokemon) => p.id && pokemonIds.indexOf(p.id) === -1);
+        }
+      } else {
+        this.setTransferErrorMsg('Too many pokemon in Box ' + (transferBoxId));
+      }
+
+    },
     async saveAllSettings(): Promise<void> {
       await this.saveSettings();
+      await saveToLocal(LOCAL_SAVED_POKEMON, this.savedPokemon);
       const callout: Callout = { id: 'save', label: 'Settings saved!' };
       this.removeCallout(callout);
       this.$nextTick(() => this.addCallout(callout));

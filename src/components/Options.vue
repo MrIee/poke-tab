@@ -7,7 +7,7 @@
       >
       </div>
       <div class="tw:flex tw:justify-center tw:items-center tw:relative tw:pointer-events-none">
-        <DragIndicator class="tw:hidden tw:sm:block tw:absolute -tw:translate-y-1/2 tw:top-1/2 -tw:left-7" />
+        <DragIndicator class="tw:hidden tw:sm:block tw:absolute tw:-translate-y-1/2 tw:top-1/2 tw:-left-7" />
         <strong>Options</strong>
       </div>
       <div class="tw:flex tw:items-center tw:h-full tw:p-1 tw:cursor-pointer tw:absolute tw:right-0" @click="onClose">
@@ -120,7 +120,7 @@ export default defineComponent({
   },
   watch: {
     selectedBoxId(id: number): void {
-      this.$emit('selectBox', id);
+      this.$emit('select-box', id);
     },
   },
   mounted(): void {
