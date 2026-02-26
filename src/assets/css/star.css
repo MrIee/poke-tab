@@ -4,48 +4,49 @@ Star
 
 .star {
   background-image: url('/images/star.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
   animation-name: grow;
   animation-duration: 0.5s;
   animation-iteration-count: 3;
   animation-direction: alternate;
+
+  @apply tw:bg-no-repeat
+  tw:bg-contain
+  tw:absolute;
 }
 
 .star--tl {
-  height: 30px;
-  width: 30px;
-  top: 5px;
-  left: 5px;
+  @apply tw:h-7.5
+  tw:w-7.5
+  tw:top-1.25
+  tw:left-1.25;
 }
 
 .star--tr {
-  height: 25px;
-  width: 25px;
-  top: 20px;
-  right: 5px;
+  @apply tw:h-6.25
+  tw:w-6.25
+  tw:top-5
+  tw:right-1.25;
 }
 
 .star--bm {
-  height: 20px;
-  width: 20px;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  bottom: 10px;
+  @apply tw:h-5
+  tw:w-5
+  tw:mx-auto
+  tw:left-0
+  tw:right-0
+  tw:bottom-2.5;
 }
 
 @keyframes grow {
   0% {
-    transform: scale(1);
+    scale: 1;
   }
 
   50% {
-    transform: scale(1.5);
+    scale: 1.5;
   }
 
   100% {
-    transform: scale(1);
+    scale: 1;
   }
 }
