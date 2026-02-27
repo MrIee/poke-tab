@@ -17,10 +17,6 @@ export default defineComponent({
       type: Number,
       default: 0
     },
-    boxId: {
-      type: Number,
-      default: 0,
-    },
   },
   emits: ['update:modelValue'],
   data() {
@@ -37,9 +33,6 @@ export default defineComponent({
         this.$emit('update:modelValue', value);
       }
     }
-  },
-  mounted() {
-    this.value = this.boxId;
   },
 });
 </script>

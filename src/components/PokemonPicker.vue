@@ -19,7 +19,7 @@
     </div>
     <Reminder
       v-if="showFormsReminder"
-      class="tw:top-[142px]"
+      class="tw:top-35.5"
       :text="formReminderText"
       :image-url="ReminderImage"
       @dont-show-again="saveShowFormsReminder(false)"

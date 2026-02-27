@@ -34,7 +34,7 @@
         Settings
       </span>
     </div>
-    <div class="tw:h-full tw:sm:h-[650px] tw:p-3 tw:overflow-auto">
+    <div class="tw:h-full tw:sm:h-162.5 tw:p-3 tw:overflow-auto">
       <div v-if="activeTab === tabSettings">
         <Settings />
       </div>
@@ -44,12 +44,7 @@
         </p>
         <div>
           <div class="tw:mb-1">
-            <select
-              class="tw:self-start tw:mr-2 tw:rounded tw:border-2 tw:border-gray-800 tw:cursor-pointer"
-              v-model="selectedBoxId"
-            >
-              <option v-for="(index, key) in maxNumBoxes" :key="key" :value="key">Box {{ index }}</option>
-            </select>
+            <BoxDropdown v-model="selectedBoxId" />
           </div>
           <PokemonBox
             :id="selectedBoxId"
@@ -67,7 +62,7 @@
         </span>
         <span class="tw:w-full tw:text-center tw:text-white">{{ tabTitle }}</span>
       </div>
-      <PokemonPicker v-if="isPickerVisible" class="tw:!h-[calc(100%-64px)]" />
+      <PokemonPicker v-if="isPickerVisible" class="tw:h-[calc(100%-64px)]!" />
     </div>
     <button class="tw:mt-auto tw:m-3" @click="onSave">Save Settings</button>
   </div>
@@ -77,14 +72,15 @@
 import { defineComponent } from 'vue';
 import { mapState } from 'pinia';
 import { useAppStore } from '../store/appStore';
+import { type PokemonBox } from '../util/interfaces';
+import { MAX_NUM_BOXES, OPTIONS_DRAGBAR_ID } from '../util/constants';
 import DragIndicator from './icons/DragIndicator.vue';
 import Cross from './icons/Cross.vue';
 import Chevron from './icons/Chevron.vue';
 import Settings from './Settings.vue';
 import PokemonBoxComponent from './PokemonBox.vue';
 import PokemonPicker from './PokemonPicker.vue';
-import { type PokemonBox } from '../util/interfaces';
-import { MAX_NUM_BOXES, OPTIONS_DRAGBAR_ID } from '../util/constants';
+import BoxDropdown from './BoxDropdown.vue';
 
 export default defineComponent({
   components: {
@@ -94,6 +90,7 @@ export default defineComponent({
     PokemonBox: PokemonBoxComponent,
     PokemonPicker,
     Settings,
+    BoxDropdown,
   },
   props: {
     savedPokemon: {
@@ -155,7 +152,7 @@ export default defineComponent({
   tw:h-full
   tw:w-full
   tw:sm:h-auto
-  tw:sm:w-[405px]
+  tw:sm:w-101.25
   tw:flex
   tw:flex-col
   tw:border
