@@ -1,8 +1,21 @@
 <template>
   <div class="footer">
     <span>Pokémon are registered trademarks of The Pokemon Company.</span>
+    <span v-if="version" class="tw:absolute tw:right-3">{{ version }}</span>
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  computed: {
+    version() {
+      return chrome.runtime && 'v' + chrome.runtime.getManifest().version;
+    },
+  }
+});
+</script>
 
 <style>
 @reference '../tailwind.css';
