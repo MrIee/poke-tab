@@ -5,6 +5,7 @@
       :key="callout.id"
       :label="callout.label"
       :description="callout.description"
+      :img-url="callout.imgUrl"
       @close="removeCallout(callout)"
     />
   </div>

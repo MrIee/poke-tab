@@ -3,6 +3,7 @@ import { loadObjectFromLocal, saveObjectToLocal } from '../util/localStorage';
 import type { RandomizerOptions } from '../util/interfaces';
 
 interface SettingsStoreState {
+  hasShinyCharm: boolean;
   randomizerOptions: RandomizerOptions;
   alwaysRandom: boolean;
   backgroundColor: string;
@@ -17,6 +18,7 @@ const randomizerOptions: RandomizerOptions = {
 
 export const useSettingsStore: StoreDefinition = defineStore('settingsStore', {
   state: (): SettingsStoreState => ({
+    hasShinyCharm: false,
     randomizerOptions,
     alwaysRandom: false,
     backgroundColor: '#ffffff',
@@ -36,10 +38,15 @@ export const useSettingsStore: StoreDefinition = defineStore('settingsStore', {
           : loadedSettings.randomizerOptions;
       }
 
+      this.hasShinyCharm = loadedSettings.hasShinyCharm || this.hasShinyCharm;
       this.alwaysRandom = loadedSettings.alwaysRandom || this.alwaysRandom;
       this.backgroundColor = loadedSettings.backgroundColor || this.backgroundColor;
       this.speed = loadedSettings.speed || this.speed;
       this.size = loadedSettings.size || this.size;
+    },
+    async setHasShinyCharm(hasCharm: boolean): Promise<void> {
+      this.hasShinyCharm = hasCharm;
+      await saveObjectToLocal({ hasShinyCharm: this.hasShinyCharm });
     },
     setAlwaysRandom(isRandom: boolean): void {
       this.alwaysRandom = isRandom;

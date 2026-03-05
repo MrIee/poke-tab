@@ -1,5 +1,5 @@
 <template>
-  <div class="tw:w-72 tw:flex tw:flex-col tw:items-center">
+  <div class="tw:flex tw:flex-col tw:items-center">
     <div class="tw:w-full tw:flex tw:mb-1">
       <strong v-if="default">In Use</strong>
       <span class="tw:ml-auto"><strong>{{ pokemon.length }}/{{ storageLimit }}</strong> pokemon</span>

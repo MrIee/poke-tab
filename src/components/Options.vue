@@ -21,7 +21,7 @@
           'active': activeTab === tabPokemon,
         }"
         @click="activeTab = tabPokemon"
-        >
+      >
         Pokemon
       </span>
       <span
@@ -30,7 +30,7 @@
           'active': activeTab === tabSettings,
         }"
         @click="activeTab = tabSettings"
-        >
+      >
         Settings
       </span>
     </div>
@@ -42,9 +42,15 @@
         <p class="tw:mb-3">
           You may store up to 10 sets of pokemon to use in your new tab(s).
         </p>
-        <div>
-          <div class="tw:mb-1">
+        <div class="tw:w-72">
+          <div class="tw:flex tw:justify-between tw:items-center tw:mb-1">
             <BoxDropdown v-model="selectedBoxId" />
+            <div v-if="hasShinyCharm" class="shiny-charm-container">
+              <img :src="shinyCharmImg" alt="shiny charm icon" />
+              <div class="star-orbit-container tw:hidden tw:h-10 tw:w-10 tw:absolute tw:top-0 tw:left-0">
+                <div class="star star--orbit tw:h-7.5 tw:w-7.5"></div>
+              </div>
+            </div>
           </div>
           <PokemonBox
             :id="selectedBoxId"
@@ -72,8 +78,10 @@
 import { defineComponent } from 'vue';
 import { mapState } from 'pinia';
 import { useAppStore } from '../store/appStore';
+import { useSettingsStore } from '../store/settingsStore';
 import { type PokemonBox } from '../util/interfaces';
 import { MAX_NUM_BOXES, OPTIONS_DRAGBAR_ID } from '../util/constants';
+import shinyCharmImg from  '../../public/images/shiny-charm.png';
 import DragIndicator from './icons/DragIndicator.vue';
 import Cross from './icons/Cross.vue';
 import Chevron from './icons/Chevron.vue';
@@ -100,6 +108,7 @@ export default defineComponent({
   },
   data() {
     return {
+      shinyCharmImg,
       selectedBoxId: 0,
       isRandom: false,
       dragBarId: OPTIONS_DRAGBAR_ID,
@@ -114,6 +123,7 @@ export default defineComponent({
   },
   computed: {
     ...mapState(useAppStore, ['defaultBoxId']),
+    ...mapState(useSettingsStore, ['hasShinyCharm']),
   },
   watch: {
     selectedBoxId(id: number): void {
@@ -170,4 +180,11 @@ export default defineComponent({
   @apply tw:border-b-0 tw:bg-white;
 }
 
+.shiny-charm-container {
+  @apply tw:h-10 tw:w-10 tw:relative;
+}
+
+.shiny-charm-container:hover > .star-orbit-container {
+  @apply tw:block;
+}
 </style>

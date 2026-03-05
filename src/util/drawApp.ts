@@ -1,11 +1,20 @@
 import { v4 as uuidv4 } from 'uuid';
-import { getRandomNumberInRange, degreesToRadians } from "./helpers";
+import { getRandomNumberInRange, degreesToRadians } from './helpers';
+import type { Pokemon } from './interfaces';
+
 interface Coord {
   x: number,
   y: number,
 }
 
 const maxAngle: number = 360;
+
+const determineIfShiny = (increaseChance: boolean): boolean => {
+  const shinyChance: number = 1;
+  const shinyMaximum: number = increaseChance ? 30 : 100;
+  const chance: number =  Math.floor(Math.random() * shinyMaximum) + 1;
+  return chance <= shinyChance;
+};
 
 export class PokemonObject {
   position: Coord;
@@ -22,18 +31,16 @@ export class PokemonObject {
   constructor({
     position = { x: 0, y: 0 },
     src = '',
-    speed = 5,
-    angle = 0,
   }, className = 'pokemon-sprite') {
     this.id = uuidv4();
     this.className = className;
     this.position = position;
     this.prevPosition = position;
     this.src = src;
-    this.speed = speed;
+    this.speed = 5;
     this.imgContainer = document.createElement('div');
     this.img = new Image();
-    this.angle = angle;
+    this.angle = 0;
     this.isShiny = false;
   };
 
@@ -92,10 +99,8 @@ export class PokemonObject {
     }
 
     const setOppositeHorizontalAngle = (): void => {
-      this.angle =
-        ((maxAngle / 2 - this.angle) + maxAngle) % maxAngle +
+      this.angle = ((maxAngle / 2 - this.angle) + maxAngle) % maxAngle +
         getRandomNumberInRange(maxAngleDiscrepancy, minAngleDiscrepancy);
-
     };
 
     // Detect collision with top of screen
@@ -159,13 +164,15 @@ export class DrawApp {
     this.animate();
   };
 
-  addPokemonToCanvas(imgSrc: string, position: Coord, isShiny = false): PokemonObject {
-    const pokemonObj = new PokemonObject({position, src: imgSrc});
+  addPokemonToCanvas(pokemon: Pokemon, position: Coord, options: { makeShiny: boolean, increaseChance: boolean }): PokemonObject {
+    const isShiny: boolean = options.makeShiny ? determineIfShiny(options.increaseChance) : false;
+    const pokemonObj = new PokemonObject({ position, src: isShiny ? pokemon.shinyImgUrl : pokemon.imgUrl });
+    pokemonObj.isShiny = isShiny;
     this.canvas?.appendChild(pokemonObj.imgContainer);
     this.pokemon.push(pokemonObj);
     pokemonObj.draw();
 
-    if (isShiny) {
+    if (pokemonObj.isShiny) {
       pokemonObj.addShinyEffect();
     }
 

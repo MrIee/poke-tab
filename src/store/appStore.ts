@@ -1,6 +1,5 @@
 import { defineStore, StoreDefinition } from "pinia";
 import type { Pokemon } from "../util/interfaces";
-import { makePokemonShiny } from '../util/helpers';
 import { saveToLocal, loadFromLocal } from '../util/localStorage';
 import { LOCAL_OPTIONS_POKEMON_FORMS_REMINDER } from '../util/constants';
 import pokemonJSON from '../assets/json/pokemon.json';
@@ -20,11 +19,12 @@ export const useAppStore: StoreDefinition = defineStore('appStore', {
     transferToBoxId: 0,
     shouldClone: false,
     transferErrorMsg: '',
+    hasRareCandy: false,
   }),
   actions: {
     setPokemonToAdd(pokemon: Pokemon | null): void {
       if (pokemon) {
-        this.pokemonToAdd = makePokemonShiny(pokemon);
+        this.pokemonToAdd = pokemon;
       } else {
         this.pokemonToAdd = null;
       }

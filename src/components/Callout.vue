@@ -1,6 +1,10 @@
 <template>
   <div class="callout">
-    <strong>{{ label }}</strong>
+    <img v-if="imgUrl" class="tw:h-10 tw:w-10 tw:mt-1.25 tw:mr-2" :src="imgUrl" alt="Callout Icon" />
+    <div class="tw:flex tw:flex-col tw:gap-2">
+      <strong>{{ label }}</strong>
+      <p v-if="description" v-html="description" class="tw:text-sm"></p>
+    </div>
     <Cross class="tw:h-6 tw:w-6 tw:cursor-pointer" @click="onClose" />
   </div>
 </template>
@@ -22,9 +26,13 @@ export default defineComponent({
       type: String,
       default: '',
     },
+    imgUrl: {
+      type: String,
+      default: '',
+    },
   },
   mounted() {
-    setTimeout(this.onClose, 5000);
+    setTimeout(this.onClose, 10000);
   },
   methods: {
     onClose(): void {
@@ -38,16 +46,18 @@ export default defineComponent({
 @reference '../tailwind.css';
 
 .callout {
-  @apply tw:flex
-    tw:justify-between
-    tw:w-full
-    tw:sm:w-[405px]
-    tw:p-3
-    tw:mx-auto
-    tw:text-white
-    tw:rounded-lg
-    tw:border
-    tw:border-gray-800
-    tw:bg-green-500;
+  background-color: #D3AF37;
+
+  @apply tw:w-full
+  tw:sm:w-101.25
+  tw:flex
+  tw:justify-between
+  tw:p-3
+  tw:mx-auto
+  tw:text-white
+  tw:rounded-lg
+  tw:border
+  tw:border-gray-800
+  /* tw:bg-green-500; */
 }
 </style>
