@@ -11,13 +11,8 @@ To use the app, either be entranced and watch the pokemon move around all day, o
 open the options pane. From there let your creativity run wild.
 
 ## What's next?
-Well now that all pokemon up to and including Gen 9 have been added, there are still tons of other features that i'd like
-to add...
-
-So next steps would be:
-- Add Shiny Charm (naturally it would increase the odds of a shiny appearing when adding pokemon to the page)
-- Add Pokeballs
-- Add beautiful pixel style backgrounds
+Wow! Now that ive completed so many features I wanted to add, I think one of the only things I desire at the moment is to
+add beautiful pixel style backgrounds (If I can ever find any...).
 
 ## Chrome Extension
 I have turned this project into a chrome extension. Check it out [here](https://chromewebstore.google.com/detail/poketab-pokemon-in-your-n/eboakcaphhgldoakdlkmdlnfemkmobab)
