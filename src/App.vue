@@ -368,6 +368,7 @@ export default defineComponent({
       const chanceOfCharm: number = Math.floor(Math.random() * chanceOfCharmMax) + 1
       const callout: Callout = {
         id: 'shinyCharm',
+        type: 'special',
         imgUrl: shinyCharmImg,
         label: 'Congratulations you have been gifted a shiny charm!',
         description: 'You now have an increased chance to spawn shiny pokemon!',

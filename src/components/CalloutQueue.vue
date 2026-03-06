@@ -3,6 +3,7 @@
     <Callout
       v-for="callout in callouts"
       :key="callout.id"
+      :type="callout.type"
       :label="callout.label"
       :description="callout.description"
       :img-url="callout.imgUrl"

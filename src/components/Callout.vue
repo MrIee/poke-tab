@@ -1,5 +1,5 @@
 <template>
-  <div class="callout">
+  <div :class="{ 'callout': true, [backgroundColor]: backgroundColor}">
     <img v-if="imgUrl" class="tw:h-10 tw:w-10 tw:mt-1.25 tw:mr-2" :src="imgUrl" alt="Callout Icon" />
     <div class="tw:flex tw:flex-col tw:gap-2">
       <strong>{{ label }}</strong>
@@ -18,6 +18,14 @@ export default defineComponent({
     Cross,
   },
   props: {
+    type: {
+      type: String,
+      default: 'default',
+      validator(value: string) {
+        // The value must match one of these strings
+        return ['default', 'special'].includes(value)
+      }
+    },
     label: {
       type: String,
       default: '',
@@ -34,6 +42,22 @@ export default defineComponent({
   mounted() {
     setTimeout(this.onClose, 10000);
   },
+  computed: {
+    backgroundColor() {
+      let color: string = '';
+
+      switch (this.type) {
+        case 'default':
+          color = 'tw:bg-green-500';
+          break;
+        case 'special':
+          color = 'tw:bg-[#D3AF37]';
+          break;
+      }
+
+      return color;
+    },
+  },
   methods: {
     onClose(): void {
       this.$emit('close');
@@ -46,7 +70,7 @@ export default defineComponent({
 @reference '../tailwind.css';
 
 .callout {
-  background-color: #D3AF37;
+  /* background-color: #D3AF37; */
 
   @apply tw:w-full
   tw:sm:w-101.25

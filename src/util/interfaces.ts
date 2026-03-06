@@ -37,6 +37,7 @@ export interface Padding {
 
 export interface Callout {
   id?: string;
+  type?: string;
   imgUrl?: string;
   label: string;
   description?: string;
