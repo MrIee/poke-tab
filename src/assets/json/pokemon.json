@@ -3320,6 +3320,13 @@
     "generation": 4
   },
   {
+    "name": "Cherrim Sunshine",
+    "imgUrl": "/images/pokemon/cherrim-sunshine.png",
+    "shinyImgUrl": "/images/pokemon/shiny/cherrim-sunshine.png",
+    "type": ["grass"],
+    "generation": 4
+  },
+  {
     "name": "Shellos",
     "imgUrl": "/images/pokemon/shellos.png",
     "shinyImgUrl": "/images/pokemon/shiny/shellos.png",
