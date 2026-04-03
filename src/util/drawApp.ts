@@ -165,7 +165,17 @@ export class DrawApp {
   };
 
   addPokemonToCanvas(pokemon: Pokemon, position: Coord, options: { makeShiny: boolean, increaseChance: boolean }): PokemonObject {
-    const isShiny: boolean = options.makeShiny ? determineIfShiny(options.increaseChance) : false;
+    let isShiny: boolean = false;
+
+    if (pokemon.isShiny) {
+      isShiny = true;
+    }
+
+    if (options.makeShiny) {
+      isShiny = determineIfShiny(options.increaseChance);
+    }
+
+    options.makeShiny ? determineIfShiny(options.increaseChance) : false;
     const pokemonObj = new PokemonObject({ position, src: isShiny ? pokemon.shinyImgUrl : pokemon.imgUrl });
     pokemonObj.isShiny = isShiny;
     this.canvas?.appendChild(pokemonObj.imgContainer);

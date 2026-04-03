@@ -297,7 +297,6 @@ export default defineComponent({
       const pokemonObj: PokemonObject = drawApp.addPokemonToCanvas(pokemon, {x, y}, { makeShiny, increaseChance: this.hasShinyCharm });
       pokemon.isShiny = pokemonObj.isShiny;
       return pokemonObj;
-      // return drawApp.addPokemonToCanvas(pokemon, {x, y}, { makeShiny, increaseChance: false });
     },
     removePokemonFromBox(): void {
       this.pokemonIdsToRemove.forEach((id: string): void => {
