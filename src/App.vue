@@ -273,6 +273,7 @@ export default defineComponent({
     },
     addPokemonToSelectedBox(pokemon: Pokemon): void {
       let id: string = '';
+      let isShiny: boolean = false;
       const pokemonInBox: Array<Pokemon> = this.savedPokemon[this.selectedBoxId].pokemon;
 
         if (pokemonInBox.length === POKEMON_STORAGE_LIMIT) {
@@ -281,12 +282,15 @@ export default defineComponent({
       }
 
       if (this.savedPokemon[this.selectedBoxId].default) {
-        id = this.addPokemonToCanvas(pokemon, true).id;
+        const addedPokemon: PokemonObject = this.addPokemonToCanvas(pokemon, true);
+        id = addedPokemon.id;
+        isShiny = addedPokemon.isShiny;
       } else {
+        isShiny = drawApp.randomlySetPokemonShiny(this.hasShinyCharm);
         id = uuidv4();
       }
 
-      this.savedPokemon[this.selectedBoxId].pokemon.unshift({ ...pokemon, id });
+      this.savedPokemon[this.selectedBoxId].pokemon.unshift({ ...pokemon, id, isShiny });
       this.setPokemonToAdd(null);
     },
     addPokemonToCanvas(pokemon: Pokemon, makeShiny = false): PokemonObject {
@@ -328,7 +332,7 @@ export default defineComponent({
       this.savedPokemon[prevBoxId].default = false;
       this.savedPokemon[boxId].default = true;
       drawApp.removeAllPokemonFromCanvas();
-      this.addSavedPokemonToCanvas(this.savedPokemon[boxId].pokemon);
+      this.addSavedPokemonToCanvas(this.savedPokemon[boxId].pokemon, true);
     },
     transferPokemonToBox(id: number, pokemonIds: Array<string>, shouldClone = false): void {
       this.setTransferErrorMsg('');
@@ -347,11 +351,21 @@ export default defineComponent({
       }
 
       if (this.savedPokemon[id].pokemon.length <= POKEMON_STORAGE_LIMIT - pokemonToTransfer.length) {
-        pokemonToTransfer.forEach((p: Pokemon) => this.savedPokemon[id].pokemon.push(p));
+        pokemonToTransfer.forEach((p: Pokemon) => {
+          this.savedPokemon[id].pokemon.push(p);
+          this.addPokemonToCanvas(p);
+        });
 
         if (!shouldClone && id !== this.selectedBoxId) {
-          this.savedPokemon[this.selectedBoxId].pokemon = this.savedPokemon[this.selectedBoxId].pokemon.filter(
-            (p: Pokemon) => p.id && pokemonIds.indexOf(p.id) === -1);
+          this.savedPokemon[this.selectedBoxId].pokemon =
+            this.savedPokemon[this.selectedBoxId].pokemon.filter((p: Pokemon) => {
+              if (p.id && pokemonIds.indexOf(p.id) === -1) {
+                return true;
+              }
+
+              drawApp.removePokemonFromCanvas(p.id || '');
+              return false;
+          });
         }
       } else {
         this.setTransferErrorMsg('Too many pokemon in Box ' + (transferBoxId));

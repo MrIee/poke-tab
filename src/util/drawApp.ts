@@ -9,13 +9,6 @@ interface Coord {
 
 const maxAngle: number = 360;
 
-const determineIfShiny = (increaseChance: boolean): boolean => {
-  const shinyChance: number = 1;
-  const shinyMaximum: number = increaseChance ? 30 : 100;
-  const chance: number =  Math.floor(Math.random() * shinyMaximum) + 1;
-  return chance <= shinyChance;
-};
-
 export class PokemonObject {
   position: Coord;
   prevPosition: Coord;
@@ -164,6 +157,13 @@ export class DrawApp {
     this.animate();
   };
 
+  randomlySetPokemonShiny(increaseChance: boolean): boolean {
+    const shinyChance: number = 1;
+    const shinyMaximum: number = increaseChance ? 30 : 100;
+    const chance: number =  Math.floor(Math.random() * shinyMaximum) + 1;
+    return chance <= shinyChance;
+  };
+
   addPokemonToCanvas(pokemon: Pokemon, position: Coord, options: { makeShiny: boolean, increaseChance: boolean }): PokemonObject {
     let isShiny: boolean = false;
 
@@ -172,10 +172,10 @@ export class DrawApp {
     }
 
     if (options.makeShiny) {
-      isShiny = determineIfShiny(options.increaseChance);
+      isShiny = this.randomlySetPokemonShiny(options.increaseChance);
     }
 
-    options.makeShiny ? determineIfShiny(options.increaseChance) : false;
+    options.makeShiny ? this.randomlySetPokemonShiny(options.increaseChance) : false;
     const pokemonObj = new PokemonObject({ position, src: isShiny ? pokemon.shinyImgUrl : pokemon.imgUrl });
     pokemonObj.isShiny = isShiny;
     this.canvas?.appendChild(pokemonObj.imgContainer);
