@@ -11095,5 +11095,224 @@
         "generation": 99
       }
     ]
+  },
+  {
+    "name": "Egg",
+    "imgUrl": "/images/pokemon/extra/eggs/egg-1.png",
+    "shinyImgUrl": "/images/pokemon/extra/egg-1.png",
+    "type": ["normal"],
+    "generation": 99,
+    "forms": [
+      {
+        "name": "Egg 1",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-1.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-1.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 2",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-2.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-2.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 3",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-3.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-3.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 4",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-4.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-4.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 5",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-5.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-5.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 6",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-6.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-6.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 7",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-7.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-7.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 8",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-8.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-8.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 9",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-9.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-9.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 10",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-10.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-10.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 11",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-11.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-11.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 12",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-12.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-12.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 13",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-13.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-13.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 14",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-14.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-14.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 15",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-15.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-15.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 16",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-16.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-16.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 17",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-17.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-17.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 18",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-18.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-18.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 19",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-19.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-19.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 20",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-20.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-20.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 21",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-21.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-21.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 22",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-22.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-22.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 23",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-23.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-23.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 24",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-24.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-24.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 25",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-25.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-25.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 26",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-26.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-26.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 27",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-27.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-27.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 28",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-28.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-28.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 29",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-29.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-29.png",
+        "type": ["normal"],
+        "generation": 99
+      },
+      {
+        "name": "Egg 30",
+        "imgUrl": "/images/pokemon/extra/eggs/egg-30.png",
+        "shinyImgUrl": "/images/pokemon/extra/egg-30.png",
+        "type": ["normal"],
+        "generation": 99
+      }
+    ]
   }
 ]
