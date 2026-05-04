@@ -332,7 +332,7 @@ export default defineComponent({
       this.savedPokemon[prevBoxId].default = false;
       this.savedPokemon[boxId].default = true;
       drawApp.removeAllPokemonFromCanvas();
-      this.addSavedPokemonToCanvas(this.savedPokemon[boxId].pokemon, true);
+      this.addSavedPokemonToCanvas(this.savedPokemon[boxId].pokemon);
     },
     transferPokemonToBox(id: number, pokemonIds: Array<string>, shouldClone = false): void {
       this.setTransferErrorMsg('');

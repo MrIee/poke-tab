@@ -1,9 +1,8 @@
 <template>
-  <select
-    class="tw:mr-2 tw:rounded tw:border-2 tw:border-gray-800 tw:cursor-pointer"
-    v-model="value"
-  >
-    <option v-for="(index, key) in maxNumBoxes" :key="key" :value="key">Box {{ index }}</option>
+  <select class="tw:w-24 tw:mr-2 tw:rounded tw:border-2 tw:border-gray-800 tw:cursor-pointer" @change="handleOnChangeDropdown">
+    <option v-for="(index, key) in maxNumBoxes" :key="key" :value="key" :selected="modelValue === index - 1">
+      {{ modelValue >= maxNumBoxes ? 'Random' : `Box ${index}` }}
+    </option>
   </select>
 </template>
 
@@ -15,8 +14,12 @@ export default defineComponent({
   props: {
     modelValue: {
       type: Number,
-      default: 0
+      default: 0,
     },
+    defaultBox: {
+      type: Number,
+      default: 0,
+    }
   },
   emits: ['update:modelValue'],
   data() {
@@ -24,15 +27,11 @@ export default defineComponent({
       maxNumBoxes: MAX_NUM_BOXES,
     };
   },
-  computed: {
-    value: {
-      get(): number {
-        return this.modelValue;
-      },
-      set(value: number): void {
-        this.$emit('update:modelValue', value);
-      }
+  methods: {
+    handleOnChangeDropdown(event: Event): void {
+      const target = event.target as HTMLInputElement;
+      this.$emit('update:modelValue', parseInt(target.value, 10));
     }
-  },
+  }
 });
 </script>
