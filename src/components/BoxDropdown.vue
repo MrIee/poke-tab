@@ -31,7 +31,7 @@ export default defineComponent({
   },
   computed: {
     ...mapState(useSettingsStore, ['alwaysRandom']),
-    numBoxes() {
+    numBoxes(): number {
       return this.alwaysRandom ? MAX_NUM_BOXES + 1 : MAX_NUM_BOXES;
     },
   },

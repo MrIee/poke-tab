@@ -55,6 +55,10 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+    selected: {
+      type: Boolean,
+      default: false,
+    },
     id: {
       type: String,
       default: '',
@@ -81,6 +85,14 @@ export default defineComponent({
       isSelected: false,
       isFormsPanelVisible: false,
     };
+  },
+  mounted(): void {
+    this.isSelected = this.selected;
+  },
+  watch: {
+    selected(selected: boolean): void {
+      this.isSelected = selected;
+    }
   },
   methods: {
     ...mapActions(useAppStore, { setPokemonToAdd: 'setPokemonToAdd' }),

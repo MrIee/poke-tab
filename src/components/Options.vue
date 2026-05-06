@@ -38,11 +38,11 @@
       <div v-if="activeTab === tabSettings">
         <Settings />
       </div>
-      <div v-if="activeTab === tabPokemon">
+      <div v-if="activeTab === tabPokemon" class="tw:flex tw:flex-col tw:items-center">
         <p class="tw:mb-3">
           You may store up to 10 sets of pokemon to use in your new tab(s).
         </p>
-        <div class="tw:w-72">
+        <div class="tw:w-11/12">
           <div class="tw:flex tw:justify-between tw:items-center tw:mb-1">
             <BoxDropdown v-model="selectedBoxId" />
             <div v-if="hasShinyCharm" class="shiny-charm-container">

@@ -11,6 +11,7 @@
         v-for="p in pokemon"
         :key="p.id"
         is-selectable
+        :selected="selectedIds.indexOf(p.id || '') > -1"
         :id="p.id"
         :img-url="getImgUrl(p)"
         :name="p.name"
@@ -19,13 +20,12 @@
     </div>
     <div class="tw:w-full tw:flex tw:flex-wrap tw:gap-2 tw:mb-2">
       <button class="tw:grow" @click="handleOnAdd">Add</button>
-      <button class="alert tw:grow" :disabled="selectedIds.length === 0" @click="handleOnRemove">
-        Remove
-      </button>
-    </div>
-    <div class="tw:w-full tw:flex tw:gap-2 tw:mb-2">
       <button class="tw:grow" @click="handleOnRandomize">Randomize</button>
-      <button class="alert tw:grow" @click="handleOnRemoveAll">Remove all</button>
+    </div>
+    <div class="tw:w-full tw:flex tw:flex-wrap tw:gap-2 tw:mb-2">
+      <button class="tw:grow" @click="handleOnSelectAll">Select All</button>
+      <button class="tw:grow" @click="() => selectedIds = []">Clear Selection</button>
+      <button class="alert tw:grow" :disabled="selectedIds.length === 0" @click="handleOnRemove">Remove</button>
     </div>
     <RandomizerOptions class="tw:self-start tw:mb-2" />
   </div>
@@ -104,6 +104,10 @@ export default defineComponent({
         this.selectedIds.splice(index, 1);
       }
     },
+    handleOnSelectAll() : void {
+      this.selectedIds = [];
+      this.pokemon.forEach((pokemon: Pokemon) => this.selectedIds.push(pokemon.id || ''));
+    },
     handleOnAdd(): void {
       this.$emit('add');
     },
@@ -115,9 +119,6 @@ export default defineComponent({
     },
     handleOnRandomize(): void {
       this.setRandomizeBoxId(this.id);
-    },
-    handleOnRemoveAll(): void {
-      this.setIdsOfPokemonToRemove(this.pokemon.map((pokemon: Pokemon): string => pokemon.id as string));
     },
     handleOnTransfer(): void {
       this.dispatchTransferPokemonEvent(this.selectedBoxId, this.selectedIds);
