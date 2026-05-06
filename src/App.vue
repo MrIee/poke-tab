@@ -146,22 +146,25 @@ export default defineComponent({
     await this.loadSettings();
     this.initializeSavedPokemonArray();
 
-    if (!loadedPokemon) {
-      this.saveRandomPokemonToBox(0, true);
-      await saveToLocal(LOCAL_SAVED_POKEMON, this.savedPokemon);
-    } else {
+    if (loadedPokemon) {
       this.savedPokemon = loadedPokemon;
-      const defaultBoxId: number = this.savedPokemon.findIndex((box: PokemonBox,) => box.default);
-      this.setDefaultBoxId(defaultBoxId);
-      this.selectedBoxId = defaultBoxId;
     }
-
-    this.addSavedPokemonToCanvas(this.savedPokemon[defaultBoxId].pokemon);
 
     if (this.alwaysRandom) {
       this.selectedBoxId = MAX_NUM_BOXES;
-      this.randomizeBox(this.selectedBoxId, true, this.randomizerOptions);
       this.setDefaultBoxId(this.selectedBoxId);
+      this.randomizeBox(this.selectedBoxId, true, this.randomizerOptions);
+    } else {
+      if (!loadedPokemon) {
+        this.saveRandomPokemonToBox(0, true);
+        await saveToLocal(LOCAL_SAVED_POKEMON, this.savedPokemon);
+      } else {
+        const defaultBoxId: number = this.savedPokemon.findIndex((box: PokemonBox,) => box.default);
+        this.setDefaultBoxId(defaultBoxId);
+        this.selectedBoxId = defaultBoxId;
+      }
+
+      this.addSavedPokemonToCanvas(this.savedPokemon[defaultBoxId].pokemon);
     }
 
     this.$nextTick(async () => {

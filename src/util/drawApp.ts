@@ -199,11 +199,13 @@ export class DrawApp {
   };
 
   removeAllPokemonFromCanvas(): void {
-    this.pokemon.forEach((pokemon: PokemonObject): void => {
-      pokemon.imgContainer.remove();
-    });
+    if (this.pokemon.length > 0) {
+      this.pokemon.forEach((pokemon: PokemonObject): void => {
+        pokemon.imgContainer.remove();
+      });
 
-    this.pokemon = [];
+      this.pokemon = [];
+    }
   };
 
   setSpeed(speed: number): void {

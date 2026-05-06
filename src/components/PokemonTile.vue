@@ -10,6 +10,7 @@
       :class="{ 'tw:-mb-2.5': label }"
       :src="imgUrl"
       :alt="name"
+      :title="name"
       loading="lazy"
       @click="onClick"
     />
